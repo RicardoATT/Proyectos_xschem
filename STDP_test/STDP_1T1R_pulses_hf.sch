@@ -138,5 +138,5 @@ value="
 spice_ignore=false}
 C {devices/lab_pin.sym} 640 -140 2 0 {name=be1 sig_type=std_logic lab=te}
 C {devices/vsource.sym} 560 -30 0 1 {name=Vsl1 value="PULSE(0 1.8 10u 100p 100p 50n 100n 100)"}
-C {/home/ricardoatt/RATT_repos/Proyectos_RATT/Proyectos_xschem/1T1R/1T1R.sym} 780 -280 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/1T1R/1T1R.sym} 870 -70 0 0 {name=x1}
 C {devices/gnd.sym} 480 -120 0 0 {name=l2 lab=GND}
