@@ -1,0 +1,73 @@
+** sch_path: /home/ricardo/RATT-repo/Proyectos-RATT/Proyectos-xschem/oscillator/oscillator_tb.sch
+**.subckt oscillator_tb
+x1 VDD vb1 vfb vb2 GND oscillator
+V1 net2 GND PULSE(0 1.8 1n 1n 50n 100n 10)
+.save i(v1)
+XR1 net2 net1 sky130_smooth Tfilament_0=3.3e-9
+D1 net1 vb2 sky130_fd_pr__diode_pw2nd_05v5 area=1e12 pj=4e6
+D2 vfb net1 sky130_fd_pr__diode_pw2nd_05v5 area=1e12 pj=4e6
+R2 GND net1 sky130_fd_pr__res_generic_m1 W=1 L=1 m=1
+V2 vb1 GND 1.8
+.save i(v2)
+V3 VDD GND 1.8
+.save i(v3)
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /home/ricardo/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt
+
+
+
+
+.control
+	save all
+	run
+	tran 100p 400n
+	write oscillator_tb.raw
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/ricardo/Escritorio/Proyectos_xschem/oscillator/oscillator.sym # of
+*+ pins=5
+** sym_path: /home/ricardo/Escritorio/Proyectos_xschem/oscillator/oscillator.sym
+** sch_path: /home/ricardo/Escritorio/Proyectos_xschem/oscillator/oscillator.sch
+.subckt oscillator vdd vbias1 vinout vbias2 gnd
+*.iopin vdd
+*.iopin gnd
+*.ipin vbias2
+*.ipin vbias1
+*.iopin vinout
+x1 net3 net2 vinout gnd inverter
+x2 vdd net1 net2 net4 inverter
+x3 vdd vinout net1 gnd inverter
+XM1 net4 vbias2 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net3 vbias1 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/ricardo/Escritorio/Proyectos_xschem/inverter/inverter.sym # of pins=4
+** sym_path: /home/ricardo/Escritorio/Proyectos_xschem/inverter/inverter.sym
+** sch_path: /home/ricardo/Escritorio/Proyectos_xschem/inverter/inverter.sch
+.subckt inverter vdd vout vin gnd
+*.ipin vin
+*.iopin vdd
+*.opin vout
+*.iopin gnd
+XM1 vout vin vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 vout vin gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL VDD
+.GLOBAL GND
+.end
