@@ -134,13 +134,15 @@ lab=GND}
 N 230 -350 230 -240 {
 lab=BL}
 N 540 -290 540 -270 {
-lab=#net1}
+lab=te}
 N 540 -210 540 -160 {
 lab=te}
 N 540 -350 620 -350 {
 lab=be}
 N 540 -290 620 -290 {
-lab=#net1}
+lab=te}
+N 540 -270 540 -210 {
+lab=te}
 C {devices/code_shown.sym} 100 160 0 0 {name=NGSPICE
 only_toplevel=true
 value="
@@ -195,10 +197,6 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 540 -180 2 0 {name=be1 sig_type=std_logic lab=te}
 C {devices/vsource.sym} 540 -30 0 1 {name=Vsl value="PULSE(0 2.6 10u 5n 5n 500n 1000n 10)"}
-C {sky130_fd_pr/rram_v0.sym} 540 -240 2 1 {name=R2
-model=rram_v0
-spiceprefix=X
-}
 C {sky130_fd_pr/rram_v0.sym} 620 -320 2 1 {name=R3
 model=rram_v0
 spiceprefix=X
