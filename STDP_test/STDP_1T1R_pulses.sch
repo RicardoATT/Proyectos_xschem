@@ -133,7 +133,7 @@ C {devices/lab_pin.sym} 490 -340 1 0 {name=be sig_type=std_logic lab=be}
 C {devices/lab_pin.sym} 320 -340 1 0 {name=p1 sig_type=std_logic lab=BL}
 C {devices/lab_pin.sym} 560 -80 2 0 {name=wl1 sig_type=std_logic lab=SL}
 C {devices/vsource.sym} 390 -340 1 0 {name=Vread value=1e-5}
-C {devices/code.sym} 60 -720 0 0 {name=MODELS2
+C {devices/code.sym} 60 -720 0 0 {name=MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -143,7 +143,7 @@ value="
 spice_ignore=false}
 C {devices/lab_pin.sym} 640 -140 2 0 {name=be1 sig_type=std_logic lab=te}
 C {devices/vsource.sym} 560 -30 0 1 {name=Vsl1 value="PULSE(0 1.8 10.5u 5n 5n 500n 1000n 10)"}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/1T1R/1T1R.sym} 870 -70 0 0 {name=x1}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/1T1R/1T1R.sym} 870 -70 0 0 {name=x1}
 C {devices/gnd.sym} 480 -120 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 80 -230 0 0 {name=Vbl2 value="PULSE(0 1.8 10u 5n 5n 500n 1000n 10)"}
 C {devices/vsource.sym} 80 -150 0 0 {name=Vbl3 value="PULSE(0 1.8 35u 5n 5n 1000n 3000n 5)"}
