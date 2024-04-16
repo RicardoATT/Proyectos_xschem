@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 B 2 -760 -20 40 380 {flags=graph
-y1=0
+y1=0.21
 y2=1.9
 ypos1=0
 ypos2=2
@@ -14,7 +14,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=0.0002
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -64,10 +64,10 @@ C {devices/lab_pin.sym} -400 -150 0 0 {name=p3 sig_type=std_logic lab=vb1}
 C {devices/lab_pin.sym} -400 -130 0 0 {name=p4 sig_type=std_logic lab=vb2}
 C {devices/lab_pin.sym} -120 -200 2 0 {name=p5 sig_type=std_logic lab=vout}
 C {devices/gnd.sym} -20 -210 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -20 -130 0 0 {name=V2 value=0.13 savecurrent=false}
+C {devices/vsource.sym} -20 -130 0 0 {name=V2 value=0.3 savecurrent=false}
 C {devices/lab_pin.sym} -20 -180 0 0 {name=p6 sig_type=std_logic lab=vb1}
 C {devices/gnd.sym} -20 -80 0 0 {name=l4 lab=GND}
-C {devices/vsource.sym} 60 -130 0 0 {name=V3 value=0.13 savecurrent=false}
+C {devices/vsource.sym} 60 -130 0 0 {name=V3 value=0.7 savecurrent=false}
 C {devices/lab_pin.sym} 60 -180 0 0 {name=p7 sig_type=std_logic lab=vb2}
 C {devices/gnd.sym} 60 -80 0 0 {name=l5 lab=GND}
 C {devices/code_shown.sym} -760 -290 0 0 {name=SIMULATION
@@ -75,7 +75,7 @@ only_toplevel=true
 value="
 .control
 	save all
-	tran 1n 10u
+	tran 1n 200u
 	write LIF_neuron_Vohra_tb.raw
 .endc
 " }
@@ -93,8 +93,8 @@ descr="load waves"
 tclcommand="xschem raw_read $netlist_dir/LIF_neuron_Vohra_tb.raw tran"
 }
 C {devices/vsource.sym} 60 -260 0 0 {name=V4 
-value="PWL(0 0 10u 1)"}
+value=1.5}
 C {devices/lab_pin.sym} 60 -310 0 0 {name=p8 sig_type=std_logic lab=vin}
 C {devices/gnd.sym} 60 -210 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -20 -310 0 0 {name=l7 lab=VDD}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -50 -60 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -50 -60 0 0 {name=x1}
