@@ -7,20 +7,21 @@ S {}
 E {}
 B 2 -760 -20 40 380 {flags=graph
 y1=0
-y2=2
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=10e-6
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node=""
-color=""
+node="vin
+vout"
+color="4 6"
 dataset=-1
 unitx=1
 logx=0
@@ -96,4 +97,4 @@ value="PWL(0 0 10u 1)"}
 C {devices/lab_pin.sym} 60 -310 0 0 {name=p8 sig_type=std_logic lab=vin}
 C {devices/gnd.sym} 60 -210 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -20 -310 0 0 {name=l7 lab=VDD}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -50 -60 0 0 {name=x1}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -50 -60 0 0 {name=x1}

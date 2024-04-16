@@ -37,20 +37,6 @@ C {devices/lab_pin.sym} 20 -50 0 0 {name=p1 sig_type=std_logic lab=vin}
 C {devices/vdd.sym} 80 -160 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} 80 0 0 0 {name=l3 lab=GND}
 C {devices/ammeter.sym} 80 -130 0 0 {name=Vmeas savecurrent=true}
-C {sky130_fd_pr/pfet_01v8.sym} 60 -50 0 0 {name=M2
-L=0.15
-W=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
 C {sky130_fd_pr/corner.sym} -410 -200 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/code_shown.sym} -410 0 0 0 {name=SIMULATION
 only_toplevel=true
@@ -61,3 +47,17 @@ value="
 	plot i(Vmeas)
 .endc
 " }
+C {sky130_fd_pr/nfet_01v8.sym} 60 -50 0 0 {name=M1
+L=1
+W=0.6
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
