@@ -304,7 +304,7 @@ C {devices/iopin.sym} 80 20 2 0 {name=p3 lab=GND}
 C {devices/ipin.sym} 20 -140 0 0 {name=p5 lab=Vb1}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 350 -110 0 0 {name=C1 model=cap_mim_m3_1 W=21 L=1 MF=1 spiceprefix=X}
 C {sky130_fd_pr/nfet_01v8.sym} 430 -160 0 0 {name=M14
-L=1
+L=4
 W=1
 nf=1 
 mult=1
