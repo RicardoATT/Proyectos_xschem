@@ -73,7 +73,7 @@ logx=0
 logy=0
 }
 N -40 -200 -20 -200 {
-lab=vpre}
+lab=#net1}
 N 60 -200 60 -160 {
 lab=be}
 N 40 -200 60 -200 {
@@ -89,7 +89,7 @@ lab=GND}
 N -280 -130 -280 -110 {
 lab=GND}
 N -140 -200 -100 -200 {
-lab=#net1}
+lab=vpre}
 N 60 -100 60 -80 {
 lab=GND}
 N 100 -130 120 -130 {
@@ -148,12 +148,12 @@ N 160 -200 180 -200 {
 lab=te}
 N 120 -80 540 -80 {
 lab=vpost}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -50 -60 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -50 -60 0 0 {name=x1}
 C {sky130_fd_pr/rram_v0.sym} 130 -200 1 0 {name=R1
 model=rram_v0
 spiceprefix=X
 }
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} 610 -60 0 0 {name=x2}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} 610 -60 0 0 {name=x2}
 C {devices/ammeter.sym} 10 -200 3 0 {name=vread1 savecurrent=true}
 C {sky130_fd_pr/diode.sym} -70 -200 1 0 {name=D1
 model=diode_pw2nd_05v5

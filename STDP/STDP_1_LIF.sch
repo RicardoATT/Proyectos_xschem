@@ -49,8 +49,8 @@ logx=0
 logy=0
 }
 B 2 100 320 900 720 {flags=graph
-y1=79061.6
-y2=86494
+y1=110835
+y2=118492
 ypos1=0
 ypos2=2
 divy=5
@@ -69,6 +69,28 @@ unitx=1
 logx=0
 logy=0
 }
+B 2 -700 720 100 1120 {flags=graph
+y1=2.8
+y2=4.1
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=2e-05
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+color=7
+node="\\"Thickness [nm]; 5 n.xr1.n1#ngap -\\""}
 N -580 -140 -580 -120 {
 lab=GND}
 N -580 -300 -580 -280 {
@@ -101,7 +123,7 @@ N -260 -210 -240 -210 {
 lab=#net1}
 N -340 -210 -320 -210 {
 lab=#net2}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -350 -70 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -350 -70 0 0 {name=x1}
 C {devices/gnd.sym} -580 -120 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -580 -300 0 0 {name=l3 lab=VDD}
 C {devices/vsource.sym} -100 -170 0 0 {name=V1 value=1.8}
