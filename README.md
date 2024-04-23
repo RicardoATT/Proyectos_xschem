@@ -1,2 +1,2 @@
 # Proyectos_xschem
-En este repositorio se almacenan los proyectos realizados utilizando la herramienta de Xschem y NGSpice
+In this repository the projects made using the Xschem and NGSpice tool are stored.
