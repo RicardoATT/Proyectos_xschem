@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 -3050 -1080 -2250 -680 {flags=graph
-y1=3.9e-06
-y2=1.5
+y1=0.300003
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
@@ -64,7 +64,7 @@ C {devices/lab_pin.sym} -2690 -1210 0 0 {name=p3 sig_type=std_logic lab=vb1}
 C {devices/lab_pin.sym} -2690 -1190 0 0 {name=p4 sig_type=std_logic lab=vb2}
 C {devices/lab_pin.sym} -2410 -1260 2 0 {name=p5 sig_type=std_logic lab=vout}
 C {devices/gnd.sym} -2310 -1270 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -2310 -1190 0 0 {name=V2 value=0.4 savecurrent=false}
+C {devices/vsource.sym} -2310 -1190 0 0 {name=V2 value=0.5 savecurrent=false}
 C {devices/lab_pin.sym} -2310 -1240 0 0 {name=p6 sig_type=std_logic lab=vb1}
 C {devices/gnd.sym} -2310 -1140 0 0 {name=l4 lab=GND}
 C {devices/vsource.sym} -2230 -1190 0 0 {name=V3 value=0.4 savecurrent=false}
@@ -89,4 +89,4 @@ value=1.5}
 C {devices/lab_pin.sym} -2230 -1370 0 0 {name=p8 sig_type=std_logic lab=vin}
 C {devices/gnd.sym} -2230 -1270 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -2310 -1370 0 0 {name=l7 lab=VDD}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -2340 -1120 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -2340 -1120 0 0 {name=x1}

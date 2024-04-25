@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 -700 -80 100 320 {flags=graph
-y1=0.37
-y2=1.8
+y1=0.45
+y2=1.5
 ypos1=0
 ypos2=2
 divy=5
@@ -28,8 +28,8 @@ logx=0
 logy=0
 }
 B 2 -700 320 100 720 {flags=graph
-y1=-3.3e-07
-y2=8.5e-06
+y1=-2.5e-07
+y2=2.1e-05
 ypos1=0
 ypos2=2
 divy=5
@@ -49,8 +49,8 @@ logx=0
 logy=0
 }
 B 2 100 320 900 720 {flags=graph
-y1=110835
-y2=118492
+y1=271019
+y2=342399
 ypos1=0
 ypos2=2
 divy=5
@@ -70,8 +70,8 @@ logx=0
 logy=0
 }
 B 2 -700 720 100 1120 {flags=graph
-y1=2.8
-y2=4.1
+y1=4.1
+y2=4.3
 ypos1=0
 ypos2=2
 divy=5
@@ -164,7 +164,7 @@ value="
 .endc
 " }
 C {devices/lab_pin.sym} -420 -210 1 0 {name=p7 sig_type=std_logic lab=vout}
-C {sky130_fd_pr/rram_v0.sym} -210 -210 1 0 {name=R1
+C {sky130_fd_pr/rram_v0.sym} -210 -210 3 0 {name=R1
 model=rram_v0
 spiceprefix=X
 }

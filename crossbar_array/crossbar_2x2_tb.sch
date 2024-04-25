@@ -254,10 +254,6 @@ N -1080 -1220 -1080 -1160 {
 lab=#net8}
 N -1080 -1220 -1050 -1220 {
 lab=#net8}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/1T1R/1T1R.sym} -1330 -660 0 0 {name=x1}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/1T1R/1T1R.sym} -1330 -300 0 0 {name=x2}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/1T1R/1T1R.sym} -1070 -660 0 0 {name=x3}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/1T1R/1T1R.sym} -1070 -300 0 0 {name=x4}
 C {devices/gnd.sym} -1460 -710 0 0 {name=l1 lab=GND}
 C {devices/gnd.sym} -1720 -710 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} -1720 -350 0 0 {name=l3 lab=GND}
@@ -343,3 +339,7 @@ C {devices/vsource.sym} -1050 -910 0 0 {name=V15 value=0}
 C {devices/gnd.sym} -1050 -860 0 0 {name=l19 lab=GND}
 C {devices/vsource.sym} -1050 -770 0 0 {name=V16 value=0}
 C {devices/gnd.sym} -1050 -720 0 0 {name=l20 lab=GND}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/1T1R.sym} -1330 -660 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/1T1R.sym} -1070 -660 0 0 {name=x5}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/1T1R.sym} -1070 -300 0 0 {name=x6}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/1T1R.sym} -1330 -300 0 0 {name=x7}
