@@ -63,26 +63,12 @@ N 450 -130 460 -130 {
 lab=GND}
 N 120 -370 140 -370 {
 lab=#net3}
-N 660 -160 670 -160 {
-lab=GND}
-N 660 -160 660 -130 {
-lab=GND}
-N 660 -130 670 -130 {
-lab=GND}
 N 450 -220 450 -190 {
 lab=u}
-N 670 -220 670 -190 {
-lab=u}
-N 670 -130 670 0 {
-lab=GND}
 N 450 0 670 0 {
 lab=GND}
 N 560 -20 560 0 {
 lab=GND}
-N 720 -160 720 40 {
-lab=Vb2}
-N 710 -160 720 -160 {
-lab=Vb2}
 N 230 -340 240 -340 {
 lab=VDD}
 N 230 -340 230 -310 {
@@ -153,8 +139,6 @@ N 960 -130 960 -110 {
 lab=#net4}
 N 960 -260 1060 -260 {
 lab=Vout}
-N 920 -60 1060 -60 {
-lab=Vb3}
 N 1060 -260 1080 -260 {
 lab=Vout}
 N 800 -160 810 -160 {
@@ -187,8 +171,6 @@ N 250 -140 250 -50 {
 lab=GND}
 N 450 -220 560 -220 {
 lab=u}
-N 560 -220 670 -220 {
-lab=u}
 N 350 -160 410 -160 {
 lab=rc}
 N 160 -260 240 -260 {
@@ -203,8 +185,6 @@ N 80 -420 240 -420 {
 lab=VDD}
 N 20 -140 180 -140 {
 lab=Vb1}
-N 20 40 720 40 {
-lab=Vb2}
 N 80 0 240 -0 {
 lab=GND}
 N 140 -370 520 -370 {
@@ -227,6 +207,8 @@ N 140 -370 140 -320 {
 lab=#net3}
 N 80 -320 140 -320 {
 lab=#net3}
+N 920 -60 1040 -60 {}
+N 1040 -260 1040 -60 {}
 C {sky130_fd_pr/nfet_01v8.sym} 60 -50 0 0 {name=M1
 L=1
 W=0.6
@@ -330,21 +312,6 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/cap_mim_m3_1.sym} 560 -50 0 0 {name=C2 model=cap_mim_m3_1 W=10 L=1 MF=50 spiceprefix=X}
-C {sky130_fd_pr/nfet_01v8.sym} 690 -160 0 1 {name=M5
-L=1
-W=2
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {devices/ipin.sym} 20 40 0 0 {name=p6 lab=Vb2}
 C {devices/iopin.sym} 80 -440 2 0 {name=p7 lab=VDD}
 C {sky130_fd_pr/nfet_01v8.sym} 900 -60 0 1 {name=M6
 L=0.5
@@ -419,4 +386,3 @@ spiceprefix=X
 C {devices/opin.sym} 1080 -260 0 0 {name=p8 lab=Vout}
 C {devices/lab_pin.sym} 560 -230 0 0 {name=p2 sig_type=std_logic lab=u}
 C {devices/lab_pin.sym} 330 -160 1 0 {name=p4 sig_type=std_logic lab=rc}
-C {devices/ipin.sym} 1060 -60 2 0 {name=p9 lab=Vb3}
