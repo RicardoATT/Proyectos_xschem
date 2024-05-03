@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 -700 -80 100 320 {flags=graph
-y1=0.45
-y2=1.5
+y1=0.35
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
@@ -28,8 +28,8 @@ logx=0
 logy=0
 }
 B 2 -700 320 100 720 {flags=graph
-y1=-2.5e-07
-y2=2.1e-05
+y1=-8.7e-08
+y2=1.5e-05
 ypos1=0
 ypos2=2
 divy=5
@@ -49,8 +49,8 @@ logx=0
 logy=0
 }
 B 2 100 320 900 720 {flags=graph
-y1=271019
-y2=342399
+y1=-16632.5
+y2=236118
 ypos1=0
 ypos2=2
 divy=5
@@ -123,6 +123,12 @@ N -260 -210 -240 -210 {
 lab=#net1}
 N -340 -210 -320 -210 {
 lab=#net2}
+N -410 -250 -370 -250 {
+lab=vout}
+N -410 -250 -410 -210 {
+lab=vout}
+N -370 -210 -370 -190 {
+lab=#net3}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -350 -70 0 0 {name=x1}
 C {devices/gnd.sym} -580 -120 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -580 -300 0 0 {name=l3 lab=VDD}
@@ -170,8 +176,18 @@ spiceprefix=X
 }
 C {devices/gnd.sym} -160 -190 0 0 {name=l1 lab=GND}
 C {devices/ammeter.sym} -290 -210 3 0 {name=vread1 savecurrent=true}
-C {sky130_fd_pr/diode.sym} -370 -210 1 0 {name=D1
-model=diode_pw2nd_05v5
-area=1e12
-pj=4e6
+C {sky130_fd_pr/nfet_01v8.sym} -370 -230 3 1 {name=M1
+L=0.15
+W=1
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
 }
+C {devices/gnd.sym} -370 -190 0 0 {name=l9 lab=GND}

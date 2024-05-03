@@ -27,8 +27,8 @@ logx=0
 logy=0
 }
 B 2 -600 -200 200 200 {flags=graph
-y1=-23742.2
-y2=12055.3
+y1=8881.52
+y2=11341.5
 ypos1=0
 ypos2=2
 divy=5
@@ -123,7 +123,7 @@ model=rram_v0
 spiceprefix=X
 }
 C {devices/res.sym} -560 -350 0 0 {name=R2
-value=8k
+value=10k
 footprint=1206
 device=resistor
 m=1}

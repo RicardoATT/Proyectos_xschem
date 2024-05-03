@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.01
+x1=-0.0005
+x2=0.0095
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -27,15 +27,15 @@ logx=0
 logy=0
 }
 B 2 -360 40 440 440 {flags=graph
-y1=7101.61
-y2=7442.84
+y1=2880.73
+y2=4096.71
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.01
+x1=-0.0005
+x2=0.0095
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -55,8 +55,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.01
+x1=-0.0005
+x2=0.0095
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -170,20 +170,6 @@ lab=GND}
 C {devices/vsource.sym} -320 -50 0 0 {name=V1 value="PULSE(-3.92 3.92 5ms 1us 1us 5ms 10ms 1)"}
 C {devices/lab_pin.sym} -320 -100 0 0 {name=p1 sig_type=std_logic lab=vin}
 C {devices/gnd.sym} -320 0 0 0 {name=l1 lab=GND}
-C {sky130_fd_pr/nfet_01v8.sym} 60 -230 0 1 {name=M1
-L=0.15
-W=1
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
 C {sky130_fd_pr/rram_v0.sym} -60 -650 0 0 {name=R1
 model=rram_v0
 spiceprefix=X
@@ -218,47 +204,19 @@ C {devices/launcher.sym} -260 -140 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/8_rram_prog.raw tran"
 }
-C {sky130_fd_pr/nfet_01v8.sym} 60 -330 0 1 {name=M2
-L=0.15
-W=1
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
 C {devices/res.sym} -60 -330 0 0 {name=R3
 value=1k
 footprint=1206
 device=resistor
 m=1}
 C {devices/lab_pin.sym} 100 -330 2 0 {name=p4 sig_type=std_logic lab=b1}
-C {sky130_fd_pr/nfet_01v8.sym} 60 -430 0 1 {name=M3
-L=0.15
-W=1
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
 C {devices/res.sym} -60 -430 0 0 {name=R4
 value=2k
 footprint=1206
 device=resistor
 m=1}
 C {devices/lab_pin.sym} 100 -430 2 0 {name=p5 sig_type=std_logic lab=b2}
-C {sky130_fd_pr/nfet_01v8.sym} 60 -530 0 1 {name=M4
+C {sky130_fd_pr/nfet_01v8.sym} 60 -530 2 0 {name=M4
 L=0.15
 W=1
 nf=1 
@@ -279,12 +237,54 @@ device=resistor
 m=1}
 C {devices/lab_pin.sym} 100 -530 2 0 {name=p6 sig_type=std_logic lab=b3}
 C {devices/gnd.sym} -60 -160 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} 200 -210 0 0 {name=V2 value=1.8}
+C {devices/vsource.sym} 200 -210 0 0 {name=V2 value=3.92}
 C {devices/lab_pin.sym} 200 -260 0 0 {name=p3 sig_type=std_logic lab=b1}
 C {devices/gnd.sym} 200 -160 0 0 {name=l3 lab=GND}
-C {devices/vsource.sym} 280 -210 0 0 {name=V3 value=1.8}
+C {devices/vsource.sym} 280 -210 0 0 {name=V3 value=3.92}
 C {devices/lab_pin.sym} 280 -260 0 0 {name=p11 sig_type=std_logic lab=b2}
 C {devices/gnd.sym} 280 -160 0 0 {name=l4 lab=GND}
-C {devices/vsource.sym} 360 -210 0 0 {name=V4 value=1.8}
+C {devices/vsource.sym} 360 -210 0 0 {name=V4 value=0}
 C {devices/lab_pin.sym} 360 -260 0 0 {name=p12 sig_type=std_logic lab=b3}
 C {devices/gnd.sym} 360 -160 0 0 {name=l5 lab=GND}
+C {sky130_fd_pr/nfet_01v8.sym} 60 -230 2 0 {name=M1
+L=0.15
+W=1
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 60 -330 2 0 {name=M2
+L=0.15
+W=1
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 60 -430 2 0 {name=M3
+L=0.15
+W=1
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
