@@ -27,7 +27,7 @@ N -60 -120 -60 -50 {
 lab=GND}
 N -160 -110 -160 -50 {
 lab=GND}
-C {devices/vsource.sym} -260 -90 0 0 {name=V1 value=0 savecurrent=false}
+C {devices/vsource.sym} -260 -90 0 0 {name=V1 value=1.8 savecurrent=false}
 C {devices/gnd.sym} -260 -40 0 0 {name=l1 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} -180 -140 0 0 {name=M1
 L=0.15
@@ -43,12 +43,12 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/vsource.sym} -60 -150 0 0 {name=V2 value=0.9 savecurrent=false}
+C {devices/vsource.sym} -60 -150 0 0 {name=V2 value=0 savecurrent=false}
 C {devices/code_shown.sym} 0 -170 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .control
-	dc v1 0 1.8 0.01
+	dc v2 0 1.8 0.01
 	plot -i(v2)
 	show
 .endc

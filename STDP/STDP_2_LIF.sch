@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -440 -40 360 360 {flags=graph
-y1=0.1
+y1=0.11
 y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.06584e-07
-x2=3.23234e-06
+x1=-1.2e-12
+x2=2.13774e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -29,15 +29,15 @@ logx=0
 logy=0
 }
 B 2 360 -40 1160 360 {flags=graph
-y1=-1.39801e-07
-y2=1.36256e-06
+y1=-3.25081e-06
+y2=2.64441e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.06584e-07
-x2=3.23234e-06
+x1=-1.2e-12
+x2=2.13774e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -59,8 +59,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.06584e-07
-x2=3.23234e-06
+x1=-1.2e-12
+x2=2.13774e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -90,10 +90,6 @@ N -280 -160 -280 -140 {
 lab=GND}
 N 60 -130 60 -110 {
 lab=GND}
-N 740 -370 760 -370 {
-lab=vpost}
-N 760 -370 760 -230 {
-lab=vpost}
 N 50 -160 60 -160 {
 lab=GND}
 N 50 -160 50 -130 {
@@ -126,18 +122,6 @@ N 970 -140 970 -120 {
 lab=GND}
 N 970 -220 970 -200 {
 lab=vb2}
-N -110 -270 -70 -270 {
-lab=vpre}
-N -110 -270 -110 -230 {
-lab=vpre}
-N 710 -410 760 -410 {
-lab=vpost}
-N 760 -410 760 -370 {
-lab=vpost}
-N 710 -370 710 -350 {
-lab=GND}
-N -70 -230 -70 -210 {
-lab=GND}
 N 100 -160 120 -160 {
 lab=vpost}
 N 120 -160 120 -80 {
@@ -145,7 +129,7 @@ lab=vpost}
 N 760 -230 760 -80 {
 lab=vpost}
 N 380 -230 400 -230 {
-lab=te}
+lab=#net2}
 N 200 -230 240 -230 {
 lab=te}
 N 60 -230 100 -230 {
@@ -167,11 +151,19 @@ lab=vpre}
 N -140 -230 -130 -230 {
 lab=vpre}
 N 460 -230 500 -230 {
-lab=#net2}
+lab=#net3}
 N 240 -230 260 -230 {
 lab=te}
-N 260 -230 380 -230 {
+N 740 -370 760 -370 {
+lab=vpost}
+N 760 -370 760 -230 {
+lab=vpost}
+N 260 -230 280 -230 {
 lab=te}
+N 280 -270 280 -250 {
+lab=VDD}
+N 380 -270 380 -250 {
+lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -50 -90 0 0 {name=x1}
 C {sky130_fd_pr/rram_v0.sym} 170 -230 1 0 {name=R1
 model=rram_v0
@@ -242,33 +234,15 @@ tclcommand="xschem raw_read $netlist_dir/STDP_2_LIF.raw tran"
 }
 C {devices/lab_pin.sym} 100 -230 1 0 {name=p11 sig_type=std_logic lab=be}
 C {devices/lab_pin.sym} 240 -230 1 0 {name=p12 sig_type=std_logic lab=te}
-C {sky130_fd_pr/nfet_01v8.sym} -70 -250 3 1 {name=M2
-L=0.15
-W=1
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
+C {sky130_fd_pr/diode.sym} -70 -230 1 0 {name=D1
+model=diode_pw2nd_05v5
+area=1e12
+pj=4e6
 }
-C {sky130_fd_pr/nfet_01v8.sym} 710 -390 1 0 {name=M3
-L=0.15
-W=1
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
+C {sky130_fd_pr/diode.sym} 710 -370 3 0 {name=D2
+model=diode_pw2nd_05v5
+area=1e12
+pj=4e6
 }
-C {devices/gnd.sym} -70 -210 0 0 {name=l11 lab=GND}
-C {devices/gnd.sym} 710 -350 0 0 {name=l12 lab=GND}
+C {devices/gnd.sym} 380 -270 2 0 {name=l11 lab=GND}
+C {devices/vdd.sym} 280 -270 0 0 {name=l12 lab=VDD}

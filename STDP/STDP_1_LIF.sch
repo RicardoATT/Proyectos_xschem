@@ -128,7 +128,7 @@ lab=vout}
 N -410 -250 -410 -210 {
 lab=vout}
 N -370 -210 -370 -190 {
-lab=#net3}
+lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -350 -70 0 0 {name=x1}
 C {devices/gnd.sym} -580 -120 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -580 -300 0 0 {name=l3 lab=VDD}
