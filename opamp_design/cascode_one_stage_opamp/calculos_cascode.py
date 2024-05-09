@@ -22,7 +22,7 @@ Cl=pi*2*10e-12
 Av=100
 VDD=1.8
 GB=1e6
-SR=5
+SR=3
 ICMR=1.3
 
 # Paso 0: Cálculo preliminar de Kn', Kp' y las lambdas
@@ -35,17 +35,16 @@ print("Kp' = ", Kp)
 print("Lambda(N) = ", lambda_n)
 print("Lambda(P) = ", lambda_p)
 
-# Paso 1: Cálculo de I5 y Pdiss
-I5=SR*Cl
-Pdiss=VDD*I5
-print("I5 = ", I5)
-print("Pdiss = ", Pdiss)
+# Paso 1: Cálculo de I9
+I9=SR*Cl
+print("I5 = ", I9)
 
-# Paso 2: Cálculo de gm1, gm2, W1 y W2
+# Paso 2: Cálculo de gm, W1, W2, W3, W4
 gm=GB*Cl
+I5=I9/2
 W1_L1=(gm**2)/(Kn*I5)
 W1=W1_L1*L
-print("W1 = W2 = ", W1)
+print("W1 = W2 = W3 = W4 = ", W1)
 
 # Paso 3: Cálculo de W3 y W4
 W3_L3=I5/(Kp*(VDD-ICMR-(abs(Vth_p))+Vth_p)**2)

@@ -1,0 +1,42 @@
+\newcommand{\pnormal}[3]{
+	\backgroundsetup{
+		scale=1,
+		opacity= 0.05,
+		angle= 0,
+		contents= {
+			\includegraphics[width=0.75\paperwidth, height=0.75\paperheight]{../ImgPortada/CIC_Logo.png}
+		}
+	}
+	\BgThispage
+	\begin{center}
+   		\begin{figure}[!tbp]
+   			\centering
+   			\subfloat{\includegraphics[scale=0.025]{../ImgPortada/IPN_Logo.png}}
+   			\hfill
+   			\subfloat{\includegraphics[scale=0.2]{../ImgPortada/MICROSE_Logo.png}}
+   		\end{figure}
+        
+        {\LARGE \textbf{\textcolor{guinda}{Instituto Polit\'ecnico Nacional}}}
+        \\ \vspace{1cm}
+        {\LARGE \textbf{\textcolor{guinda}{Centro de Investigaci\'on en Computaci\'on}}}
+        \\ \vspace{2.5cm}
+        {\LARGE \texttt{#1}} %%%%%%%%%%Materia%%%%%%%%%%
+        \\ \vspace{2cm}
+        {\LARGE \textbf{ \texttt{\textcolor{guinda}{#2}} } } %%%%%%%%%%Título%%%%%%%%%%
+        \\ \vspace{3cm}
+        {\Large \textsc{ Profesor: }}
+        \\ \vspace{0.3cm}
+        {\Large \textsc{ #3 } } %%%%%%%%%%Profesor%%%%%%%%%%
+        \\ \vspace{2cm}
+        {\Large \textsc{ Por: }}
+        \\ \vspace{0.3cm}
+        {\Large \textsc{ Ing. Ricardo Aldair Tirado Torres }}
+        %\ \\
+        %A230726
+        \\ \vspace{2cm}
+        \begin{flushright}
+        	\large \textsc{Ciudad de M\'exico, \today} 
+        \end{flushright}
+    \end{center}
+}
+

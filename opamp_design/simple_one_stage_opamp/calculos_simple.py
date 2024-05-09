@@ -30,6 +30,10 @@ Kn=(2*Id_n)/((W/L)((Vgs_n-Vth_n)*2))
 lambda_n=((Id_n/(Kn*(W/2*L)(Vgs_n-Vth_n)*2))-1)/Vds_n
 Kp=(2*Id_p)/((W/L)((Vgs_p-Vth_p)*2))
 lambda_p=((Id_p/(Kn*(W/2*L)(Vgs_p-Vth_p)*2))-1)/Vds_p
+print("Kn' = ", Kn)
+print("Kp' = ", Kp)
+print("Lambda(N) = ", lambda_n)
+print("Lambda(P) = ", lambda_p)
 
 # Paso 1: Cálculo de I5 y Pdiss
 I5=SR*Cl
