@@ -2,62 +2,74 @@ from math import sqrt
 from math import pi
 import numpy as np 
 
-# Valores conocidos
-# NMOS
-Id_n=448.869e-6
-Vth_n=0.769432
-Vgs_n=1.79987
-Vds_n=0.89974
-vdsat_n=0.362147
-# PMOS
-Id_p=12e-6
-Vth_p=0.624345
-Vgs_p=0.9
-Vds_p=0.9
-vdsat_p=0.0444931
-# Parámetros
-W=1e-6
-L=1.5e-7
-Cl=pi*2*10e-12
-Av=100
-VDD=1.8
-GB=1e6
-SR=5
-ICMR=1.3
+W0=1e-6;
+L0=0.15e-6;
 
-# Paso 0: Cálculo preliminar de Kn', Kp' y las lambdas
-Kn=(2*Id_n)/((W/L)((Vgs_n-Vth_n)*2))
-lambda_n=((Id_n/(Kn*(W/2*L)(Vgs_n-Vth_n)*2))-1)/Vds_n
-Kp=(2*Id_p)/((W/L)((Vgs_p-Vth_p)*2))
-lambda_p=((Id_p/(Kn*(W/2*L)(Vgs_p-Vth_p)*2))-1)/Vds_p
-print("Kn' = ", Kn)
-print("Kp' = ", Kp)
-print("Lambda(N) = ", lambda_n)
-print("Lambda(P) = ", lambda_p)
+#DATOS PROPUESTOS:
+Cl=12e-12;
+Av=100; 
+VDD=1.8;
+GB=2*pi*(10e6);
+SR=3;
+ICMR=1.6; #ICMR = Vin(max) 
+ICMR_min=0.7
 
-# Paso 1: Cálculo de I5 y Pdiss
-I5=SR*Cl
-Pdiss=VDD*I5
-print("I5 = ", I5)
-print("Pdiss = ", Pdiss)
+# TRANSISTOR CANAL N
+Vthn=0.769464;
+'''
+Idn=500e-6;
+Vgsn=1.79985;
+Vdsn=1.79971;
+gmn=0.00053222
+Kn=(gmn*2)/(2*Idn*((W0)/(2*L0)))#(Id)/((W/(2*L))((Vgs-Vth)*2))
+lambda_n=((Idn/(Kn*((W0)/(2*L0))*(Vgsn-Vthn)*2))-1)/Vdsn;
+'''
+Kn=0.00015137603990044484 
+lambda_n=0.08896373280684104
 
-# Paso 2: Cálculo de gm1, gm2, W1 y W2
-gm=GB*Cl
-W1_L1=(gm**2)/(Kn*I5)
-W1=W1_L1*L
-print("W1 = W2 = ", W1)
+# TRANSISTOR CANAL P
+Vthp=0.51;
+'''
+Idp=200e-6;
+Vgsp=1.79;
+Vdsp=1.8;
+gmp=0.000238192
+Kp=(gmp*2)/(2*Idp*((W0)/(2*L0)))#(Idp)/((Wp/(2*Lp))((Vgsp-Vthp)*2));
+lambda_p=abs(((Idp/(Kp*((W0)/(2*L0))*(abs(Vgsp)-Vthp)*2))-1)/Vdsp)
+'''
+Kp=0.000057013889055450486
+lambda_p=0.06896373280684104
 
-# Paso 3: Cálculo de W3 y W4
-W3_L3=I5/(Kp*(VDD-ICMR-(abs(Vth_p))+Vth_p)**2)
-W3=W3_L3*L
-print("W3 = W4 = ", W3)
+# Paso 1
+I5=SR*Cl/(1e-6);
+print("I5=", I5*1e6,'uA')
+Pdiss=VDD*I5;
+print("Pdiss=", Pdiss)
 
-# Paso 4: Cálculo de W5
-Vgs1=sqrt((2*I5)/(Kn*W1_L1))+Vth_n
-W5_L5=(2*I5)/(Kn*((1-Vgs1)**2))
-W5=W5_L5*L
-print("W5 = ", W5)
+# Paso 2
+gm=GB*Cl;
+W1_L1=(gm**2)/(Kn*I5); #W1_L1=W1/L;
+W1=W1_L1*L0;
+W2=W1;
 
-# Paso 5: Cálculo de la ganancia
-A0 = (2*gm)/((lambda_n+lambda_p)*I5)
-print("A0 = ", A0)
+# Paso 3
+W3_L3=I5/(Kp*(VDD-ICMR-(abs(Vthp))+Vthn)**2);
+W3=W3_L3*L0;
+W4=W3;
+
+# Paso 4    
+Vgs1=sqrt(I5/(Kn*W1_L1))+Vthn;
+W5_L5=(2*I5)/(Kn*(ICMR_min-Vgs1)**2);
+W5=W5_L5*L0;
+
+print("W1",W1*1e6,'um')
+print("W2",W2*1e6,'um')
+print("W3",W3*1e6,'um')
+print("W4",W4*1e6,'um')
+print("W5",W5*1e6,'um')
+
+
+print(".param W1=",round(W1*1e6,3))
+print(".param W3=",round(W3*1e6,3))
+print(".param W5=",round(W5*1e6,3))
+print(".param W6=",round(W5*1e6,3))

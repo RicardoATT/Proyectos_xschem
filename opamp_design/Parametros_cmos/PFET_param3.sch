@@ -107,7 +107,7 @@ C {sky130_fd_pr/corner.sym} -880 -200 0 0 {name=CORNER only_toplevel=true corner
 C {devices/code_shown.sym} -900 170 0 0 {name=Vth_Kl_Ks
 only_toplevel=false 
 value="
-.dc V2 0 1.8 1m
+.dc V2 0.85 1.8 1m
 .control
 	run
 	plot i(Vmeas1) i(Vmeas2) i(Vmeas3) i(Vmeas4) i(Vmeas5) i(Vmeas6)
