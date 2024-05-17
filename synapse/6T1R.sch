@@ -12,7 +12,7 @@ lab=#net1}
 N -80 -60 -80 -40 {
 lab=#net1}
 N -300 20 -300 60 {
-lab=#net2}
+lab=BE}
 N -300 120 -300 140 {
 lab=GND}
 N -300 140 -80 140 {
@@ -20,11 +20,11 @@ lab=GND}
 N -80 120 -80 140 {
 lab=GND}
 N -80 20 -80 60 {
-lab=#net3}
+lab=TE}
 N -300 40 -220 40 {
-lab=#net2}
+lab=BE}
 N -160 40 -80 40 {
-lab=#net3}
+lab=TE}
 N -40 90 -30 90 {
 lab=Vpre}
 N -40 -10 -20 -10 {
@@ -63,21 +63,33 @@ N -90 -10 -80 -10 {
 lab=GND}
 N -90 -10 -90 90 {
 lab=GND}
-N -250 -170 -240 -170 {
+N -30 -110 -20 -110 {
 lab=VDD}
-N -240 -200 -240 -170 {
+N -20 -140 -20 -110 {
 lab=VDD}
-N -250 -200 -240 -200 {
+N -30 -140 -20 -140 {
 lab=VDD}
-N -250 -140 -250 -120 {
+N -30 -80 -30 -60 {
+lab=Ipos}
+N -30 -160 -30 -140 {
+lab=VDD}
+N -110 -110 -110 -60 {
+lab=#net1}
+N -190 -160 -190 -140 {
 lab=Ipre}
-N -250 -220 -250 -200 {
+N -190 -80 -190 -60 {
+lab=#net1}
+N -200 -110 -190 -110 {
 lab=VDD}
-N -250 -240 -250 -220 {
+N -200 -150 -200 -110 {
 lab=VDD}
-N -310 -170 -290 -170 {}
-N -300 -170 -300 -60 {}
-C {sky130_fd_pr/nfet_01v8.sym} -320 -10 0 0 {name=M1
+N -200 -150 -30 -150 {
+lab=VDD}
+N -110 -110 -70 -110 {
+lab=#net1}
+N -150 -110 -110 -110 {
+lab=#net1}
+C {sky130_fd_pr/nfet_01v8.sym} -320 -10 2 1 {name=M1
 L=0.15
 W=1
 nf=1 
@@ -91,39 +103,11 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/rram_v0.sym} -190 40 1 0 {name=R1
+C {sky130_fd_pr/rram_v0.sym} -190 40 3 0 {name=R1
 model=rram_v0
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8.sym} -320 90 0 0 {name=M2
-L=0.15
-W=1
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_01v8.sym} -60 -10 0 1 {name=M3
-L=0.15
-W=1
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_01v8.sym} -60 90 0 1 {name=M4
+C {sky130_fd_pr/nfet_01v8.sym} -60 -10 2 0 {name=M3
 L=0.15
 W=1
 nf=1 
@@ -140,8 +124,8 @@ spiceprefix=X
 C {devices/ipin.sym} -370 -10 0 0 {name=p1 lab=Vpre}
 C {devices/ipin.sym} -370 90 0 0 {name=p2 lab=Vpos}
 C {devices/iopin.sym} -300 180 0 0 {name=p3 lab=GND}
-C {devices/iopin.sym} -250 -120 1 0 {name=p4 lab=Ipre}
-C {sky130_fd_pr/pfet_01v8.sym} -270 -170 0 0 {name=M5
+C {devices/iopin.sym} -30 -60 0 0 {name=p4 lab=Ipos}
+C {sky130_fd_pr/pfet_01v8.sym} -50 -110 0 0 {name=M6
 L=1
 W=1
 nf=1
@@ -155,5 +139,50 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} -310 -170 2 0 {name=p5 lab=Ipos}
-C {devices/iopin.sym} -250 -240 0 0 {name=p6 lab=VDD}
+C {devices/iopin.sym} -190 -160 2 0 {name=p5 lab=Ipre}
+C {devices/iopin.sym} -30 -160 0 0 {name=p6 lab=VDD}
+C {sky130_fd_pr/pfet_01v8.sym} -170 -110 0 1 {name=M5
+L=1
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} -240 40 3 0 {name=p7 sig_type=std_logic lab=BE}
+C {devices/lab_pin.sym} -140 40 3 0 {name=p8 sig_type=std_logic lab=TE}
+C {sky130_fd_pr/nfet_01v8.sym} -320 90 2 1 {name=M2
+L=0.15
+W=1
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} -60 90 2 0 {name=M4
+L=0.15
+W=1
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} -200 -60 3 0 {name=p9 sig_type=std_logic lab=vipre}
