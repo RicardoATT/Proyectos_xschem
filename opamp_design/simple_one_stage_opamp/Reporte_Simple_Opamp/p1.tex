@@ -3,14 +3,66 @@
 \begin{center}
 	\begin{minipage}{12cm}
 		\begin{tcolorbox}[title=Actividad 1]
-			Emplear la siguiente metodología, propuesta por \cite{Allen_2012} para diseñar el amplificador de una etapa (Ver \autoref{fig:calculos_allen}).
+			Emplear la siguiente metodología, propuesta por \cite{Allen_2012} para diseñar el amplificador simple de una etapa (Ver \autoref{fig:calculos_allen}).
 		\end{tcolorbox}	
 	\end{minipage}
 \end{center}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Calculos_Allen.png}
 	\caption{Procedimiento de diseño. \label{fig:calculos_allen}}
 \end{figure}
+
+\begin{equation}
+	\begin{array}{l l}
+		\textbf{Parametros conocidos} \\
+		V_{DD} =  1.8  V \\
+		L_{min} =  150.0  nm \\
+		0.7 V \leq ICMR \leq 1.6 V \\
+		K'_{N} =  151.37604  \frac{\mu A}{V^{2}} \\
+		K'_{P} =  57.013889  \frac{\mu A}{V^{2}} \\
+		V_{TN} =  0.769464  V \\
+		V_{TP} =  0.51  V \\
+		\lambda_{N} =  0.088964  V^{-1} \\
+		\lambda_{P} =  0.068964  V^{-1} \\
+		C_{L} =  12.0  pF \\
+		\\
+		\textbf{Características deseadas} \\
+		A_{V} =  100  \frac{V}{V} \\
+		P_{diss} \leq  1  mW \\
+		GB =  10000000.0  MHz \\
+		SR \geq  3  \frac{V}{\mu s} \\
+		\\
+		\textbf{Paso 1} \\
+		I_{5} = SR \times C_{L} = 3\times1.2e-11
+		I_{5} =  36.0 \mu A \\
+		\\
+		\textbf{Paso 2} \\
+		g_{m} = 2\pi{} \times GB \times C_{L} = 2 \pi{} \times10000000.0\times 1.2e-11  \\
+		g_{m} =  753.982237  \mu S \\
+		\frac{W_1}{L_1} = \frac{gm^2}{K'_{N}\times I_5} = \frac{0.000754^2}{0.000151\times3.6e-05}\\
+		\frac{W_1}{L_1} =  104.31880139108173  \\
+		W_{1} = \frac{W_1}{L_1} \times L_{min} =  104.318801 \times 1.5e-07  \\
+		W_{1} = W_{2} =  15.64782  \mu m \\
+		\\
+		\textbf{Paso 3} \\
+		\frac{W_3}{L_3} = \frac{I_5}{K'_{P}\times \left[(V_{DD}-ICMR^{+}-|V_{TP}|+V_{TN}\right]^{2}} = \frac{ 3.6e-05 }{ 5.7e-05 \times \left[ 1.8 - 1.6 - 0.51 + 0.769464 \right]^{2}} \\
+		\frac{W_3}{L_3} =  2.9910168261696684  \\
+		W_{3} = \frac{W_3}{L_3} \times L_{min} =  2.991017 \times 1.5e-07  \\
+		W_{3} = W_{4} =  0.448653  \mu m \\
+		\\
+		\textbf{Paso 4} \\
+		v_{GS1} = \sqrt{\frac{I_{5}}{K'_{N}\times\frac{W_{1}}{L_{1}}}}+V_{TN} = \sqrt{\frac{ 3.6e-05 }{ 0.000151 \times 104.318801 }}+ 0.769464  \\
+		v_{GS1} =  0.8172104829275686  V \\
+		\frac{W_{5}}{L_{5}} = \frac{2\times I_{5}}{K'_{N}\times (ICMR^{-}-V_{{GS1}})^{2}} = \frac{2\times 3.6e-05 }{ 0.000151 \times ( 0.7 - 0.81721 )^{2}} \\
+		\frac{W_5}{L_5} =  34.62122625693465  \\
+		W_{5} = \frac{W_5}{L_5} \times L_{min} =  34.621226 \times 1.5e-07  \\
+		W_{5} = W_{6} =  5.193184  \mu m \\
+		\\
+		\textbf{Paso 5} \\
+		A_0=2\frac{gm}{(\Lambda{}_n+\Lambda{}_p)I_5}&=2*\frac{0.00075}{(0.089+0.069)*4e-05} \\
+		\text{}&: 265.23506778946836 \\
+	\end{array}
+\end{equation}
 

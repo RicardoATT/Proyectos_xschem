@@ -127,6 +127,8 @@ N 180 40 320 40 {
 lab=VSS}
 N 320 -160 320 40 {
 lab=VSS}
+N -590 -280 -590 -260 {
+lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} -260 -110 0 0 {name=M1
 L=\{L0\}
 W=\{W1\}
@@ -250,7 +252,7 @@ value="
 .endc
 .save all
 "}
-C {sky130_fd_pr/corner.sym} -730 -370 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {sky130_fd_pr/corner.sym} -540 -370 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/lab_pin.sym} 320 -240 1 0 {name=p10 sig_type=std_logic lab=Vout}
 C {devices/res.sym} 320 -190 0 0 {name=RL
 value=100k
@@ -263,3 +265,4 @@ value=100k
 footprint=1206
 device=resistor
 m=1}
+C {devices/gnd.sym} -590 -280 2 0 {name=l7 lab=GND}

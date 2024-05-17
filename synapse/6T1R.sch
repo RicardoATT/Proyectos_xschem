@@ -6,11 +6,11 @@ V {}
 S {}
 E {}
 N -300 -60 -300 -40 {
-lab=#net1}
+lab=vipre}
 N -300 -60 -80 -60 {
-lab=#net1}
+lab=vipre}
 N -80 -60 -80 -40 {
-lab=#net1}
+lab=vipre}
 N -300 20 -300 60 {
 lab=BE}
 N -300 120 -300 140 {
@@ -74,11 +74,11 @@ lab=Ipos}
 N -30 -160 -30 -140 {
 lab=VDD}
 N -110 -110 -110 -60 {
-lab=#net1}
+lab=vipre}
 N -190 -160 -190 -140 {
 lab=Ipre}
 N -190 -80 -190 -60 {
-lab=#net1}
+lab=vipre}
 N -200 -110 -190 -110 {
 lab=VDD}
 N -200 -150 -200 -110 {
@@ -86,12 +86,12 @@ lab=VDD}
 N -200 -150 -30 -150 {
 lab=VDD}
 N -110 -110 -70 -110 {
-lab=#net1}
+lab=vipre}
 N -150 -110 -110 -110 {
-lab=#net1}
+lab=vipre}
 C {sky130_fd_pr/nfet_01v8.sym} -320 -10 2 1 {name=M1
 L=0.15
-W=1
+W=15
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -103,13 +103,13 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/rram_v0.sym} -190 40 3 0 {name=R1
+C {sky130_fd_pr/rram_v0.sym} -190 40 1 0 {name=R1
 model=rram_v0
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -60 -10 2 0 {name=M3
 L=0.15
-W=1
+W=15
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -126,8 +126,8 @@ C {devices/ipin.sym} -370 90 0 0 {name=p2 lab=Vpos}
 C {devices/iopin.sym} -300 180 0 0 {name=p3 lab=GND}
 C {devices/iopin.sym} -30 -60 0 0 {name=p4 lab=Ipos}
 C {sky130_fd_pr/pfet_01v8.sym} -50 -110 0 0 {name=M6
-L=1
-W=1
+L=0.15
+W=20
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -142,8 +142,8 @@ spiceprefix=X
 C {devices/iopin.sym} -190 -160 2 0 {name=p5 lab=Ipre}
 C {devices/iopin.sym} -30 -160 0 0 {name=p6 lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} -170 -110 0 1 {name=M5
-L=1
-W=1
+L=0.15
+W=20
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -159,7 +159,7 @@ C {devices/lab_pin.sym} -240 40 3 0 {name=p7 sig_type=std_logic lab=BE}
 C {devices/lab_pin.sym} -140 40 3 0 {name=p8 sig_type=std_logic lab=TE}
 C {sky130_fd_pr/nfet_01v8.sym} -320 90 2 1 {name=M2
 L=0.15
-W=1
+W=15
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -173,7 +173,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -60 90 2 0 {name=M4
 L=0.15
-W=1
+W=15
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

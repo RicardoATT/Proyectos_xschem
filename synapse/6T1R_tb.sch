@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 -640 -40 160 360 {flags=graph
-y1=2.2e-06
-y2=1.3e-05
+y1=2.48459e-05
+y2=0.000100146
 ypos1=0
 ypos2=2
 divy=5
@@ -28,8 +28,8 @@ logy=0
 color=4
 node=i(vread1)}
 B 2 160 -40 960 360 {flags=graph
-y1=-110
-y2=270000
+y1=6630.09
+y2=24176.2
 ypos1=0
 ypos2=2
 divy=5
@@ -90,12 +90,14 @@ lab=GND}
 N -80 -180 -80 -160 {
 lab=GND}
 N -360 -220 -340 -220 {
-lab=pulse}
-N -360 -240 -360 -220 {
-lab=pulse}
+lab=VDD}
 N -220 -240 -80 -240 {
 lab=prepos}
-C {devices/vsource.sym} -560 -210 0 0 {name=V2 value="PULSE(0 1.8 1n 1n 1n 50n 100n 50)"}
+N -360 -290 -360 -220 {
+lab=VDD}
+N -360 -290 -280 -290 {
+lab=VDD}
+C {devices/vsource.sym} -560 -210 0 0 {name=V2 value="PULSE(0 1.8 1n 1n 1n 100n 200n 50)"}
 C {devices/gnd.sym} -280 -160 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -280 -300 0 0 {name=l2 lab=VDD}
 C {devices/gnd.sym} -560 -160 0 0 {name=l3 lab=GND}
@@ -116,7 +118,7 @@ only_toplevel=true
 value="
 .control
   save all
-  tran 1n 5u
+  tran 1n 20u
   write 6T1R_tb.raw
 .endc
 " }
