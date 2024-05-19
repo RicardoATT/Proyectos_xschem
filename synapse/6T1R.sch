@@ -75,8 +75,6 @@ N -30 -160 -30 -140 {
 lab=VDD}
 N -110 -110 -110 -60 {
 lab=vipre}
-N -190 -160 -190 -140 {
-lab=Ipre}
 N -190 -80 -190 -60 {
 lab=vipre}
 N -200 -110 -190 -110 {
@@ -89,6 +87,8 @@ N -110 -110 -70 -110 {
 lab=vipre}
 N -150 -110 -110 -110 {
 lab=vipre}
+N -190 -150 -190 -140 {
+lab=VDD}
 C {sky130_fd_pr/nfet_01v8.sym} -320 -10 2 1 {name=M1
 L=0.15
 W=15
@@ -139,7 +139,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} -190 -160 2 0 {name=p5 lab=Ipre}
 C {devices/iopin.sym} -30 -160 0 0 {name=p6 lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} -170 -110 0 1 {name=M5
 L=0.15
