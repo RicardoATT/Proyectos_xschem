@@ -26,8 +26,6 @@ Lambda_p = 0.06896373280684104
 # Paso 1
 I5=SR*Cl/(1e-6)
 print("I5=", I5*1e6,'uA')
-Pdiss=VDD*I5
-print("Pdiss=", Pdiss)
 
 # Paso 2
 gm=GB*Cl
@@ -48,6 +46,20 @@ W5=W5_L5*L0
 # Paso 5
 A0=(2*gm)/((Lambda_n+Lambda_p)*I5)
 A0_db=20*log10(A0)
+
+# Calculo de Av
+Datos_Av = np.loadtxt('simple_one_stage_opamp_sr.ssv')
+
+# Cálculo de GB
+Datos_GB = np.loadtxt('simple_one_stage_opamp_gb.ssv')
+
+# Cálculo de Pdiss
+Pdiss=VDD*I5
+
+# Cálculo de SR
+Datos_SR = np.loadtxt('simple_one_stage_opamp_sr.ssv')
+X = Datos_SR[50007:50016, 0]
+Y = Datos_SR[50007:50016, 1]
 
 print("W1",W1*1e6,'um')
 print("W2",W2*1e6,'um')
