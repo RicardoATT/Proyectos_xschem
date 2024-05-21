@@ -1,5 +1,6 @@
 from math import sqrt
 from math import pi
+from math import log10
 import numpy as np 
 
 #Datos propuestos:
@@ -46,6 +47,7 @@ W5=W5_L5*L0
 
 # Paso 5
 A0=(2*gm)/((Lambda_n+Lambda_p)*I5)
+A0_db=20*log10(A0)
 
 print("W1",W1*1e6,'um')
 print("W2",W2*1e6,'um')
@@ -105,11 +107,11 @@ print("\\frac{W_{5}}{L_{5}} = \\frac{2\\times I_{5}}{K'_{N}\\times (ICMR^{-}-V_{
 print("\\frac{W_5}{L_5} = ",W5_L5," \\\\")
 print("W_{5} = \\frac{W_5}{L_5} \\times L_{min} = ",round(W5_L5, 6),"\\times",L0," \\\\")
 print("W_{5} = W_{6} = ",round(W5*1e6, 6)," \\mu m \\\\")
-
+    
 print("\\\\")
 print("\\textbf{Paso 5} \\\\")
-print("A_0=2\\frac{gm}{(\\Lambda{}_n+\\Lambda{}_p)I_5}&=2*\\frac{"+str(round(gm,5))+"}{("+str(round(Lambda_n,3))+"+"+str(round(Lambda_p,3))+")*"+str(round(I5,5))+"}",'\\\\')
-print("\\text{}&:",A0,'\\\\')
+print("A_{0} = \\frac{2g_{m}}{(\\lambda_{N}+\\lambda_{P})\\times I_{5}} = \\frac{2\\times",round(gm, 6),"}{(",round(Lambda_n, 6),"+",round(Lambda_p, 6),")\\times",round(I5, 6),"} \\\\")
+print("A_{0} = ",round(A0, 6)," = ",round(A0_db, 6)," db \\\\")
 
 print(" \\end{array}")
 print("\\end{equation}")

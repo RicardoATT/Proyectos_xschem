@@ -43,8 +43,6 @@ N 300 -310 300 -210 {
 lab=#net1}
 N 280 -310 300 -310 {
 lab=#net1}
-N 240 -180 240 -80 {
-lab=#net2}
 N 350 -160 350 -140 {
 lab=rc}
 N 350 -80 350 -0 {
@@ -62,7 +60,7 @@ lab=GND}
 N 450 -130 460 -130 {
 lab=GND}
 N 120 -370 140 -370 {
-lab=#net3}
+lab=#net2}
 N 450 -220 450 -190 {
 lab=u}
 N 450 0 670 0 {
@@ -128,15 +126,15 @@ lab=#net1}
 N 800 -260 900 -260 {
 lab=#net1}
 N 880 -110 880 -90 {
-lab=#net4}
+lab=#net3}
 N 800 -110 880 -110 {
-lab=#net4}
+lab=#net3}
 N 800 -130 800 -110 {
-lab=#net4}
+lab=#net3}
 N 880 -110 960 -110 {
-lab=#net4}
+lab=#net3}
 N 960 -130 960 -110 {
-lab=#net4}
+lab=#net3}
 N 960 -260 1060 -260 {
 lab=Vout}
 N 1060 -260 1080 -260 {
@@ -163,12 +161,6 @@ N 880 0 970 0 {
 lab=GND}
 N 230 -210 240 -210 {
 lab=GND}
-N 230 -210 230 -140 {
-lab=GND}
-N 230 -140 250 -140 {
-lab=GND}
-N 250 -140 250 -50 {
-lab=GND}
 N 450 -220 560 -220 {
 lab=u}
 N 350 -160 410 -160 {
@@ -188,7 +180,7 @@ lab=Vb1}
 N 80 0 240 -0 {
 lab=GND}
 N 140 -370 520 -370 {
-lab=#net3}
+lab=#net2}
 N 800 -260 800 -190 {
 lab=#net1}
 N 800 -340 820 -340 {
@@ -202,13 +194,25 @@ lab=u}
 N 560 -220 560 -80 {
 lab=u}
 N 80 -340 80 -80 {
-lab=#net3}
+lab=#net2}
 N 140 -370 140 -320 {
-lab=#net3}
+lab=#net2}
 N 80 -320 140 -320 {
-lab=#net3}
-N 920 -60 1040 -60 {}
-N 1040 -260 1040 -60 {}
+lab=#net2}
+N 920 -60 1040 -60 {
+lab=Vout}
+N 1040 -260 1040 -60 {
+lab=Vout}
+N 250 -170 250 -50 {
+lab=GND}
+N 230 -170 250 -170 {
+lab=GND}
+N 230 -210 230 -170 {
+lab=GND}
+N 240 -90 240 -80 {
+lab=#net4}
+N 240 -180 240 -150 {
+lab=#net5}
 C {sky130_fd_pr/nfet_01v8.sym} 60 -50 0 0 {name=M1
 L=1
 W=0.6
@@ -386,3 +390,4 @@ spiceprefix=X
 C {devices/opin.sym} 1080 -260 0 0 {name=p8 lab=Vout}
 C {devices/lab_pin.sym} 560 -230 0 0 {name=p2 sig_type=std_logic lab=u}
 C {devices/lab_pin.sym} 330 -160 1 0 {name=p4 sig_type=std_logic lab=rc}
+C {devices/vsource.sym} 240 -120 0 1 {name=vread3 value=1e-4}

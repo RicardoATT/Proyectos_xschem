@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 B 2 -700 -80 100 320 {flags=graph
-y1=0.31
+y1=-0.21
 y2=1.8
 ypos1=0
 ypos2=2
@@ -14,7 +14,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=2e-05
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -29,15 +29,15 @@ logx=0
 logy=0
 }
 B 2 -700 320 100 720 {flags=graph
-y1=-2.5e-07
-y2=1.4e-05
+y1=-9.04571e-08
+y2=1.38525e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=2e-05
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -52,20 +52,20 @@ color="6 7"
 node="\\"im1 (A);i(vread1)\\"
 \\"im2 (A);i(vread2)\\""}
 B 2 100 320 900 720 {flags=graph
-y1=271019
-y2=342399
+y1=-5.15024e-07
+y2=1.15538e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=2e-05
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="\\"M [ohms];vout 0 - i(vread1) /\\""
+node="\\"Ibias [ohms]; i(v.x1.vread3)\\""
 color=10
 dataset=-1
 unitx=1
@@ -73,15 +73,15 @@ logx=0
 logy=0
 }
 B 2 -700 720 100 1120 {flags=graph
-y1=4.15121
-y2=4.15473
+y1=4.1
+y2=4.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=2e-05
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -197,7 +197,7 @@ only_toplevel=true
 value="
 .control
   save all
-  tran 1n 20u
+  tran 10n 100u
   write STDP_1_LIF.raw
 .endc
 " }
@@ -215,7 +215,7 @@ C {devices/vdd.sym} -580 -560 0 0 {name=l9 lab=VDD}
 C {devices/lab_pin.sym} -700 -470 0 0 {name=p4 sig_type=std_logic lab=vin}
 C {devices/lab_pin.sym} -690 -420 0 0 {name=p5 sig_type=std_logic lab=vb1}
 C {devices/lab_pin.sym} -690 -400 0 0 {name=p8 sig_type=std_logic lab=vb2}
-C {devices/vsource.sym} 20 -170 0 0 {name=V3 value=0.8}
+C {devices/vsource.sym} 20 -170 0 0 {name=V3 value=0.4}
 C {devices/gnd.sym} 20 -120 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 20 -220 2 0 {name=p9 sig_type=std_logic lab=vb2}
 C {devices/lab_pin.sym} -420 -470 1 0 {name=p10 sig_type=std_logic lab=vout2}
