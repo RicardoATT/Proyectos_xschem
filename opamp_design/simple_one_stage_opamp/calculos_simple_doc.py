@@ -10,17 +10,17 @@ Cl = 12e-12
 AV = 100 
 VDD = 1.8
 GB = 2*pi*(10e6)
-SR = 3
+SR = 5
 ICMR_max = 1.6   #Vin(max) 
 ICMR_min = 0.7   #Vin(min) 
 
 # Transistor canal N
-Vthn = 0.769464
+Vthn = 0.769432
 Kn = 0.00015137603990044484 
 Lambda_n = 0.08896373280684104
 
 # Transistor canal P
-Vthp = 0.51
+Vthp = 0.624345
 Kp = 0.000057013889055450486
 Lambda_p = 0.06896373280684104
 

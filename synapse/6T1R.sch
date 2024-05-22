@@ -103,7 +103,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/rram_v0.sym} -190 40 3 0 {name=R1
+C {sky130_fd_pr/rram_v0.sym} -190 40 1 0 {name=R1
 model=rram_v0
 spiceprefix=X
 }

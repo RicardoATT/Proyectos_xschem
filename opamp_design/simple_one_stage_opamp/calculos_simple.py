@@ -5,22 +5,22 @@ import math
 import numpy as np 
 
 #Datos propuestos:
-L0 = 0.45e-6
+L0 = 0.15e-6
 Cl = 12e-12
 AV = 100 
 VDD = 1.8
 GB = 2*pi*(10e6)
-SR = 3
+SR = 5
 ICMR_max = 1.6   #Vin(max) 
 ICMR_min = 0.7   #Vin(min) 
 
 # Transistor canal N
-Vthn = 0.769464
+Vthn = 0.769432
 Kn = 0.00015137603990044484 
 Lambda_n = 0.08896373280684104
 
 # Transistor canal P
-Vthp = 0.51
+Vthp = 0.624345
 Kp = 0.000057013889055450486
 Lambda_p = 0.06896373280684104
 
@@ -49,13 +49,13 @@ A0_db=20*log10(A0)
 
 # Calculo de Av
 Datos_Av = np.loadtxt('/home/ricardo/RATT_repos/Proyectos_xschem/simulations/simple_one_stage_opamp_av.ssv')
-X_Av = Datos_Av[0:1, 0]
-Av_final = X_Av[0]/(100e3*1.2e-8)
+Y_Av = Datos_Av[0:1, 1]
+Av_final = Y_Av[0]/(100e3*1.2e-6)
 
 # Cálculo de GB
 Datos_GB = np.loadtxt('/home/ricardo/RATT_repos/Proyectos_xschem/simulations/simple_one_stage_opamp_gb.ssv')
-X_GB = Datos_GB[7:9, 0]
-Y_GB = Datos_GB[7:9, 1]
+X_GB = Datos_GB[5:7, 0]
+Y_GB = Datos_GB[5:7, 1]
 m_GB = (Y_GB[1]-Y_GB[0])/(X_GB[1]-X_GB[0])
 b_GB = Y_GB[1]-(m_GB*X_GB[1])
 GB_final = (Y_GB[0]-3-b_GB)/m_GB
@@ -65,8 +65,8 @@ Pdiss=VDD*I5
 
 # Cálculo de SR
 Datos_SR = np.loadtxt('/home/ricardo/RATT_repos/Proyectos_xschem/simulations/simple_one_stage_opamp_sr.ssv')
-X = Datos_SR[49997:50113, 0]
-Y = Datos_SR[49997:50113, 1]
+X = Datos_SR[49997:50018, 0]
+Y = Datos_SR[49997:50018, 1]
 x_bias1 = np.c_[np.ones(X.shape[0]), X]
 # Calculo de la pendiente para el SR -> theta = (X^T * X)^-1 * X^T * y
 theta = np.linalg.inv(x_bias1.T @ x_bias1) @ x_bias1.T @ Y
@@ -91,8 +91,8 @@ print("\\\\")
 print("\\textbf{Características deseadas} \\\\")
 print("A_{V} = ",AV," \\frac{V}{V} \\\\")
 print("P_{diss} \leq ",1," mW \\\\")
-print("GB = ",10," MHz \\\\")
-print("SR \\geq ",3," \\frac{V}{\\mu s} \\\\")
+print("GB = ",round(GB/(2*pi*1e6), 6)," MHz \\\\")
+print("SR \\geq ",SR," \\frac{V}{\\mu s} \\\\")
 
 print("\\\\")
 print("\\textbf{Paso 1} \\\\")
@@ -101,7 +101,7 @@ print("I_{5} = ",round(I5*1e6, 6),"\\mu A \\\\")
 
 print("\\\\")
 print("\\textbf{Paso 2} \\\\")
-print("g_{m} = 2\\pi{} \\times GB \\times C_{L} = 2 \\pi{} \\times"+str(10e6)+"\\times",Cl," \\\\")
+print("g_{m} = 2\\pi{} \\times GB \\times C_{L} = 2 \\pi{} \\times"+str(GB/(2*pi))+"\\times",Cl," \\\\")
 print("g_{m} = ",round(gm*1e6, 6)," \\mu S \\\\")
 print("\\frac{W_1}{L_1} = \\frac{gm^2}{K'_{N}\\times I_5} = \\frac{"+str(round(gm, 6))+"^2}{"+str(round(Kn, 6))+"\\times"+str(round(I5, 6))+"}\\\\")
 print("\\frac{W_1}{L_1} = ",round(W1_L1, 6)," \\\\")
@@ -138,12 +138,12 @@ print("L_{1} = L_{2} = L_{3} = L_{4} = L_{5} = L_{6} =",round(L0*1e6, 6),' \\mu 
 
 print("\\\\")
 print("\\textbf{Resultados obtenidos de la simulación} \\\\")
-print("A_{V} = \\frac{A_{V}(0)}{R \\times C} = \\frac{",round(X_Av[0], 6),"}{",100e3,"\\times",12e-9,"} \\\\")
+print("A_{V} = \\frac{A_{V}(0)}{R \\times C} = \\frac{",round(Y_Av[0], 6),"}{",100e3,"\\times",12e-9,"} \\\\")
 print("A_{V} = ",round(Av_final, 6)," \\\\")
 print("P_{diss} = V_{DD} \\times I_{5} = ",1.8,"\\times",round(I5,6)," \\\\")
 print("P_{diss} = ",round(Pdiss*1e3, 6)," mW \\\\")
-print("GB = ",round(GB_final*1e-6, 6)," MHz \\\\")
-print("Slew Rate = ",round(theta[1]*1e-7, 6),"\\frac{V}{\\mu s} \\\\")
+print("GB = ",round(GB_final*1e-3, 6)," KHz \\\\")
+print("Slew Rate = ",round(theta[1]*1e-8, 6),"\\frac{V}{\\mu s} \\\\")
 
 print(" \\end{array}")
 print("\\end{equation}")

@@ -42,7 +42,7 @@ C {devices/lab_pin.sym} -710 -340 2 0 {name=p4 sig_type=std_logic lab=Vinp}
 C {devices/vsource.sym} -770 -290 0 0 {name=V4 value=0}
 C {devices/gnd.sym} -770 -240 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -770 -340 2 0 {name=p6 sig_type=std_logic lab=VSS}
-C {devices/code_shown.sym} -470 -410 0 0 {name=SPICE
+C {devices/code_shown.sym} -340 -550 0 0 {name=SPICE
 value="
 .control
 	tran 0.1n 15u
@@ -53,7 +53,7 @@ value="
 .endc
 .save all
 "}
-C {sky130_fd_pr/corner.sym} -490 -560 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {sky130_fd_pr/corner.sym} -460 -560 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/lab_pin.sym} -580 -480 2 0 {name=p10 sig_type=std_logic lab=Vout}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/simple_one_stage_opamp/simple_one_stage_opamp.sym} -420 -240 0 0 {name=x1}
 C {devices/lab_pin.sym} -700 -390 2 0 {name=p7 sig_type=std_logic lab=VSS}

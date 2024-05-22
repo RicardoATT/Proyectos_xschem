@@ -14,7 +14,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -28,37 +28,38 @@ logx=0
 logy=0
 }
 B 2 -700 320 100 720 {flags=graph
-y1=-2e-07
-y2=6.4e-05
+y1=-8.1e-07
+y2=5.4e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 node="\\"im1 (A);i(vread1)\\"
-\\"im1 (A);i(vread2)\\""
-color="10 6"
+
+i(vmeas)"
+color="10 8"
 dataset=-1
 unitx=1
 logx=0
 logy=0
 }
 B 2 100 320 900 720 {flags=graph
-y1=-67163.4
-y2=378384
+y1=-43413.6
+y2=1.54867e+06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -71,15 +72,15 @@ logx=0
 logy=0
 }
 B 2 -700 720 100 1120 {flags=graph
-y1=2.8
-y2=4
+y1=2.6
+y2=3.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -126,36 +127,38 @@ N -320 -150 -260 -150 {
 lab=#net2}
 N -680 -150 -670 -150 {
 lab=vb1}
-N -860 -130 -860 -110 {
+N -880 -130 -880 -110 {
 lab=GND}
-N -740 -230 -740 -210 {
+N -760 -230 -760 -210 {
 lab=#net3}
-N -740 -210 -680 -210 {
+N -760 -260 -750 -260 {
+lab=VDD}
+N -750 -290 -750 -260 {
+lab=VDD}
+N -760 -290 -750 -290 {
+lab=VDD}
+N -840 -260 -800 -260 {
+lab=#net4}
+N -880 -290 -760 -290 {
+lab=VDD}
+N -890 -260 -880 -260 {
+lab=VDD}
+N -890 -290 -890 -260 {
+lab=VDD}
+N -890 -290 -880 -290 {
+lab=VDD}
+N -880 -230 -880 -210 {
+lab=#net4}
+N -880 -210 -820 -210 {
+lab=#net4}
+N -820 -260 -820 -210 {
+lab=#net4}
+N -880 -210 -880 -190 {
+lab=#net4}
+N -700 -210 -680 -210 {
 lab=#net3}
-N -740 -260 -730 -260 {
-lab=VDD}
-N -730 -290 -730 -260 {
-lab=VDD}
-N -740 -290 -730 -290 {
-lab=VDD}
-N -820 -260 -780 -260 {
-lab=#net4}
-N -860 -290 -740 -290 {
-lab=VDD}
-N -870 -260 -860 -260 {
-lab=VDD}
-N -870 -290 -870 -260 {
-lab=VDD}
-N -870 -290 -860 -290 {
-lab=VDD}
-N -860 -230 -860 -210 {
-lab=#net4}
-N -860 -210 -800 -210 {
-lab=#net4}
-N -800 -260 -800 -210 {
-lab=#net4}
-N -860 -210 -860 -190 {
-lab=#net4}
+N -760 -210 -700 -210 {
+lab=#net3}
 C {devices/gnd.sym} -580 -120 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -580 -300 0 0 {name=l3 lab=VDD}
 C {devices/vsource.sym} 140 -160 0 0 {name=V1 value=1.8}
@@ -196,10 +199,10 @@ C {devices/gnd.sym} -180 -110 0 0 {name=l12 lab=GND}
 C {devices/vsource.sym} -350 -150 1 0 {name=vread2 value=1e-4}
 C {devices/gnd.sym} -380 -130 0 0 {name=l9 lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} -340 -130 0 0 {name=x1}
-C {devices/vdd.sym} -800 -290 0 0 {name=l8 lab=VDD}
-C {devices/isource.sym} -860 -160 0 1 {name=I0 value=3u}
-C {devices/gnd.sym} -860 -110 0 0 {name=l11 lab=GND}
-C {sky130_fd_pr/pfet_01v8.sym} -760 -260 0 0 {name=M1
+C {devices/vdd.sym} -820 -290 0 0 {name=l8 lab=VDD}
+C {devices/isource.sym} -880 -160 0 1 {name=I0 value="PULSE(0 3u 1n 1n 1n 2.5u 5u 10)"}
+C {devices/gnd.sym} -880 -110 0 0 {name=l11 lab=GND}
+C {sky130_fd_pr/pfet_01v8.sym} -780 -260 0 0 {name=M1
 L=0.15
 W=1
 nf=1
@@ -213,7 +216,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8.sym} -840 -260 0 1 {name=M2
+C {sky130_fd_pr/pfet_01v8.sym} -860 -260 0 1 {name=M2
 L=0.15
 W=1
 nf=1

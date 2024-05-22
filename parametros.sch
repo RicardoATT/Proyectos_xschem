@@ -29,10 +29,21 @@ N -160 -170 -150 -170 {
 lab=#net2}
 C {devices/vsource.sym} -260 -90 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/gnd.sym} -260 -40 0 0 {name=l1 lab=GND}
+C {devices/vsource.sym} -60 -150 0 0 {name=V2 value=0.9 savecurrent=false}
+C {devices/code_shown.sym} 0 -170 0 0 {name=NGSPICE
+only_toplevel=true
+value="
+.control
+	dc v1 0 1.8 0.001
+	plot -i(v2)
+.endc
+.save all
+" }
+C {sky130_fd_pr/corner.sym} 170 -170 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {sky130_fd_pr/pfet_01v8.sym} -180 -140 0 0 {name=M1
 L=0.15
 W=1
-nf=1 
+nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -43,14 +54,3 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/vsource.sym} -60 -150 0 0 {name=V2 value=0.9 savecurrent=false}
-C {devices/code_shown.sym} 0 -170 0 0 {name=NGSPICE
-only_toplevel=true
-value="
-.control
-	dc v1 0 3 0.01
-	plot -i(v2)
-.endc
-.save all
-" }
-C {sky130_fd_pr/corner.sym} 170 -170 0 0 {name=CORNER only_toplevel=true corner=tt}

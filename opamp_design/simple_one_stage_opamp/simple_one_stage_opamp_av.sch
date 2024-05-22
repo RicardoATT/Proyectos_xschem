@@ -59,13 +59,13 @@ N -280 -790 -280 -730 {
 lab=VSS}
 N -420 -730 -280 -730 {
 lab=VSS}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -420 -820 0 0 {name=CL model=cap_mim_m3_1 W=5040000 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -420 -820 0 0 {name=CL model=cap_mim_m3_1 W=504000000 L=1 MF=1 spiceprefix=X}
 C {devices/res.sym} -280 -820 0 0 {name=RL
 value=100k
 footprint=1206
 device=resistor
 m=1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -620 -780 0 0 {name=CL1 model=cap_mim_m3_1 W=5040000 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -620 -780 0 0 {name=CL1 model=cap_mim_m3_1 W=504000000 L=1 MF=1 spiceprefix=X}
 C {devices/res.sym} -570 -1000 1 0 {name=RL1
 value=100k
 footprint=1206
@@ -85,7 +85,7 @@ C {devices/lab_pin.sym} -470 -670 2 0 {name=p13 sig_type=std_logic lab=Vinp}
 C {devices/vsource.sym} -590 -620 0 0 {name=V8 value=0}
 C {devices/gnd.sym} -590 -570 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} -590 -670 2 0 {name=p14 sig_type=std_logic lab=VSS}
-C {devices/code_shown.sym} -220 -860 0 0 {name=SPICE1 only_toplevel=false 
+C {devices/code_shown.sym} -110 -1010 0 0 {name=SPICE1 only_toplevel=false 
 value=".ac dec 0.0001 1 1000k
 .control
 	run

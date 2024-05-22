@@ -31,6 +31,10 @@ N -500 -200 -480 -200 {
 lab=Vout}
 N -580 -150 -580 -120 {
 lab=VSS}
+N -580 -130 -480 -130 {
+lab=VSS}
+N -480 -200 -480 -190 {
+lab=Vout}
 C {devices/vdd.sym} -580 -270 0 0 {name=l2 lab=VDD}
 C {devices/vsource.sym} -710 -10 0 0 {name=V1 value=1.8}
 C {devices/vdd.sym} -710 -60 0 0 {name=l3 lab=VDD}
@@ -45,7 +49,7 @@ C {devices/lab_pin.sym} -530 -60 2 0 {name=p4 sig_type=std_logic lab=Vinp}
 C {devices/vsource.sym} -650 -10 0 0 {name=V4 value=0}
 C {devices/gnd.sym} -650 40 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -650 -60 2 0 {name=p6 sig_type=std_logic lab=VSS}
-C {devices/code_shown.sym} -360 -130 0 0 {name=SPICE only_toplevel=false 
+C {devices/code_shown.sym} -250 -270 0 0 {name=SPICE only_toplevel=false 
 value=".ac dec 0.0001 1 10000000k
 .control
 	run
@@ -63,3 +67,4 @@ C {devices/lab_pin.sym} -480 -200 2 0 {name=p10 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -680 -160 0 0 {name=p3 sig_type=std_logic lab=Vinn}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/simple_one_stage_opamp/simple_one_stage_opamp.sym} -300 40 0 0 {name=x1}
 C {devices/lab_pin.sym} -580 -120 2 0 {name=p7 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -480 -160 0 0 {name=CL model=cap_mim_m3_1 W=5040 L=1 MF=1 spiceprefix=X}
