@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.14)  20 MAY 2024 17:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.14)  21 MAY 2024 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1154,12 +1154,12 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count375
-<../ImgPortada/IPN_Logo.png, id=43, 3854.4pt x 2168.1pt>
+<../ImgPortada/IPN_Logo.png, id=51, 3854.4pt x 2168.1pt>
 File: ../ImgPortada/IPN_Logo.png Graphic file (type png)
 <use ../ImgPortada/IPN_Logo.png>
 Package pdftex.def Info: ../ImgPortada/IPN_Logo.png  used on input line 10.
 (pdftex.def)             Requested size: 96.33623pt x 54.18913pt.
-<../ImgPortada/MICROSE_Logo.png, id=44, 897.3525pt x 280.04625pt>
+<../ImgPortada/MICROSE_Logo.png, id=52, 897.3525pt x 280.04625pt>
 File: ../ImgPortada/MICROSE_Logo.png Graphic file (type png)
 <use ../ImgPortada/MICROSE_Logo.png>
 Package pdftex.def Info: ../ImgPortada/MICROSE_Logo.png  used on input line 10.
@@ -1171,7 +1171,7 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <20.74> not available
 (./Reporte_Simple_Opamp.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-<../ImgPortada/CIC_Logo.png, id=47, 426.59375pt x 309.155pt>
+<../ImgPortada/CIC_Logo.png, id=55, 426.59375pt x 309.155pt>
 File: ../ImgPortada/CIC_Logo.png Graphic file (type png)
 <use ../ImgPortada/CIC_Logo.png>
 Package pdftex.def Info: ../ImgPortada/CIC_Logo.png  used on input line 3.
@@ -1183,51 +1183,144 @@ Package pdftex.def Info: ../ImgPortada/CIC_Logo.png  used on input line 3.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../ImgPortada/CIC_Logo.png
-> <../ImgPortada/IPN_Logo.png> <../ImgPortada/MICROSE_Logo.png>])
-\tf@toc=\write5
-\openout5 = `Reporte_Simple_Opamp.toc'.
-
- [1] (./objetivos.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+> <../ImgPortada/IPN_Logo.png> <../ImgPortada/MICROSE_Logo.png>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 5.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)) [2] (./p1.tex
-<./img//Calculos_Allen.png, id=79, 890.32625pt x 432.61626pt>
+))
+\tf@toc=\write5
+\openout5 = `Reporte_Simple_Opamp.toc'.
+
+ [1]
+(./objetivos.tex) [2] (./p1.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+<./img//Calculos_Allen.png, id=89, 890.32625pt x 432.61626pt>
 File: ./img//Calculos_Allen.png Graphic file (type png)
 <use ./img//Calculos_Allen.png>
 Package pdftex.def Info: ./img//Calculos_Allen.png  used on input line 13.
 (pdftex.def)             Requested size: 445.16203pt x 216.3076pt.
+[3 <./img//Calculos_Allen.png>] [4]) [5] (./p2.tex
+<./img//SimpleOneStageOpAmp.png, id=112, 1312.905pt x 880.28876pt>
+File: ./img//SimpleOneStageOpAmp.png Graphic file (type png)
+<use ./img//SimpleOneStageOpAmp.png>
+Package pdftex.def Info: ./img//SimpleOneStageOpAmp.png  used on input line 13.
 
-[3 <./img//Calculos_Allen.png>] [4]) [5] (./conclusiones.tex) [6
+(pdftex.def)             Requested size: 459.52364pt x 308.10568pt.
+<./img//SimpleOneStageOpAmpAv.png, id=113, 1776.6375pt x 906.38625pt>
+File: ./img//SimpleOneStageOpAmpAv.png Graphic file (type png)
+<use ./img//SimpleOneStageOpAmpAv.png>
+Package pdftex.def Info: ./img//SimpleOneStageOpAmpAv.png  used on input line 1
+9.
+(pdftex.def)             Requested size: 479.69855pt x 244.72755pt.
 
-]
-(./Reporte_Simple_Opamp.bbl) [7] (./Reporte_Simple_Opamp.aux
+Overfull \hbox (7.66731pt too wide) in paragraph at lines 19--20
+ [][] 
+ []
+
+<./img//SimpleOneStageOpAmpAvWF.png, id=114, 1696.3375pt x 974.64125pt>
+File: ./img//SimpleOneStageOpAmpAvWF.png Graphic file (type png)
+<use ./img//SimpleOneStageOpAmpAvWF.png>
+Package pdftex.def Info: ./img//SimpleOneStageOpAmpAvWF.png  used on input line
+ 25.
+(pdftex.def)             Requested size: 474.97127pt x 272.89769pt.
+
+Overfull \hbox (2.94003pt too wide) in paragraph at lines 25--26
+ [][] 
+ []
+
+<./img//SimpleOneStageOpAmpGB.png, id=117, 1570.86874pt x 647.41875pt>
+File: ./img//SimpleOneStageOpAmpGB.png Graphic file (type png)
+<use ./img//SimpleOneStageOpAmpGB.png>
+Package pdftex.def Info: ./img//SimpleOneStageOpAmpGB.png  used on input line 3
+1.
+(pdftex.def)             Requested size: 471.26427pt x 194.22711pt.
+<./img//SimpleOneStageOpAmpGBWF.png, id=118, 1696.3375pt x 974.64125pt>
+File: ./img//SimpleOneStageOpAmpGBWF.png Graphic file (type png)
+<use ./img//SimpleOneStageOpAmpGBWF.png>
+Package pdftex.def Info: ./img//SimpleOneStageOpAmpGBWF.png  used on input line
+ 37.
+(pdftex.def)             Requested size: 474.97127pt x 272.89769pt.
+
+Overfull \hbox (2.94003pt too wide) in paragraph at lines 37--38
+ [][] 
+ []
+
+<./img//SimpleOneStageOpAmpSR.png, id=121, 1833.85126pt x 847.165pt>
+File: ./img//SimpleOneStageOpAmpSR.png Graphic file (type png)
+<use ./img//SimpleOneStageOpAmpSR.png>
+Package pdftex.def Info: ./img//SimpleOneStageOpAmpSR.png  used on input line 4
+3.
+(pdftex.def)             Requested size: 476.79008pt x 220.25769pt.
+
+Overfull \hbox (4.75885pt too wide) in paragraph at lines 43--44
+ [][] 
+ []
+
+<./img//SimpleOneStageOpAmpSRWF.png, id=122, 553.06625pt x 492.84125pt>
+File: ./img//SimpleOneStageOpAmpSRWF.png Graphic file (type png)
+<use ./img//SimpleOneStageOpAmpSRWF.png>
+Package pdftex.def Info: ./img//SimpleOneStageOpAmpSRWF.png  used on input line
+ 49.
+(pdftex.def)             Requested size: 387.14374pt x 344.98651pt.
+) [6
+
+ <./img//SimpleOneStageOpAmp.png>] [7 <./img//SimpleOneStageOpAmpAv.png> <./img
+//SimpleOneStageOpAmpAvWF.png>] [8 <./img//SimpleOneStageOpAmpGB.png> <./img//S
+impleOneStageOpAmpGBWF.png>] [9 <./img//SimpleOneStageOpAmpSR.png> <./img//Simp
+leOneStageOpAmpSRWF.png>] (./Reporte_Simple_Opamp.bbl) [10
+
+] (./anexos.tex
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 10.
+
+(../calculos_simple_doc.py [11])) [12] (./Reporte_Simple_Opamp.aux
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
 )
 Package rerunfilecheck Info: File `Reporte_Simple_Opamp.out' has not changed.
-(rerunfilecheck)             Checksum: 4C3B56E35726D892FF72D3AB6AF1AC2E;361.
+(rerunfilecheck)             Checksum: 10D63ABC6CC5FDB4FD0A0B592024701E;1113.
  ) 
 Here is how much of TeX's memory you used:
- 32486 strings out of 478287
- 626662 string characters out of 5849289
- 1012637 words of memory out of 5000000
- 50077 multiletter control sequences out of 15000+600000
- 477954 words of font info for 61 fonts, out of 8000000 for 9000
+ 33154 strings out of 478287
+ 634973 string characters out of 5849289
+ 1415885 words of memory out of 5000000
+ 50636 multiletter control sequences out of 15000+600000
+ 480583 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,12n,136p,488b,1081s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 92i,12n,136p,496b,2228s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -1240,11 +1333,12 @@ amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Reporte_Simple_Opamp.pdf (8 pages, 500378 bytes).
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Reporte_Simple_Opamp.pdf (13 pages, 891333 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 118 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 

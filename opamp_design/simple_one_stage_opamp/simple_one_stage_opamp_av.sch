@@ -59,13 +59,13 @@ N -280 -790 -280 -730 {
 lab=VSS}
 N -420 -730 -280 -730 {
 lab=VSS}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -420 -820 0 0 {name=CL model=cap_mim_m3_1 W=50000000 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -420 -820 0 0 {name=CL model=cap_mim_m3_1 W=5040000 L=1 MF=1 spiceprefix=X}
 C {devices/res.sym} -280 -820 0 0 {name=RL
 value=100k
 footprint=1206
 device=resistor
 m=1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -620 -780 0 0 {name=CL1 model=cap_mim_m3_1 W=50000000 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -620 -780 0 0 {name=CL1 model=cap_mim_m3_1 W=5040000 L=1 MF=1 spiceprefix=X}
 C {devices/res.sym} -570 -1000 1 0 {name=RL1
 value=100k
 footprint=1206
@@ -101,5 +101,5 @@ value=".ac dec 0.0001 1 1000k
 C {sky130_fd_pr/corner.sym} -230 -1010 0 0 {name=CORNER1 only_toplevel=true corner=tt}
 C {devices/lab_pin.sym} -280 -870 1 0 {name=p15 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -640 -830 0 0 {name=p16 sig_type=std_logic lab=Vinn}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/opamp_design/simple_one_stage_opamp/simple_one_stage_opamp.sym} -240 -630 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/simple_one_stage_opamp/simple_one_stage_opamp.sym} -240 -630 0 0 {name=x1}
 C {devices/lab_pin.sym} -620 -730 0 0 {name=p17 sig_type=std_logic lab=VSS}

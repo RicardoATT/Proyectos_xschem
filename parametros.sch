@@ -16,20 +16,20 @@ lab=#net2}
 N -160 -180 -160 -170 {
 lab=#net2}
 N -160 -140 -150 -140 {
-lab=GND}
-N -150 -140 -150 -110 {
-lab=GND}
-N -160 -110 -150 -110 {
-lab=GND}
+lab=#net2}
 N -260 -50 -60 -50 {
 lab=GND}
 N -60 -120 -60 -50 {
 lab=GND}
 N -160 -110 -160 -50 {
 lab=GND}
+N -150 -170 -150 -140 {
+lab=#net2}
+N -160 -170 -150 -170 {
+lab=#net2}
 C {devices/vsource.sym} -260 -90 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/gnd.sym} -260 -40 0 0 {name=l1 lab=GND}
-C {sky130_fd_pr/nfet_01v8.sym} -180 -140 0 0 {name=M1
+C {sky130_fd_pr/pfet_01v8.sym} -180 -140 0 0 {name=M1
 L=0.15
 W=1
 nf=1 
@@ -40,7 +40,7 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=nfet_01v8
+model=pfet_01v8
 spiceprefix=X
 }
 C {devices/vsource.sym} -60 -150 0 0 {name=V2 value=0.9 savecurrent=false}

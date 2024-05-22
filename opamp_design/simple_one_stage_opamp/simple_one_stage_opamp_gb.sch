@@ -61,5 +61,5 @@ value=".ac dec 0.0001 1 10000000k
 C {sky130_fd_pr/corner.sym} -370 -280 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/lab_pin.sym} -480 -200 2 0 {name=p10 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -680 -160 0 0 {name=p3 sig_type=std_logic lab=Vinn}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/opamp_design/simple_one_stage_opamp/simple_one_stage_opamp.sym} -300 40 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/simple_one_stage_opamp/simple_one_stage_opamp.sym} -300 40 0 0 {name=x1}
 C {devices/lab_pin.sym} -580 -120 2 0 {name=p7 sig_type=std_logic lab=VSS}
