@@ -89,7 +89,7 @@ N 70 0 190 0 {
 lab=#net4}
 N 190 200 190 210 {
 lab=GND}
-C {/home/ral298/Documentos/CIC/pruebas tesis/Pyspice/ota multiplicador/OTA_simb.sym} 70 0 0 0 {name=x1 W1_2=10 L1_2=1 WB_3_4=5 LB_3_4=1 W5_8=5 L5_8=1 W9_16=15 L9_16=1 Wms=1 Lms=8.5}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/OTA/OTA_simb.sym} 70 0 0 0 {name=x1 W1_2=10 L1_2=1 WB_3_4=5 LB_3_4=1 W5_8=5 L5_8=1 W9_16=15 L9_16=1 Wms=1 Lms=8.5}
 C {devices/vsource.sym} -200 0 0 0 {name=V5 value=0 savecurrent=false}
 C {devices/gnd.sym} -260 30 0 0 {name=l4 lab=GND}
 C {devices/vcvs.sym} -320 0 0 0 {name=E1 value=-1}
