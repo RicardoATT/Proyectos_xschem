@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 B 2 -700 -80 100 320 {flags=graph
-y1=-0.14
+y1=0.34
 y2=1.9
 ypos1=0
 ypos2=2
@@ -28,8 +28,8 @@ logx=0
 logy=0
 }
 B 2 -700 320 100 720 {flags=graph
-y1=-8.1e-07
-y2=5.4e-05
+y1=-1.6e-07
+y2=5.6e-05
 ypos1=0
 ypos2=2
 divy=5
@@ -43,8 +43,9 @@ xlabmag=1.0
 ylabmag=1.0
 node="\\"im1 (A);i(vread1)\\"
 
-i(vmeas)"
-color="10 8"
+i(vmeas)
+i(vmeas1)"
+color="10 8 6"
 dataset=-1
 unitx=1
 logx=0
@@ -127,7 +128,7 @@ N -320 -150 -260 -150 {
 lab=#net2}
 N -680 -150 -670 -150 {
 lab=vb1}
-N -880 -130 -880 -110 {
+N -880 -50 -880 -30 {
 lab=GND}
 N -760 -230 -760 -210 {
 lab=#net3}
@@ -156,9 +157,9 @@ lab=#net4}
 N -880 -210 -880 -190 {
 lab=#net4}
 N -700 -210 -680 -210 {
-lab=#net3}
-N -760 -210 -700 -210 {
-lab=#net3}
+lab=#net5}
+N -880 -130 -880 -110 {
+lab=#net6}
 C {devices/gnd.sym} -580 -120 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -580 -300 0 0 {name=l3 lab=VDD}
 C {devices/vsource.sym} 140 -160 0 0 {name=V1 value=1.8}
@@ -200,8 +201,8 @@ C {devices/vsource.sym} -350 -150 1 0 {name=vread2 value=1e-4}
 C {devices/gnd.sym} -380 -130 0 0 {name=l9 lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} -340 -130 0 0 {name=x1}
 C {devices/vdd.sym} -820 -290 0 0 {name=l8 lab=VDD}
-C {devices/isource.sym} -880 -160 0 1 {name=I0 value="PULSE(0 3u 1n 1n 1n 2.5u 5u 10)"}
-C {devices/gnd.sym} -880 -110 0 0 {name=l11 lab=GND}
+C {devices/isource.sym} -880 -80 0 1 {name=I0 value="PULSE(0 3u 1n 1n 1n 2.5u 5u 10)"}
+C {devices/gnd.sym} -880 -30 0 0 {name=l11 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -780 -260 0 0 {name=M1
 L=0.15
 W=1
@@ -230,3 +231,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
+C {devices/ammeter.sym} -880 -160 0 0 {name=Vmeas savecurrent=true}
+C {devices/ammeter.sym} -730 -210 3 0 {name=Vmeas1 savecurrent=true}
