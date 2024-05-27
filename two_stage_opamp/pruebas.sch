@@ -246,7 +246,7 @@ N -1250 70 -1250 80 {
 lab=#net8}
 N -1250 140 -1250 150 {
 lab=GND}
-C {/home/ral298/Documentos/opam/twoatage_symbol.sym} 90 -80 0 0 {name=x1 W1=2.13 W2=9 W3=8.7 W4=9 W5=9.8 W6=8.7 L1=0.3965 L2=0.3965 L3=0.3965 L4=0.9 L5=1.2 L6=0.8}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} 90 -80 0 0 {name=x1 W1=2.13 W2=9 W3=8.7 W4=9 W5=9.8 W6=8.7 L1=0.3965 L2=0.3965 L3=0.3965 L4=0.9 L5=1.2 L6=0.8}
 C {devices/vdd.sym} -20 -40 0 0 {name=l1 lab=VDD}
 C {devices/vdd.sym} -230 20 0 0 {name=l2 lab=VDD}
 C {devices/vsource.sym} -230 60 0 0 {name=V1 value=\{v1vdd\} savecurrent=false}
@@ -278,7 +278,7 @@ tclcommand="xschem raw_read $netlist_dir/pruebas.raw"
 C {devices/lab_pin.sym} -150 30 1 0 {name=p2 sig_type=std_logic lab=vin}
 C {devices/vsource.sym} -20 150 0 0 {name=V3 value=\{v3vss\} savecurrent=false}
 C {devices/gnd.sym} -20 190 0 0 {name=l6 lab=GND}
-C {/home/ral298/Documentos/opam/twoatage_symbol.sym} 90 330 0 0 {name=x2 W1=2.13 W2=9 W3=8.7 W4=9 W5=9.8 W6=8.7 L1=0.3965 L2=0.3965 L3=0.3965 L4=0.9 L5=1.2 L6=0.8}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} 90 330 0 0 {name=x2 W1=2.13 W2=9 W3=8.7 W4=9 W5=9.8 W6=8.7 L1=0.3965 L2=0.3965 L3=0.3965 L4=0.9 L5=1.2 L6=0.8}
 C {devices/vdd.sym} -20 370 0 0 {name=l8 lab=VDD}
 C {devices/gnd.sym} -70 530 0 0 {name=l10 lab=GND}
 C {devices/vdd.sym} -70 300 0 0 {name=l13 lab=VDD}
@@ -296,7 +296,7 @@ value=100k
 footprint=1206
 device=resistor
 m=1}
-C {/home/ral298/Documentos/opam/twoatage_symbol.sym} 780 -70 0 0 {name=x3 W1=2.13 W2=9 W3=8.7 W4=9 W5=9.8 W6=8.7 L1=0.3965 L2=0.3965 L3=0.3965 L4=0.9 L5=1.2 L6=0.8}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} 780 -70 0 0 {name=x3 W1=2.13 W2=9 W3=8.7 W4=9 W5=9.8 W6=8.7 L1=0.3965 L2=0.3965 L3=0.3965 L4=0.9 L5=1.2 L6=0.8}
 C {devices/vdd.sym} 670 -30 0 0 {name=l9 lab=VDD}
 C {devices/gnd.sym} 620 130 0 0 {name=l11 lab=GND}
 C {devices/vdd.sym} 620 -100 0 0 {name=l12 lab=VDD}
@@ -327,7 +327,7 @@ m=1}
 C {devices/vsource.sym} 390 210 0 0 {name=V5 value=0.1 savecurrent=false}
 C {devices/vsource.sym} 430 280 0 0 {name=V7 value=-0.2 savecurrent=false}
 C {devices/gnd.sym} 430 330 0 0 {name=l16 lab=GND}
-C {/home/ral298/Documentos/opam/twoatage_symbol.sym} -1140 -120 0 0 {name=x4 W1=15 W2=94 W3=3 W4=4.5 W5=14 W6=10 L1=0.15 L2=0.15 L3=0.15 L4=0.15 L5=0.15 L6=0.15}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} -1140 -120 0 0 {name=x4 W1=15 W2=94 W3=3 W4=4.5 W5=14 W6=10 L1=0.15 L2=0.15 L3=0.15 L4=0.15 L5=0.15 L6=0.15}
 C {devices/vdd.sym} -1250 -80 0 0 {name=l17 lab=VDD}
 C {devices/gnd.sym} -1300 80 0 0 {name=l19 lab=GND}
 C {devices/vdd.sym} -1300 -150 0 0 {name=l22 lab=VDD}

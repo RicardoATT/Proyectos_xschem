@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -440 -40 360 360 {flags=graph
-y1=-0.017
+y1=-0.04
 y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0001
+x1=-3.37208e-06
+x2=1.54343e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -29,15 +29,15 @@ logx=0
 logy=0
 }
 B 2 360 -40 1160 360 {flags=graph
-y1=-1.9e-07
-y2=2.5e-05
+y1=-2e-09
+y2=9.3e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0001
+x1=-3.37208e-06
+x2=1.54343e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -51,19 +51,20 @@ logy=0
 
 
 
-color="4 10"
+color="4 6 7"
 node="i(vmeas1)
+i(vmeas2)
 i(vmeas2)"}
 B 2 -440 360 360 760 {flags=graph
-y1=2.5
-y2=3.7
+y1=2.7
+y2=4
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0001
+x1=-3.37208e-06
+x2=1.54343e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -76,13 +77,13 @@ logx=0
 logy=0
 color=10
 node="\\"Thickness [nm]; 5 n.x4.xr1.n1#ngap -\\""}
-N 850 -140 850 -120 {
+N 550 -100 550 -80 {
 lab=GND}
-N 850 -220 850 -200 {
+N 550 -180 550 -160 {
 lab=VDD}
-N 910 -140 910 -120 {
+N 610 -100 610 -80 {
 lab=GND}
-N 910 -220 910 -200 {
+N 610 -180 610 -160 {
 lab=vb1}
 N -80 -170 -80 -150 {
 lab=GND}
@@ -124,16 +125,14 @@ N -300 -290 -300 -240 {
 lab=#net2}
 N -360 -240 -360 -220 {
 lab=#net2}
-N 500 -220 520 -220 {
+N 1100 -500 1120 -500 {
 lab=#net3}
-N 520 -160 530 -160 {
+N 1120 -440 1130 -440 {
 lab=vb3}
-N 620 -150 620 -130 {
+N 1220 -430 1220 -410 {
 lab=GND}
-N 620 -310 620 -290 {
+N 1220 -590 1220 -570 {
 lab=VDD}
-N 760 -360 760 -220 {
-lab=vpos}
 N 320 -360 320 -240 {
 lab=vpos}
 N 80 -240 100 -240 {
@@ -154,9 +153,9 @@ N 400 -220 420 -220 {
 lab=#net5}
 N 240 -220 300 -220 {
 lab=#net4}
-N 970 -140 970 -120 {
+N 670 -100 670 -80 {
 lab=GND}
-N 970 -220 970 -200 {
+N 670 -180 670 -160 {
 lab=vb2}
 N 160 -180 160 -160 {
 lab=GND}
@@ -215,31 +214,83 @@ lab=#net9}
 N 240 -540 300 -540 {
 lab=#net8}
 N 480 -220 500 -220 {
-lab=#net3}
-N 500 -540 500 -220 {
-lab=#net3}
-N 480 -540 500 -540 {
-lab=#net3}
-N 320 -360 760 -360 {
-lab=vpos}
+lab=#net10}
 N 320 -560 320 -360 {
 lab=vpos}
 N 220 -560 320 -560 {
 lab=vpos}
 N 320 -500 370 -500 {
 lab=vpos}
-N 1030 -140 1030 -120 {
+N 730 -100 730 -80 {
 lab=GND}
-N 1030 -220 1030 -200 {
+N 730 -180 730 -160 {
 lab=vb3}
-C {devices/vsource.sym} 850 -170 0 0 {name=V1 value=1.8}
-C {devices/gnd.sym} 850 -120 0 0 {name=l6 lab=GND}
-C {devices/vdd.sym} 850 -220 0 0 {name=l7 lab=VDD}
-C {devices/vsource.sym} 910 -170 0 0 {name=V2 value=0.4}
-C {devices/gnd.sym} 910 -120 0 0 {name=l9 lab=GND}
-C {devices/lab_pin.sym} 910 -220 2 0 {name=p9 sig_type=std_logic lab=vb1}
-C {sky130_fd_pr/corner.sym} 950 -390 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/code.sym} 830 -390 0 0 {name=MODELS2
+N 500 -540 500 -220 {
+lab=#net10}
+N 520 -500 520 -460 {
+lab=GND}
+N 520 -500 540 -500 {
+lab=GND}
+N 520 -480 540 -480 {
+lab=GND}
+N 640 -470 640 -450 {
+lab=GND}
+N 640 -590 640 -570 {
+lab=VDD}
+N 600 -590 640 -590 {
+lab=VDD}
+N 500 -540 540 -540 {
+lab=#net10}
+N 480 -540 500 -540 {
+lab=#net10}
+N 520 -640 540 -640 {
+lab=#net10}
+N 520 -640 520 -540 {
+lab=#net10}
+N 600 -640 720 -640 {
+lab=#net11}
+N 720 -640 720 -520 {
+lab=#net11}
+N 720 -520 740 -520 {
+lab=#net11}
+N 820 -480 820 -440 {
+lab=GND}
+N 820 -480 840 -480 {
+lab=GND}
+N 820 -460 840 -460 {
+lab=GND}
+N 940 -450 940 -430 {
+lab=GND}
+N 940 -570 940 -550 {
+lab=VDD}
+N 900 -570 940 -570 {
+lab=VDD}
+N 800 -520 840 -520 {
+lab=#net12}
+N 820 -620 840 -620 {
+lab=#net12}
+N 820 -620 820 -520 {
+lab=#net12}
+N 900 -620 1020 -620 {
+lab=#net13}
+N 1020 -620 1020 -500 {
+lab=#net13}
+N 320 -700 320 -560 {
+lab=vpos}
+N 1020 -500 1040 -500 {
+lab=#net13}
+N 320 -700 1360 -700 {
+lab=vpos}
+N 1360 -700 1360 -500 {
+lab=vpos}
+C {devices/vsource.sym} 550 -130 0 0 {name=V1 value=1.8}
+C {devices/gnd.sym} 550 -80 0 0 {name=l6 lab=GND}
+C {devices/vdd.sym} 550 -180 0 0 {name=l7 lab=VDD}
+C {devices/vsource.sym} 610 -130 0 0 {name=V2 value=0.4}
+C {devices/gnd.sym} 610 -80 0 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} 610 -180 2 0 {name=p9 sig_type=std_logic lab=vb1}
+C {sky130_fd_pr/corner.sym} 650 -350 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {devices/code.sym} 530 -350 0 0 {name=MODELS2
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -247,7 +298,7 @@ value="
 .inc $::SKYWATER_MODELS/rram_v0.spice
 "
 spice_ignore=false}
-C {devices/code_shown.sym} 1080 -390 0 0 {name=NGSPICE
+C {devices/code_shown.sym} 780 -350 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .control
@@ -256,7 +307,7 @@ value="
   write STDP_3_LIF_6T1R.raw
 .endc
 " }
-C {devices/launcher.sym} 1140 -260 0 0 {name=h5
+C {devices/launcher.sym} 840 -220 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/STDP_3_LIF_6T1R.raw tran"
 }
@@ -298,7 +349,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 860 -140 0 0 {name=x3}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 1460 -420 0 0 {name=x3}
 C {sky130_fd_pr/pfet_01v8.sym} 370 -200 3 0 {name=M1
 L=0.15
 W=1
@@ -313,16 +364,16 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 520 -160 3 0 {name=p1 sig_type=std_logic lab=vb3}
-C {devices/gnd.sym} 620 -130 0 0 {name=l1 lab=GND}
-C {devices/vdd.sym} 620 -310 0 0 {name=l2 lab=VDD}
+C {devices/lab_pin.sym} 1120 -440 3 0 {name=p1 sig_type=std_logic lab=vb3}
+C {devices/gnd.sym} 1220 -410 0 0 {name=l1 lab=GND}
+C {devices/vdd.sym} 1220 -590 0 0 {name=l2 lab=VDD}
 C {devices/gnd.sym} 160 -160 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 320 -320 2 0 {name=p2 sig_type=std_logic lab=vpos}
 C {devices/vdd.sym} 370 -270 0 0 {name=l4 lab=VDD}
 C {devices/ammeter.sym} 450 -220 3 0 {name=Vmeas1 savecurrent=true}
-C {devices/vsource.sym} 970 -170 0 0 {name=V3 value=0.4}
-C {devices/gnd.sym} 970 -120 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} 970 -220 2 0 {name=p3 sig_type=std_logic lab=vb2}
+C {devices/vsource.sym} 670 -130 0 0 {name=V3 value=0.4}
+C {devices/gnd.sym} 670 -80 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} 670 -180 2 0 {name=p3 sig_type=std_logic lab=vb2}
 C {devices/gnd.sym} -80 -470 0 0 {name=l8 lab=GND}
 C {devices/vdd.sym} -80 -650 0 0 {name=l10 lab=VDD}
 C {devices/lab_pin.sym} -180 -500 0 0 {name=p4 sig_type=std_logic lab=vb2}
@@ -378,6 +429,30 @@ spiceprefix=X
 }
 C {devices/vdd.sym} 370 -590 0 0 {name=l18 lab=VDD}
 C {devices/ammeter.sym} 450 -540 3 1 {name=Vmeas2 savecurrent=true}
-C {devices/vsource.sym} 1030 -170 0 0 {name=V4 value=0.7}
-C {devices/gnd.sym} 1030 -120 0 0 {name=l21 lab=GND}
-C {devices/lab_pin.sym} 1030 -220 2 0 {name=p6 sig_type=std_logic lab=vb3}
+C {devices/vsource.sym} 730 -130 0 0 {name=V4 value=0.7}
+C {devices/gnd.sym} 730 -80 0 0 {name=l21 lab=GND}
+C {devices/lab_pin.sym} 730 -180 2 0 {name=p6 sig_type=std_logic lab=vb3}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} 750 -630 0 0 {name=x6 W1=15 W2=94 W3=3 W4=4.5 W5=14 W6=10 L1=0.15 L2=0.15 L3=0.15 L4=0.15 L5=0.15 L6=0.15}
+C {devices/gnd.sym} 520 -460 0 0 {name=l22 lab=GND}
+C {devices/gnd.sym} 640 -450 0 0 {name=l23 lab=GND}
+C {devices/vdd.sym} 640 -590 0 0 {name=l24 lab=VDD}
+C {devices/res.sym} 570 -640 1 0 {name=R1
+value=1k
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 770 -520 1 0 {name=R2
+value=1k
+footprint=1206
+device=resistor
+m=1}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} 1050 -610 0 0 {name=x7 W1=15 W2=94 W3=3 W4=4.5 W5=14 W6=10 L1=0.15 L2=0.15 L3=0.15 L4=0.15 L5=0.15 L6=0.15}
+C {devices/gnd.sym} 820 -440 0 0 {name=l25 lab=GND}
+C {devices/gnd.sym} 940 -430 0 0 {name=l26 lab=GND}
+C {devices/vdd.sym} 940 -570 0 0 {name=l27 lab=VDD}
+C {devices/res.sym} 870 -620 1 0 {name=R3
+value=1k
+footprint=1206
+device=resistor
+m=1}
+C {devices/ammeter.sym} 1070 -500 3 1 {name=Vmeas3 savecurrent=true}

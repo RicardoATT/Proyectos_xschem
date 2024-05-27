@@ -28,8 +28,8 @@ logx=0
 logy=0
 }
 B 2 360 -40 1160 360 {flags=graph
-y1=-6.6e-07
-y2=5.7e-05
+y1=-7.99352e-07
+y2=4.08617e-06
 ypos1=0
 ypos2=2
 divy=5
@@ -52,8 +52,8 @@ logy=0
 color=10
 node=i(vmeas1)}
 B 2 -440 360 360 760 {flags=graph
-y1=4
-y2=4.9
+y1=2
+y2=3.8
 ypos1=0
 ypos2=2
 divy=5
@@ -193,11 +193,11 @@ C {devices/gnd.sym} -80 -150 0 0 {name=l13 lab=GND}
 C {devices/vdd.sym} -80 -330 0 0 {name=l14 lab=VDD}
 C {devices/lab_pin.sym} -180 -180 0 0 {name=p13 sig_type=std_logic lab=vb1}
 C {devices/lab_pin.sym} 80 -240 1 0 {name=p14 sig_type=std_logic lab=vpre}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} 220 -60 0 0 {name=x3}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} 220 -60 0 0 {name=x3}
 C {devices/vdd.sym} 160 -300 0 0 {name=l16 lab=VDD}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 160 -160 0 0 {name=x1}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 160 -160 0 0 {name=x1}
 C {devices/vdd.sym} -300 -320 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -360 -190 0 1 {name=I0 value=1u}
+C {devices/isource.sym} -360 -190 0 1 {name=I0 value="PWL(0 0 100u 10u)"}
 C {devices/gnd.sym} -360 -140 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -260 -290 0 0 {name=M2
 L=0.15
@@ -227,7 +227,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 840 -140 0 0 {name=x2}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 840 -140 0 0 {name=x2}
 C {sky130_fd_pr/pfet_01v8.sym} 370 -200 3 0 {name=M1
 L=0.15
 W=1
