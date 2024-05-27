@@ -432,7 +432,7 @@ C {devices/ammeter.sym} 450 -540 3 1 {name=Vmeas2 savecurrent=true}
 C {devices/vsource.sym} 730 -130 0 0 {name=V4 value=0.7}
 C {devices/gnd.sym} 730 -80 0 0 {name=l21 lab=GND}
 C {devices/lab_pin.sym} 730 -180 2 0 {name=p6 sig_type=std_logic lab=vb3}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} 750 -630 0 0 {name=x6 W1=15 W2=94 W3=3 W4=4.5 W5=14 W6=10 L1=0.15 L2=0.15 L3=0.15 L4=0.15 L5=0.15 L6=0.15}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} 750 -630 0 0 {name=x6 W1=15 W2=94 W3=3 W4=4.5 W5=14 W6=10 L1=0.15 L2=0.15 L3=0.15 L4=0.15 L5=0.15 L6=0.15}
 C {devices/gnd.sym} 520 -460 0 0 {name=l22 lab=GND}
 C {devices/gnd.sym} 640 -450 0 0 {name=l23 lab=GND}
 C {devices/vdd.sym} 640 -590 0 0 {name=l24 lab=VDD}
@@ -446,7 +446,7 @@ value=1k
 footprint=1206
 device=resistor
 m=1}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} 1050 -610 0 0 {name=x7 W1=15 W2=94 W3=3 W4=4.5 W5=14 W6=10 L1=0.15 L2=0.15 L3=0.15 L4=0.15 L5=0.15 L6=0.15}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/two_stage_opamp/two_stage_opamp.sym} 1050 -610 0 0 {name=x7 W1=15 W2=94 W3=3 W4=4.5 W5=14 W6=10 L1=0.15 L2=0.15 L3=0.15 L4=0.15 L5=0.15 L6=0.15}
 C {devices/gnd.sym} 820 -440 0 0 {name=l25 lab=GND}
 C {devices/gnd.sym} 940 -430 0 0 {name=l26 lab=GND}
 C {devices/vdd.sym} 940 -570 0 0 {name=l27 lab=VDD}

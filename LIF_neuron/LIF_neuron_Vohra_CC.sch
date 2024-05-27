@@ -7,8 +7,6 @@ S {}
 E {}
 N 240 -280 240 -240 {
 lab=rc}
-N 80 0 80 20 {
-lab=GND}
 N 180 -50 200 -50 {
 lab=Vb1}
 N 240 -20 240 -0 {
@@ -45,8 +43,6 @@ N 450 -130 460 -130 {
 lab=GND}
 N 450 -220 450 -190 {
 lab=Iin}
-N 450 0 670 0 {
-lab=GND}
 N 560 -20 560 0 {
 lab=GND}
 N 230 -340 240 -340 {
@@ -56,8 +52,6 @@ lab=VDD}
 N 230 -310 240 -310 {
 lab=VDD}
 N 240 -420 240 -340 {
-lab=VDD}
-N 80 -440 80 -420 {
 lab=VDD}
 N 740 -160 760 -160 {
 lab=Iin}
@@ -87,12 +81,8 @@ N 960 -400 970 -400 {
 lab=VDD}
 N 960 -420 960 -400 {
 lab=VDD}
-N 560 -420 960 -420 {
-lab=VDD}
 N 800 -420 800 -400 {
 lab=VDD}
-N 300 -260 800 -260 {
-lab=#net1}
 N 800 -260 900 -260 {
 lab=#net1}
 N 880 -110 880 -90 {
@@ -123,8 +113,6 @@ N 870 -60 870 -30 {
 lab=GND}
 N 870 -30 880 -30 {
 lab=GND}
-N 670 -0 880 0 {
-lab=GND}
 N 880 -30 880 0 {
 lab=GND}
 N 810 -160 810 -0 {
@@ -151,24 +139,30 @@ N 160 -260 160 -160 {
 lab=rc}
 N 160 -160 350 -160 {
 lab=rc}
-N 240 -420 560 -420 {
-lab=VDD}
-N 80 -420 240 -420 {
-lab=VDD}
-N 80 0 240 -0 {
-lab=GND}
 N 800 -260 800 -190 {
-lab=#net1}
-N 800 -340 820 -340 {
-lab=#net1}
-N 820 -340 820 -260 {
 lab=#net1}
 N 560 -220 560 -80 {
 lab=Iin}
 N 560 -220 740 -220 {
 lab=Iin}
-N 560 -240 560 -220 {
+N 220 -390 560 -390 {
 lab=Iin}
+N 560 -390 560 -220 {
+lab=Iin}
+N 800 -340 800 -260 {
+lab=#net1}
+N 240 -420 800 -420 {
+lab=VDD}
+N 800 -420 960 -420 {
+lab=VDD}
+N 450 -0 560 -0 {
+lab=GND}
+N 560 -0 810 0 {
+lab=GND}
+N 810 0 880 -0 {
+lab=GND}
+N 300 -260 800 -260 {
+lab=#net1}
 C {sky130_fd_pr/nfet_01v8.sym} 220 -50 0 0 {name=M13
 L=0.5
 W=5
@@ -211,7 +205,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 80 20 2 0 {name=p3 lab=GND}
+C {devices/iopin.sym} 240 0 2 0 {name=p3 lab=GND}
 C {devices/ipin.sym} 180 -50 0 0 {name=p5 lab=Vb1}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 350 -110 0 0 {name=C1 model=cap_mim_m3_1 W=21 L=1 MF=1 spiceprefix=X}
 C {sky130_fd_pr/nfet_01v8.sym} 430 -160 0 0 {name=M14
@@ -229,7 +223,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/cap_mim_m3_1.sym} 560 -50 0 0 {name=C2 model=cap_mim_m3_1 W=10 L=1 MF=50 spiceprefix=X}
-C {devices/iopin.sym} 80 -440 2 0 {name=p7 lab=VDD}
+C {devices/iopin.sym} 240 -420 2 0 {name=p7 lab=VDD}
 C {sky130_fd_pr/nfet_01v8.sym} 900 -60 0 1 {name=M6
 L=0.5
 W=1
@@ -302,4 +296,4 @@ spiceprefix=X
 }
 C {devices/opin.sym} 1080 -260 0 0 {name=p8 lab=Vout}
 C {devices/lab_pin.sym} 330 -160 1 0 {name=p4 sig_type=std_logic lab=rc}
-C {devices/ipin.sym} 560 -240 0 0 {name=p1 lab=Iin}
+C {devices/ipin.sym} 220 -390 0 0 {name=p1 lab=Iin}
