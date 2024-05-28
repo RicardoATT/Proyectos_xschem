@@ -16,17 +16,17 @@ lab=#net2}
 N -160 -180 -160 -170 {
 lab=#net2}
 N -160 -140 -150 -140 {
-lab=#net2}
+lab=GND}
 N -260 -50 -60 -50 {
 lab=GND}
 N -60 -120 -60 -50 {
 lab=GND}
 N -160 -110 -160 -50 {
 lab=GND}
-N -150 -170 -150 -140 {
-lab=#net2}
-N -160 -170 -150 -170 {
-lab=#net2}
+N -150 -140 -150 -110 {
+lab=GND}
+N -160 -110 -150 -110 {
+lab=GND}
 C {devices/vsource.sym} -260 -90 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/gnd.sym} -260 -40 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} -60 -150 0 0 {name=V2 value=1.8 savecurrent=false}
