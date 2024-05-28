@@ -91,7 +91,7 @@ N -190 -150 -190 -140 {
 lab=VDD}
 C {sky130_fd_pr/nfet_01v8.sym} -320 -10 2 1 {name=M1
 L=0.15
-W=15
+W=10
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -103,7 +103,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/rram_v0.sym} -190 40 3 0 {name=R1
+C {sky130_fd_pr/rram_v0.sym} -190 40 1 0 {name=R1
 model=rram_v0
 spiceprefix=X
 }
@@ -172,7 +172,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -60 90 2 0 {name=M4
 L=0.15
-W=15
+W=10
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

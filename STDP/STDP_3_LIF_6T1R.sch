@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 B 2 -440 -40 360 360 {flags=graph
-y1=-0.017
+y1=-0.15
 y2=1.9
 ypos1=0
 ypos2=2
@@ -29,8 +29,8 @@ logx=0
 logy=0
 }
 B 2 360 -40 1160 360 {flags=graph
-y1=-1.9e-07
-y2=2.5e-05
+y1=-1.1e-06
+y2=5.6e-05
 ypos1=0
 ypos2=2
 divy=5
@@ -51,12 +51,12 @@ logy=0
 
 
 
-color="4 10"
-node="i(vmeas1)
-i(vmeas2)"}
+color="4 6"
+node="\\"Ipre1 (A);i(vmeas1)\\"
+\\"Ipre2 (A);i(vmeas2)\\""}
 B 2 -440 360 360 760 {flags=graph
-y1=2.5
-y2=3.7
+y1=3.3
+y2=4.7
 ypos1=0
 ypos2=2
 divy=5
@@ -235,11 +235,11 @@ lab=vb3}
 C {devices/vsource.sym} 850 -170 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} 850 -120 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} 850 -220 0 0 {name=l7 lab=VDD}
-C {devices/vsource.sym} 910 -170 0 0 {name=V2 value=0.4}
+C {devices/vsource.sym} 910 -170 0 0 {name=V2 value=0.5}
 C {devices/gnd.sym} 910 -120 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 910 -220 2 0 {name=p9 sig_type=std_logic lab=vb1}
-C {sky130_fd_pr/corner.sym} 950 -390 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/code.sym} 830 -390 0 0 {name=MODELS2
+C {sky130_fd_pr/corner.sym} 550 470 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {devices/code.sym} 430 470 0 0 {name=MODELS2
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -247,7 +247,7 @@ value="
 .inc $::SKYWATER_MODELS/rram_v0.spice
 "
 spice_ignore=false}
-C {devices/code_shown.sym} 1080 -390 0 0 {name=NGSPICE
+C {devices/code_shown.sym} 680 470 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .control
@@ -256,7 +256,7 @@ value="
   write STDP_3_LIF_6T1R.raw
 .endc
 " }
-C {devices/launcher.sym} 1140 -260 0 0 {name=h5
+C {devices/launcher.sym} 740 600 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/STDP_3_LIF_6T1R.raw tran"
 }
@@ -268,7 +268,7 @@ C {/home/ricardoatt/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} 220 -60 0 0 {n
 C {devices/vdd.sym} 160 -300 0 0 {name=l16 lab=VDD}
 C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 160 -160 0 0 {name=x1}
 C {devices/vdd.sym} -300 -320 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -360 -190 0 1 {name=I0 value=5u}
+C {devices/isource.sym} -360 -190 0 1 {name=I0 value="PULSE(0 3u 5u 10n 10n 5u 10u 10)"}
 C {devices/gnd.sym} -360 -140 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -260 -290 0 0 {name=M2
 L=0.15
@@ -320,7 +320,7 @@ C {devices/gnd.sym} 160 -160 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 320 -320 2 0 {name=p2 sig_type=std_logic lab=vpos}
 C {devices/vdd.sym} 370 -270 0 0 {name=l4 lab=VDD}
 C {devices/ammeter.sym} 450 -220 3 0 {name=Vmeas1 savecurrent=true}
-C {devices/vsource.sym} 970 -170 0 0 {name=V3 value=0.4}
+C {devices/vsource.sym} 970 -170 0 0 {name=V3 value=0.5}
 C {devices/gnd.sym} 970 -120 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 970 -220 2 0 {name=p3 sig_type=std_logic lab=vb2}
 C {devices/gnd.sym} -80 -470 0 0 {name=l8 lab=GND}
@@ -331,7 +331,7 @@ C {/home/ricardoatt/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} 220 -380 0 0 {
 C {devices/vdd.sym} 160 -620 0 0 {name=l11 lab=VDD}
 C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 160 -480 0 0 {name=x2}
 C {devices/vdd.sym} -300 -640 0 0 {name=l12 lab=VDD}
-C {devices/isource.sym} -360 -510 0 1 {name=I1 value=5u}
+C {devices/isource.sym} -360 -510 0 1 {name=I1 value="PULSE(0 3u 10n 10n 10n 5u 10u 5)"}
 C {devices/gnd.sym} -360 -460 0 0 {name=l15 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -260 -610 0 0 {name=M4
 L=0.15
@@ -378,6 +378,6 @@ spiceprefix=X
 }
 C {devices/vdd.sym} 370 -590 0 0 {name=l18 lab=VDD}
 C {devices/ammeter.sym} 450 -540 3 1 {name=Vmeas2 savecurrent=true}
-C {devices/vsource.sym} 1030 -170 0 0 {name=V4 value=0.7}
+C {devices/vsource.sym} 1030 -170 0 0 {name=V4 value=0.45}
 C {devices/gnd.sym} 1030 -120 0 0 {name=l21 lab=GND}
 C {devices/lab_pin.sym} 1030 -220 2 0 {name=p6 sig_type=std_logic lab=vb3}

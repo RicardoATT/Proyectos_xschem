@@ -29,7 +29,7 @@ N -160 -170 -150 -170 {
 lab=#net2}
 C {devices/vsource.sym} -260 -90 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/gnd.sym} -260 -40 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} -60 -150 0 0 {name=V2 value=0.9 savecurrent=false}
+C {devices/vsource.sym} -60 -150 0 0 {name=V2 value=1.8 savecurrent=false}
 C {devices/code_shown.sym} 0 -170 0 0 {name=NGSPICE
 only_toplevel=true
 value="
@@ -40,7 +40,7 @@ value="
 .save all
 " }
 C {sky130_fd_pr/corner.sym} 170 -170 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {sky130_fd_pr/pfet_01v8.sym} -180 -140 0 0 {name=M1
+C {sky130_fd_pr/nfet_01v8.sym} -180 -140 0 0 {name=M1
 L=0.15
 W=1
 nf=1
@@ -51,6 +51,6 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=pfet_01v8
+model=nfet_01v8
 spiceprefix=X
 }

@@ -5,8 +5,8 @@ K {}
 V {}
 S {}
 E {}
-B 2 -700 -80 100 320 {flags=graph
-y1=0.34
+B 2 470 -280 1270 120 {flags=graph
+y1=0.31
 y2=1.9
 ypos1=0
 ypos2=2
@@ -19,60 +19,36 @@ divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="vin
-vout"
+node=vout
+color=4
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
+B 2 470 120 1270 520 {flags=graph
+y1=-8.1e-07
+y2=5.4e-05
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-05
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="\\"Iout (A);i(vmeas3)\\"
+\\"Iin (A); i(vmeas)\\""
 color="4 6"
 dataset=-1
 unitx=1
 logx=0
 logy=0
 }
-B 2 -700 320 100 720 {flags=graph
-y1=-1.6e-07
-y2=5.6e-05
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=5e-05
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"im1 (A);i(vread1)\\"
-
-i(vmeas)
-i(vmeas1)"
-color="10 8 6"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-}
-B 2 100 320 900 720 {flags=graph
-y1=-43413.6
-y2=1.54867e+06
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=5e-05
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"M [ohms];vout 0 - i(vread1) /\\""
-color=10
-dataset=-1
-unitx=1
-logx=0
-logy=0
-}
-B 2 -700 720 100 1120 {flags=graph
+B 2 470 520 1270 920 {flags=graph
 y1=2.6
 y2=3.9
 ypos1=0
@@ -98,13 +74,13 @@ N -580 -140 -580 -120 {
 lab=GND}
 N -580 -300 -580 -280 {
 lab=VDD}
-N 140 -130 140 -110 {
+N -1050 -210 -1050 -190 {
 lab=GND}
-N 140 -210 140 -190 {
+N -1050 -290 -1050 -270 {
 lab=VDD}
-N 200 -130 200 -110 {
+N -990 -210 -990 -190 {
 lab=GND}
-N 200 -210 200 -190 {
+N -990 -290 -990 -270 {
 lab=vb1}
 N -440 -210 -420 -210 {
 lab=vout}
@@ -119,13 +95,9 @@ lab=#net1}
 N -180 -130 -180 -110 {
 lab=GND}
 N -340 -210 -320 -210 {
-lab=vout}
-N -420 -210 -340 -210 {
-lab=vout}
-N -380 -150 -380 -130 {
-lab=GND}
-N -320 -150 -260 -150 {
 lab=#net2}
+N -260 -150 -260 -130 {
+lab=GND}
 N -680 -150 -670 -150 {
 lab=vb1}
 N -880 -50 -880 -30 {
@@ -160,14 +132,16 @@ N -700 -210 -680 -210 {
 lab=#net5}
 N -880 -130 -880 -110 {
 lab=#net6}
+N -420 -210 -400 -210 {
+lab=vout}
 C {devices/gnd.sym} -580 -120 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -580 -300 0 0 {name=l3 lab=VDD}
-C {devices/vsource.sym} 140 -160 0 0 {name=V1 value=1.8}
-C {devices/gnd.sym} 140 -110 0 0 {name=l4 lab=GND}
-C {devices/vdd.sym} 140 -210 0 0 {name=l5 lab=VDD}
-C {devices/vsource.sym} 200 -160 0 0 {name=V2 value=0.5}
-C {devices/gnd.sym} 200 -110 0 0 {name=l7 lab=GND}
-C {devices/lab_pin.sym} 200 -210 2 0 {name=p3 sig_type=std_logic lab=vb1}
+C {devices/vsource.sym} -1050 -240 0 0 {name=V1 value=1.8}
+C {devices/gnd.sym} -1050 -190 0 0 {name=l4 lab=GND}
+C {devices/vdd.sym} -1050 -290 0 0 {name=l5 lab=VDD}
+C {devices/vsource.sym} -990 -240 0 0 {name=V2 value=0.5}
+C {devices/gnd.sym} -990 -190 0 0 {name=l7 lab=GND}
+C {devices/lab_pin.sym} -990 -290 2 0 {name=p3 sig_type=std_logic lab=vb1}
 C {devices/lab_pin.sym} -680 -150 0 0 {name=p6 sig_type=std_logic lab=vb1}
 C {sky130_fd_pr/corner.sym} 230 -60 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/code.sym} 110 -60 0 0 {name=MODELS2
@@ -192,16 +166,14 @@ value="
 .endc
 " }
 C {devices/lab_pin.sym} -420 -210 1 0 {name=p7 sig_type=std_logic lab=vout}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -200 -30 0 0 {name=x2}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -200 -30 0 0 {name=x2}
 C {devices/gnd.sym} -180 -230 2 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -260 -270 0 0 {name=l10 lab=VDD}
-C {devices/vsource.sym} -180 -160 0 0 {name=vread1 value=1e-4}
 C {devices/gnd.sym} -180 -110 0 0 {name=l12 lab=GND}
-C {devices/vsource.sym} -350 -150 1 0 {name=vread2 value=1e-4}
-C {devices/gnd.sym} -380 -130 0 0 {name=l9 lab=GND}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} -340 -130 0 0 {name=x1}
+C {devices/gnd.sym} -260 -130 0 0 {name=l9 lab=GND}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} -340 -130 0 0 {name=x1}
 C {devices/vdd.sym} -820 -290 0 0 {name=l8 lab=VDD}
-C {devices/isource.sym} -880 -80 0 1 {name=I0 value="PULSE(0 3u 1n 1n 1n 2.5u 5u 10)"}
+C {devices/isource.sym} -880 -80 0 1 {name=I0 value="PULSE(0 3u 1n 1n 1n 5u 10u 5)"}
 C {devices/gnd.sym} -880 -30 0 0 {name=l11 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -780 -260 0 0 {name=M1
 L=0.15
@@ -232,4 +204,6 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/ammeter.sym} -880 -160 0 0 {name=Vmeas savecurrent=true}
-C {devices/ammeter.sym} -730 -210 3 0 {name=Vmeas1 savecurrent=true}
+C {devices/ammeter.sym} -730 -210 3 1 {name=Vmeas1 savecurrent=true}
+C {devices/ammeter.sym} -370 -210 3 1 {name=Vmeas2 savecurrent=true}
+C {devices/ammeter.sym} -180 -160 0 0 {name=Vmeas3 savecurrent=true}

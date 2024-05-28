@@ -8,6 +8,8 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
 \setlength{\parskip}{12pt}
 \usepackage[numbers]{natbib}
 %\renewcommand{\refname}{Referencias}
@@ -31,20 +33,12 @@ rtiradot2023@cic.ipn.mx}
 	\textit{Instituto Politécnico Nacional}\\
 	Ciudad de México, México \\
 	rbarron@cic.ipn.mx}
-\and
-\IEEEauthorblockN{3\textsuperscript{rd} Víctor Hugo Ponce Ponce}
-\IEEEauthorblockA{\textit{Centro de Investigación en Computación} \\
-	\textit{Instituto Politécnico Nacional}\\
-	Ciudad de México, México \\
-	vponce@cic.ipn.mx}
 }
 
 \maketitle
 
 \begin{abstract}
-This document is a model and instructions for \LaTeX.
-This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
-or Math in Paper Title or Abstract.
+El cómputo neuromórfico, con sus redes neuronales pulsantes, el aprendizaje STDP y los memristores, representa un paradigma revolucionario en la informática. La integración de estos conceptos en la tecnología CMOS no solo promete un salto significativo en la eficiencia y capacidad de las máquinas, sino que también nos acerca un paso más a replicar la asombrosa complejidad y eficiencia del cerebro humano. Esta tecnología abre un abanico de posibilidades en el campo de la inteligencia artificial y más allá, con el potencial de transformar la forma en que interactuamos con las máquinas y el mundo que nos rodea. En este trabajo se utiliza al nodo tecnológico de SKY130, un proceso de fabricación que integra los elementos necesarios para diseñar una red neuronal pulsante que integra el concepto del aprendizaje STDP no supervisado.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -52,46 +46,48 @@ Redes neuronales pulsantes, sinapsis memristiva, plasticidad dependiente del tie
 \end{IEEEkeywords}
 
 \section{Introducción}
-El cómputo neuromórfico es un campo emergente en la ingeniería y la informática que se inspira en la arquitectura y funcionamiento del cerebro humano para diseñar sistemas de procesamiento de información más eficientes y adaptativos. A diferencia de las computadoras tradicionales, que siguen el modelo de von Neumann, los sistemas neuromórficos emplean una arquitectura distribuida y paralela, emulando las redes neuronales del cerebro. Esta aproximación no solo promete una mayor eficiencia energética y velocidad de procesamiento, sino también una capacidad de aprendizaje y adaptación superior.
+El cómputo neuromórfico es un campo emergente en la ingeniería y la informática que se inspira en la arquitectura y funcionamiento del cerebro humano para diseñar sistemas de procesamiento de información más eficientes y adaptativos. A diferencia de las computadoras tradicionales, que siguen el modelo de von Neumann, los sistemas neuromórficos emplean una arquitectura distribuida y paralela, emulando las redes neuronales del cerebro. Esta aproximación no solo promete una mayor eficiencia energética y velocidad de procesamiento \cite{Guimaraes_2021}, sino también una capacidad de aprendizaje y adaptación superior.
 
-En el corazón del cómputo neuromórfico se encuentran las redes neuronales pulsantes, que son modelos de redes neuronales que procesan información en forma de picos de actividad eléctrica, o pulsos. Estos modelos son más biológicamente realistas que las redes neuronales tradicionales utilizadas en el aprendizaje profundo. Las redes neuronales pulsantes permiten un procesamiento temporal y espacial más natural de la información, similar al que ocurre en el cerebro, lo que resulta en un rendimiento superior en tareas que requieren reconocimiento de patrones y procesamiento sensorial en tiempo real.
+En el corazón del cómputo neuromórfico se encuentran las redes neuronales pulsantes, que son modelos de redes neuronales que procesan información en forma de pulsos de actividad eléctrica, o pulsos. Estos modelos son más biológicamente realistas que las redes neuronales tradicionales utilizadas en el aprendizaje profundo. Las redes neuronales pulsantes permiten un procesamiento temporal y espacial más natural de la información, similar al que ocurre en el cerebro, lo que resulta en un rendimiento superior en tareas que requieren reconocimiento de patrones y procesamiento sensorial en tiempo real.
 
-El aprendizaje dependiente del tiempo de los pulsos (STDP, por sus siglas en inglés) es un mecanismo clave en las redes neuronales pulsantes. El STDP es una forma de aprendizaje sináptico que ajusta la fuerza de las conexiones entre neuronas en función del momento en que ocurren los pulsos. Si una neurona emisora envía un pulso justo antes de que una neurona receptora envíe el suyo, la conexión entre ambas se fortalece. Este principio, que se observa en las sinapsis biológicas, permite a las redes neuromórficas aprender y adaptarse de manera más eficiente, logrando un aprendizaje no supervisado y dinámico. Esta regla temporal puede ser implementada directamente en unos elementos de memoria, llamados memristores, debido a su capacidad para cambiar su resistencia en función de la historia temporal de los pulsos que los atraviesan.
+El aprendizaje dependiente del tiempo de los pulsos (STDP, por sus siglas en inglés) es un mecanismo clave en las redes neuronales pulsantes. El STDP es una forma de aprendizaje sináptico que ajusta la fuerza de las conexiones entre neuronas en función del momento en que ocurren los pulsos. Si una neurona emisora envía un pulso justo antes de que una neurona receptora envíe el suyo, la conexión entre ambas se fortalece. Este principio, que se observa en las sinapsis biológicas, permite a las redes neuromórficas aprender y adaptarse de manera más eficiente, logrando un aprendizaje no supervisado y dinámico. Esta regla temporal puede ser implementada directamente en unos elementos de memoria, llamados memristores, debido a su capacidad para cambiar su resistencia en función de la historia temporal de los pulsos que los atraviesan \cite{Weiss_2022} \cite{Zhao_2018}.
 
-El memristor, un componente eléctrico cuya resistencia varía en función de la cantidad y la dirección de la carga eléctrica que lo atraviesa, ha emergido como una pieza fundamental en el campo del cómputo neuromórfico. Descubierto teóricamente por Leon Chua en 1971 y desarrollado prácticamente en los laboratorios de HP en 2008, el memristor es a menudo considerado el cuarto elemento de los circuitos pasivos junto con el resistor, el capacitor y el inductor. Su capacidad para "recordar" el último estado de resistencia hace que el memristor sea especialmente adecuado para imitar las sinapsis biológicas en sistemas neuromórficos.
+El memristor, un componente eléctrico cuya resistencia varía en función de la cantidad y la dirección de la carga eléctrica que lo atraviesa, ha emergido como una pieza fundamental en el campo del cómputo neuromórfico. Descubierto teóricamente por Leon Chua en 1971 \cite{Chua_1971} y desarrollado prácticamente en los laboratorios de HP en 2008, el memristor es a menudo considerado el cuarto elemento de los circuitos pasivos junto con el resistor, el capacitor y el inductor. Su capacidad para "recordar" el último estado de resistencia hace que el memristor sea especialmente adecuado para imitar las sinapsis biológicas en sistemas neuromórficos.
 
-En el contexto del cómputo neuromórfico, los memristores se utilizan como sinapsis artificiales que conectan las neuronas en redes neuronales pulsantes. Estas redes, que procesan información en forma de pulsos de actividad eléctrica similares a los impulsos neuronales del cerebro, se benefician enormemente de la naturaleza adaptable y no volátil del memristor. La resistencia del memristor cambia en respuesta a los picos eléctricos, permitiendo la modulación sináptica de manera analógica, lo cual es crucial para replicar los procesos de aprendizaje y memoria del cerebro humano.
+En el contexto del cómputo neuromórfico, los memristores se utilizan como sinapsis artificiales que conectan las neuronas en redes neuronales pulsantes. Estas redes, que procesan información en forma de pulsos de actividad eléctrica similares a los impulsos neuronales del cerebro, se benefician enormemente de la naturaleza adaptable y no volátil del memristor \cite{Saxena_2018}. La resistencia del memristor cambia en respuesta a los pulsos eléctricos, permitiendo la modulación sináptica de manera analógica, lo cual es crucial para replicar los procesos de aprendizaje y memoria del cerebro humano \cite{Amirsoleimani_2017}.
 
-Para implementar estos conceptos, se utiliza la tecnología CMOS (Complementary Metal-Oxide-Semiconductor), ampliamente conocida por su uso en la fabricación de chips de computadora tradicionales. La tecnología CMOS ofrece una plataforma robusta y escalable para desarrollar hardware neuromórfico, facilitando la creación de sistemas que son tanto energéticamente eficientes como capaces de realizar cálculos complejos en paralelo. La integración de memristores en la tecnología CMOS ha permitido avances significativos en la construcción de circuitos neuromórficos eficientes y escalables. Los memristores, debido a su tamaño reducido y bajo consumo de energía, se pueden integrar en matrices densas junto con transistores CMOS para crear chips neuromórficos que emulan el funcionamiento del cerebro humano de manera más realista y eficiente. Estos chips, como los desarrollados en proyectos como IBM TrueNorth e Intel Loihi, incorporan miles de millones de sinapsis memristivas capaces de aprendizaje autónomo y procesamiento paralelo, replicando la complejidad y eficiencia del cerebro. A medida que la tecnología CMOS sigue evolucionando, se espera que las capacidades del cómputo neuromórfico se expandan, abriendo nuevas posibilidades en la inteligencia artificial y más allá.
+Para implementar estos conceptos, se utiliza la tecnología CMOS (Complementary Metal-Oxide-Semiconductor), ampliamente conocida por su uso en la fabricación de chips de computadora tradicionales. La tecnología CMOS ofrece una plataforma robusta y escalable para desarrollar hardware neuromórfico, facilitando la creación de sistemas que son tanto energéticamente eficientes como capaces de realizar cálculos complejos en paralelo \cite{Vohra_2023_2}. La integración de memristores en la tecnología CMOS ha permitido avances significativos en la construcción de circuitos neuromórficos eficientes y escalables. Los memristores, debido a su tamaño reducido y bajo consumo de energía, se pueden integrar en matrices densas junto con transistores CMOS para crear chips neuromórficos que emulan el funcionamiento del cerebro humano de manera más realista y eficiente. Estos chips, como los desarrollados en proyectos como IBM TrueNorth e Intel Loihi \cite{Barnell_2023}, incorporan miles de millones de sinapsis memristivas capaces de aprendizaje autónomo y procesamiento paralelo, replicando la complejidad y eficiencia del cerebro . A medida que la tecnología CMOS sigue evolucionando, se espera que las capacidades del cómputo neuromórfico se expandan, abriendo nuevas posibilidades en la inteligencia artificial y más allá.
 
 El cómputo neuromórfico, con sus redes neuronales pulsantes, el aprendizaje STDP y la reciente fabricación de memristores representa una revolución en cómo concebimos y desarrollamos sistemas de procesamiento de información. La integración de estos conceptos en la tecnología CMOS no solo promete un salto significativo en la eficiencia y capacidad de las máquinas, sino que también nos acerca un paso más a replicar la asombrosa complejidad y eficiencia del cerebro humano. Es por ello que, en este trabajo, se realizaron las siguientes contribuciones:
 
 \begin{enumerate}
     \item Un circuito de neurona tipo LIF, implementada en el dominio analógico en un nivel de transistores CMOS. A través de una señal de corriente, la neurona realizará un pulso a su salida si se supera un cierto umbral y entrará en un periodo refractario.
     \item Una sinapsis del tipo memristiva, que puede cambiar su resistencia en respuesta a las señales eléctricas, lo que permite imitar la plasticidad sináptica del cerebro humano. Esta capacidad de adaptación es crucial para el aprendizaje y la memoria en sistemas neuromórficos.
-    \item Una red neuronal sencilla, con una capa de entrada de x neuronas y una capa de salida de y neuronas. El nodo tecnológico empleado es el de SKY130, un proceso de fabricación de código abierto, que reduce costos asociados con el diseño y producción de chips, facilitando la creación de sistemas neuromórficos avanzados.
+    \item Una red neuronal sencilla, con una capa de entrada de 2 neuronas y una capa de salida de 1 neurona. El nodo tecnológico empleado es el de SKY130, un proceso de fabricación de código abierto, que reduce costos asociados con el diseño y producción de chips, facilitando la creación de sistemas neuromórficos avanzados.
 \end{enumerate}
 
 \section{Sistema propuesto}
 
 \subsection{Neurona LIF}
-El circuito de una neurona LIF comprende varias secciones, como integración de corriente, fuga, generación de picos, reinicio del potencial de membrana y período refractario.
+El circuito de una neurona LIF comprende varias secciones, como integración de corriente, fuga, generación de pulsos, reinicio del potencial de membrana y período refractario.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.14]{img/cto_neurona_LIF.png}
-	\caption{Diagrama esquemático del circuito de neurona implementado por \cite{Shamsi_2018}. Consta de varias secciones para integración de corriente, fugas, generación de picos, reinicio y período refractario.
+	\caption{Diagrama esquemático del circuito de neurona implementado por \cite{Shamsi_2018}. Consta de varias secciones para integración de corriente, fugas, generación de pulsos, reinicio y período refractario.
 	\label{fig:cto_neurona_LIF}}
 \end{figure}
 
-La figura \ref{fig:cto_neurona_LIF} muestra el circuito neuronal LIF propuesto originalmente, que incluye un condensador $C_{u}$ para la integración de corriente, un transistor $M_5$ para fugas, un disparador Schmitt para la generación de pulsos, $M_{11}-M_{14}$ para reinicio y un condensador $C_{ref}$ para el período refractario. Las terminales $V_{tt}$ y $V_{ex}$ se utilizan para aplicar un voltaje de entrada a la neurona, ya sea los proporcionados desde las sinapsis de retroalimentación o desde las sinapsis excitadoras laterales. La terminal inhibidora lateral $V_{inh}$ se utiliza para restablecer el potencial de membrana. Los transistores $M_{1}$ y $M_{2}$ controlan el rango de la corriente de entrada y el transistor $M_{4}$ controla la corriente inyectada en $C_{u}$. Además, la capacitancia de $C_{u}$ y $C_{ref}$ se puede alterar para controlar la tasa de pulsos de salida. Cuando se aplica el voltaje de entrada a la neurona, la corriente $I_{in}$ se inyecta en la sección del integrador con fugas a través del espejo de corriente. Luego, la corriente inyectada se integra con $C_{u}$ y se escapa a través de $M_{5}$. A través de un disparador Schmitt de baja potencia se generan los pulsos. Cuando el potencial de membrana alcanza el voltaje de conmutación del disparador Schmitt, $M_{11}-M_{14}$ intervienen para cambiar el voltaje de alto a bajo. Simultáneamente, el transistor $M_{11}$ se enciende y el potencial de membrana se restablece a cero a través de la sección de reinicio. En consecuencia, se genera un pulso en la salida de la neurona. Además, es posible restablecer el potencial de membrana a través del terminal inhibidor lateral $V_{inh}$. El circuito fue diseñado originalmente para una tecnología CMOS de 90 nm.
+La Figura \ref{fig:cto_neurona_LIF} muestra el circuito neuronal LIF propuesto originalmente, que incluye un condensador $C_{u}$ para la integración de corriente, un transistor $M_5$ para fugas, un disparador Schmitt para la generación de pulsos, $M_{11}-M_{14}$ para reinicio y un condensador $C_{ref}$ para el período refractario. Las terminales $V_{tt}$ y $V_{ex}$ se utilizan para aplicar un voltaje de entrada a la neurona, ya sea los proporcionados desde las sinapsis de retroalimentación o desde las sinapsis excitadoras laterales. La terminal inhibidora lateral $V_{inh}$ se utiliza para restablecer el potencial de membrana. Los transistores $M_{1}$ y $M_{2}$ controlan el rango de la corriente de entrada y el transistor $M_{4}$ controla la corriente inyectada en $C_{u}$. Además, la capacitancia de $C_{u}$ y $C_{ref}$ se puede alterar para controlar la tasa de pulsos de salida. Cuando se aplica el voltaje de entrada a la neurona, la corriente $I_{in}$ se inyecta en la sección del integrador con fugas a través del espejo de corriente. Luego, la corriente inyectada se integra con $C_{u}$ y se escapa a través de $M_{5}$. A través de un disparador Schmitt de baja potencia se generan los pulsos. Cuando el potencial de membrana alcanza el voltaje de conmutación del disparador Schmitt, $M_{11}-M_{14}$ intervienen para cambiar el voltaje de alto a bajo. Simultáneamente, el transistor $M_{11}$ se enciende y el potencial de membrana se restablece a cero a través de la sección de reinicio. En consecuencia, se genera un pulso en la salida de la neurona. Además, es posible restablecer el potencial de membrana a través del terminal inhibidor lateral $V_{inh}$. El circuito fue diseñado originalmente para una tecnología CMOS de 90 nm.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.2]{img/cto_neurona_LIF_cc.png}
+	\includegraphics[scale=0.17]{img/cto_neurona_LIF_cc.png}
 	\caption{Neurona LIF modificada.
 		\label{fig:cto_neurona_LIF_cc}}
 \end{figure}
+
+Con el objetivo de reducir el consumo de potencia, se redujo el número de transistores, tomando como base la implementación de \cite{Vohra_2023} y se modificó la etapa de inyección del corriente del circuito, para que varié con respecto a una corriente de entrada y no a un voltaje. La implementación final, vista en la Figura \ref{fig:cto_neurona_LIF_cc}, resulto en un circuito con 9 transistores (5 menos que el modelo original) y únicamente 2 entradas: La corriente de entrada a la neurona, $I_{in}$ y un voltaje de polarización $V_{b1}$, capaz de modificar la frecuencia de pulso de la neurona. De igual forma, se cambiaron los parámetros de diseño originales, para adaptar el modelo final al nodo tecnológico de SKY130, cuyo ancho de canal mínimo es de 130nm.
 
 \begin{figure}[ht]
 	\centering
@@ -100,9 +96,7 @@ La figura \ref{fig:cto_neurona_LIF} muestra el circuito neuronal LIF propuesto o
 		\label{fig:schmitt_trigger}}
 \end{figure}
 
-Con el objetivo de reducir el consumo de potencia, se redujo el número de transistores y se modificó la etapa de inyección del corriente del circuito, para que varié con respecto a una corriente de entrada y no a un voltaje. La implementación final, vista en la figura \ref{fig:cto_neurona_LIF_cc}, resulto en un circuito con 9 transistores (5 menos que el modelo original) y unicamente 2 entradas: La corriente de entrada a la neurona, $I_{in}$ y un voltaje de polarización $V_{b1}$, capaz de modificar la frecuencia de pulso de la neurona. De igual forma, se cambiaron los parámetros de diseño originales, para adaptar el modelo final al nodo tecnológico de SKY130, cuyo ancho de canal mínimo es de 130nm.
-
-El funcionamiento de la neurona resulta muy parecido al original, por lo que el voltaje de conmutación, $V_{SV}$, del disparador Schmitt (Ver figura \ref{fig:schmitt_trigger}) es el umbral de activación de la neurona y se obtiene de la siguiente manera:
+El funcionamiento de la neurona resulta muy parecido al original, por lo que el voltaje de conmutación, $V_{SV}$, del disparador Schmitt (Ver Figura \ref{fig:schmitt_trigger}) es el umbral de activación de la neurona \cite{Vohra_2024} y se obtiene de la siguiente manera:
 
 \begin{equation}
 	I_{D6} = \beta_{6}\left(V_{n}-V_{TN}\right)^{2}
@@ -131,6 +125,13 @@ En donde $R_{7/8}$ representa a $\sqrt{\frac{\beta_{7}}{\beta_{8}}}$. Igualando 
 	\label{eq:Vn}
 \end{equation}
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.2]{img/6T1R.png}
+	\caption{Sinapsis memristiva en configuración 6T1R.
+		\label{fig:6T1R}}
+\end{figure}
+
 En donde $R_{6/8}$ representa a $\sqrt{\frac{\beta_{6}}{\beta_{8}}}$. Sustituyendo la ecuación \ref{eq:Vn} en \ref{eq:VSV1}, se obtiene:
 
 \begin{equation}
@@ -139,9 +140,9 @@ En donde $R_{6/8}$ representa a $\sqrt{\frac{\beta_{6}}{\beta_{8}}}$. Sustituyen
 \end{equation}
 
 \subsection{Sinapsis memristiva}
-La configuración 6T1R, empleada en la sinapsis memristiva, fue tomada en base a la idea planteada en \cite{Tian_2022}, donde se implementan 4 transistores en configuración de puente H para controlar el sentido de la corriente que pasa por un memristor. El modelo de simulación pertenece a la tecnología SKY130 de \cite{SKY130reram}\cite{SKY130reramGitHub}, pero los parámetros del dispositivo son los tomados por \cite{Wang_2016}\cite{Alshaya_2022}. Este memristor tiene 
+La configuración 6T1R, empleada en la sinapsis memristiva de la Figura \ref{fig:6T1R}, fue tomada en base a la idea planteada en \cite{Tian_2022}, donde se implementan 4 transistores en configuración de puente H para controlar el sentido de la corriente que pasa por un memristor. El modelo de simulación pertenece a la tecnología SKY130 de \cite{SKY130reram}\cite{SKY130reramGitHub}, pero los parámetros del dispositivo son los tomados por \cite{Wang_2016}\cite{Alshaya_2022}. Este memristor tiene voltajes de umbral de $V_{ON}\approx 0.9V$ y $V_{OFF}\approx -0.6V$. El voltaje que consumen los transistores entre la terminal de drenador y de fuente es de $V_{Dsat}\approx 0.35V$, lo cual proporciona una suficiente alimentación para que exista el cambio en la resistencia del memristor, debido a que se esta utilizando un $V_{DD}=1.8V$
 
-El modelo básico de la regla STDP esta determinado por la ecuación \ref{eq:STDP}:
+La sinapsis memristiva cumple un rol importante en la red neuronal pulsante, ya que el aprendizaje dependiente del tiempo de los pulsos puede ser implementado de manera efectiva utilizando memristores. En STDP, la fuerza de una sinapsis se ajusta en función de la sincronización relativa de los pulsos pre y post-sinápticos. Si un pulso en la neurona presináptica precede a un pulso en la neurona postsináptica, la sinapsis se fortalece (potenciación). Por el contrario, si el pulso presináptico sigue al postsináptico, la sinapsis se debilita (supresión). Esta regla temporal puede ser implementada directamente en memristores debido a su capacidad para cambiar su resistencia en función de la historia temporal de los pulsos que los atraviesan. El modelo básico de la regla STDP esta determinado por la ecuación \ref{eq:STDP}:
 
 \begin{equation}
     \quad \Delta w
@@ -154,60 +155,134 @@ El modelo básico de la regla STDP esta determinado por la ecuación \ref{eq:STD
     \label{eq:STDP}
 \end{equation}
 
-Ahora bien, para que el exista una potenciación
-
-\section{Operación del sistema}
-
 \section{Resultados de la simulación}
-
-
-\subsection{Figures and Tables}
-\paragraph{Positioning Figures and Tables} Place figures and tables at the top and 
-bottom of columns. Avoid placing them in the middle of columns. Large 
-figures and tables may span across both columns. Figure captions should be 
-below the figures; table heads should appear above the tables. Insert 
-figures and tables after they are cited in the text. Use the abbreviation 
-``Fig.~\ref{fig}'', even at the beginning of a sentence.
-
-\begin{table}[htbp]
-\caption{Parámetros $\frac{W}{L}$ de la neurona LIF}
-\begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{Table}&\multicolumn{3}{|c|}{\textbf{Table Column Head}} \\
-\cline{2-4} 
-\textbf{Head} & \textbf{\textit{Table column subhead}}& \textbf{\textit{Subhead}}& \textbf{\textit{Subhead}} \\
-\hline
-copy& More table copy$^{\mathrm{a}}$& &  \\
-\hline
-\multicolumn{4}{l}{$^{\mathrm{a}}$Sample of a Table footnote.}
-\end{tabular}
-\label{tab1}
-\end{center}
-\end{table}
-
-\begin{table}[htbp]
-\caption{Parámetros $\frac{W}{L}$ de la sinapsis memristiva}
-\begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{Table}&\multicolumn{3}{|c|}{\textbf{Table Column Head}} \\
-\cline{2-4} 
-\textbf{Head} & \textbf{\textit{Table column subhead}}& \textbf{\textit{Subhead}}& \textbf{\textit{Subhead}} \\
-\hline
-copy& More table copy$^{\mathrm{a}}$& &  \\
-\hline
-\multicolumn{4}{l}{$^{\mathrm{a}}$Sample of a Table footnote.}
-\end{tabular}
-\label{tab1}
-\end{center}
-\end{table}
-
+\subsection{Simulación de una neurona y una sinapsis}
 \begin{figure}[htbp]
-\centerline{\includegraphics{img/fig1.png}}
-\caption{Example of a figure caption.}
-\label{fig}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/1LIF.png}
+        \caption{Circuito de una neurona LIF cuya salida esta conectada una sinapsis memristiva.}
+        \label{fig:1LIF}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/1LIF_V.png}
+        \caption{Generación de pulsos a la salida de la neurona LIF.}
+        \label{fig:1LIF_V}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/1LIF_T.png}
+        \caption{Cambio de la anchura del filamento del memristor.}
+        \label{fig:1LIF_T}
+    \end{subfigure}
+    \caption{Descripción general de las dos imágenes.}
+    \label{fig:LIF1}
 \end{figure}
+
+Para el primer caso de simulación, se utilizó una neurona LIF conectada en su entrada a un espejo de corriente que suministra la señal de entrada. A la salida de la neurona se conecta la sinapsis de tal forma que se debe modificar el peso sináptico en forma de supresión. En la Figura \ref{fig:1LIF} se muestra el circuito simulado.
+
+En la Figura \ref{fig:1LIF_V} se observa que la neurona funciona de manera correcta, generando trenes de pulsos, únicamente cuando se polariza la entrada. En la Figura \ref{fig:1LIF_T} se visualiza el cambio del ancho del filamento en el memristor. Como este filamento esta disminuyendo conforme recibe pulsos por parte de la neurona, se genera un cambio en la resistencia del memristor, haciendo que aumente y por consecuencia, disminuya el peso sináptico, provocando una supresión, de acuerdo con la regla STDP.
+
+\subsection{Simulación de dos neuronas y una sinapsis}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/2LIF.png}
+        \caption{Circuito de una neurona LIF cuya salida esta conectada una sinapsis memristiva.}
+        \label{fig:2LIF}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/2LIF_V.png}
+        \caption{Generación de pulsos a la salida de la neurona LIF.}
+        \label{fig:2LIF_V}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/2LIF_T.png}
+        \caption{Cambio de la anchura del filamento del memristor.}
+        \label{fig:2LIF_T}
+    \end{subfigure}
+    \caption{Descripción general de las dos imágenes.}
+    \label{fig:LIF2}
+\end{figure}
+
+Para el segundo caso de simulación, se utilizaron dos neuronas LIF interconectadas entre sí por medio de una sinapsis memristiva. Se observa en la Figura \ref{fig:2LIF} que la neurona presináptica esta conectada de la misma forma que en el primer caso, no obstante, la neurona postsináptica requiere de un transistor PMOS entre su entrada y la salida de la sinapsis, debido a que solo recibirá una señal de excitación cuando la propia neurona no pulse, si sucede un pulso a su salida, se debe aislar a la entrada para evitar oscilación en el circuito.
+
+En la Figura \ref{fig:2LIF_V} se observa que los pulsos entre la neurona presináptica y postsináptica suceden de manera simular, salvo en los últimos momentos de la simulación en donde la primer neurona pulsa más rápido que la segunda, provocando que la estabilidad que había en el filamento del memristor cambie, provocando que el peso sináptico disminuya y por lo tanto, la resistencia aumente, como se observa en la Figura \ref{fig:2LIF_T}.
+
+\subsection{Simulación de tres neuronas y dos sinapsis}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/3LIF.png}
+        \caption{Circuito de una neurona LIF cuya salida esta conectada una sinapsis memristiva.}
+        \label{fig:3LIF}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/3LIF_V.png}
+        \caption{Generación de pulsos a la salida de la neurona LIF.}
+        \label{fig:3LIF_V}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/3LIF_T.png}
+        \caption{Cambio de la anchura del filamento del memristor.}
+        \label{fig:3LIF_T}
+    \end{subfigure}
+    \caption{Descripción general de las dos imágenes.}
+    \label{fig:LIF3}
+\end{figure}
+
+Para el último caso de simulación, se utilizaron tres neuronas LIF, dos en la capa de entrada y una en la capa de salida. Como se observa en la Figura \ref{fig:3LIF}, al ser dos conexiones sinápticas, se requieren de dos sinapsis, junto con dos transistores PMOS, para evitar el fenómeno de oscilación, previamente mencionado.
+
+En la Figura \ref{fig:2LIF_V} se observa que para esta prueba se generó solo la mitad de pulsos en la segunda neurona presináptica para observar que la neurona postsináptica depende de esta excitación para pulsar de manera más frecuente. En la Figura \ref{fig:2LIF_T} se visualiza que los pulsos entre las neuronas mantienen un equilibrio en el filamento, sin embargo, cuando termina de pulsar la segunda neurona, los pulsos de la neurona postsináptica no son suficientes, provocando que la resistencia aumente y el ancho del filamento promedio disminuya junto con los pesos sinápticos.
+
+En el Cuadro \ref{parametros}, se muestran los parámetros utilizados para la implementación de las neuronas y de las sinapsis de este trabajo.
+
+\begin{table}[htbp]
+\caption{Parámetros $\frac{W}{L}$ del sistema}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Neurona}}&\multicolumn{2}{|c|}{\textbf{Sinapsis}} \\
+\cline{1-4} 
+\textbf{\textit{Parámetro}} & \textbf{\textit{Valor}}& \textbf{\textit{Parámetro}}& \textbf{\textit{Valor}} \\
+\hline
+$W_{1}$ & $0.2\mu m$ & $W_{1}$ & $5\mu m$\\
+\hline
+$W_{2}$ & $0.2\mu m$ & $W_{2}$ & $5\mu m$\\
+\hline
+$W_{3}$ & $1\mu m$ & $W_{3}$ & $1.5\mu m$\\
+\hline
+$W_{4}$ & $0.2\mu m$ & $W_{4}$ & $15\mu m$\\
+\hline
+$W_{5}$ & $0.2\mu m$ & $W_{5}$ & $1.5\mu m$\\
+\hline
+$W_{6}$ & $0.2\mu m$ & $W_{6}$ & $15\mu m$\\
+\hline
+$W_{7}$ & $0.2\mu m$ & & \\
+\hline
+$W_{8}$ & $0.2\mu m$ & & \\
+\hline
+$W_{9}$ & $1\mu m$ & & \\
+\hline
+\multicolumn{4}{l}{$^{*}$$L_{min}=0.1\mu m$ en ambos circuitos.}
+\end{tabular}
+\label{parametros}
+\end{center}
+\end{table}
 
 \section*{Conclusión}
 
