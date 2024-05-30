@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 N 240 -280 240 -240 {
-lab=rc}
+lab=Crefr}
 N 180 -50 200 -50 {
 lab=Vb1}
 N 240 -20 240 -0 {
@@ -26,7 +26,7 @@ lab=#net1}
 N 240 -180 240 -80 {
 lab=#net2}
 N 350 -160 350 -140 {
-lab=rc}
+lab=Crefr}
 N 350 -80 350 -0 {
 lab=GND}
 N 240 -0 350 -0 {
@@ -132,13 +132,13 @@ lab=GND}
 N 450 -220 560 -220 {
 lab=Iin}
 N 350 -160 410 -160 {
-lab=rc}
+lab=Crefr}
 N 160 -260 240 -260 {
-lab=rc}
+lab=Crefr}
 N 160 -260 160 -160 {
-lab=rc}
+lab=Crefr}
 N 160 -160 350 -160 {
-lab=rc}
+lab=Crefr}
 N 800 -260 800 -190 {
 lab=#net1}
 N 560 -220 560 -80 {
@@ -207,7 +207,7 @@ spiceprefix=X
 }
 C {devices/iopin.sym} 240 0 2 0 {name=p3 lab=GND}
 C {devices/ipin.sym} 180 -50 0 0 {name=p5 lab=Vb1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 350 -110 0 0 {name=C1 model=cap_mim_m3_1 W=10 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 350 -110 0 0 {name=C1 model=cap_mim_m3_1 W=21 L=1 MF=1 spiceprefix=X}
 C {sky130_fd_pr/nfet_01v8.sym} 430 -160 0 0 {name=M14
 L=20
 W=1
@@ -295,5 +295,5 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/opin.sym} 1080 -260 0 0 {name=p8 lab=Vout}
-C {devices/lab_pin.sym} 330 -160 1 0 {name=p4 sig_type=std_logic lab=rc}
+C {devices/lab_pin.sym} 350 -160 1 0 {name=p4 sig_type=std_logic lab=Crefr}
 C {devices/ipin.sym} 220 -390 0 0 {name=p1 lab=Iin}
