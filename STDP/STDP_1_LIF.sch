@@ -129,7 +129,7 @@ N -410 -250 -410 -210 {
 lab=vout}
 N -370 -210 -370 -190 {
 lab=GND}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -350 -70 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra.sym} -350 -70 0 0 {name=x1}
 C {devices/gnd.sym} -580 -120 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -580 -300 0 0 {name=l3 lab=VDD}
 C {devices/vsource.sym} -100 -170 0 0 {name=V1 value=1.8}
@@ -139,7 +139,7 @@ C {devices/vsource.sym} 80 -170 0 0 {name=V4 value=1.5}
 C {devices/gnd.sym} 80 -120 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 80 -220 2 0 {name=p1 sig_type=std_logic lab=vin}
 C {devices/lab_pin.sym} -680 -210 0 0 {name=p2 sig_type=std_logic lab=vin}
-C {devices/vsource.sym} -40 -170 0 0 {name=V2 value=0.45}
+C {devices/vsource.sym} -40 -170 0 0 {name=V2 value=0.6}
 C {devices/gnd.sym} -40 -120 0 0 {name=l7 lab=GND}
 C {devices/lab_pin.sym} -40 -220 2 0 {name=p3 sig_type=std_logic lab=vb1}
 C {devices/vsource.sym} 20 -170 0 0 {name=V3 value=0.4}

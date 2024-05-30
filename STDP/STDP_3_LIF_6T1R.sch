@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0001
+x1=2.01289e-05
+x2=2.41827e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0001
+x1=2.01289e-05
+x2=2.41827e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -62,8 +62,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0001
+x1=2.01289e-05
+x2=2.41827e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -76,13 +76,13 @@ logx=0
 logy=0
 color=10
 node="\\"Thickness [nm]; 5 n.x4.xr1.n1#ngap -\\""}
-N 850 -140 850 -120 {
+N 930 -140 930 -120 {
 lab=GND}
-N 850 -220 850 -200 {
+N 930 -220 930 -200 {
 lab=VDD}
-N 910 -140 910 -120 {
+N 990 -140 990 -120 {
 lab=GND}
-N 910 -220 910 -200 {
+N 990 -220 990 -200 {
 lab=vb1}
 N -80 -170 -80 -150 {
 lab=GND}
@@ -124,15 +124,15 @@ N -300 -290 -300 -240 {
 lab=#net2}
 N -360 -240 -360 -220 {
 lab=#net2}
-N 500 -220 520 -220 {
+N 580 -220 600 -220 {
 lab=#net3}
-N 520 -160 530 -160 {
+N 600 -160 610 -160 {
 lab=vb3}
-N 620 -150 620 -130 {
+N 700 -150 700 -130 {
 lab=GND}
-N 620 -310 620 -290 {
+N 700 -310 700 -290 {
 lab=VDD}
-N 760 -360 760 -220 {
+N 840 -360 840 -220 {
 lab=vpos}
 N 320 -360 320 -240 {
 lab=vpos}
@@ -154,9 +154,9 @@ N 400 -220 420 -220 {
 lab=#net5}
 N 240 -220 300 -220 {
 lab=#net4}
-N 970 -140 970 -120 {
+N 1050 -140 1050 -120 {
 lab=GND}
-N 970 -220 970 -200 {
+N 1050 -220 1050 -200 {
 lab=vb2}
 N 160 -180 160 -160 {
 lab=GND}
@@ -215,29 +215,31 @@ lab=#net9}
 N 240 -540 300 -540 {
 lab=#net8}
 N 480 -220 500 -220 {
-lab=#net3}
+lab=#net10}
 N 500 -540 500 -220 {
-lab=#net3}
+lab=#net10}
 N 480 -540 500 -540 {
-lab=#net3}
-N 320 -360 760 -360 {
-lab=vpos}
+lab=#net10}
 N 320 -560 320 -360 {
 lab=vpos}
 N 220 -560 320 -560 {
 lab=vpos}
 N 320 -500 370 -500 {
 lab=vpos}
-N 1030 -140 1030 -120 {
+N 1110 -140 1110 -120 {
 lab=GND}
-N 1030 -220 1030 -200 {
+N 1110 -220 1110 -200 {
 lab=vb3}
-C {devices/vsource.sym} 850 -170 0 0 {name=V1 value=1.8}
-C {devices/gnd.sym} 850 -120 0 0 {name=l6 lab=GND}
-C {devices/vdd.sym} 850 -220 0 0 {name=l7 lab=VDD}
-C {devices/vsource.sym} 910 -170 0 0 {name=V2 value=0.5}
-C {devices/gnd.sym} 910 -120 0 0 {name=l9 lab=GND}
-C {devices/lab_pin.sym} 910 -220 2 0 {name=p9 sig_type=std_logic lab=vb1}
+N 500 -220 520 -220 {
+lab=#net10}
+N 320 -360 840 -360 {
+lab=vpos}
+C {devices/vsource.sym} 930 -170 0 0 {name=V1 value=1.8}
+C {devices/gnd.sym} 930 -120 0 0 {name=l6 lab=GND}
+C {devices/vdd.sym} 930 -220 0 0 {name=l7 lab=VDD}
+C {devices/vsource.sym} 990 -170 0 0 {name=V2 value=0.5}
+C {devices/gnd.sym} 990 -120 0 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} 990 -220 2 0 {name=p9 sig_type=std_logic lab=vb1}
 C {sky130_fd_pr/corner.sym} 550 470 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/code.sym} 430 470 0 0 {name=MODELS2
 only_toplevel=true
@@ -264,11 +266,11 @@ C {devices/gnd.sym} -80 -150 0 0 {name=l13 lab=GND}
 C {devices/vdd.sym} -80 -330 0 0 {name=l14 lab=VDD}
 C {devices/lab_pin.sym} -180 -180 0 0 {name=p13 sig_type=std_logic lab=vb1}
 C {devices/lab_pin.sym} 80 -240 1 0 {name=p14 sig_type=std_logic lab=vpre1}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} 220 -60 0 0 {name=x4}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} 220 -60 0 0 {name=x4}
 C {devices/vdd.sym} 160 -300 0 0 {name=l16 lab=VDD}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 160 -160 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 160 -160 0 0 {name=x1}
 C {devices/vdd.sym} -300 -320 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -360 -190 0 1 {name=I0 value="PULSE(0 3u 5u 10n 10n 5u 10u 10)"}
+C {devices/isource.sym} -360 -190 0 1 {name=I0 value="PULSE(0 3u 10n 10n 10n 5u 10u 10)"}
 C {devices/gnd.sym} -360 -140 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -260 -290 0 0 {name=M2
 L=0.15
@@ -298,7 +300,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 860 -140 0 0 {name=x3}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 940 -140 0 0 {name=x3}
 C {sky130_fd_pr/pfet_01v8.sym} 370 -200 3 0 {name=M1
 L=0.15
 W=1
@@ -313,23 +315,23 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 520 -160 3 0 {name=p1 sig_type=std_logic lab=vb3}
-C {devices/gnd.sym} 620 -130 0 0 {name=l1 lab=GND}
-C {devices/vdd.sym} 620 -310 0 0 {name=l2 lab=VDD}
+C {devices/lab_pin.sym} 600 -160 3 0 {name=p1 sig_type=std_logic lab=vb3}
+C {devices/gnd.sym} 700 -130 0 0 {name=l1 lab=GND}
+C {devices/vdd.sym} 700 -310 0 0 {name=l2 lab=VDD}
 C {devices/gnd.sym} 160 -160 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 320 -320 2 0 {name=p2 sig_type=std_logic lab=vpos}
 C {devices/vdd.sym} 370 -270 0 0 {name=l4 lab=VDD}
 C {devices/ammeter.sym} 450 -220 3 0 {name=Vmeas1 savecurrent=true}
-C {devices/vsource.sym} 970 -170 0 0 {name=V3 value=0.5}
-C {devices/gnd.sym} 970 -120 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} 970 -220 2 0 {name=p3 sig_type=std_logic lab=vb2}
+C {devices/vsource.sym} 1050 -170 0 0 {name=V3 value=0.5}
+C {devices/gnd.sym} 1050 -120 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} 1050 -220 2 0 {name=p3 sig_type=std_logic lab=vb2}
 C {devices/gnd.sym} -80 -470 0 0 {name=l8 lab=GND}
 C {devices/vdd.sym} -80 -650 0 0 {name=l10 lab=VDD}
 C {devices/lab_pin.sym} -180 -500 0 0 {name=p4 sig_type=std_logic lab=vb2}
 C {devices/lab_pin.sym} 80 -560 1 0 {name=p5 sig_type=std_logic lab=vpre2}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} 220 -380 0 0 {name=x5}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} 220 -380 0 0 {name=x5}
 C {devices/vdd.sym} 160 -620 0 0 {name=l11 lab=VDD}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 160 -480 0 0 {name=x2}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/LIF_neuron_Vohra_CC.sym} 160 -480 0 0 {name=x2}
 C {devices/vdd.sym} -300 -640 0 0 {name=l12 lab=VDD}
 C {devices/isource.sym} -360 -510 0 1 {name=I1 value="PULSE(0 3u 10n 10n 10n 5u 10u 5)"}
 C {devices/gnd.sym} -360 -460 0 0 {name=l15 lab=GND}
@@ -378,6 +380,7 @@ spiceprefix=X
 }
 C {devices/vdd.sym} 370 -590 0 0 {name=l18 lab=VDD}
 C {devices/ammeter.sym} 450 -540 3 1 {name=Vmeas2 savecurrent=true}
-C {devices/vsource.sym} 1030 -170 0 0 {name=V4 value=0.45}
-C {devices/gnd.sym} 1030 -120 0 0 {name=l21 lab=GND}
-C {devices/lab_pin.sym} 1030 -220 2 0 {name=p6 sig_type=std_logic lab=vb3}
+C {devices/vsource.sym} 1110 -170 0 0 {name=V4 value=0.45}
+C {devices/gnd.sym} 1110 -120 0 0 {name=l21 lab=GND}
+C {devices/lab_pin.sym} 1110 -220 2 0 {name=p6 sig_type=std_logic lab=vb3}
+C {devices/ammeter.sym} 550 -220 3 0 {name=Vmeas3 savecurrent=true}
