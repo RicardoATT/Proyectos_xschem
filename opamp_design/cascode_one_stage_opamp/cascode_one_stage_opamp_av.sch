@@ -59,13 +59,13 @@ N -280 -790 -280 -730 {
 lab=VSS}
 N -420 -730 -280 -730 {
 lab=VSS}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -420 -820 0 0 {name=CL model=cap_mim_m3_1 W=504000000 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -420 -820 0 0 {name=CL model=cap_mim_m3_1 W=5040000 L=1 MF=1 spiceprefix=X}
 C {devices/res.sym} -280 -820 0 0 {name=RL
 value=100k
 footprint=1206
 device=resistor
 m=1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -620 -780 0 0 {name=CL1 model=cap_mim_m3_1 W=504000000 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -620 -780 0 0 {name=CL1 model=cap_mim_m3_1 W=5040000 L=1 MF=1 spiceprefix=X}
 C {devices/res.sym} -570 -1000 1 0 {name=RL1
 value=100k
 footprint=1206
@@ -85,8 +85,20 @@ C {devices/lab_pin.sym} -470 -670 2 0 {name=p13 sig_type=std_logic lab=Vinp}
 C {devices/vsource.sym} -590 -620 0 0 {name=V8 value=0}
 C {devices/gnd.sym} -590 -570 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} -590 -670 2 0 {name=p14 sig_type=std_logic lab=VSS}
-C {devices/code_shown.sym} -110 -1010 0 0 {name=SPICE1 only_toplevel=false 
-value=".ac dec 0.0001 1 1000k
+C {sky130_fd_pr/corner.sym} -230 -1010 0 0 {name=CORNER1 only_toplevel=true corner=tt}
+C {devices/lab_pin.sym} -280 -870 1 0 {name=p15 sig_type=std_logic lab=Vout}
+C {devices/lab_pin.sym} -640 -830 0 0 {name=p16 sig_type=std_logic lab=Vinn}
+C {devices/lab_pin.sym} -620 -730 0 0 {name=p17 sig_type=std_logic lab=VSS}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/cascode_one_stage_opamp/cascode_one_stage_opamp.sym} -290 -750 0 0 {name=x1}
+C {devices/code_shown.sym} -220 -860 0 0 {name=SPICE only_toplevel=false 
+value="
+.param W1=9.389
+.param W5=9.7
+.param W9=35.393
+.param W10=7.5
+.param W11=0.469
+.param L0=0.15
+.ac dec 0.0001 1 10000000k
 .control
 	run
 	setplot tran1
@@ -94,12 +106,7 @@ value=".ac dec 0.0001 1 1000k
 	set color1=rgb:0/0/0
 	settype decibel vout
 	plot vdb(Vout) xlog
-	wrdata simple_one_stage_opamp_av.ssv vdb(Vout) xlog
+	wrdata cascode_one_stage_opamp_av.ssv vdb(Vout) xlog
 .endc
 .save all
 "}
-C {sky130_fd_pr/corner.sym} -230 -1010 0 0 {name=CORNER1 only_toplevel=true corner=tt}
-C {devices/lab_pin.sym} -280 -870 1 0 {name=p15 sig_type=std_logic lab=Vout}
-C {devices/lab_pin.sym} -640 -830 0 0 {name=p16 sig_type=std_logic lab=Vinn}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/simple_one_stage_opamp/simple_one_stage_opamp.sym} -240 -630 0 0 {name=x1}
-C {devices/lab_pin.sym} -620 -730 0 0 {name=p17 sig_type=std_logic lab=VSS}

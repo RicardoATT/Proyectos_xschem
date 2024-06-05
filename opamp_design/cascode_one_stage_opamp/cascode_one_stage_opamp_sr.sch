@@ -42,18 +42,24 @@ C {devices/lab_pin.sym} -710 -340 2 0 {name=p4 sig_type=std_logic lab=Vinp}
 C {devices/vsource.sym} -770 -290 0 0 {name=V4 value=0}
 C {devices/gnd.sym} -770 -240 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -770 -340 2 0 {name=p6 sig_type=std_logic lab=VSS}
-C {devices/code_shown.sym} -340 -550 0 0 {name=SPICE
+C {devices/code_shown.sym} -450 -410 0 0 {name=SPICE
 value="
+.param W1=9.389
+.param W5=9.7
+.param W9=35.393
+.param W10=7.5
+.param W11=0.469
+.param L0=0.15
 .control
 	tran 0.1n 15u
 	set color0=rgb:f/f/f
 	set color1=rgb:0/0/0
 	plot v(Vout)
-	wrdata simple_one_stage_opamp_sr.ssv (Vout)
+	wrdata cascode_one_stage_opamp_sr.ssv (Vout)
 .endc
 .save all
 "}
 C {sky130_fd_pr/corner.sym} -460 -560 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/lab_pin.sym} -580 -480 2 0 {name=p10 sig_type=std_logic lab=Vout}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/simple_one_stage_opamp/simple_one_stage_opamp.sym} -420 -240 0 0 {name=x1}
 C {devices/lab_pin.sym} -700 -390 2 0 {name=p7 sig_type=std_logic lab=VSS}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/cascode_one_stage_opamp/cascode_one_stage_opamp.sym} -470 -360 0 0 {name=x1}

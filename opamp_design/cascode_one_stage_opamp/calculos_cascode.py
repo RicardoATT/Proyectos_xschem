@@ -17,8 +17,8 @@ ICMR_min = 0.8      #Vin(min)
 Pd = 1e-3
 
 # Parametros de diseño
-L0 = 0.45e-6
-Cl = 10e-12
+L0 = 0.15e-6
+Cl = 12e-12
 #   Transistor canal N
 Vthn = 0.769432
 Kn = 0.00015137603990044484 
@@ -43,7 +43,7 @@ W3=W1
 W4=W1
 
 # Paso 4  
-I10=0.000006        # I9/20
+I10=12e-6        # I9/10
 
 # Paso 5
 I1=0.5*I9
@@ -81,12 +81,16 @@ Vds9_sat=sqrt((2*I9)/(Kn*W9_L9))
 V0_max=VDD-(2*Vds8_sat)
 V0_min=(2*Vds3_sat)+Vds9_sat
 
-print(round(W1*1e6, 3))
-print(round(W5*1e6, 3))
-print(round(W9*1e6, 3))
-print(round(W11*1e6, 3))
-print(A0)
+print("W1=",round(W1*1e6, 3),"um")
+print("W5=",round(W5*1e6, 3),"um")
+print("W9=",round(W9*1e6, 3),"um")
+print("W11=",round(W11*1e6, 3),"um")
+print("Av=",A0)
 print(V0_max, V0_min)
+print("I1=",I1)
+print("I9=",I9)
+print("I10=",I10)
+print("Rout=",Rout)
 
 '''
 # Calculo de Av
