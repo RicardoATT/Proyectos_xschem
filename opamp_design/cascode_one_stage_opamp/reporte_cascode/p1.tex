@@ -16,10 +16,11 @@
 
 \begin{equation*}
 	\begin{array}{l l}
-		\textbf{Parámetros conocidos} \\
+		\textbf{Parametros conocidos} \\
 		V_{DD} =  1.8  V \\
+		V_{SS} =  0  V \\
 		L_{min} =  150.0  nm \\
-		0.7 V \leq ICMR \leq 1.6 V \\
+		0.8 V \leq ICMR \leq 1.8 V \\
 		K'_{N} =  151.37604  \frac{\mu A}{V^{2}} \\
 		K'_{P} =  57.013889  \frac{\mu A}{V^{2}} \\
 		V_{TN} =  0.769432  V \\
@@ -29,49 +30,101 @@
 		C_{L} =  12.0  pF \\
 		\\
 		\textbf{Características deseadas} \\
-		A_{V} =  100  \frac{V}{V} \\
-		P_{diss} \leq  1  mW \\
+		A_{V} =  3000  \frac{V}{V} \\
+		P_{diss} \leq  1.0  mW \\
 		GB =  10.0  MHz \\
-		SR \geq  5  \frac{V}{\mu s} \\
+		SR \geq  10  \frac{V}{\mu s} \\
+		0.3 V \leq V_{OUT} \leq 1.5 V \\
 		\\
 		\textbf{Paso 1} \\
-		I_{5} = SR \times C_{L} = 5\times1.2e-11 \\
-		I_{5} =  60.0 \mu A \\
+		I_{9} = SR \times C_{L} = 10\times1.2e-11 \\
+		I_{9} =  120.0 \mu A \\
 		\\
 		\textbf{Paso 2} \\
-		g_{m} = 2\pi{} \times GB \times C_{L} = 2 \pi{} \times10000000.0\times 1.2e-11  \\
+		g_{m} = g_{m1} = g_{m2} = 2\pi{} \times GB \times C_{L} = 2 \pi{} \times10000000.0\times 1.2e-11  \\
 		g_{m} =  753.982237  \mu S \\
+		I_{5} = \frac{I_{9}}{2} = \frac{ 0.00012 }{2} \\
+		I_{5} =  60.0 \mu A \\
 		\frac{W_1}{L_1} = \frac{gm^2}{K'_{N}\times I_5} = \frac{0.000754^2}{0.000151\times6e-05}\\
 		\frac{W_1}{L_1} =  62.591281  \\
 		W_{1} = \frac{W_1}{L_1} \times L_{min} =  62.591281 \times 1.5e-07  \\
 		W_{1} = W_{2} =  9.388692  \mu m \\
 		\\
 		\textbf{Paso 3} \\
-		\frac{W_3}{L_3} = \frac{I_5}{K'_{P}\times \left[(V_{DD}-ICMR^{+}-|V_{TP}|+V_{TN}\right]^{2}} = \frac{ 6e-05 }{ 5.7e-05 \times \left[ 1.8 - 1.6 - 0.624345 + 0.769432 \right]^{2}} \\
-		\frac{W_3}{L_3} =  8.837174  \\
-		W_{3} = \frac{W_3}{L_3} \times L_{min} =  8.837174 \times 1.5e-07  \\
-		W_{3} = W_{4} =  1.325576  \mu m \\
+		W_{4} = W_{3} = W_{1} =  9.388692  \mu m \\
 	\end{array}
 \end{equation*}
 
 \begin{equation*}
 	\begin{array}{l l}
 		\textbf{Paso 4} \\
-		V_{GS1} = \sqrt{\frac{I_{5}}{K'_{N}\times\frac{W_{1}}{L_{1}}}}+V_{TN} = \sqrt{\frac{ 6e-05 }{ 0.000151 \times 62.591281 }}+ 0.769432  \\
-		V_{GS1} =  0.849009  V \\
-		\frac{W_{5}}{L_{5}} = \frac{2\times I_{5}}{K'_{N}\times (ICMR^{-}-V_{{GS1}})^{2}} = \frac{2\times 6e-05 }{ 0.000151 \times ( 0.7 - 0.849009 )^{2}} \\
-		\frac{W_5}{L_5} =  35.702313  \\
-		W_{5} = \frac{W_5}{L_5} \times L_{min} =  35.702313 \times 1.5e-07  \\
-		W_{5} = W_{6} =  5.355347  \mu m \\
+		\text{Se escoge a} I_{10} =  12.0  \mu A \\
+		\text{Se escoge a} \frac{W_{10}}{L_{10}} =  50  \\
+		W_{10} = \frac{W_10}{L_10} \times L_{min} =  50 \times 1.5e-07  \\
+		W_{10} =  7.5  \mu m \\
 		\\
 		\textbf{Paso 5} \\
-		A_{0} = \frac{2g_{m}}{(\lambda_{N}+\lambda_{P})\times I_{5}} = \frac{2\times 0.000754 }{( 0.088964 + 0.068964 )\times 6e-05 } \\
-		A_{0} =  159.141041  =  44.035644  db \\
+		I_{1} = I_{2} = \frac{I_{9}}{2} = \frac{ 0.00012 }{2} \\
+		I_{1} =  60.0 \mu A \\
+		\frac{W_{11}}{L_{11}} = \frac{I_{10}}{4\times I_{1}}\times \frac{W_1}{L_1}= \frac{ 1.2e-05 }{4\times 6e-05 }\times 62.591281  \\
+		\frac{W_{11}}{L_{11}} =  3.129564  \\
+		W_{11} = \frac{W_{11}}{L_{11}} \times L_{min} =  3.129564 \times 1.5e-07  \\
+		W_{11} =  0.469435  \mu m \\
+		\\
+		\textbf{Paso 6} \\
+		V_{DS3}(sat) = \sqrt{\frac{2\times I_{1}}{K'_{N}\times\frac{W_{1}}{L_{1}}}} = \sqrt{\frac{2\times 6e-05 }{ 0.000151 \times 62.591281 }} \\
+		V_{DS3}(sat) =  0.11254  V \\
+		\frac{W_7}{L_7} = \frac{2\times I_{1}}{K'_{P}\times (V_{DD}-ICMR^{+}-|V_{TP}|-V_{DS3}(sat)+V_{TN})^{2}} = \frac{2\times 6e-05 }{ 5.7e-05 \times ( 1.8 - 1.8 - 0.624345 - 0.11254 + 0.769432 )^{2}} \\
+		\frac{W_7}{L_7} =  64.667113  \\
+		W_{7} = \frac{W_7}{L_7} \times L_{min} =  64.667113 \times 1.5e-07  \\
+		W_{7} = W_{8} =  9.700067  \mu m \\
+		\\
+		\textbf{Paso 7} \\
+		W_{5} = W_{6} = W_{7} =  9.700067  \mu m \\
+		\\
+		\textbf{Paso 8} \\
+		V_{GS1} = \sqrt{\frac{I_{9}}{K'_{N}\times\frac{W_{1}}{L_{1}}}}+V_{TN} = \sqrt{\frac{ 0.00012 }{ 0.000151 \times 62.591281 }}+ 0.769432  \\
+		V_{GS1} =  0.881972  V \\
+		\frac{W_9}{L_9} = \frac{2\times I_{9}}{K'_{N}\times (ICMR^{-}-V_{{GS1}})^{2}} = \frac{2\times 0.00012 }{ 0.000151 \times ( 0.8 - 0.881972 )^{2}} \\
+		\frac{W_9}{L_9} =  235.954312  \\
+		W_{9} = \frac{W_9}{L_9} \times L_{min} =  235.954312 \times 1.5e-07  \\
+		W_{9} =  35.393147  \mu m \\
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		\textbf{Paso 9} \\
+		r_{ds2} = r_{ds4} = \frac{1}{\lambda_{N}\times I_{2}} = \frac{1}{ 0.088964 \times 6e-05 } \\
+		r_{ds2} =  187.342259  K\Omega \\
+		r_{ds6} = r_{ds8} = \frac{1}{\lambda_{P}\times I_{2}} = \frac{1}{ 0.068964 \times 6e-05 } \\
+		r_{ds6} =  241.67292  K\Omega \\
+		g_{m4} = \sqrt{2\times K'_{N}\times \frac{W_4}{L_4}\times I_{2}} = \sqrt{2\times 0.000151 \times 62.591281 \times 6e-05 } \\
+		g_{m4} =  1066.291905  \mu S \\
+		g_{m6} = \sqrt{2\times K'_{P}\times \frac{W_6}{L_6}\times I_{2}} = \sqrt{2\times 5.7e-05 \times 64.667113 \times 6e-05 } \\
+		g_{m6} =  665.154742  \mu S \\
+		R_{OUT} \approx (r_{ds2}\times g_{m4}\times r_{ds4})||(r_{ds6}\times g_{m6}\times r_{ds8}) \\
+		R_{OUT} \approx ( 187342.258928 \times 0.001066 \times 187342.258928 )||( 241672.919784 \times 0.000665 \times 241672.919784 ) \\
+		R_{OUT} \approx  19.061511  M\Omega \\
+		A_{0} = g_{m}\times R_{OUT} =  0.000754 \times 19061511.096319  \\
+		A_{0} =  14372.040774  =  83.150369  db \\
+		\\
+		\textbf{Paso 10} \\
+		V_{DS8}(sat) = \sqrt{\frac{2\times I_{2}}{K'_{N}\times\frac{W_{8}}{L_{8}}}} = \sqrt{\frac{2\times 6e-05 }{ 0.000151 \times 64.667113 }} \\
+		V_{DS8}(sat) =  0.110719  V \\
+		V_{DS9}(sat) = \sqrt{\frac{2\times I_{9}}{K'_{N}\times\frac{W_{9}}{L_{9}}}} = \sqrt{\frac{2\times 0.00012 }{ 0.000151 \times 235.954312 }} \\
+		V_{DS9}(sat) =  0.081972  V \\
+		V_{OUT}(max) = V_{DD} - 2\times V_{DS8}(sat) =  1.8 - 2\times  0.110719  \\
+		V_{OUT}(max) =  1.578563  V \\
+		V_{OUT}(min) = 2\times V_{DS3}(sat) + V_{DS9}(sat) = 2\times  0.11254  +  0.081972  \\
+		V_{OUT}(min) =  0.307051  V \\
 		\\
 		\textbf{Parámetros calculados} \\
-		W_{1} = W_{2} =  9.388692  \mu m \\
-		W_{3} = W_{4} =  1.325576  \mu m \\
-		W_{5} = W_{6} =  5.355347  \mu m \\
-		L_{1} = L_{2} = L_{3} = L_{4} = L_{5} = L_{6} = 0.15  \mu m \\
+		W_{1} = W_{2} = W_{3} = W_{4} =  9.388692  \mu m \\
+		W_{5} = W_{6} = W_{7} = W_{8} =  9.700067  \mu m \\
+		W_{9} =  35.393147  \mu m \\
+		W_{10} =  7.5  \mu m \\
+		W_{11} =  0.469435  \mu m \\
+		L_{1} - L_{11} =  0.15  \mu m \\
 	\end{array}
 \end{equation*}

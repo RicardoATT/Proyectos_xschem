@@ -16,48 +16,48 @@
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.32]{CascodeOneStageOpAmpAv.png}
-	\caption{Circuito utilizado para obtener la ganancia del amplificador operacional cascodo de una etapa (Seguidor de voltaje). \label{fig:CascodeOneStageOpAmpAv}}
+	\includegraphics[scale=0.42]{CascodeOneStageOpAmpAv.png}
+	\caption{Circuito utilizado para obtener la ganancia del amplificador operacional cascodo de una etapa. \label{fig:CascodeOneStageOpAmpAv}}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.28]{CascodeOneStageOpAmpAvWF.png}
+	\includegraphics[scale=0.33]{CascodeOneStageOpAmpAvWF.png}
 	\caption{Diagrama de Bode obtenido de la \autoref{fig:CascodeOneStageOpAmpAv}. \label{fig:CascodeOneStageOpAmpAvWF}}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.35]{CascodeOneStageOpAmpGB.png}
-	\caption{Circuito utilizado para obtener la ganancia en ancho de banda (\textit{Gain Bandwidth}) del amplificador operacional cascodo de una etapa). \label{fig:CascodeOneStageOpAmpGB}}
+	\includegraphics[scale=0.42]{CascodeOneStageOpAmpGB.png}
+	\caption{Circuito utilizado para obtener la ganancia en ancho de banda (\textit{Gain Bandwidth}) del amplificador operacional cascodo de una etapa. \label{fig:CascodeOneStageOpAmpGB}}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.28]{CascodeOneStageOpAmpGBWF.png}
+	\includegraphics[scale=0.33]{CascodeOneStageOpAmpGBWF.png}
 	\caption{Diagrama de Bode obtenido de la \autoref{fig:CascodeOneStageOpAmpGB}. \label{fig:CascodeOneStageOpAmpGBWF}}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.35]{CascodeOneStageOpAmpSR.png}
+	\includegraphics[scale=0.47]{CascodeOneStageOpAmpSR.png}
 	\caption{Circuito utilizado para evaluar obtener el \textit{Slew Rate} del amplificador operacional cascodo de una etapa (Seguidor de voltaje). \label{fig:CascodeOneStageOpAmpSR}}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.28]{CascodeOneStageOpAmpSRWF.png}
+	\includegraphics[scale=0.33]{CascodeOneStageOpAmpSRWF.png}
 	\caption{Grafica del voltaje de salida obtenido de la \autoref{fig:CascodeOneStageOpAmpSR}. \label{fig:CascodeOneStageOpAmpSRWF}}
 \end{figure}
 
 \begin{equation*}
 	\begin{array}{l l}
 		\textbf{Resultados obtenidos de la simulación} \\
-		A_{V} = \frac{A_{V}(0)}{R \times C} = \frac{ 15.742238 }{ 100000.0 \times 1.2e-08 } \\
-		A_{V} =  131.18532  \\
-		P_{diss} = V_{DD} \times I_{5} =  1.8 \times 6e-05  \\
-		P_{diss} =  0.108  mW \\
-		GB =  417.643781  KHz \\
-		Slew Rate =  11.823621 \frac{V}{\mu s} \\
+		A_{V} = \frac{A_{V}(0)}{R \times C} = \frac{ 21.116722 }{ 100000.0 \times 1.2e-08 } \\
+		A_{V} =  17597.268667  \\
+		P_{diss} = V_{DD} \times (I_{9}+I_{10}) =  1.8 \times ( 0.00012  +  1.2e-05 ) \\
+		P_{diss} =  0.2376  mW \\
+		GB =  329.068635  KHz \\
+		Slew Rate =  18.923227 \frac{V}{\mu s} \\
 	\end{array}
 \end{equation*}
