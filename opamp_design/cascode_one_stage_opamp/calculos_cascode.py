@@ -12,7 +12,7 @@ GB = 10e6
 SR = 10
 Vout_max = 1.5      #Vout(max)
 Vout_min = 0.3      #Vout(min)
-ICMR_max = 1.8      #Vin(max) 
+ICMR_max = 1.7      #Vin(max) 
 ICMR_min = 0.8      #Vin(min) 
 Pd = 1e-3
 
@@ -55,7 +55,7 @@ W11=W11_L11*L0
 
 # Paso 6
 Vds3_sat=sqrt((2*I1)/(Kn*W1_L1))
-W7_L7=(2*I1)/(Kp*(VDD-ICMR_max-Vthp-Vds3_sat+Vthn))
+W7_L7=(2*I1)/(Kp*(VDD-ICMR_max-Vthp-Vds3_sat+Vthn)**2)
 W7=W7_L7*L0
 W8=W7
 
@@ -237,3 +237,5 @@ print("Slew Rate = ",round(theta[1]*1e-8, 6),"\\frac{V}{\\mu s} \\\\")
 
 print(" \\end{array}")
 print("\\end{equation}")
+
+print("W7=",W7)
