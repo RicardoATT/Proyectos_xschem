@@ -519,7 +519,7 @@ C {devices/gnd.sym} -790 -520 2 0 {name=l22 lab=GND}
 C {devices/lab_pin.sym} -1000 -460 1 0 {name=p8 sig_type=std_logic lab=vsyn2}
 C {devices/lab_pin.sym} -1000 -200 1 0 {name=p11 sig_type=std_logic lab=vsyn1}
 C {devices/vdd.sym} -1540 -560 0 0 {name=l12 lab=VDD}
-C {devices/isource.sym} -1600 -430 0 1 {name=I2 value="PULSE(0 3u 100n 10n 10n 5u 10u 10)"}
+C {devices/isource.sym} -1600 -430 0 1 {name=I2 value=0}
 C {devices/gnd.sym} -1600 -380 0 0 {name=l15 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -1500 -530 0 0 {name=M4
 L=0.15
