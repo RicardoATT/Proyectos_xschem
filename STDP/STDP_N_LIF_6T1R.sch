@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=3.40516e-05
+x1=1.13238e-05
+x2=1.35228e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -22,8 +22,9 @@ ylabmag=1.0
 node="\\"Vpre1 [V];vpre1\\"
 \\"Vpre2 [V];vpre2\\"
 \\"Vpre3 [V];vpre3\\"
+\\"Vpre4 [V];vpre4\\"
 \\"Vpost [V];vpos\\""
-color="4 10 7 6"
+color="4 10 7 8 6"
 dataset=-1
 unitx=1
 logx=0
@@ -37,8 +38,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=3.40516e-05
+x1=1.13238e-05
+x2=1.35228e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -63,8 +64,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=3.40516e-05
+x1=1.13238e-05
+x2=1.35228e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -76,10 +77,11 @@ unitx=1
 logx=0
 logy=0
 
-color="4 10 7 6"
+color="4 10 7 8 6"
 node="\\"Vmempre1 [V];vc1\\"
 \\"Vmempre2 [V];vc2\\"
 \\"Vmempre3 [V];vc3\\"
+\\"Vmempre4 [V];vc4\\"
 \\"Vmempost [V];vc\\""}
 B 2 -1000 340 -200 740 {flags=graph
 y1=3.3
@@ -89,8 +91,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=3.40516e-05
+x1=1.13238e-05
+x2=1.35228e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -361,6 +363,84 @@ N -660 -720 -660 -460 {
 lab=#net2}
 N -920 -680 -920 -480 {
 lab=vpos}
+N -1320 -930 -1320 -910 {
+lab=GND}
+N -1320 -1090 -1320 -1070 {
+lab=VDD}
+N -1180 -1000 -1160 -1000 {
+lab=vpre4}
+N -1080 -1060 -1080 -1040 {
+lab=VDD}
+N -1420 -940 -1410 -940 {
+lab=vb4}
+N -1480 -1000 -1420 -1000 {
+lab=vc4}
+N -1160 -1000 -1140 -1000 {
+lab=vpre4}
+N -920 -940 -870 -940 {
+lab=vpos}
+N -920 -1000 -920 -940 {
+lab=vpos}
+N -870 -1030 -870 -980 {
+lab=VDD}
+N -1020 -980 -1000 -980 {
+lab=vsyn4}
+N -940 -980 -900 -980 {
+lab=vsyn4}
+N -1020 -1000 -920 -1000 {
+lab=vpos}
+N -1000 -980 -940 -980 {
+lab=vsyn4}
+N -1080 -940 -1080 -920 {
+lab=GND}
+N -840 -980 -820 -980 {
+lab=#net11}
+N -820 -940 -790 -940 {
+lab=#net11}
+N -820 -980 -820 -940 {
+lab=#net11}
+N -790 -1040 -790 -980 {
+lab=GND}
+N -760 -980 -740 -980 {
+lab=#net12}
+N -680 -980 -660 -980 {
+lab=#net2}
+N -1600 -920 -1600 -900 {
+lab=GND}
+N -1480 -1020 -1480 -1000 {
+lab=vc4}
+N -1480 -1050 -1470 -1050 {
+lab=VDD}
+N -1470 -1080 -1470 -1050 {
+lab=VDD}
+N -1480 -1080 -1470 -1080 {
+lab=VDD}
+N -1560 -1050 -1520 -1050 {
+lab=#net13}
+N -1600 -1080 -1480 -1080 {
+lab=VDD}
+N -1610 -1050 -1600 -1050 {
+lab=VDD}
+N -1610 -1080 -1610 -1050 {
+lab=VDD}
+N -1610 -1080 -1600 -1080 {
+lab=VDD}
+N -1600 -1020 -1600 -1000 {
+lab=#net13}
+N -1600 -1000 -1540 -1000 {
+lab=#net13}
+N -1540 -1050 -1540 -1000 {
+lab=#net13}
+N -1600 -1000 -1600 -980 {
+lab=#net13}
+N -920 -940 -920 -740 {
+lab=vpos}
+N -660 -980 -660 -720 {
+lab=#net2}
+N 140 240 140 260 {
+lab=GND}
+N 140 160 140 180 {
+lab=vb4}
 C {devices/vsource.sym} -160 210 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} -160 260 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -160 160 0 0 {name=l7 lab=VDD}
@@ -519,7 +599,7 @@ C {devices/gnd.sym} -790 -520 2 0 {name=l22 lab=GND}
 C {devices/lab_pin.sym} -1000 -460 1 0 {name=p8 sig_type=std_logic lab=vsyn2}
 C {devices/lab_pin.sym} -1000 -200 1 0 {name=p11 sig_type=std_logic lab=vsyn1}
 C {devices/vdd.sym} -1540 -560 0 0 {name=l12 lab=VDD}
-C {devices/isource.sym} -1600 -430 0 1 {name=I2 value=0}
+C {devices/isource.sym} -1600 -430 0 1 {name=I2 value="PULSE(0 3u 200n 10n 10n 5u 10u 10)"}
 C {devices/gnd.sym} -1600 -380 0 0 {name=l15 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -1500 -530 0 0 {name=M4
 L=0.15
@@ -591,7 +671,7 @@ spiceprefix=X
 C {devices/gnd.sym} -790 -780 2 0 {name=l28 lab=GND}
 C {devices/lab_pin.sym} -1000 -720 1 0 {name=p19 sig_type=std_logic lab=vsyn3}
 C {devices/vdd.sym} -1540 -820 0 0 {name=l30 lab=VDD}
-C {devices/isource.sym} -1600 -690 0 1 {name=I3 value="PULSE(0 3u 200n 10n 10n 5u 10u 10)"}
+C {devices/isource.sym} -1600 -690 0 1 {name=I3 value="PULSE(0 3u 100n 10n 10n 5u 10u 10)"}
 C {devices/gnd.sym} -1600 -640 0 0 {name=l31 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -1500 -790 0 0 {name=M10
 L=0.15
@@ -621,3 +701,78 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
+C {devices/gnd.sym} -1320 -910 0 0 {name=l33 lab=GND}
+C {devices/vdd.sym} -1320 -1090 0 0 {name=l34 lab=VDD}
+C {devices/lab_pin.sym} -1420 -940 0 0 {name=p20 sig_type=std_logic lab=vb4}
+C {devices/lab_pin.sym} -1160 -1000 1 0 {name=p21 sig_type=std_logic lab=vpre4}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -1020 -820 0 0 {name=x8}
+C {devices/vdd.sym} -1080 -1060 0 0 {name=l35 lab=VDD}
+C {sky130_fd_pr/pfet_01v8.sym} -870 -960 3 0 {name=M13
+L=0.15
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {devices/gnd.sym} -1080 -920 0 0 {name=l36 lab=GND}
+C {devices/vdd.sym} -870 -1030 0 0 {name=l37 lab=VDD}
+C {devices/ammeter.sym} -710 -980 3 0 {name=Vmeas4 savecurrent=true}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Presynaptic_LIF_neuron.sym} -1120 -900 0 0 {name=x9}
+C {devices/lab_pin.sym} -1480 -1000 0 0 {name=p22 sig_type=std_logic lab=vc4}
+C {sky130_fd_pr/nfet_01v8.sym} -790 -960 3 0 {name=M14
+L=0.15
+W=1
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/gnd.sym} -790 -1040 2 0 {name=l38 lab=GND}
+C {devices/lab_pin.sym} -1000 -980 1 0 {name=p23 sig_type=std_logic lab=vsyn4}
+C {devices/vdd.sym} -1540 -1080 0 0 {name=l39 lab=VDD}
+C {devices/isource.sym} -1600 -950 0 1 {name=I4 value="PULSE(0 3u 300n 10n 10n 5u 10u 10)"}
+C {devices/gnd.sym} -1600 -900 0 0 {name=l40 lab=GND}
+C {sky130_fd_pr/pfet_01v8.sym} -1500 -1050 0 0 {name=M15
+L=0.15
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8.sym} -1580 -1050 0 1 {name=M16
+L=0.15
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {devices/vsource.sym} 140 210 0 0 {name=V6 value=0.5}
+C {devices/gnd.sym} 140 260 0 0 {name=l41 lab=GND}
+C {devices/lab_pin.sym} 140 160 2 0 {name=p24 sig_type=std_logic lab=vb4}

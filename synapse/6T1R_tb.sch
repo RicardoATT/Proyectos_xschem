@@ -146,4 +146,4 @@ C {devices/gnd.sym} -80 -160 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -490 -240 1 0 {name=p1 sig_type=std_logic lab=pre}
 C {devices/lab_pin.sym} -160 -240 1 0 {name=p2 sig_type=std_logic lab=pos}
 C {devices/vsource.sym} -200 -190 0 0 {name=vread1 value=1e-4}
-C {/home/ricardoatt/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -220 -60 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -220 -60 0 0 {name=x1}

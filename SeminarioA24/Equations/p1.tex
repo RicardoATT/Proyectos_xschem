@@ -1,0 +1,75 @@
+\section{Cálculo de parámetros  \label{sec:s1}}
+
+\begin{equation*}
+	\begin{array}{l l}
+		\frac{V_{out}}{V_{in}} \approx \frac{g_{mb3} g_{m1} g_{m2}+g_{mb4} g_{m1} g_{m2}-g_{mb4} g_{m2} g_{m3}-g_{m1} g_{m2} g_{m3}+g_{mb3} g_{m1} g_{m4}-g_{m1} g_{m2} g_{m4}-g_{m1} g_{m3} g_{m4}+g_{m2} g_{m3} g_{m4}}{g_{mb3} g_{m2} g_{m5}-g_{m2} g_{m3} g_{m5}+g_{mb3} g_{m4} g_{m5}-g_{m3} g_{m4} g_{m5}}
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		V_{A} \approx \frac{g_{mb4} g_{m1}+g_{mb4} g_{m3}-g_{m1} g_{m4}-g_{m3} g_{m4}}{g_{mb3} g_{m2}-g_{m2} g_{m3}+g_{mb3} g_{m4}-g_{m3} g_{m4}}\times V_{in}
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		\text{¿} V_{in} = \frac{I_{in}}{sC_{m}} \text{?}
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		V_{D} \approx \frac{-g_{m6}}{sC_{r}}\times V_{A}
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		V_{in} \approx \frac{I_{in}}{sC_{m}} + \left( \frac{-g_{m9}}{sC_{m}} \times V_{D} \right)
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		V_{in} \approx \frac{I_{in}}{sC_{m}} + \left( \frac{g_{m6} g_{m9}}{s^{2} C_{m} C_{r}} \times V_{A} \right)
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		V_{in} = \frac{I_{in}}{sC_{m}} + \left( \frac{(g_{m6} g_{m9})(g_{mb4} g_{m1}+g_{mb4} g_{m3}-g_{m1} g_{m4}-g_{m3} g_{m4})}{(s^{2} C_{m} C_{r})(g_{mb3} g_{m2}-g_{m2} g_{m3}+g_{mb3} g_{m4}-g_{m3} g_{m4})}\times V_{in} \right)
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		\left(1 - \frac{(g_{m6} g_{m9})(g_{mb4} g_{m1}+g_{mb4} g_{m3}-g_{m1} g_{m4}-g_{m3} g_{m4})}{(s^{2} C_{m} C_{r})(g_{mb3} g_{m2}-g_{m2} g_{m3}+g_{mb3} g_{m4}-g_{m3} g_{m4})} \right) V_{in} = \frac{I_{in}}{sC_{m}}
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		V_{in} = \frac{I_{in}}{sC_{m} \left(1 - \frac{(g_{m6} g_{m9})(g_{mb4} g_{m1}+g_{mb4} g_{m3}-g_{m1} g_{m4}-g_{m3} g_{m4})}{(s^{2} C_{m} C_{r})(g_{mb3} g_{m2}-g_{m2} g_{m3}+g_{mb3} g_{m4}-g_{m3} g_{m4})} \right)}
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		V_{in} = \frac{I_{in}}{sC_{m} - \frac{(g_{m6} g_{m9})(g_{mb4} g_{m1}+g_{mb4} g_{m3}-g_{m1} g_{m4}-g_{m3} g_{m4})}{(s C_{r})(g_{mb3} g_{m2}-g_{m2} g_{m3}+g_{mb3} g_{m4}-g_{m3} g_{m4})}}
+	\end{array}
+\end{equation*}
+
+
+\begin{equation*}
+	\begin{array}{l l}
+		\frac{W_{9}}{L_{9}}=\frac{1}{20}
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{l l}
+		V_{b1}=0.5V \\
+		C_{m}=18pF
+	\end{array}
+\end{equation*}
