@@ -50,8 +50,6 @@ class HPMemristor:
             self.w.append(actual_w)
             self.resistance.append(actual_res)
             self.current.append(v / actual_res)
-            print(self.resistance)
-            print(self.voltage[0])
     
     def plot_memristance(self):
         fig, ax = plt.subplots()

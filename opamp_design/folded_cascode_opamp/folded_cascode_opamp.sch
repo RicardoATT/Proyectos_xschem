@@ -187,14 +187,6 @@ N -480 -290 -80 -290 {
 lab=#net1}
 N -480 -290 -480 -230 {
 lab=#net1}
-N -420 -270 -300 -270 {
-lab=Vout}
-N -300 -270 -300 -230 {
-lab=Vout}
-N -300 -170 -300 -100 {
-lab=VSS}
-N -300 -300 -300 -270 {
-lab=Vout}
 N -20 -680 -20 -420 {
 lab=VDD}
 N -860 -220 -860 -180 {
@@ -289,7 +281,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} -440 -390 0 0 {name=M7
 L=\{L0\}
-W=\{W6\}
+W=\{W4\}
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -303,7 +295,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} -560 -390 0 1 {name=M6
 L=\{L0\}
-W=\{W6\}
+W=\{W4\}
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -385,8 +377,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} -300 -200 0 0 {name=C1 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
-C {devices/opin.sym} -300 -300 3 0 {name=p2 lab=Vout}
+C {devices/opin.sym} -420 -320 0 0 {name=p2 lab=Vout}
 C {devices/ipin.sym} -880 -510 0 0 {name=p3 lab=Vinn}
 C {devices/ipin.sym} -880 -450 0 0 {name=p1 lab=Vinp}
 C {devices/iopin.sym} -860 -680 2 0 {name=p4 lab=VDD}
@@ -405,10 +396,10 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/isource.sym} -260 -480 0 0 {name=I4 value=10u}
+C {devices/isource.sym} -260 -480 0 0 {name=I4 value=165u}
 C {sky130_fd_pr/pfet_01v8.sym} -160 -440 0 0 {name=M13
 L=\{L0\}
-W=\{W6\}
+W=\{W4\}
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -420,7 +411,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/isource.sym} -140 -340 0 0 {name=I1 value=10u}
+C {devices/isource.sym} -140 -340 0 0 {name=I1 value=165u}
 C {sky130_fd_pr/nfet_01v8.sym} -40 -290 0 0 {name=M14
 L=\{L0\}
 W=\{W8\}
@@ -435,7 +426,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/isource.sym} -20 -390 0 0 {name=I2 value=10u}
+C {devices/isource.sym} -20 -390 0 0 {name=I2 value=165u}
 C {sky130_fd_pr/nfet_01v8.sym} -840 -150 0 1 {name=M15
 L=\{L0\}
 W=\{W3\}
@@ -450,4 +441,4 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/isource.sym} -860 -250 0 1 {name=I3 value=10u}
+C {devices/isource.sym} -860 -250 0 1 {name=I3 value=150u}

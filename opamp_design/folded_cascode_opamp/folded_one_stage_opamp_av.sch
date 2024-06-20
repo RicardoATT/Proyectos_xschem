@@ -59,15 +59,15 @@ N -280 -790 -280 -730 {
 lab=VSS}
 N -420 -730 -280 -730 {
 lab=VSS}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -420 -820 0 0 {name=CL model=cap_mim_m3_1 W=5040000 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -420 -820 0 0 {name=CL model=cap_mim_m3_1 W=630100 L=1 MF=1 spiceprefix=X}
 C {devices/res.sym} -280 -820 0 0 {name=RL
-value=100k
+value=1000k
 footprint=1206
 device=resistor
 m=1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -620 -780 0 0 {name=CL1 model=cap_mim_m3_1 W=5040000 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -620 -780 0 0 {name=CL1 model=cap_mim_m3_1 W=630100 L=1 MF=1 spiceprefix=X}
 C {devices/res.sym} -570 -1000 1 0 {name=RL1
-value=100k
+value=1000k
 footprint=1206
 device=resistor
 m=1}
@@ -92,12 +92,11 @@ C {devices/lab_pin.sym} -620 -730 0 0 {name=p17 sig_type=std_logic lab=VSS}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/folded_cascode_opamp/folded_cascode_opamp.sym} -320 -750 0 0 {name=x1}
 C {devices/code_shown.sym} -220 -860 0 0 {name=SPICE only_toplevel=false 
 value="
-.param W1= 7.824
-.param W5= 14.975
-.param W9= 29.494
-.param W10= 7.5
-.param W11= 0.469
-.param L0=0.15
+.param W1= 0.45
+.param W3= 16.776
+.param W4= 65.116
+.param W8= 43.6
+.param L0= 0.45
 .ac dec 0.0001 1 10000000k
 .control
 	run

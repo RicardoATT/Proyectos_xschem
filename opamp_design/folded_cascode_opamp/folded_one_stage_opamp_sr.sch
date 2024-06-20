@@ -44,12 +44,11 @@ C {devices/gnd.sym} -770 -240 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -770 -340 2 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/code_shown.sym} -450 -410 0 0 {name=SPICE
 value="
-.param W1= 7.824
-.param W5= 14.975
-.param W9= 29.494
-.param W10= 7.5
-.param W11= 0.469
-.param L0=0.15
+.param W1= 0.45
+.param W3= 16.776
+.param W4= 65.116
+.param W8= 43.6
+.param L0= 0.45
 .control
 	tran 0.1n 15u
 	set color0=rgb:f/f/f

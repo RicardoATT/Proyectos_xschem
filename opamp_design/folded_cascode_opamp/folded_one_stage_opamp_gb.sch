@@ -51,12 +51,11 @@ C {devices/gnd.sym} -650 40 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -650 -60 2 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/code_shown.sym} -250 -270 0 0 {name=SPICE only_toplevel=false 
 value="
-.param W1= 7.824
-.param W5= 14.975
-.param W9= 29.494
-.param W10= 7.5
-.param W11= 0.469
-.param L0=0.15
+.param W1= 0.45
+.param W3= 16.776
+.param W4= 65.116
+.param W8= 43.6
+.param L0= 0.45
 .ac dec 0.0001 1 10000000k
 .control
 	run
@@ -73,5 +72,5 @@ C {sky130_fd_pr/corner.sym} -370 -280 0 0 {name=CORNER only_toplevel=true corner
 C {devices/lab_pin.sym} -480 -200 2 0 {name=p10 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -680 -160 0 0 {name=p3 sig_type=std_logic lab=Vinn}
 C {devices/lab_pin.sym} -580 -120 2 0 {name=p7 sig_type=std_logic lab=VSS}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -480 -160 0 0 {name=CL model=cap_mim_m3_1 W=5040 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -480 -160 0 0 {name=CL model=cap_mim_m3_1 W=6301 L=1 MF=1 spiceprefix=X}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/folded_cascode_opamp/folded_cascode_opamp.sym} -380 -80 0 0 {name=x1}
