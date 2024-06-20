@@ -18,7 +18,7 @@ Pd = 1e-3
 
 # Parametros de diseño
 L0 = 0.15e-6
-Cl = 12e-12
+Cl = 10e-12
 #   Transistor canal N
 Vthn = 0.769432
 Kn = 0.00015137603990044484 
@@ -101,8 +101,8 @@ Pdiss=VDD*(I9+I10)
 
 # Cálculo de SR
 Datos_SR = np.loadtxt('/home/ricardo/RATT_repos/Proyectos_xschem/simulations/cascode_one_stage_opamp_sr.ssv')
-X = Datos_SR[50010:50018, 0]
-Y = Datos_SR[50010:50018, 1]
+X = Datos_SR[50010:50021, 0]
+Y = Datos_SR[50010:50021, 1]
 x_bias1 = np.c_[np.ones(X.shape[0]), X]
 # Calculo de la pendiente para el SR -> theta = (X^T * X)^-1 * X^T * y
 theta = np.linalg.inv(x_bias1.T @ x_bias1) @ x_bias1.T @ Y
@@ -238,4 +238,8 @@ print("Slew Rate = ",round(theta[1]*1e-8, 6),"\\frac{V}{\\mu s} \\\\")
 print(" \\end{array}")
 print("\\end{equation}")
 
-print("W7=",W7)
+print(".param W1=",round(W1*1e6,3))
+print(".param W5=",round(W5*1e6,3))
+print(".param W9=",round(W9*1e6,3))
+print(".param W10=",round(W10*1e6,3))
+print(".param W11=",round(W11*1e6,3))

@@ -359,7 +359,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/isource.sym} -1250 -240 0 1 {name=I0 value=120u}
+C {devices/isource.sym} -1250 -240 0 1 {name=I0 value=100u}
 C {devices/isource.sym} -1010 -800 0 1 {name=I1 value=12u}
 C {devices/ipin.sym} -950 -340 1 0 {name=p2 lab=Vinp}
 C {devices/ipin.sym} -510 -340 1 0 {name=p4 lab=Vinn}
@@ -378,7 +378,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/isource.sym} -1130 -650 0 1 {name=I2 value=60u}
+C {devices/isource.sym} -1130 -650 0 1 {name=I2 value=50u}
 C {sky130_fd_pr/pfet_01v8.sym} -1110 -730 0 1 {name=M13
 L=\{L0\}
 W=\{W5\}

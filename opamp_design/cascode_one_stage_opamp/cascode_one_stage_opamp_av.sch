@@ -92,11 +92,11 @@ C {devices/lab_pin.sym} -620 -730 0 0 {name=p17 sig_type=std_logic lab=VSS}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/cascode_one_stage_opamp/cascode_one_stage_opamp.sym} -290 -750 0 0 {name=x1}
 C {devices/code_shown.sym} -220 -860 0 0 {name=SPICE only_toplevel=false 
 value="
-.param W1=9.389
-.param W5=9.7
-.param W9=35.393
-.param W10=7.5
-.param W11=0.469
+.param W1= 7.824
+.param W5= 14.975
+.param W9= 29.494
+.param W10= 7.5
+.param W11= 0.469
 .param L0=0.15
 .ac dec 0.0001 1 10000000k
 .control

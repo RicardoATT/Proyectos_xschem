@@ -51,11 +51,11 @@ C {devices/gnd.sym} -650 40 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -650 -60 2 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/code_shown.sym} -250 -270 0 0 {name=SPICE only_toplevel=false 
 value="
-.param W1=9.389
-.param W5=9.7
-.param W9=35.393
-.param W10=7.5
-.param W11=0.469
+.param W1= 7.824
+.param W5= 14.975
+.param W9= 29.494
+.param W10= 7.5
+.param W11= 0.469
 .param L0=0.15
 .ac dec 0.0001 1 10000000k
 .control

@@ -7,11 +7,11 @@ x1 VDD Vout Vinp Vout VSS cascode_one_stage_opamp
 **** begin user architecture code
 
 
-.param W1=9.389
-.param W5=9.7
-.param W9=35.393
-.param W10=7.5
-.param W11=0.469
+.param W1= 7.824
+.param W5= 14.975
+.param W9= 29.494
+.param W10= 7.5
+.param W11= 0.469
 .param L0=0.15
 .control
 	tran 0.1n 15u
@@ -80,12 +80,12 @@ XM10 net2 net10 VDD VDD sky130_fd_pr__pfet_01v8 L={L0} W={W10} nf=1 ad='int((nf+
 XM14 net9 net9 VSS VSS sky130_fd_pr__nfet_01v8 L={L0} W={W9} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
-I0 VDD net9 120u
+I0 VDD net9 100u
 I1 net10 VSS 12u
 XM12 net10 net10 VDD VDD sky130_fd_pr__pfet_01v8 L={L0} W={W10} nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-I2 net8 VSS 60u
+I2 net8 VSS 50u
 XM13 net8 net8 VDD VDD sky130_fd_pr__pfet_01v8 L={L0} W={W5} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
