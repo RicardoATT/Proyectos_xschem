@@ -89,6 +89,29 @@ Rout=1/((1/(gm8*rds8*rds8))+(1/(gm6*rds6*(1/(1/rds1)+(1/rds4)))))
 A0=gm1*Rout
 A0_db=20*log10(A0)
 
+# Calculo de Av
+Datos_Av = np.loadtxt('/home/ricardoatt/RATT_repos/Proyectos_xschem/simulations/folded_one_stage_opamp_av.ssv')
+Y_Av = Datos_Av[0:1, 1]
+Av_final = Y_Av[0]/(100e3*1.2e-8)
+
+# Cálculo de GB
+Datos_GB = np.loadtxt('/home/ricardoatt/RATT_repos/Proyectos_xschem/simulations/folded_one_stage_opamp_gb.ssv')
+X_GB = Datos_GB[5:7, 0]
+Y_GB = Datos_GB[5:7, 1]
+m_GB = (Y_GB[1]-Y_GB[0])/(X_GB[1]-X_GB[0])
+b_GB = Y_GB[1]-(m_GB*X_GB[1])
+GB_final = (Y_GB[0]-3-b_GB)/m_GB
+
+# Cálculo de Pdiss
+Pdiss=VDD*(It)
+
+# Cálculo de SR
+Datos_SR = np.loadtxt('/home/ricardoatt/RATT_repos/Proyectos_xschem/simulations/folded_one_stage_opamp_sr.ssv')
+X = Datos_SR[50010:50021, 0]
+Y = Datos_SR[50010:50021, 1]
+x_bias1 = np.c_[np.ones(X.shape[0]), X]
+# Calculo de la pendiente para el SR -> theta = (X^T * X)^-1 * X^T * y
+theta = np.linalg.inv(x_bias1.T @ x_bias1) @ x_bias1.T @ Y
 
 # Formato en LaTeX
 print("\\begin{equation}")
@@ -161,25 +184,66 @@ print("W_{1} = W_{2} = ",round(W1*1e6, 6)," \\mu m \\\\")
 
 print("\\\\")
 print("\\textbf{Paso 7} \\\\")
-print("V_{DS3}(sat) = 0.5 \\times \\left[ V_{OUT}(min) - V_{SS} \\right] = 0.5 \\times \\left[ ",Vout_min," - ",VSS," \\right] \\\\")
+print("V_{DS3}(sat) = \\sqrt{\\frac{I_{3}}{K'_{N} \\times \\frac{W_1}{L_1}}} - V_{TN} = \\sqrt{\\frac{",I3,"}{",Kn," \\times ",round(W1_L1, 6),"}} - ",Vthn," \\\\")
 print("V_{DS3}(sat) = ",round(Vds3_sat, 6)," V \\\\")
-print("\\frac{W_3}{L_3} = \\frac{\\left( GB^2 \\times C_{L}^2 \\right)}{K'_{N} \\times I_{3}} = \\frac{\\left( ",GB,"^2 \\times ",Cl,"^2 \\right)}{",round(Kn, 6)," \\times ",round(I3, 6),"} \\\\")
-print("\\frac{W_3}{L_3} = ",round(W1_L1, 6)," \\\\")
+print("\\frac{W_3}{L_3} = \\frac{2\\times I_{3}}{K'_{N} \\times V_{DS3}(sat)^2} = \\frac{2\\times",round(I3, 6),"}{",round(Kn, 6),"\\times (",round(Vds3_sat, 6),")^2} \\\\")
+print("\\frac{W_3}{L_3} = ",round(W3_L3, 6)," \\\\")
 print("W_{3} = \\frac{W_3}{L_3} \\times L_{min} = ",round(W3_L3, 6),"\\times",L0," \\\\")
 print("W_{3}  = ",round(W3*1e6, 6)," \\mu m \\\\")
 
-'''
-# Paso 6
-W1_L1=((GB**2)*(Cl**2))/(Kn*I3)
-W1=W1_L1*L0
-W2=W1
+print("\\\\")
+print("\\textbf{Paso 8} \\\\")
+print("\\frac{W_4}{L_4}_{spec} = \\frac{2\\times I_{4}}{K'_{P} \\times \\left( V_{DD} - ICMR^{+} + V_{TN} \\right) ^2} = \\frac{2 \\times ",round(I4, 6),"}{",round(Kp, 6)," \\times \\left( ",VDD," - ",ICMR_max," + ",round(Vthn, 6)," \\right) ^2} \\\\")
+print("\\frac{W_4}{L_4}_{spec} = ",round(W4_L4_CM, 6)," \\\\")
+print("\\text{Se observa que} \\frac{W_4}{L_4} \\geq \\frac{W_4}{L_4}_{spec} \\text{por lo que la relación} \\frac{W_4}{L_4} \\text{esta bien calculada} \\\\")
 
-# Paso 7
-Vds3_sat=(sqrt(I3/(Kn*W1_L1)))-Vthn
-W3_L3=(2*I3)/(Kn*(Vds3_sat**2))
-W3=W3_L3*L0
-'''
+print("\\\\")
+print("\\textbf{Paso 9} \\\\")
+print("I_{T} = I_{4} + I_{5} = ",round(I4, 6),"+",round(I5, 6)," \\\\")
+print("I_{T} = ",round(It*1e6, 6)," \\mu A \\\\")
+print("P_{diss} = (V_{DD} - V_{SS}) \\times I_{T} = (",VDD,"-",VSS,") \\times ",round(It, 6)," \\\\")
+print("P_{diss} = ",round(Pdiss*1e3, 6)," mW \\\\")
+print("g_{m1} = \\sqrt{2 \\times I_{1} \\times K'_{N} \\times \\frac{W_1}{L_1}} = \\sqrt{2 \\times ",I1," \\times ",round(Kn, 6)," \\times ",round(W1_L1, 6),"} \\\\")
+print("g_{m1} = ",round(gm1*1e6, 6)," \\mu S \\\\")
+print("g_{m4} = \\sqrt{2 \\times I_{4} \\times K'_{P} \\times \\frac{W_4}{L_4}} = \\sqrt{2 \\times ",I4," \\times ",round(Kp, 6)," \\times ",round(W4_L4, 6),"} \\\\")
+print("g_{m4} = ",round(gm4*1e6, 6)," \\mu S \\\\")
+print("g_{m6} = \\sqrt{2 \\times \\left( \\frac{I_{T} - I_{3}}{2} \\right) \\times K'_{P} \\times \\frac{W_4}{L_4}} = \\sqrt{2 \\times \\left( \\frac{",round(It, 6)," - ",round(I3, 6),"}{2} \\right) \\times ",round(Kp, 6)," \\times ",round(W4_L4, 6),"} \\\\")
+print("g_{m6} = ",round(gm6*1e6, 6)," \\mu S \\\\")
+print("g_{m8} = \\sqrt{2 \\times \\left( \\frac{I_{T} - I_{3}}{2} \\right) \\times K'_{N} \\times \\frac{W_8}{L_8}} = \\sqrt{2 \\times \\left( \\frac{",round(It, 6)," - ",round(I3, 6),"}{2} \\right) \\times ",round(Kn, 6)," \\times ",round(W8_L8, 6),"} \\\\")
+print("g_{m8} = ",round(gm8*1e6, 6)," \\mu S \\\\")
+print("r_{ds1} = \\frac{1}{\\lambda_{N} \\times I_{1}} = \\frac{1}{",round(Lambda_n, 6)," \\times ",round(I1, 6),"} \\\\")
+print("r_{ds1} = ",round(rds1*1e-3, 6)," K \\Omega \\\\")
+print("r_{ds4} = \\frac{1}{\\lambda_{P} \\times I_{4}} = \\frac{1}{",round(Lambda_p, 6)," \\times ",round(I4, 6),"} \\\\")
+print("r_{ds4} = ",round(rds4*1e-3, 6)," K \\Omega \\\\")
+print("r_{ds6} = \\frac{1}{\\lambda_{P} \\times \\left( \\frac{I_{T} - I_{3}}{2} \\right)} = \\frac{1}{",round(Lambda_p, 6)," \\times \\left( \\frac{",round(It, 6)," - ",round(I3, 6),"}{2} \\right)} \\\\")
+print("r_{ds6} = ",round(rds6*1e-3, 6)," K \\Omega \\\\")
+print("r_{ds8} = \\frac{1}{\\lambda_{N} \\times \\left( \\frac{I_{T} - I_{3}}{2} \\right)} = \\frac{1}{",round(Lambda_n, 6)," \\times \\left( \\frac{",round(It, 6)," - ",round(I3, 6),"}{2} \\right)} \\\\")
+print("r_{ds8} = ",round(rds8*1e-3, 6)," K \\Omega \\\\")
+print("R_{OUT} = \\left( g_{m8} \\times r_{ds8}^{2} \\right) || \\left[ g_{m6} \\times r_{ds6} \\times \\left( r_{ds1} || r_{ds4} \\right) \\right] \\\\")
+print("R_{OUT} = \\left( ",round(gm8, 6)," \\times ",round(rds8, 6),"^{2} \\right) || \\left[ ",round(gm6, 6)," \\times ",round(rds6, 6)," \\times \\left( ",round(rds1, 6)," || ",round(rds4, 6)," \\right) \\right] \\\\")
+print("R_{OUT} = ",round(Rout*1e-6, 6)," M \\Omega \\\\")
+print("A_{0} = g_{m1} \\times R_{OUT} = ",round(gm1, 6)," \\times ",round(Rout, 6)," \\\\")
+print("A_{0} = ",round(A0, 6)," = ",round(A0_db, 6)," db \\\\")
 
+print("\\\\")
+print("\\textbf{Parámetros calculados} \\\\")
+print("W_{1} = W_{2} = ",round(W1*1e6, 6),' \\mu m \\\\')
+print("W_{3} = ",round(W3*1e6, 6),' \\mu m \\\\')
+print("W_{4} = W_{5} = W_{6} = W_{7} = ",round(W4*1e6, 6),' \\mu m \\\\')
+print("W_{8} = W_{9} = W_{10} = W_{11} = ",round(W8*1e6, 6),' \\mu m \\\\')
+print("L_{1} - L_{11} = ",round(L0*1e6, 6),' \\mu m \\\\')
+
+print("\\\\")
+print("\\textbf{Resultados obtenidos de la simulación} \\\\")
+print("A_{V} = \\frac{A_{V}(0)}{R \\times C} = \\frac{",round(Y_Av[0], 6),"}{",100e3,"\\times",12e-9,"} \\\\")
+print("A_{V} = ",round(Av_final, 6)," \\\\")
+print("P_{diss} = V_{DD} \\times (I_{9}+I_{10}) = ",1.8,"\\times (",round(I4,6)," + ",round(I5,6),") \\\\")
+print("P_{diss} = ",round(Pdiss*1e3, 6)," mW \\\\")
+print("GB = ",round(GB_final*1e-3, 6)," KHz \\\\")
+print("Slew Rate = ",round(theta[1]*1e-8, 6),"\\frac{V}{\\mu s} \\\\")
+
+print(" \\end{array}")
+print("\\end{equation}")
 
 print("I1=",I1*1e6)
 print("I3=",I3*1e6)
