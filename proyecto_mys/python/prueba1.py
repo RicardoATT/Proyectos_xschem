@@ -10,24 +10,43 @@ mnist = tf.keras.datasets.mnist
 
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
-# Definir el modelo de memristor
-class MemristorLayer(layers.Layer):
+# Definir el modelo de memristor HP
+class HPMemristorLayer(layers.Layer):
     def __init__(self, units=32, input_dim=32):
-        super(MemristorLayer, self).__init__()
+        super(HPMemristorLayer, self).__init__()
         self.units = units
+        self.input_dim = input_dim
         self.weight = self.add_weight(
             shape=(input_dim, units),
             initializer="random_normal",
             trainable=True,
         )
+        self.D = 1.0  # Thickness of the memristor device
+        self.mu = 1e-10  # Mobility of the dopants
+        self.R_on = 1e2  # Minimum resistance
+        self.R_off = 1e5  # Maximum resistance
+        self.w = self.add_weight(
+            shape=(input_dim, units),
+            initializer="random_uniform",
+            trainable=True,
+        )
 
     def call(self, inputs):
-        return tf.matmul(inputs, self.weight)
+        # Memristance computation
+        R = self.R_on * self.w + self.R_off * (1 - self.w)
+        V = tf.matmul(inputs, self.weight)
+        dw = self.mu * tf.matmul(tf.transpose(inputs), V) / self.D
+        self.w.assign_add(dw)
+        self.w.assign(tf.clip_by_value(self.w, 0, 1))
+        return V
+
+    def compute_output_shape(self, input_shape):
+        return (input_shape[0], self.units)
 
 # Construcción del modelo
 model = models.Sequential([
     layers.Flatten(input_shape=(28, 28)),
-    MemristorLayer(128, 784),
+    HPMemristorLayer(128, 784),
     layers.Activation('relu'),
     layers.Dense(10)
 ])

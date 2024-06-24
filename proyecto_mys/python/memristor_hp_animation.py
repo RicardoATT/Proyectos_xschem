@@ -51,14 +51,6 @@ class HPMemristor:
             self.resistance.append(actual_res)
             self.current.append(v / actual_res)
     
-    def plot_memristance(self):
-        fig, ax = plt.subplots()
-        #ax.set_xlim(-1.5, 1.5)
-        #ax.set_ylim(-0.02, 0.02)
-        fig.add_axes(ax)
-        ln, = plt.plot(self.resistance, self.voltage[0], "r*")
-        return ln
-    
     def plot_static(self):
         fig, ax = plt.subplots()
         ax.set_xlim(-1.5, 1.5)
