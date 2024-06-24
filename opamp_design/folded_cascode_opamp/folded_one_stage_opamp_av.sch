@@ -89,7 +89,7 @@ C {sky130_fd_pr/corner.sym} -230 -1010 0 0 {name=CORNER1 only_toplevel=true corn
 C {devices/lab_pin.sym} -280 -870 1 0 {name=p15 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -640 -830 0 0 {name=p16 sig_type=std_logic lab=Vinn}
 C {devices/lab_pin.sym} -620 -730 0 0 {name=p17 sig_type=std_logic lab=VSS}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/folded_cascode_opamp/folded_cascode_opamp.sym} -320 -750 0 0 {name=x1}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/opamp_design/folded_cascode_opamp/folded_cascode_opamp.sym} -320 -750 0 0 {name=x1}
 C {devices/code_shown.sym} -220 -860 0 0 {name=SPICE only_toplevel=false 
 value="
 .param W1= 0.45
@@ -97,7 +97,7 @@ value="
 .param W4= 65.116
 .param W8= 43.6
 .param L0= 0.45
-.ac dec 0.0001 1 10000000k
+.ac dec 0.0001 1 100000k
 .control
 	run
 	setplot tran1

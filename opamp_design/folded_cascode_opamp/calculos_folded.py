@@ -92,7 +92,7 @@ A0_db=20*log10(A0)
 # Calculo de Av
 Datos_Av = np.loadtxt('/home/ricardoatt/RATT_repos/Proyectos_xschem/simulations/folded_one_stage_opamp_av.ssv')
 Y_Av = Datos_Av[0:1, 1]
-Av_final = Y_Av[0]/(100e3*1.2e-8)
+Av_final = Y_Av[0]/(1e6*1.5e-9)
 
 # Cálculo de GB
 Datos_GB = np.loadtxt('/home/ricardoatt/RATT_repos/Proyectos_xschem/simulations/folded_one_stage_opamp_gb.ssv')
@@ -100,15 +100,16 @@ X_GB = Datos_GB[5:7, 0]
 Y_GB = Datos_GB[5:7, 1]
 m_GB = (Y_GB[1]-Y_GB[0])/(X_GB[1]-X_GB[0])
 b_GB = Y_GB[1]-(m_GB*X_GB[1])
-GB_final = (Y_GB[0]-3-b_GB)/m_GB
+GB_final = (Y_GB[0]-0.11-b_GB)/m_GB
 
 # Cálculo de Pdiss
 Pdiss=VDD*(It)
 
 # Cálculo de SR
 Datos_SR = np.loadtxt('/home/ricardoatt/RATT_repos/Proyectos_xschem/simulations/folded_one_stage_opamp_sr.ssv')
-X = Datos_SR[50010:50021, 0]
-Y = Datos_SR[50010:50021, 1]
+X = Datos_SR[50023:50027, 0]
+Y = Datos_SR[50023:50027, 1]
+print(Y)
 x_bias1 = np.c_[np.ones(X.shape[0]), X]
 # Calculo de la pendiente para el SR -> theta = (X^T * X)^-1 * X^T * y
 theta = np.linalg.inv(x_bias1.T @ x_bias1) @ x_bias1.T @ Y

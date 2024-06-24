@@ -61,4 +61,4 @@ value="
 C {sky130_fd_pr/corner.sym} -460 -560 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/lab_pin.sym} -580 -480 2 0 {name=p10 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -700 -390 2 0 {name=p7 sig_type=std_logic lab=VSS}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/folded_cascode_opamp/folded_cascode_opamp.sym} -500 -360 0 0 {name=x1}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/opamp_design/folded_cascode_opamp/folded_cascode_opamp.sym} -500 -360 0 0 {name=x1}

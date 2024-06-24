@@ -73,4 +73,4 @@ C {devices/lab_pin.sym} -480 -200 2 0 {name=p10 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -680 -160 0 0 {name=p3 sig_type=std_logic lab=Vinn}
 C {devices/lab_pin.sym} -580 -120 2 0 {name=p7 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/cap_mim_m3_1.sym} -480 -160 0 0 {name=CL model=cap_mim_m3_1 W=6301 L=1 MF=1 spiceprefix=X}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/opamp_design/folded_cascode_opamp/folded_cascode_opamp.sym} -380 -80 0 0 {name=x1}
+C {/home/ricardoatt/RATT_repos/Proyectos_xschem/opamp_design/folded_cascode_opamp/folded_cascode_opamp.sym} -380 -80 0 0 {name=x1}
