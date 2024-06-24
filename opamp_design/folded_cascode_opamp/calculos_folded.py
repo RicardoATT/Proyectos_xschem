@@ -109,7 +109,6 @@ Pdiss=VDD*(It)
 Datos_SR = np.loadtxt('/home/ricardoatt/RATT_repos/Proyectos_xschem/simulations/folded_one_stage_opamp_sr.ssv')
 X = Datos_SR[50023:50027, 0]
 Y = Datos_SR[50023:50027, 1]
-print(Y)
 x_bias1 = np.c_[np.ones(X.shape[0]), X]
 # Calculo de la pendiente para el SR -> theta = (X^T * X)^-1 * X^T * y
 theta = np.linalg.inv(x_bias1.T @ x_bias1) @ x_bias1.T @ Y
