@@ -125,12 +125,12 @@ Los memristores (resistores de memoria) son componentes eléctricos pasivos que 
 La idea de los memristores fue propuesta por primera vez por Leon Chua en 1971. Chua predijo la existencia de un cuarto elemento pasivo fundamental en los circuitos eléctricos, junto con el resistor, el capacitor y el inductor. Este cuarto elemento, el memristor, tiene una relación directa entre el flujo magnético y la carga eléctrica, lo que le confiere sus propiedades únicas. El memristor se define matemáticamente por la ecuación \ref{eq:2} y \ref{eq:3}.
 
 \begin{equation}
-	V = R(\omega) \cdot I
+	V = R(w) \cdot I
 	\label{eq:2}
 \end{equation}
 
 \begin{equation}
-	\frac{d\omega}{dt} = f(I)
+	\frac{dw}{dt} = f(I)
 	\label{eq:3}
 \end{equation}
 
@@ -138,7 +138,7 @@ Donde:
 \begin{itemize}
 	\item $V$ es la tensión a través del memristor.
 	\item $I$ es la corriente que pasa a través del memristor.
-	\item $R(\omega)$ es la resistencia dependiente del estado $\omega$, que es una función de la carga histórica.
+	\item $R(w)$ es la resistencia dependiente del estado $\omega$, que es una función de la carga histórica.
 \end{itemize}
 
 La capacidad de retener un estado resistivo específico sin necesidad de energía continua.
@@ -161,93 +161,25 @@ Capa de Salida: Una capa densa (fully connected) con 10 neuronas, cada una corre
 Modelo de Memristor de HP
 El modelo de memristor de HP se integra en la capa oculta personalizada. La actualización de los pesos sinápticos en esta capa se realiza mediante una ecuación diferencial simplificada que describe la dinámica de los memristores:
 
-𝑅
-(
-𝑤
-)
-=
-𝑅
-𝑜
-𝑛
-⋅
-𝑤
-+
-𝑅
-𝑜
-𝑓
-𝑓
-⋅
-(
-1
-−
-𝑤
-)
-R(w)=R 
-on
-​
-⋅w+R 
-off
-​
-⋅(1−w)
-𝑑
-𝑤
-𝑑
-𝑡
-=
-𝜇
-⋅
-𝐼
-𝐷
-dt
-dw
-​
-=μ⋅ 
-D
-I
-​
+\begin{equation}
+	R(w) = R_{on} \cdot w + R_{off} \cdot (1 - w)
+	\label{eq:4}
+\end{equation}
 
+\begin{equation}
+	\frac{dw}{dt} = \mu \cdot \frac{I}{D}
+	\label{eq:5}
+\end{equation}
 
 Donde:
+\begin{itemize}
+	\item $R_{on}$ y $R_{off}$ son las resistencias mínima y máxima del memristor.
+	\item $w$ es una variable de estado que representa la proporción de la capa de $TiO_{2}$ dopada.
+	\item $\mu$ es la movilidad de los vacantes de oxígeno.
+	\item $D$ es el espesor de la película de $TiO_{2}$.
+\end{itemize}
 
-𝑅
-𝑜
-𝑛
-R 
-on
-​
-y 
-𝑅
-𝑜
-𝑓
-𝑓
-R 
-off
-​
-son las resistencias mínima y máxima del memristor.
-𝑤
-w es una variable de estado que representa la proporción de la capa de 
-𝑇
-𝑖
-𝑂
-2
-−
-𝑥
-TiO 
-2−x
-​
-dopada.
-𝜇
-μ es la movilidad de los vacantes de oxígeno.
-𝐷
-D es el espesor de la película de 
-𝑇
-𝑖
-𝑂
-2
-TiO 
-2
-​
-.
+
 Funcionamiento del Programa
 El programa se implementa en Python utilizando TensorFlow, una biblioteca de código abierto para la construcción y entrenamiento de modelos de aprendizaje profundo. El flujo de trabajo del programa es el siguiente:
 
