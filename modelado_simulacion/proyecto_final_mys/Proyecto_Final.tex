@@ -53,16 +53,21 @@ Los memristores han emergido como una tecnología prometedora para implementar p
 
 El memristor de HP, desarrollado por Hewlett-Packard, es uno de los primeros y más conocidos dispositivos de este tipo, capaz de recordar su estado resistivo incluso después de apagar la energía. Este atributo lo hace ideal para su uso en ANNs, donde puede representar y ajustar eficientemente los pesos sinápticos, facilitando así la implementación de redes neuronales en dispositivos de hardware especializados.
 
-Para evaluar y entrenar redes neuronales, se utilizan conjuntos de datos estandarizados que permiten medir el rendimiento y la precisión del modelo. Uno de los conjuntos de datos más utilizados en la investigación de ANNs es el MNIST (Modified National Institute of Standards and Technology), que contiene 60,000 imágenes de entrenamiento y 10,000 imágenes de prueba de dígitos escritos a mano, cada una con una resolución de 28x28 píxeles. Este conjunto de datos ha sido fundamental para el desarrollo y benchmarking de nuevas arquitecturas de redes neuronales y técnicas de aprendizaje automático.
+Para evaluar y entrenar redes neuronales, se utilizan conjuntos de datos estandarizados que permiten medir el rendimiento y la precisión del modelo. Uno de los conjuntos de datos más utilizados en la investigación de ANNs es el MNIST (\textit{Modified National Institute of Standards and Technology}), que contiene 60,000 imágenes de entrenamiento y 10,000 imágenes de prueba de dígitos escritos a mano, cada una con una resolución de 28x28 píxeles. Este conjunto de datos ha sido fundamental para el desarrollo y \textit{benchmarking} de nuevas arquitecturas de redes neuronales y técnicas de aprendizaje automático.
 
-Este reporte explorará en detalle los conceptos mencionados, comenzando con una revisión de las redes neuronales artificiales, seguido de una discusión sobre el papel de los memristores como pesos sinápticos, destacando el memristor de HP, y finalizando con un análisis del conjunto de datos MNIST y su relevancia en el campo de la inteligencia artificial, el aprendizaje máquina y el aprendizaje profundo.
+Este reporte explorará en detalle los conceptos mencionados, comenzando con una revisión de las redes neuronales artificiales, seguido de una discusión sobre el papel de los memristores como pesos sinápticos, destacando el memristor de HP, y finalizando con la descripción de arquitectura de la red neuronal diseñada con la herramienta TensorFlow, evaluando el desempeño de nuestro modelo en la tarea de clasificación de imágenes.
 
-A lo largo de este trabajo, discutimos la teoría subyacente de los memristores, detallamos la arquitectura de nuestra red neuronal y evaluamos el desempeño de nuestro modelo en la tarea de clasificación de imágenes. Los resultados obtenidos muestran que la integración de memristores en redes neuronales es una estrategia prometedora que puede contribuir significativamente al desarrollo de sistemas de IA más avanzados y eficientes.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.2]{img/ANN.png}
+	\caption{Diagrama de una red neuronal artificial con las diferentes capas interconectadas.
+		\label{fig:ann}}
+\end{figure}
 
 \section{Preliminares}
 
 \subsection{Redes neuronales artificiales}
-Las redes neuronales artificiales son modelos computacionales inspirados en la estructura y el funcionamiento del cerebro humano. Estas redes están compuestas por unidades interconectadas llamadas neuronas artificiales, distribuidas típicamente en tres tipos de capas:
+Las redes neuronales artificiales (ver Figura \ref{fig:ann}) son modelos computacionales inspirados en la estructura y el funcionamiento del cerebro humano. Estas redes están compuestas por unidades interconectadas llamadas neuronas artificiales, distribuidas típicamente en tres tipos de capas:
 
 \begin{itemize}
 	\item \textit{Capa de entrada}: Recibe las señales iniciales del entorno externo. En el caso de la clasificación de imágenes, cada neurona de la capa de entrada representa un píxel de la imagen.
@@ -70,7 +75,14 @@ Las redes neuronales artificiales son modelos computacionales inspirados en la e
 	\item \textit{Capa de salida}: Genera la salida final del modelo. Para la clasificación, cada neurona en la capa de salida puede representar una clase diferente.
 \end{itemize}
 
-Cada neurona en una red neuronal artificial realiza una operación matemática sobre sus entradas ponderadas y una función de activación. La salida de una neurona $j$ se puede representar matemáticamente como:
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.55]{img/Neuron.png}
+	\caption{Esquema de una neurona artificial.
+		\label{fig:neuron}}
+\end{figure}
+
+Como se visualiza en la Figura \ref{fig:neuron}, cada neurona en una red neuronal artificial realiza una operación matemática sobre sus entradas ponderadas y una función de activación. La salida de una neurona $j$ se puede representar matemáticamente como:
 
 \begin{equation}
 	y_{j} = \sigma \left( \sum_{i} w_{ij}x_{i} + b_{i} \right)
@@ -87,37 +99,18 @@ Donde:
 	\item $b_{j}$ es el sesgo de la neurona $j$
 \end{itemize}
 
-El proceso de entrenamiento de una red neuronal implica ajustar los pesos sinápticos $w_{ij}$ y los sesgos $b_{j}$ para minimizar una función de pérdida, que mide la diferencia entre las predicciones de la red y los valores reales. Este ajuste se realiza mediante un algoritmo de optimización, como el gradiente descendente, junto con un proceso de retropropagación del error.
+El proceso de entrenamiento de una red neuronal implica ajustar los pesos sinápticos $w_{ij}$ y los sesgos $b_{j}$ para minimizar una función de pérdida, que mide la diferencia entre las predicciones de la red y los valores reales. Este ajuste se realiza mediante un algoritmo de optimización, junto con un proceso de retropropagación del error.
 
-Propagación hacia Adelante: Los datos de entrada se propagan a través de la red para generar una predicción.
-Cálculo de la Pérdida: Se calcula la función de pérdida que mide la discrepancia entre la predicción y la etiqueta real.
-Retropropagación: El error se propaga hacia atrás a través de la red para calcular los gradientes de la función de pérdida respecto a los pesos y sesgos.
-Actualización de Pesos: Los pesos y sesgos se actualizan utilizando el algoritmo de optimización.
+Existen varios tipos de redes neuronales artificiales, siendo las redes neuronales \textit{feedforward} o FFNN, uno de los tipos más simples y ampliamente utilizados. En una FFNN, las conexiones entre las unidades no forman ciclos, y la información fluye solo en una dirección: desde las capas de entrada, a través de las capas ocultas, y finalmente hacia la capa de salida. El funcionamiento de este tipo de red neuronal se puede describir de la siguiente manera:
 
-Propagación hacia Adelante:
+\begin{itemize}
+	\item \textit{Propagación hacia Adelante:} Las entradas se pasan a través de la capa de entrada. Las salidas de cada neurona de la capa de entrada se multiplican por los pesos correspondientes y se pasan a las neuronas de la primera capa oculta. Cada neurona de la capa oculta suma sus entradas ponderadas y aplica una función de activación para calcular su salida.	Este proceso se repite para todas las capas ocultas hasta llegar a la capa de salida.	La capa de salida produce la predicción final del modelo.
+	\item \textit{Cálculo de la Pérdida:} La salida de la red se compara con la etiqueta verdadera utilizando una función de pérdida (como la entropía cruzada esparsa para problemas de clasificación). La función de pérdida cuantifica la discrepancia entre la predicción del modelo y el valor verdadero.
+	\item \textit{Retropropagación del Error:} El error calculado se propaga hacia atrás a través de la red. Se calculan los gradientes de la función de pérdida respecto a los pesos y sesgos utilizando el algoritmo de retropropagación. Estos gradientes indican la dirección y magnitud en la que deben ajustarse los pesos para reducir la pérdida. 
+	\item \textit{Actualización de Pesos:} Los pesos y sesgos se actualizan utilizando un algoritmo de optimización, como el gradiente descendente o una de sus variantes. La actualización de los pesos se realiza para minimizar la función de pérdida y mejorar la precisión del modelo.
+\end{itemize}
 
-Las entradas se pasan a través de la capa de entrada.
-Las salidas de cada neurona de la capa de entrada se multiplican por los pesos correspondientes y se pasan a las neuronas de la primera capa oculta.
-Cada neurona de la capa oculta suma sus entradas ponderadas y aplica una función de activación (como ReLU, sigmoide o tanh) para calcular su salida.
-Este proceso se repite para todas las capas ocultas hasta llegar a la capa de salida.
-La capa de salida produce la predicción final del modelo.
-Cálculo de la Pérdida:
-
-La salida de la red se compara con la etiqueta verdadera utilizando una función de pérdida (como la entropía cruzada esparsa para problemas de clasificación).
-La función de pérdida cuantifica la discrepancia entre la predicción del modelo y el valor verdadero.
-Retropropagación del Error:
-
-El error calculado se propaga hacia atrás a través de la red.
-Se calculan los gradientes de la función de pérdida respecto a los pesos y sesgos utilizando el algoritmo de retropropagación.
-Estos gradientes indican la dirección y magnitud en la que deben ajustarse los pesos para reducir la pérdida.
-Actualización de Pesos:
-
-Los pesos y sesgos se actualizan utilizando un algoritmo de optimización, como el gradiente descendente o una de sus variantes (por ejemplo, Adam, RMSprop).
-La actualización de los pesos se realiza para minimizar la función de pérdida y mejorar la precisión del modelo.
-
-Uno de los tipos más simples y ampliamente utilizados de redes neuronales artificiales son las redes neuronales \textit{feedforward} (FFNN). En una FFNN, las conexiones entre las unidades no forman ciclos, y la información fluye solo en una dirección: desde las capas de entrada, a través de las capas ocultas, y finalmente hacia la capa de salida.
-
-Existen varios tipos de redes neuronales artificiales
+Las ventajas de utilizar FFNN es que son las redes neuronales más simples de entender y implementar en comparación con otros tipos de redes neuronales, son adecuadas para una amplia variedad de tareas de predicción y clasificación y requieren menos recursos computacionales en comparación con redes más complejas como las redes convolucionales (CNN) y las redes recurrentes (RNN). No obstante, tienen limitaciones en el procesamiento de datos espaciales y temporales ya que no capturan bien las relaciones espaciales en datos como imágenes (para lo cual se utilizan las CNN) o las dependencias temporales en series de tiempo (para lo cual se utilizan las RNN). De igual forma, en redes profundas, las FFNN pueden sufrir de problemas de \textit{vanishing gradients} (gradientes que se desvanecen), lo que dificulta el entrenamiento de capas muy profundas.
 
 \subsection{Memristores}
 Los memristores (resistores de memoria) son componentes eléctricos pasivos que han sido teorizados durante décadas y que finalmente se desarrollaron experimentalmente en los últimos años. Estos dispositivos se caracterizan por su capacidad para recordar la cantidad de carga que ha pasado a través de ellos, lo que les permite retener un estado resistivo específico incluso después de que se ha eliminado la fuente de energía. Esta propiedad de memoria los hace especialmente adecuados para aplicaciones en almacenamiento de datos no volátil y procesamiento neuromórfico.
@@ -141,25 +134,26 @@ Donde:
 	\item $R(w)$ es la resistencia dependiente del estado $\omega$, que es una función de la carga histórica.
 \end{itemize}
 
-La capacidad de retener un estado resistivo específico sin necesidad de energía continua.
-Analogía con las sinapsis: Su comportamiento es similar al de las sinapsis neuronales, donde la resistencia del memristor puede ajustarse de manera análoga a la fuerza sináptica en las redes biológicas.
-Densidad y eficiencia energética: Ofrecen alta densidad de almacenamiento y baja energía de operación en comparación con los dispositivos convencionales.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.27]{img/MemristorHP.png}
+	\caption{Estructura física del memristor sintetizado por HP Labs.
+		\label{fig:memristorhp}}
+\end{figure}
 
-La integración de memristores en redes neuronales artificiales ofrece una solución prometedora para mejorar la eficiencia energética y la densidad de almacenamiento de estos sistemas. Los memristores pueden emular las sinapsis biológicas al proporcionar una forma no volátil y analógica de almacenamiento y procesamiento de información. En la siguiente sección, describimos nuestro enfoque para integrar un modelo de memristor de HP en una red neuronal artificial para la clasificación del dataset MNIST, utilizando TensorFlow.
+Las características principales de este componente eléctrico es la capacidad de retener un estado resistivo específico sin necesidad de energía continua, esto a su vez genera una analogía con las sinapsis, ya que su comportamiento es similar al de las sinapsis neuronales, donde la resistencia del memristor puede ajustarse de manera análoga a la fuerza sináptica en las redes biológicas. Además de lo anteriormente descrito, los memristores ofrecen alta densidad de almacenamiento y baja energía de operación en comparación con los dispositivos convencionales.
 
-\section{Sistema propuesto}
+\subsection{Memristor de HP}
+En 2008, un equipo de investigadores de HP Labs, dirigido por Stanley Williams, fabricó el primer memristor funcional utilizando una estructura de óxido de metal. Este desarrollo confirmó la existencia de los memristores y abrió nuevas posibilidades para su uso en la tecnología de la información.
 
-El sistema propuesto integra un modelo de memristor de HP en una red neuronal artificial para la clasificación del dataset MNIST utilizando la herramienta TensorFlow. Este enfoque busca aprovechar las propiedades únicas de los memristores para mejorar la eficiencia energética y la capacidad de almacenamiento del sistema de aprendizaje automático. A continuación, se detalla la arquitectura de la red neuronal, el funcionamiento del programa, el modelo de memristor utilizado y el algoritmo de entrenamiento.
+El memristor de HP (ver Figura \ref{fig:memristorhp}) se construye con una película delgada de dióxido de titanio ($TiO_{2}$) colocada entre dos electrodos de platino. La película de $TiO_{2}$ tiene dos capas: una capa de $TiO_{2}$ pura y otra con oxígeno deficitario ($TiO_{2-x}$). La migración de los vacantes de oxígeno entre estas capas, causada por una corriente eléctrica, modifica la resistencia del dispositivo.
 
-\subsection{Arquitectura de la Red Neuronal}
-La red neuronal utilizada en este trabajo es una red neuronal feedforward (FFNN) con las siguientes características:
+\begin{itemize}
+	\item Estado de Alta Resistencia (HRS): Cuando los vacantes de oxígeno están distribuidos uniformemente, el memristor está en un estado de alta resistencia.
+	\item Estado de Baja Resistencia (LRS): Cuando una corriente eléctrica hace que los vacantes de oxígeno se acumulen en la capa de $TiO_{2-x}$, el dispositivo entra en un estado de baja resistencia.
+\end{itemize}
 
-Capa de Entrada: Una capa de entrada que toma imágenes de 28x28 píxeles del dataset MNIST, aplanando cada imagen en un vector de 784 dimensiones.
-Capa Oculta Personalizada con Memristores: Una capa oculta personalizada que simula el comportamiento de un memristor de HP, con 128 unidades (neuronas).
-Capa de Activación: Una capa de activación ReLU (Rectified Linear Unit) que introduce no linealidad en el modelo.
-Capa de Salida: Una capa densa (fully connected) con 10 neuronas, cada una correspondiente a una de las 10 clases de dígitos (0-9) del dataset MNIST.
-Modelo de Memristor de HP
-El modelo de memristor de HP se integra en la capa oculta personalizada. La actualización de los pesos sinápticos en esta capa se realiza mediante una ecuación diferencial simplificada que describe la dinámica de los memristores:
+El modelo de HP se puede describir con las ecuaciones diferenciales que rigen la dinámica del dispositivo, vistas en la ecuación \ref{eq:4} y \ref{eq:5}:
 
 \begin{equation}
 	R(w) = R_{on} \cdot w + R_{off} \cdot (1 - w)
@@ -179,6 +173,21 @@ Donde:
 	\item $D$ es el espesor de la película de $TiO_{2}$.
 \end{itemize}
 
+Los memristores tienen aplicaciones potenciales en varias áreas, como el almacenamiento de datos puesto que pueden reemplazar a la memoria flash debido a su alta densidad y velocidad, también pueden ser usados en circuitos lógicos reconfigurables, proporcionando una alternativa flexible y eficiente en términos energéticos a los transistores tradicionales. Actualmente el campo en el que los memristores tienen un futuro muy prometedor es en el cómputo neuromórfico, debido a que la integración de memristores en redes neuronales artificiales ofrece una solución prometedora para mejorar la eficiencia energética y la densidad de almacenamiento de estos sistemas. Los memristores pueden emular las sinapsis biológicas al proporcionar una forma no volátil y analógica de almacenamiento y procesamiento de información, alineando el hardware de computación más estrechamente con la estructura y el funcionamiento del cerebro humano. En la siguiente sección, describimos nuestro enfoque para integrar un modelo de memristor de HP en una red neuronal artificial para la clasificación del conjunto de datos MNIST, utilizando TensorFlow.
+
+\section{Sistema propuesto}
+
+El sistema propuesto integra un modelo de memristor de HP en una red neuronal artificial para la clasificación del dataset MNIST utilizando la herramienta TensorFlow. Este enfoque busca aprovechar las propiedades únicas de los memristores para mejorar la eficiencia energética y la capacidad de almacenamiento del sistema de aprendizaje automático. A continuación, se detalla la arquitectura de la red neuronal, el funcionamiento del programa, el modelo de memristor utilizado y el algoritmo de entrenamiento.
+
+\subsection{Arquitectura de la Red Neuronal}
+La red neuronal utilizada en este trabajo es una red neuronal feedforward (FFNN) con las siguientes características:
+
+Capa de Entrada: Una capa de entrada que toma imágenes de 28x28 píxeles del dataset MNIST, aplanando cada imagen en un vector de 784 dimensiones.
+Capa Oculta Personalizada con Memristores: Una capa oculta personalizada que simula el comportamiento de un memristor de HP, con 128 unidades (neuronas).
+Capa de Activación: Una capa de activación ReLU (Rectified Linear Unit) que introduce no linealidad en el modelo.
+Capa de Salida: Una capa densa (fully connected) con 10 neuronas, cada una correspondiente a una de las 10 clases de dígitos (0-9) del dataset MNIST.
+Modelo de Memristor de HP
+El modelo de memristor de HP se integra en la capa oculta personalizada. La actualización de los pesos sinápticos en esta capa se realiza mediante una ecuación diferencial simplificada que describe la dinámica de los memristores:
 
 Funcionamiento del Programa
 El programa se implementa en Python utilizando TensorFlow, una biblioteca de código abierto para la construcción y entrenamiento de modelos de aprendizaje profundo. El flujo de trabajo del programa es el siguiente:
