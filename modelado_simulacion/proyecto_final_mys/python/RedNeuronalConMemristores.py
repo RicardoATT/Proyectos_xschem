@@ -1,3 +1,12 @@
+#******************************************************************
+# Integración de memristores en redes neuroanles artificiales para 
+# la clasificación del dataset MNIST utilizando TensorFlow
+#******************************************************************
+# Programador: Ricardo Aldair Tirado Torres
+# Fecha: Sept 27, 2023
+# Instituto Politécnico Nacional
+# Centro de Investigación en Computación, Mexico
+#******************************************************************
 import tensorflow as tf
 from tensorflow import keras
 from keras import layers, models
@@ -7,11 +16,11 @@ import matplotlib.pyplot as plt
 # Cargar y preprocesar el dataset MNIST
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
-
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
 # Definir el modelo de memristor HP
 class HPMemristorLayer(layers.Layer):
+    # Inicialización de valores
     def __init__(self, units=32, input_dim=32):
         super(HPMemristorLayer, self).__init__()
         self.units = units
@@ -21,18 +30,17 @@ class HPMemristorLayer(layers.Layer):
             initializer="random_normal",
             trainable=True,
         )
-        self.D = 1.0  # Thickness of the memristor device
-        self.mu = 1e-10  # Mobility of the dopants
-        self.R_on = 1e2  # Minimum resistance
-        self.R_off = 1e5  # Maximum resistance
+        self.D = 1.0        # Ancho del memristor
+        self.mu = 1e-10     # Mobilidad de los dopantes
+        self.R_on = 1e2     # Resistencia mínima
+        self.R_off = 1e5    # Resistencia máxima
         self.w = self.add_weight(
             shape=(input_dim, units),
             initializer="random_uniform",
             trainable=True,
         )
-
+    # Cálculo de la memristancia
     def call(self, inputs):
-        # Memristance computation
         R = self.R_on * self.w + self.R_off * (1 - self.w)
         V = tf.matmul(inputs, self.weight)
         dw = self.mu * tf.matmul(tf.transpose(inputs), V) / self.D
@@ -43,7 +51,7 @@ class HPMemristorLayer(layers.Layer):
     def compute_output_shape(self, input_shape):
         return (input_shape[0], self.units)
 
-# Construcción del modelo
+# Construir del modelo
 model = models.Sequential([
     layers.Flatten(input_shape=(28, 28)),
     HPMemristorLayer(128, 784),
@@ -64,8 +72,7 @@ test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
 print('\nTest accuracy:', test_acc)
 
 # Realizar predicciones
-probability_model = tf.keras.Sequential([model, 
-                                         tf.keras.layers.Softmax()])
+probability_model = tf.keras.Sequential([model, tf.keras.layers.Softmax()])
 predictions = probability_model.predict(x_test)
 
 # Mostrar algunas predicciones
@@ -74,22 +81,18 @@ def plot_image(i, predictions_array, true_label, img):
   plt.grid(False)
   plt.xticks([])
   plt.yticks([])
-
   plt.imshow(img, cmap=plt.cm.binary)
-
   predicted_label = np.argmax(predictions_array)
   if predicted_label == true_label:
     color = 'blue'
   else:
     color = 'red'
-
   plt.xlabel("{} {:2.0f}% ({})".format(class_names[predicted_label],
                                 100*np.max(predictions_array),
                                 class_names[true_label]),
                                 color=color)
 
 class_names = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
 num_rows = 5
 num_cols = 3
 num_images = num_rows*num_cols
