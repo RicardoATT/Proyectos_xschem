@@ -6,11 +6,11 @@ V {}
 S {}
 E {}
 N -480 -260 -460 -260 {
-lab=vdd}
+lab=vout}
 N -460 -420 -460 -260 {
-lab=vdd}
+lab=vout}
 N -480 -420 -460 -420 {
-lab=vdd}
+lab=vout}
 N -560 -260 -540 -260 {
 lab=vin}
 N -560 -420 -560 -260 {
@@ -44,7 +44,7 @@ lab=gnd}
 N -430 -530 -410 -530 {
 lab=vdd}
 N -460 -340 -440 -340 {
-lab=vdd}
+lab=vout}
 N -700 -590 -560 -590 {
 lab=vin}
 N -680 -590 -680 -200 {
@@ -55,12 +55,18 @@ N -510 -220 -510 -200 {
 lab=vin}
 N -680 -340 -560 -340 {
 lab=vin}
-N -510 -420 -510 -410 {}
-N -510 -410 -430 -410 {}
-N -430 -520 -430 -410 {}
-N -510 -270 -510 -260 {}
-N -600 -270 -510 -270 {}
-N -600 -530 -600 -270 {}
+N -510 -420 -510 -410 {
+lab=vdd}
+N -510 -410 -430 -410 {
+lab=vdd}
+N -430 -520 -430 -410 {
+lab=vdd}
+N -510 -270 -510 -260 {
+lab=gnd}
+N -600 -270 -510 -270 {
+lab=gnd}
+N -600 -530 -600 -270 {
+lab=gnd}
 C {sky130_fd_pr/pfet_01v8.sym} -510 -440 1 0 {name=M1
 L=0.15
 W=1
@@ -120,4 +126,4 @@ spiceprefix=X
 C {devices/iopin.sym} -610 -530 2 0 {name=p1 lab=gnd}
 C {devices/iopin.sym} -410 -530 0 0 {name=p2 lab=vdd}
 C {devices/opin.sym} -440 -340 0 0 {name=p3 lab=vout}
-C {devices/opin.sym} -700 -590 2 0 {name=p4 lab=vin}
+C {devices/ipin.sym} -700 -590 2 0 {name=p4 lab=vin}
