@@ -6,25 +6,22 @@ V {}
 S {}
 E {}
 B 2 -1800 -60 -1000 340 {flags=graph
-y1=-0.07
-y2=1.9
+y1=1.112
+y2=3.082
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.13238e-05
-x2=1.35228e-05
+x1=1.87036e-06
+x2=2.45631e-06
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 node="\\"Vpre1 [V];vpre1\\"
-\\"Vpre2 [V];vpre2\\"
-\\"Vpre3 [V];vpre3\\"
-\\"Vpre4 [V];vpre4\\"
-\\"Vpost [V];vpos\\""
-color="4 10 7 8 6"
+\\"Vpost1 [V];vpost1\\""
+color="4 6"
 dataset=-1
 unitx=1
 logx=0
@@ -38,8 +35,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.13238e-05
-x2=1.35228e-05
+x1=1.87036e-06
+x2=2.45631e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -64,8 +61,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.13238e-05
-x2=1.35228e-05
+x1=1.87036e-06
+x2=2.45631e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -91,8 +88,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.13238e-05
-x2=1.35228e-05
+x1=1.87036e-06
+x2=2.45631e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -441,6 +438,38 @@ N 140 240 140 260 {
 lab=GND}
 N 140 160 140 180 {
 lab=vb4}
+N -580 -980 -560 -980 {
+lab=vpre4}
+N -500 -940 -500 -920 {
+lab=GND}
+N -500 -1040 -500 -1020 {
+lab=VDD}
+N -440 -980 -420 -980 {
+lab=vpost4}
+N -580 -800 -560 -800 {
+lab=vpre3}
+N -500 -760 -500 -740 {
+lab=GND}
+N -500 -860 -500 -840 {
+lab=VDD}
+N -440 -800 -420 -800 {
+lab=vpost3}
+N -580 -620 -560 -620 {
+lab=vpre2}
+N -500 -580 -500 -560 {
+lab=GND}
+N -500 -680 -500 -660 {
+lab=VDD}
+N -440 -620 -420 -620 {
+lab=vpost2}
+N -580 -440 -560 -440 {
+lab=vpre1}
+N -500 -400 -500 -380 {
+lab=GND}
+N -500 -500 -500 -480 {
+lab=VDD}
+N -440 -440 -420 -440 {
+lab=vpost1}
 C {devices/vsource.sym} -160 210 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} -160 260 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -160 160 0 0 {name=l7 lab=VDD}
@@ -776,3 +805,24 @@ spiceprefix=X
 C {devices/vsource.sym} 140 210 0 0 {name=V6 value=0.5}
 C {devices/gnd.sym} 140 260 0 0 {name=l41 lab=GND}
 C {devices/lab_pin.sym} 140 160 2 0 {name=p24 sig_type=std_logic lab=vb4}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/delay/delay.sym} -320 -860 0 0 {name=x10}
+C {devices/lab_pin.sym} -580 -980 0 0 {name=p25 sig_type=std_logic lab=vpre4}
+C {devices/gnd.sym} -500 -920 0 0 {name=l42 lab=GND}
+C {devices/vdd.sym} -500 -1040 0 0 {name=l43 lab=VDD}
+C {devices/lab_pin.sym} -420 -980 2 0 {name=p26 sig_type=std_logic lab=vpost4}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/delay/delay.sym} -320 -680 0 0 {name=x11}
+C {devices/lab_pin.sym} -580 -800 0 0 {name=p27 sig_type=std_logic lab=vpre3}
+C {devices/gnd.sym} -500 -740 0 0 {name=l44 lab=GND}
+C {devices/vdd.sym} -500 -860 0 0 {name=l45 lab=VDD}
+C {devices/lab_pin.sym} -420 -800 2 0 {name=p28 sig_type=std_logic lab=vpost3
+}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/delay/delay.sym} -320 -500 0 0 {name=x12}
+C {devices/lab_pin.sym} -580 -620 0 0 {name=p29 sig_type=std_logic lab=vpre2}
+C {devices/gnd.sym} -500 -560 0 0 {name=l46 lab=GND}
+C {devices/vdd.sym} -500 -680 0 0 {name=l47 lab=VDD}
+C {devices/lab_pin.sym} -420 -620 2 0 {name=p30 sig_type=std_logic lab=vpost2}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/delay/delay.sym} -320 -320 0 0 {name=x13}
+C {devices/lab_pin.sym} -580 -440 0 0 {name=p31 sig_type=std_logic lab=vpre1}
+C {devices/gnd.sym} -500 -380 0 0 {name=l48 lab=GND}
+C {devices/vdd.sym} -500 -500 0 0 {name=l49 lab=VDD}
+C {devices/lab_pin.sym} -420 -440 2 0 {name=p32 sig_type=std_logic lab=vpost1}

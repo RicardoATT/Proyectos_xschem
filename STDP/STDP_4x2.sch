@@ -529,12 +529,12 @@ value="
 .control
   save all
   tran 1n 50u
-  write STDP_N_LIF_6T1R.raw
+  write STDP_4x2.raw
 .endc
 " }
 C {devices/launcher.sym} 120 100 0 0 {name=h1
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/STDP_N_LIF_6T1R.raw tran"
+tclcommand="xschem raw_read $netlist_dir/STDP_4x2.raw tran"
 }
 C {devices/lab_pin.sym} -1480 -220 0 0 {name=p10 sig_type=std_logic lab=vc1}
 C {devices/lab_pin.sym} -570 -200 1 0 {name=p15 sig_type=std_logic lab=vc}
@@ -776,4 +776,3 @@ spiceprefix=X
 C {devices/vsource.sym} 140 210 0 0 {name=V6 value=0.5}
 C {devices/gnd.sym} 140 260 0 0 {name=l41 lab=GND}
 C {devices/lab_pin.sym} 140 160 2 0 {name=p24 sig_type=std_logic lab=vb4}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Postsynaptic_LIF_neuron.sym} -51 -484 0 0 {name=x10}

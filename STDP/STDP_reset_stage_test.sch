@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 -880 -1080 -80 -680 {flags=graph
-y1=2.20405
-y2=3.49429
+y1=2.3
+y2=3.6
 ypos1=0
 ypos2=2
 divy=5
@@ -72,13 +72,13 @@ N -1060 -800 -1060 -780 {
 lab=GND}
 N -1000 -860 -980 -860 {
 lab=GND}
-N -1170 -720 -1170 -700 {
+N -1300 -760 -1300 -740 {
 lab=GND}
-N -1170 -820 -1170 -780 {
+N -1300 -860 -1300 -820 {
 lab=#net1}
-N -1220 -860 -1200 -860 {
+N -1220 -930 -1220 -910 {
 lab=VDD}
-N -1170 -880 -1170 -860 {
+N -1220 -810 -1220 -790 {
 lab=GND}
 C {devices/vsource.sym} -860 -360 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} -860 -310 0 0 {name=l6 lab=GND}
@@ -110,22 +110,9 @@ C {devices/vdd.sym} -1060 -920 0 0 {name=l11 lab=VDD}
 C {devices/gnd.sym} -1060 -780 0 0 {name=l17 lab=GND}
 C {devices/lab_pin.sym} -980 -840 2 0 {name=p8 sig_type=std_logic lab=vsyn1}
 C {devices/gnd.sym} -980 -860 3 0 {name=l4 lab=GND}
-C {devices/vdd.sym} -1220 -860 0 0 {name=l1 lab=VDD}
-C {devices/vsource.sym} -1170 -750 0 0 {name=V2 value="PULSE(0 1.8 1n 1n 1n 5u 10u 2)"}
-C {devices/gnd.sym} -1170 -700 0 0 {name=l3 lab=GND}
+C {devices/vdd.sym} -1220 -930 0 0 {name=l1 lab=VDD}
+C {devices/vsource.sym} -1300 -790 0 0 {name=V2 value="PULSE(0 1.8 1n 1n 1n 5u 10u 5)"}
+C {devices/gnd.sym} -1300 -740 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} -1130 -860 1 0 {name=p2 sig_type=std_logic lab=vcontrol}
-C {sky130_fd_pr/nfet_01v8.sym} -1170 -840 3 0 {name=M1
-L=0.15
-W=1
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {devices/gnd.sym} -1170 -880 2 0 {name=l2 lab=GND}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/transmission_gate.sym} -1080 -780 0 0 {name=x2}
+C {devices/gnd.sym} -1220 -790 0 0 {name=l2 lab=GND}
