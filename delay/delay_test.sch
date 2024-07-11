@@ -60,7 +60,7 @@ only_toplevel=true
 value="
 .control
   save all
-  tran 1n 1u
+  tran 1n 2u
   write delay_test.raw
 .endc
 " }
@@ -70,6 +70,6 @@ tclcommand="xschem raw_read $netlist_dir/delay_test.raw tran"
 }
 C {devices/gnd.sym} -1620 -180 0 0 {name=l2 lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/delay/delay.sym} -1440 -120 0 0 {name=x1}
-C {devices/vsource.sym} -1680 -150 0 0 {name=V2 value="PULSE(0 1.8 1n 1n 1n 100n 200n 5)"}
+C {devices/vsource.sym} -1680 -150 0 0 {name=V2 value="PULSE(0 1.8 1n 1n 1n 100n 200n 20)"}
 C {devices/lab_pin.sym} -1540 -240 2 0 {name=p1 sig_type=std_logic lab=delay}
 C {devices/lab_pin.sym} -1680 -210 0 0 {name=p2 sig_type=std_logic lab=vin}

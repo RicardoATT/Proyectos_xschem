@@ -89,9 +89,9 @@ N -150 -110 -110 -110 {
 lab=vipre}
 N -190 -150 -190 -140 {
 lab=VDD}
-C {sky130_fd_pr/nfet_01v8.sym} -320 -10 2 1 {name=M1
+C {sky130_fd_pr/nfet_01v8.sym} -320 -10 0 0 {name=M1
 L=0.15
-W=1
+W=10
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -107,7 +107,7 @@ C {sky130_fd_pr/rram_v0.sym} -190 40 1 0 {name=R1
 model=rram_v0
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8.sym} -60 -10 2 0 {name=M3
+C {sky130_fd_pr/nfet_01v8.sym} -60 -10 0 1 {name=M3
 L=0.15
 W=20
 nf=1 
@@ -156,7 +156,7 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} -240 40 3 0 {name=p7 sig_type=std_logic lab=BE}
 C {devices/lab_pin.sym} -140 40 3 0 {name=p8 sig_type=std_logic lab=TE}
-C {sky130_fd_pr/nfet_01v8.sym} -320 90 2 1 {name=M2
+C {sky130_fd_pr/nfet_01v8.sym} -320 90 0 0 {name=M2
 L=0.15
 W=20
 nf=1 
@@ -170,9 +170,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8.sym} -60 90 2 0 {name=M4
+C {sky130_fd_pr/nfet_01v8.sym} -60 90 0 1 {name=M4
 L=0.15
-W=1
+W=10
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

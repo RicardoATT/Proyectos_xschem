@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -1800 -60 -1000 340 {flags=graph
-y1=-0.39
-y2=2.1
+y1=0.26
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=5e-05
+x1=-2.5e-06
+x2=4.75e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -28,15 +28,15 @@ logx=0
 logy=0
 }
 B 2 -1000 -60 -200 340 {flags=graph
-y1=-5.1e-08
-y2=1.7e-05
+y1=-1.7e-09
+y2=1.4e-07
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=5e-05
+x1=-2.5e-06
+x2=4.75e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -54,15 +54,15 @@ color="4 10"
 node="\\"Ipre1 (A);i(vmeas1)\\"
 \\"Ipost (A);i(vmeas)\\""}
 B 2 -1800 340 -1000 740 {flags=graph
-y1=-0.017
-y2=1.8
+y1=0.025
+y2=1.5
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=5e-05
+x1=-2.5e-06
+x2=4.75e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -81,15 +81,15 @@ node="\\"Vmempre1 [V];vc1\\"
 \\"Vmempre4 [V];vc4\\"
 \\"Vmempost [V];vc\\""}
 B 2 -1000 340 -200 740 {flags=graph
-y1=3.1
-y2=4.3
+y1=4.4
+y2=4.5
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=5e-05
+x1=-2.5e-06
+x2=4.75e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -470,6 +470,18 @@ N -500 -500 -500 -480 {
 lab=VDD}
 N -440 -440 -420 -440 {
 lab=vpost1}
+N -160 380 -160 400 {
+lab=GND}
+N -160 300 -160 320 {
+lab=vctrl}
+N -1160 -720 -1140 -720 {
+lab=vctrl}
+N -1160 -460 -1140 -460 {
+lab=vctrl}
+N -1160 -200 -1140 -200 {
+lab=vctrl}
+N -1160 -980 -1140 -980 {
+lab=vctrl}
 C {devices/vsource.sym} -160 210 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} -160 260 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -160 160 0 0 {name=l7 lab=VDD}
@@ -480,7 +492,6 @@ C {devices/gnd.sym} -1320 -130 0 0 {name=l13 lab=GND}
 C {devices/vdd.sym} -1320 -310 0 0 {name=l14 lab=VDD}
 C {devices/lab_pin.sym} -1420 -160 0 0 {name=p13 sig_type=std_logic lab=vb1}
 C {devices/lab_pin.sym} -1160 -220 1 0 {name=p14 sig_type=std_logic lab=vpre1}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -1020 -40 0 0 {name=x4}
 C {devices/vdd.sym} -1080 -280 0 0 {name=l16 lab=VDD}
 C {devices/vdd.sym} -1540 -300 0 0 {name=l19 lab=VDD}
 C {devices/isource.sym} -1600 -170 0 1 {name=I1 value="PULSE(0 3u 10n 10n 10n 5u 10u 10)"}
@@ -558,12 +569,12 @@ value="
 .control
   save all
   tran 10n 50u
-  write STDP_N_LIF_6T1R.raw
+  write STDP_N_LIF_7T1R.raw
 .endc
 " }
 C {devices/launcher.sym} 120 100 0 0 {name=h1
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/STDP_N_LIF_6T1R.raw tran"
+tclcommand="xschem raw_read $netlist_dir/STDP_N_LIF_7T1R.raw tran"
 }
 C {devices/lab_pin.sym} -1480 -220 0 0 {name=p10 sig_type=std_logic lab=vc1}
 C {devices/lab_pin.sym} -570 -200 1 0 {name=p15 sig_type=std_logic lab=vc}
@@ -589,7 +600,6 @@ C {devices/gnd.sym} -1320 -390 0 0 {name=l8 lab=GND}
 C {devices/vdd.sym} -1320 -570 0 0 {name=l10 lab=VDD}
 C {devices/lab_pin.sym} -1420 -420 0 0 {name=p4 sig_type=std_logic lab=vb2}
 C {devices/lab_pin.sym} -1160 -480 1 0 {name=p5 sig_type=std_logic lab=vpre2}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -1020 -300 0 0 {name=x1}
 C {devices/vdd.sym} -1080 -540 0 0 {name=l11 lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} -870 -440 3 0 {name=M6
 L=0.15
@@ -662,7 +672,6 @@ C {devices/gnd.sym} -1320 -650 0 0 {name=l23 lab=GND}
 C {devices/vdd.sym} -1320 -830 0 0 {name=l24 lab=VDD}
 C {devices/lab_pin.sym} -1420 -680 0 0 {name=p12 sig_type=std_logic lab=vb3}
 C {devices/lab_pin.sym} -1160 -740 1 0 {name=p17 sig_type=std_logic lab=vpre3}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -1020 -560 0 0 {name=x6}
 C {devices/vdd.sym} -1080 -800 0 0 {name=l25 lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} -870 -700 3 0 {name=M8
 L=0.15
@@ -734,7 +743,6 @@ C {devices/gnd.sym} -1320 -910 0 0 {name=l33 lab=GND}
 C {devices/vdd.sym} -1320 -1090 0 0 {name=l34 lab=VDD}
 C {devices/lab_pin.sym} -1420 -940 0 0 {name=p20 sig_type=std_logic lab=vb4}
 C {devices/lab_pin.sym} -1160 -1000 1 0 {name=p21 sig_type=std_logic lab=vpre4}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -1020 -820 0 0 {name=x8}
 C {devices/vdd.sym} -1080 -1060 0 0 {name=l35 lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} -870 -960 3 0 {name=M13
 L=0.15
@@ -826,3 +834,14 @@ C {devices/lab_pin.sym} -580 -440 0 0 {name=p31 sig_type=std_logic lab=vpre1}
 C {devices/gnd.sym} -500 -380 0 0 {name=l48 lab=GND}
 C {devices/vdd.sym} -500 -500 0 0 {name=l49 lab=VDD}
 C {devices/lab_pin.sym} -420 -440 2 0 {name=p32 sig_type=std_logic lab=vpost1}
+C {devices/vsource.sym} -160 350 0 0 {name=V7 value="PWL(0 1.8 29.9u 1.8 30u 0)"}
+C {devices/gnd.sym} -160 400 0 0 {name=l50 lab=GND}
+C {devices/lab_pin.sym} -160 300 2 0 {name=p33 sig_type=std_logic lab=vctrl}
+C {devices/lab_pin.sym} -1160 -200 0 0 {name=p34 sig_type=std_logic lab=vctrl}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/7T1R.sym} -980 -870 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/7T1R.sym} -980 -90 0 0 {name=x4}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/7T1R.sym} -980 -350 0 0 {name=x6}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/7T1R.sym} -980 -610 0 0 {name=x8}
+C {devices/lab_pin.sym} -1160 -460 0 0 {name=p38 sig_type=std_logic lab=vctrl}
+C {devices/lab_pin.sym} -1160 -720 0 0 {name=p35 sig_type=std_logic lab=vctrl}
+C {devices/lab_pin.sym} -1160 -980 0 0 {name=p36 sig_type=std_logic lab=vctrl}
