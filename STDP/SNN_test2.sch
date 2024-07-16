@@ -598,10 +598,6 @@ N -2080 -870 -2080 -850 {
 lab=VDD}
 N -2030 -960 -2020 -960 {
 lab=uw}
-N -2030 -930 -2030 -910 {
-lab=Vbias}
-N -2030 -930 -2020 -930 {
-lab=Vbias}
 N -2030 -1010 -2030 -990 {
 lab=Ctrl1}
 N -1970 -1220 -1970 -1210 {
@@ -614,10 +610,6 @@ N -2030 -1290 -2020 -1290 {
 lab=Ctrl1}
 N -2030 -1260 -2020 -1260 {
 lab=uw}
-N -2030 -1230 -2030 -1210 {
-lab=Vbias}
-N -2030 -1230 -2020 -1230 {
-lab=Vbias}
 N -2030 -1310 -2030 -1290 {
 lab=Ctrl1}
 N -1970 -1520 -1970 -1510 {
@@ -630,10 +622,6 @@ N -2030 -1590 -2020 -1590 {
 lab=Ctrl1}
 N -2030 -1560 -2020 -1560 {
 lab=uw}
-N -2030 -1530 -2030 -1510 {
-lab=Vbias}
-N -2030 -1530 -2020 -1530 {
-lab=Vbias}
 N -2030 -1610 -2030 -1590 {
 lab=Ctrl1}
 N -3020 -530 -3020 -510 {
@@ -707,12 +695,12 @@ value="
 .control
   save all
   tran 50n 100u
-  write STDP_N_LIF_6T1R.raw
+  write SNN_test2.raw
 .endc
 " }
 C {devices/launcher.sym} -3040 -670 0 0 {name=h1
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/STDP_N_LIF_6T1R.raw tran"
+tclcommand="xschem raw_read $netlist_dir/SNN_test2.raw tran"
 }
 C {devices/lab_pin.sym} -3150 -960 0 0 {name=p10 sig_type=std_logic lab=vc1}
 C {devices/vsource.sym} -3260 -560 0 0 {name=V5 value=0.45}
@@ -1063,22 +1051,19 @@ C {devices/vdd.sym} -2080 -870 0 0 {name=l73 lab=VDD}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/t_gate.sym} -2080 -810 0 0 {name=x7}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/t_gate.sym} -2080 -1110 0 0 {name=x9}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/t_gate.sym} -2080 -1410 0 0 {name=x15}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/sw.sym} -1970 -960 0 0 {name=x8}
-C {devices/lab_pin.sym} -2030 -910 2 0 {name=p78 sig_type=std_logic lab=Vbias}
 C {devices/lab_pin.sym} -1920 -1270 1 0 {name=p54 sig_type=std_logic lab=vpres2}
 C {devices/lab_pin.sym} -2030 -1260 0 0 {name=p55 sig_type=std_logic lab=uw}
 C {devices/lab_pin.sym} -2030 -1310 2 0 {name=p56 sig_type=std_logic lab=Ctrl1}
 C {devices/gnd.sym} -1970 -1210 0 0 {name=l59 lab=GND}
 C {devices/vdd.sym} -1970 -1310 0 0 {name=l60 lab=VDD}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/sw.sym} -1970 -1260 0 0 {name=x14}
-C {devices/lab_pin.sym} -2030 -1210 2 0 {name=p57 sig_type=std_logic lab=Vbias}
 C {devices/lab_pin.sym} -1920 -1570 1 0 {name=p76 sig_type=std_logic lab=vpres3}
 C {devices/lab_pin.sym} -2030 -1560 0 0 {name=p77 sig_type=std_logic lab=uw}
 C {devices/lab_pin.sym} -2030 -1610 2 0 {name=p80 sig_type=std_logic lab=Ctrl1}
 C {devices/gnd.sym} -1970 -1510 0 0 {name=l61 lab=GND}
 C {devices/vdd.sym} -1970 -1610 0 0 {name=l62 lab=VDD}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/sw.sym} -1970 -1560 0 0 {name=x16}
-C {devices/lab_pin.sym} -2030 -1510 2 0 {name=p81 sig_type=std_logic lab=Vbias}
 C {devices/vsource.sym} -3020 -560 0 0 {name=V10 value=0.5}
 C {devices/gnd.sym} -3020 -510 0 0 {name=l75 lab=GND}
 C {devices/lab_pin.sym} -3020 -610 2 0 {name=p82 sig_type=std_logic lab=Vbias}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/t_gate.sym} -1970 -960 0 0 {name=x8}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/t_gate.sym} -1970 -1260 0 0 {name=x14}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/t_gate.sym} -1970 -1560 0 0 {name=x16}

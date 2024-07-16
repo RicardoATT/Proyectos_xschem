@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=3e-05
+x1=2.09984e-06
+x2=2.86418e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -25,9 +25,8 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-color="4 6"
-node="vin
-vout"}
+color=4
+node=vout}
 N -680 -480 -680 -470 {
 lab=VDD}
 N -680 -370 -680 -360 {
@@ -44,6 +43,22 @@ N -730 -220 -730 -200 {
 lab=GND}
 N -730 -300 -730 -280 {
 lab=Vin}
+N -600 -420 -600 -350 {
+lab=Vout}
+N -600 -320 -590 -320 {
+lab=GND}
+N -590 -320 -590 -290 {
+lab=GND}
+N -600 -290 -590 -290 {
+lab=GND}
+N -600 -290 -600 -270 {
+lab=GND}
+N -650 -320 -640 -320 {
+lab=Vb}
+N -850 -220 -850 -200 {
+lab=GND}
+N -850 -300 -850 -280 {
+lab=Vb}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/transmission_gate.sym} -540 -340 0 0 {name=x1}
 C {devices/gnd.sym} -680 -360 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -680 -480 0 0 {name=l2 lab=VDD}
@@ -69,3 +84,22 @@ C {devices/launcher.sym} -740 -150 0 0 {name=h1
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/transmission_gate_tb.raw tran"
 }
+C {sky130_fd_pr/nfet_01v8.sym} -620 -320 0 0 {name=M1
+L=0.15
+W=1.5
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/gnd.sym} -600 -270 0 0 {name=l4 lab=GND}
+C {devices/lab_pin.sym} -650 -320 0 0 {name=p4 sig_type=std_logic lab=Vb}
+C {devices/vsource.sym} -850 -250 0 0 {name=V3 value=0.1}
+C {devices/gnd.sym} -850 -200 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} -850 -300 1 0 {name=p5 sig_type=std_logic lab=Vb}

@@ -26,11 +26,11 @@ lab=VDD}
 N -430 -530 -430 -520 {
 lab=VDD}
 N -560 -530 -560 -520 {
-lab=gnd}
+lab=GND}
 N -590 -520 -560 -520 {
-lab=gnd}
+lab=GND}
 N -590 -530 -590 -520 {
-lab=gnd}
+lab=GND}
 N -560 -590 -560 -570 {
 lab=Ctrl}
 N -560 -590 -460 -590 {
@@ -40,7 +40,7 @@ lab=Ctrl}
 N -510 -530 -510 -460 {
 lab=#net1}
 N -610 -530 -590 -530 {
-lab=gnd}
+lab=GND}
 N -430 -530 -410 -530 {
 lab=VDD}
 N -460 -340 -440 -340 {
@@ -60,14 +60,14 @@ lab=VDD}
 N -430 -520 -430 -410 {
 lab=VDD}
 N -510 -270 -510 -260 {
-lab=gnd}
+lab=GND}
 N -600 -270 -510 -270 {
-lab=gnd}
+lab=GND}
 N -600 -530 -600 -270 {
-lab=gnd}
+lab=GND}
 N -620 -340 -560 -340 {
 lab=Vin}
-C {sky130_fd_pr/pfet_01v8.sym} -510 -440 1 0 {name=M1
+C {sky130_fd_pr/pfet_01v8.sym} -510 -440 3 1 {name=M1
 L=0.15
 W=1.5
 nf=1
