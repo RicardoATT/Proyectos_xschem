@@ -116,6 +116,8 @@ N -190 -540 -190 -520 {
 lab=#net5}
 N -260 -570 -20 -570 {
 lab=#net6}
+N -440 -630 -440 -610 {
+lab=GND}
 C {devices/vsource.sym} -910 -500 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} -910 -450 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -910 -550 0 0 {name=l7 lab=VDD}
@@ -164,3 +166,4 @@ C {devices/gnd.sym} -250 -440 0 1 {name=l10 lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/sw.sym} -310 -570 0 1 {name=x3}
 C {devices/vsource.sym} -190 -490 0 1 {name=V7 value=0.5}
 C {devices/gnd.sym} -190 -440 0 1 {name=l13 lab=GND}
+C {devices/gnd.sym} -440 -630 2 0 {name=l11 lab=GND}

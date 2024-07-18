@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -2400 -1200 -1600 -800 {flags=graph
-y1=-0.0087
-y2=1.8
+y1=-0.077
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=0.0001
+x2=0.00025
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,7 +36,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=0.0001
+x2=0.00025
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -62,7 +62,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=0.0001
+x2=0.00025
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -79,14 +79,14 @@ color=7
 node="\\"Vpos [V];vpos1\\""}
 B 2 -1600 -800 -800 -400 {flags=graph
 y1=2.2
-y2=4.9
+y2=5.1
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=0.0001
+x2=0.00025
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -103,7 +103,7 @@ logy=0
 
 color=10
 node="\\"Thickness1 [nm]; 5 n.x11.xr1.n1#ngap -\\""}
-B 2 -2400 -400 -1600 0 {flags=graph
+B 2 -1600 -400 -800 0 {flags=graph
 y1=0
 y2=1.8
 ypos1=0
@@ -112,7 +112,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=0.0001
+x2=0.00025
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -128,16 +128,16 @@ node="\\"Update Weights;uw\\"
 \\"Training;training\\"
 \\"Inference;inference\\"
 \\"e\\""}
-B 2 -1600 -400 -800 0 {flags=graph
+B 2 -2400 -400 -1600 0 {flags=graph
 y1=0
-y2=0.01
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=0.0001
+x2=0.00025
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -314,10 +314,6 @@ N -2620 -550 -2620 -540 {
 lab=vpres1}
 N -2500 -550 -2500 -540 {
 lab=vpos1}
-N -3220 -800 -3220 -780 {
-lab=GND}
-N -3220 -880 -3220 -860 {
-lab=vpre}
 N -2790 -370 -2780 -370 {
 lab=uw}
 N -2790 -340 -2780 -340 {
@@ -376,7 +372,7 @@ only_toplevel=true
 value="
 .control
   save all
-  tran 50n 100u
+  tran 50n 250u
   write SNN_simpletest.raw
 .endc
 " }
@@ -424,11 +420,11 @@ C {devices/lab_pin.sym} -2500 -10 2 0 {name=p61 sig_type=std_logic lab=vp1}
 C {devices/vsource.sym} -3480 -690 0 0 {name=V13 value="PWL(0 1.8 9.9u 1.8 10u 0)"}
 C {devices/gnd.sym} -3480 -640 0 0 {name=l67 lab=GND}
 C {devices/lab_pin.sym} -3480 -740 2 0 {name=p65 sig_type=std_logic lab=uw}
-C {devices/vsource.sym} -3480 -550 0 0 {name=V14 value=0}
+C {devices/vsource.sym} -3480 -550 0 0 {name=V14 value="PWL(0 0 14.9u 0 15u 1.8 99.9u 1.8 100u 0)"}
 C {devices/gnd.sym} -3480 -500 0 0 {name=l68 lab=GND}
 C {devices/lab_pin.sym} -3480 -600 2 0 {name=p66 sig_type=std_logic lab=training}
 C {devices/lab_pin.sym} -2830 -540 1 0 {name=p69 sig_type=std_logic lab=vpre1}
-C {devices/vsource.sym} -3480 -410 0 0 {name=V15 value=0}
+C {devices/vsource.sym} -3480 -410 0 0 {name=V15 value="PWL(0 0 104.9u 0 105u 1.8)"}
 C {devices/gnd.sym} -3480 -360 0 0 {name=l69 lab=GND}
 C {devices/lab_pin.sym} -3480 -460 2 0 {name=p73 sig_type=std_logic lab=inference}
 C {devices/ammeter.sym} -3310 -540 1 0 {name=Vmeas1 savecurrent=true}
@@ -441,7 +437,7 @@ C {devices/lab_pin.sym} -2680 -550 1 0 {name=p2 sig_type=std_logic lab=vpres1}
 C {devices/lab_pin.sym} -2780 -530 3 0 {name=p5 sig_type=std_logic lab=vpre1}
 C {devices/lab_pin.sym} -2790 -580 2 0 {name=p14 sig_type=std_logic lab=ctrl2}
 C {devices/gnd.sym} -2730 -490 0 0 {name=l33 lab=GND}
-C {devices/vsource.sym} -3300 -830 0 0 {name=V12 value=0}
+C {devices/vsource.sym} -3300 -830 0 0 {name=V12 value="PWL(0 0 104.9u 0 105u 1.8)"}
 C {devices/gnd.sym} -3300 -780 0 0 {name=l35 lab=GND}
 C {devices/lab_pin.sym} -3300 -880 2 0 {name=p17 sig_type=std_logic lab=ctrl2}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/t_gate.sym} -2730 -540 0 0 {name=x7}
@@ -472,8 +468,5 @@ C {devices/lab_pin.sym} -2560 -590 1 0 {name=p15 sig_type=std_logic lab=vdd_syn}
 C {devices/lab_pin.sym} -2730 -780 0 0 {name=p18 sig_type=std_logic lab=vdd_delay}
 C {devices/lab_pin.sym} -2730 -450 0 0 {name=p19 sig_type=std_logic lab=vdd_sw}
 C {devices/lab_pin.sym} -2730 -610 0 0 {name=p20 sig_type=std_logic lab=vdd_tg}
-C {devices/vsource.sym} -3220 -830 0 0 {name=V16 value="PWL(0 0 14.9u 0 15u 1.8)"}
-C {devices/gnd.sym} -3220 -780 0 0 {name=l3 lab=GND}
-C {devices/lab_pin.sym} -3220 -880 2 0 {name=p21 sig_type=std_logic lab=vpre}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/sw.sym} -2730 -370 0 0 {name=x2}
 C {devices/lab_pin.sym} -2790 -340 0 0 {name=p22 sig_type=std_logic lab=vbias}
