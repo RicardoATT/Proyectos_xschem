@@ -128,8 +128,8 @@ lab=VDD}
 N -130 100 -110 100 {
 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -130 -50 0 0 {name=M1
-L=7
-W=0.45
+L=\{Lp_delay\}
+W=\{Wp_delay\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -142,8 +142,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -130 50 0 0 {name=M2
-L=7
-W=0.45
+L=\{Ln_delay\}
+W=\{Wn_delay\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -156,8 +156,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 30 -50 0 0 {name=M3
-L=7
-W=0.45
+L=\{Lp_delay\}
+W=\{Wp_delay\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -170,8 +170,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 30 50 0 0 {name=M4
-L=7
-W=0.45
+L=\{Ln_delay\}
+W=\{Wn_delay\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -184,8 +184,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 190 -50 0 0 {name=M5
-L=7
-W=0.45
+L=\{Lp_delay\}
+W=\{Wp_delay\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -198,8 +198,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 190 50 0 0 {name=M6
-L=7
-W=0.45
+L=\{Ln_delay\}
+W=\{Wn_delay\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -212,8 +212,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 350 -50 0 0 {name=M7
-L=7
-W=0.45
+L=\{Lp_delay\}
+W=\{Wp_delay\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -226,8 +226,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 350 50 0 0 {name=M8
-L=7
-W=0.45
+L=\{Ln_delay\}
+W=\{Wn_delay\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

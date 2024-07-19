@@ -222,7 +222,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 560 -50 0 0 {name=C2 model=cap_mim_m3_1 W=1000 L=1 MF=20 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 560 -50 0 0 {name=C2 model=cap_mim_m3_1 W=100 L=100 MF=10 spiceprefix=X}
 C {devices/iopin.sym} 240 -420 2 0 {name=p7 lab=VDD}
 C {sky130_fd_pr/nfet_01v8.sym} 900 -60 0 1 {name=M6
 L=0.5

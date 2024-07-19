@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 B 2 -2400 -1200 -1600 -800 {flags=graph
-y1=-0.077
+y1=-0.12
 y2=1.9
 ypos1=0
 ypos2=2
@@ -54,8 +54,8 @@ color="4 10"
 node="\\"Ipre1 (A);i(vmeas1)\\"
 \\"Ipost (A);i(vmeas)\\""}
 B 2 -2400 -800 -1600 -400 {flags=graph
-y1=-0.29
-y2=1.9
+y1=-0.37
+y2=2
 ypos1=0
 ypos2=2
 divy=5
@@ -152,13 +152,9 @@ logy=0
 color="12 13"
 node="\\"Control 1;ctrl1\\"
 \\"Control 2;ctrl2\\""}
-N -3480 -1080 -3480 -1060 {
+N -3400 -1080 -3400 -1060 {
 lab=GND}
-N -3480 -1160 -3480 -1140 {
-lab=VDD}
-N -3420 -1080 -3420 -1060 {
-lab=GND}
-N -3420 -1160 -3420 -1140 {
+N -3400 -1160 -3400 -1140 {
 lab=vdd_pre}
 N -2980 -470 -2980 -450 {
 lab=GND}
@@ -173,21 +169,21 @@ lab=vc1}
 N -3140 -540 -3080 -540 {
 lab=vc1}
 N -3140 -590 -3130 -590 {
-lab=VDD}
+lab=vdd_in}
 N -3130 -620 -3130 -590 {
-lab=VDD}
+lab=vdd_in}
 N -3140 -620 -3130 -620 {
-lab=VDD}
+lab=vdd_in}
 N -3220 -590 -3180 -590 {
 lab=#net1}
 N -3260 -620 -3140 -620 {
-lab=VDD}
+lab=vdd_in}
 N -3270 -590 -3260 -590 {
-lab=VDD}
+lab=vdd_in}
 N -3270 -620 -3270 -590 {
-lab=VDD}
+lab=vdd_in}
 N -3270 -620 -3260 -620 {
-lab=VDD}
+lab=vdd_in}
 N -3260 -560 -3260 -540 {
 lab=#net1}
 N -3260 -540 -3200 -540 {
@@ -196,9 +192,9 @@ N -3200 -590 -3200 -540 {
 lab=#net1}
 N -3340 -540 -3340 -520 {
 lab=#net2}
-N -3150 -1080 -3150 -1060 {
+N -3130 -1080 -3130 -1060 {
 lab=GND}
-N -3150 -1160 -3150 -1140 {
+N -3130 -1160 -3130 -1140 {
 lab=vdd_delay}
 N -2560 -480 -2560 -470 {
 lab=GND}
@@ -274,21 +270,21 @@ N -3320 -940 -3320 -920 {
 lab=GND}
 N -3320 -1020 -3320 -1000 {
 lab=vbias}
-N -3330 -1080 -3330 -1060 {
+N -3310 -1080 -3310 -1060 {
 lab=GND}
-N -3330 -1160 -3330 -1140 {
+N -3310 -1160 -3310 -1140 {
 lab=vdd_pos}
-N -3240 -1080 -3240 -1060 {
+N -3220 -1080 -3220 -1060 {
 lab=GND}
-N -3240 -1160 -3240 -1140 {
+N -3220 -1160 -3220 -1140 {
 lab=vdd_syn}
-N -3040 -1080 -3040 -1060 {
+N -3020 -1080 -3020 -1060 {
 lab=GND}
-N -3040 -1160 -3040 -1140 {
+N -3020 -1160 -3020 -1140 {
 lab=vdd_sw}
-N -2960 -1080 -2960 -1060 {
+N -2940 -1080 -2940 -1060 {
 lab=GND}
-N -2960 -1160 -2960 -1140 {
+N -2940 -1160 -2940 -1140 {
 lab=vdd_tg}
 N -3480 -940 -3480 -920 {
 lab=GND}
@@ -318,16 +314,16 @@ N -2790 -370 -2780 -370 {
 lab=uw}
 N -2790 -340 -2780 -340 {
 lab=vbias}
-C {devices/vsource.sym} -3480 -1110 0 0 {name=V1 value=1.8}
-C {devices/gnd.sym} -3480 -1060 0 0 {name=l6 lab=GND}
-C {devices/vdd.sym} -3480 -1160 0 0 {name=l7 lab=VDD}
-C {devices/vsource.sym} -3420 -1110 0 0 {name=V2 value=1.8}
-C {devices/gnd.sym} -3420 -1060 0 0 {name=l9 lab=GND}
-C {devices/lab_pin.sym} -3420 -1160 2 0 {name=p9 sig_type=std_logic lab=vdd_pre}
+N -3480 -1080 -3480 -1060 {
+lab=GND}
+N -3480 -1160 -3480 -1140 {
+lab=vdd_in}
+C {devices/vsource.sym} -3400 -1110 0 0 {name=V2 value=1.8}
+C {devices/gnd.sym} -3400 -1060 0 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} -3400 -1160 2 0 {name=p9 sig_type=std_logic lab=vdd_pre}
 C {devices/gnd.sym} -2980 -450 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} -3080 -480 0 0 {name=p13 sig_type=std_logic lab=vb_pre}
-C {devices/vdd.sym} -3200 -620 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -3340 -490 0 0 {name=I1 value="PWL(0 0 14.9u 0 15u 3u)"}
+C {devices/isource.sym} -3340 -490 0 0 {name=I1 value="PWL(0 0 14.9u 0 15u 3u 99.9u 3u 100u 0)"}
 C {devices/gnd.sym} -3340 -440 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3160 -590 0 0 {name=M2
 L=0.15
@@ -372,7 +368,7 @@ only_toplevel=true
 value="
 .control
   save all
-  tran 50n 250u
+  tran 50n 150u
   write SNN_simpletest.raw
 .endc
 " }
@@ -381,9 +377,9 @@ descr="load waves"
 tclcommand="xschem raw_read $netlist_dir/SNN_simpletest.raw tran"
 }
 C {devices/lab_pin.sym} -3140 -540 0 0 {name=p10 sig_type=std_logic lab=vc1}
-C {devices/vsource.sym} -3150 -1110 0 0 {name=V5 value=0.45}
-C {devices/gnd.sym} -3150 -1060 0 0 {name=l29 lab=GND}
-C {devices/lab_pin.sym} -3150 -1160 2 0 {name=p16 sig_type=std_logic lab=vdd_delay}
+C {devices/vsource.sym} -3130 -1110 0 0 {name=V5 value=1.8}
+C {devices/gnd.sym} -3130 -1060 0 0 {name=l29 lab=GND}
+C {devices/lab_pin.sym} -3130 -1160 2 0 {name=p16 sig_type=std_logic lab=vdd_delay}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -2500 -360 0 0 {name=x11}
 C {devices/gnd.sym} -2560 -470 0 0 {name=l39 lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/delay/delay.sym} -2550 -590 0 0 {name=x10}
@@ -444,18 +440,18 @@ C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/t_gate.sym} -2730 -540 0 0 {
 C {devices/vsource.sym} -3320 -970 0 0 {name=V10 value=0.5}
 C {devices/gnd.sym} -3320 -920 0 0 {name=l75 lab=GND}
 C {devices/lab_pin.sym} -3320 -1020 2 0 {name=p82 sig_type=std_logic lab=vbias}
-C {devices/vsource.sym} -3330 -1110 0 0 {name=V3 value=1.8}
-C {devices/gnd.sym} -3330 -1060 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} -3330 -1160 2 0 {name=p6 sig_type=std_logic lab=vdd_pos}
-C {devices/vsource.sym} -3240 -1110 0 0 {name=V4 value=1.8}
-C {devices/gnd.sym} -3240 -1060 0 0 {name=l8 lab=GND}
-C {devices/lab_pin.sym} -3240 -1160 2 0 {name=p7 sig_type=std_logic lab=vdd_syn}
-C {devices/vsource.sym} -3040 -1110 0 0 {name=V6 value=0.45}
-C {devices/gnd.sym} -3040 -1060 0 0 {name=l1 lab=GND}
-C {devices/lab_pin.sym} -3040 -1160 2 0 {name=p1 sig_type=std_logic lab=vdd_sw}
-C {devices/vsource.sym} -2960 -1110 0 0 {name=V7 value=0.45}
-C {devices/gnd.sym} -2960 -1060 0 0 {name=l2 lab=GND}
-C {devices/lab_pin.sym} -2960 -1160 2 0 {name=p3 sig_type=std_logic lab=vdd_tg}
+C {devices/vsource.sym} -3310 -1110 0 0 {name=V3 value=1.8}
+C {devices/gnd.sym} -3310 -1060 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} -3310 -1160 2 0 {name=p6 sig_type=std_logic lab=vdd_pos}
+C {devices/vsource.sym} -3220 -1110 0 0 {name=V4 value=1.8}
+C {devices/gnd.sym} -3220 -1060 0 0 {name=l8 lab=GND}
+C {devices/lab_pin.sym} -3220 -1160 2 0 {name=p7 sig_type=std_logic lab=vdd_syn}
+C {devices/vsource.sym} -3020 -1110 0 0 {name=V6 value=1.8}
+C {devices/gnd.sym} -3020 -1060 0 0 {name=l1 lab=GND}
+C {devices/lab_pin.sym} -3020 -1160 2 0 {name=p1 sig_type=std_logic lab=vdd_sw}
+C {devices/vsource.sym} -2940 -1110 0 0 {name=V7 value=1.8}
+C {devices/gnd.sym} -2940 -1060 0 0 {name=l2 lab=GND}
+C {devices/lab_pin.sym} -2940 -1160 2 0 {name=p3 sig_type=std_logic lab=vdd_tg}
 C {devices/vsource.sym} -3480 -970 0 0 {name=V8 value=0.5}
 C {devices/gnd.sym} -3480 -920 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -3480 -1020 2 0 {name=p8 sig_type=std_logic lab=vb_pre}
@@ -470,3 +466,7 @@ C {devices/lab_pin.sym} -2730 -450 0 0 {name=p19 sig_type=std_logic lab=vdd_sw}
 C {devices/lab_pin.sym} -2730 -610 0 0 {name=p20 sig_type=std_logic lab=vdd_tg}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/switch/sw.sym} -2730 -370 0 0 {name=x2}
 C {devices/lab_pin.sym} -2790 -340 0 0 {name=p22 sig_type=std_logic lab=vbias}
+C {devices/vsource.sym} -3480 -1110 0 0 {name=V1 value=1.8}
+C {devices/gnd.sym} -3480 -1060 0 0 {name=l3 lab=GND}
+C {devices/lab_pin.sym} -3480 -1160 2 0 {name=p21 sig_type=std_logic lab=vdd_in}
+C {devices/lab_pin.sym} -3200 -620 1 0 {name=p23 sig_type=std_logic lab=vdd_in}
