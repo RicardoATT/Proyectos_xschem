@@ -283,8 +283,6 @@ N -2980 -470 -2980 -450 {
 lab=GND}
 N -2980 -630 -2980 -610 {
 lab=vdd_pre}
-N -3080 -480 -3070 -480 {
-lab=vb_pre}
 N -3340 -460 -3340 -440 {
 lab=GND}
 N -3140 -560 -3140 -540 {
@@ -433,8 +431,6 @@ N -2980 -990 -2980 -970 {
 lab=GND}
 N -2980 -1150 -2980 -1130 {
 lab=vdd_pre}
-N -3080 -1000 -3070 -1000 {
-lab=vb_pre}
 N -3340 -980 -3340 -960 {
 lab=GND}
 N -3140 -1080 -3140 -1060 {
@@ -627,13 +623,15 @@ N -3060 40 -3060 50 {
 lab=inh_d}
 N -3100 0 -3090 0 {
 lab=vinh}
+N -3080 -990 -3070 -990 {}
+N -3080 -470 -3070 -470 {}
 C {devices/vsource.sym} -3970 -1010 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} -3970 -960 0 0 {name=l6 lab=GND}
 C {devices/vsource.sym} -3890 -1010 0 0 {name=V2 value=1.8}
 C {devices/gnd.sym} -3890 -960 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} -3890 -1060 2 0 {name=p9 sig_type=std_logic lab=vdd_pre}
 C {devices/gnd.sym} -2980 -450 0 0 {name=l13 lab=GND}
-C {devices/lab_pin.sym} -3080 -480 0 0 {name=p13 sig_type=std_logic lab=vb_pre}
+C {devices/lab_pin.sym} -3080 -470 0 0 {name=p13 sig_type=std_logic lab=vb_pre}
 C {devices/isource.sym} -3340 -490 0 0 {name=I1 value="PWL(0 0 14.9u 0 15u 3u 99.9u 3u 100u 0)"}
 C {devices/gnd.sym} -3340 -440 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3160 -590 0 0 {name=M2
@@ -664,7 +662,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Presynaptic_LIF_neuron.sym} -2780 -440 0 0 {name=x1}
 C {sky130_fd_pr/corner.sym} -3900 -150 0 0 {name=CORNER1 only_toplevel=true corner=tt}
 C {devices/code.sym} -4020 -150 0 0 {name=MODELS1
 only_toplevel=true
@@ -785,7 +782,7 @@ C {devices/lab_pin.sym} -2790 -340 0 0 {name=p22 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -3970 -1060 2 0 {name=p21 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3200 -620 1 0 {name=p40 sig_type=std_logic lab=vdd_in}
 C {devices/gnd.sym} -2980 -970 0 0 {name=l12 lab=GND}
-C {devices/lab_pin.sym} -3080 -1000 0 0 {name=p23 sig_type=std_logic lab=vb_pre}
+C {devices/lab_pin.sym} -3080 -990 0 0 {name=p23 sig_type=std_logic lab=vb_pre}
 C {devices/isource.sym} -3340 -1010 0 0 {name=I2 value="PWL(0 0 104.9u 0 105u 3u 199.9u 3u 200u 0 204.9u 0 205u 3u)"}
 C {devices/gnd.sym} -3340 -960 0 0 {name=l14 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3160 -1110 0 0 {name=M3
@@ -816,7 +813,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Presynaptic_LIF_neuron.sym} -2780 -960 0 0 {name=x2}
 C {devices/lab_pin.sym} -3140 -1060 0 0 {name=p25 sig_type=std_logic lab=vc2}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -2500 -880 0 0 {name=x21}
 C {devices/gnd.sym} -2560 -990 0 0 {name=l15 lab=GND}
@@ -979,3 +975,5 @@ spiceprefix=X
 C {devices/gnd.sym} -3060 -10 2 0 {name=l34 lab=GND}
 C {devices/lab_pin.sym} -3060 50 2 0 {name=p90 sig_type=std_logic lab=inh_d}
 C {devices/lab_pin.sym} -3100 0 0 0 {name=p93 sig_type=std_logic lab=vinh}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Input_Layer_LIF.sym} -2980 -540 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Input_Layer_LIF.sym} -2980 -1060 0 0 {name=x2}

@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -3050 -1080 -2250 -680 {flags=graph
-y1=0.27
+y1=-0.0023
 y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2e-05
+x1=1.76246e-07
+x2=2.37528e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -25,8 +25,33 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-color=4
-node=vout}
+color="4 6"
+node="vout
+vin"}
+B 2 -2250 -1080 -1450 -680 {flags=graph
+y1=0
+y2=2e-06
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=1.76246e-07
+x2=2.37528e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+color=7
+node=i(vmeas1)}
 N -2110 -1250 -2090 -1250 {
 lab=vout}
 N -3050 -1500 -3050 -1480 {
@@ -134,7 +159,7 @@ value="
 .param Wn_or=1
 .control
 	save all
-	tran 1n 20u
+	tran 1n 40u
 	write Postsynaptic_LIF_neuron_tb.raw
 .endc
 " }
@@ -146,7 +171,7 @@ descr="load waves"
 tclcommand="xschem raw_read $netlist_dir/Postsynaptic_LIF_neuron_tb.raw tran"
 }
 C {devices/vdd.sym} -2710 -1410 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -2770 -1200 0 1 {name=I1 value=3u}
+C {devices/isource.sym} -2770 -1200 0 1 {name=I1 value="PULSE(0 2u 1n 1n 1n 10n 100n 400)"}
 C {devices/gnd.sym} -2770 -1150 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -2670 -1380 0 0 {name=M2
 L=0.15
@@ -179,7 +204,7 @@ spiceprefix=X
 C {devices/lab_pin.sym} -2650 -1250 0 0 {name=p10 sig_type=std_logic lab=Vin}
 C {devices/ammeter.sym} -2770 -1280 0 0 {name=Vmeas1 savecurrent=true}
 C {devices/ammeter.sym} -2650 -1300 0 0 {name=Vmeas2 savecurrent=true}
-C {devices/vsource.sym} -2870 -1450 0 0 {name=V4 savecurrent=false value="PWL(0 0 14.9u 0 15u 1.8)"}
+C {devices/vsource.sym} -2870 -1450 0 0 {name=V4 savecurrent=false value="PWL(0 0 39.9u 0 40u 1.8)"}
 C {devices/lab_pin.sym} -2870 -1500 0 0 {name=p1 sig_type=std_logic lab=ctrl}
 C {devices/gnd.sym} -2870 -1400 0 0 {name=l6 lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/inhibitory/or_2.sym} -2500 -1310 0 0 {name=x3}

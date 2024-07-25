@@ -1,0 +1,18 @@
+name=MonteCarlo_Simulation
+only_toplevel=true
+value="
+.control
+	set wr_vecnames
+	set wr_singlescale
+
+	let mc_runs = 10
+	let run = 1
+	dowhile run <= mc_runs
+		tran 1n 5u
+		wrdata LIF_neuron_cc_mc{$&run}.txt v(vout)
+		reset
+		let run = run + 1
+	end
+.endc
+.save all
+" 

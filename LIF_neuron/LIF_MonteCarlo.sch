@@ -96,10 +96,6 @@ N -2540 -1290 -2540 -1270 {
 lab=#net3}
 N -2420 -1230 -2420 -1210 {
 lab=Vin}
-N -2110 -1210 -2110 -1190 {
-lab=vout}
-N -2120 -1210 -2110 -1210 {
-lab=vout}
 N -2360 -1250 -2350 -1250 {
 lab=Vlky}
 N -2360 -1170 -2350 -1170 {
@@ -108,39 +104,30 @@ N -1870 -1210 -1870 -1190 {
 lab=Vlky}
 N -1870 -1130 -1870 -1110 {
 lab=GND}
+N -1670 -1100 -1640 -1100 {
+lab=#net5}
+N -2120 -1210 -2110 -1210 {
+lab=Vout}
 C {devices/gnd.sym} -2260 -1120 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -2260 -1300 0 0 {name=l3 lab=VDD}
 C {devices/vsource.sym} -2010 -1160 0 0 {name=V1 
 value=1.8}
 C {devices/lab_pin.sym} -2360 -1170 0 0 {name=p3 sig_type=std_logic lab=Vb}
-C {devices/lab_pin.sym} -2110 -1190 2 0 {name=p5 sig_type=std_logic lab=vout}
+C {devices/lab_pin.sym} -2110 -1210 2 0 {name=p5 sig_type=std_logic lab=Vout}
 C {devices/gnd.sym} -2010 -1110 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -1940 -1160 0 0 {name=V2 value=0.7 savecurrent=false}
+C {devices/vsource.sym} -1940 -1160 0 0 {name=V2 value=0.6 savecurrent=false}
 C {devices/lab_pin.sym} -1940 -1210 0 0 {name=p6 sig_type=std_logic lab=Vb}
 C {devices/gnd.sym} -1940 -1110 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -3040 -1350 0 0 {name=MonteCarlo_Simulation
 only_toplevel=true
 value="
 .control
-	set wr_vecnames
-	set wr_singlescale
-
-	let mc_runs = 10
-	let run = 1
-	dowhile run <= mc_runs
-		tran 1n 5u
-		wrdata LIF_neuron_cc_mc\{$&run\}.txt v(vout)
-		reset
-		let run = run + 1
-	end
+	tran 1n 20u
+	write LIF_MonteCarlo.raw
 .endc
 .save all
 " }
-C {sky130_fd_pr/corner.sym} -1700 -1240 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
-C {devices/launcher.sym} -1630 -1100 0 0 {name=h5
-descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/LIF_neuron_cc_mc.raw tran"
-}
+C {sky130_fd_pr/corner.sym} -1700 -1240 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/vdd.sym} -2010 -1290 0 0 {name=l7 lab=VDD}
 C {devices/vdd.sym} -2480 -1370 0 0 {name=l19 lab=VDD}
 C {devices/isource.sym} -2540 -1160 0 1 {name=I1 value=3u}
@@ -177,8 +164,12 @@ C {devices/lab_pin.sym} -2420 -1210 0 0 {name=p10 sig_type=std_logic lab=Vin}
 C {devices/ammeter.sym} -2010 -1240 2 0 {name=Vmeas savecurrent=true}
 C {devices/ammeter.sym} -2540 -1240 0 0 {name=Vmeas1 savecurrent=true}
 C {devices/ammeter.sym} -2420 -1260 0 1 {name=Vmeas2 savecurrent=true}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Input_Layer_LIF.sym} -2260 -1210 0 0 {name=x1}
 C {devices/lab_pin.sym} -2360 -1250 0 0 {name=p1 sig_type=std_logic lab=Vlky}
 C {devices/vsource.sym} -1870 -1160 0 0 {name=V3 value=0.5 savecurrent=false}
 C {devices/lab_pin.sym} -1870 -1210 0 0 {name=p2 sig_type=std_logic lab=Vlky}
 C {devices/gnd.sym} -1870 -1110 0 0 {name=l5 lab=GND}
+C {devices/launcher.sym} -1630 -1100 0 0 {name=h5
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/LIF_MonteCarlo.raw tran"
+}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Input_Layer_LIF.sym} -2260 -1210 0 0 {name=x1}
