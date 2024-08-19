@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 B 2 -3050 -1080 -2250 -680 {flags=graph
-y1=0.0063
+y1=-0.0014
 y2=1.9
 ypos1=0
 ypos2=2
@@ -14,7 +14,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=5e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -28,15 +28,15 @@ logx=0
 logy=0
 }
 B 2 -2250 -1080 -1450 -680 {flags=graph
-y1=8e-06
-y2=5.8e-05
+y1=-1.9e-06
+y2=6.1e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=5e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -104,8 +104,6 @@ N -1870 -1210 -1870 -1190 {
 lab=Vlky}
 N -1870 -1130 -1870 -1110 {
 lab=GND}
-N -1670 -1100 -1640 -1100 {
-lab=#net5}
 N -2120 -1210 -2110 -1210 {
 lab=Vout}
 C {devices/gnd.sym} -2260 -1120 0 0 {name=l1 lab=GND}
@@ -115,22 +113,31 @@ value=1.8}
 C {devices/lab_pin.sym} -2360 -1170 0 0 {name=p3 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} -2110 -1210 2 0 {name=p5 sig_type=std_logic lab=Vout}
 C {devices/gnd.sym} -2010 -1110 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -1940 -1160 0 0 {name=V2 value=0.6 savecurrent=false}
+C {devices/vsource.sym} -1940 -1160 0 0 {name=V2 value=0.5 savecurrent=false}
 C {devices/lab_pin.sym} -1940 -1210 0 0 {name=p6 sig_type=std_logic lab=Vb}
 C {devices/gnd.sym} -1940 -1110 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -3040 -1350 0 0 {name=MonteCarlo_Simulation
 only_toplevel=true
 value="
 .control
-	tran 1n 20u
-	write LIF_MonteCarlo.raw
+	set wr_vecnames
+	set wr_singlescale
+
+	let mc_runs = 20
+	let run = 1
+	dowhile run <= mc_runs
+		tran 0.1n 3u
+		wrdata MC_LIF_Neuron\{$&run\}.txt v(vout)
+		reset
+		let run = run + 1
+	end
 .endc
 .save all
 " }
-C {sky130_fd_pr/corner.sym} -1700 -1240 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {sky130_fd_pr/corner.sym} -1700 -1240 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
 C {devices/vdd.sym} -2010 -1290 0 0 {name=l7 lab=VDD}
 C {devices/vdd.sym} -2480 -1370 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -2540 -1160 0 1 {name=I1 value=3u}
+C {devices/isource.sym} -2540 -1160 0 1 {name=I1 value="PULSE(0 3u 1n 1n 1n 10n 40n 500)"}
 C {devices/gnd.sym} -2540 -1110 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -2440 -1340 0 0 {name=M2
 L=0.15
@@ -165,7 +172,7 @@ C {devices/ammeter.sym} -2010 -1240 2 0 {name=Vmeas savecurrent=true}
 C {devices/ammeter.sym} -2540 -1240 0 0 {name=Vmeas1 savecurrent=true}
 C {devices/ammeter.sym} -2420 -1260 0 1 {name=Vmeas2 savecurrent=true}
 C {devices/lab_pin.sym} -2360 -1250 0 0 {name=p1 sig_type=std_logic lab=Vlky}
-C {devices/vsource.sym} -1870 -1160 0 0 {name=V3 value=0.5 savecurrent=false}
+C {devices/vsource.sym} -1870 -1160 0 0 {name=V3 value=0.55 savecurrent=false}
 C {devices/lab_pin.sym} -1870 -1210 0 0 {name=p2 sig_type=std_logic lab=Vlky}
 C {devices/gnd.sym} -1870 -1110 0 0 {name=l5 lab=GND}
 C {devices/launcher.sym} -1630 -1100 0 0 {name=h5

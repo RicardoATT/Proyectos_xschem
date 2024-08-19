@@ -5,14 +5,26 @@ value="
 	set wr_vecnames
 	set wr_singlescale
 
-	let mc_runs = 10
+	let mc_runs = 20
 	let run = 1
 	dowhile run <= mc_runs
-		tran 1n 5u
-		wrdata LIF_neuron_cc_mc{$&run}.txt v(vout)
+		tran 1n 10u
+		wrdata MC_LIF_Neuron{$&run}.txt v(vout)
 		reset
 		let run = run + 1
 	end
+.endc
+.save all
+" 
+
+
+
+name=MonteCarlo_Simulation
+only_toplevel=true
+value="
+.control
+	tran 1n 20u
+	write LIF_MonteCarlo.raw
 .endc
 .save all
 " 

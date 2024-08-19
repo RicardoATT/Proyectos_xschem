@@ -725,7 +725,6 @@ C {devices/lab_pin.sym} -2680 -380 1 0 {name=p24 sig_type=std_logic lab=vpres1}
 C {devices/lab_pin.sym} -2790 -370 0 0 {name=p53 sig_type=std_logic lab=uw}
 C {devices/lab_pin.sym} -2560 -260 0 0 {name=p59 sig_type=std_logic lab=vb_pos}
 C {devices/gnd.sym} -2570 -140 0 0 {name=l63 lab=GND}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Postsynaptic_LIF_neuron.sym} -2600 90 1 0 {name=x3}
 C {devices/ammeter.sym} -2500 -300 0 0 {name=Vmeas3 savecurrent=true}
 C {devices/lab_pin.sym} -2500 -340 2 0 {name=p60 sig_type=std_logic lab=pattern1}
 C {devices/lab_pin.sym} -2500 -10 2 0 {name=p61 sig_type=std_logic lab=vp1}
@@ -887,7 +886,6 @@ C {devices/gnd.sym} -2270 -410 3 0 {name=l21 lab=GND}
 C {devices/lab_pin.sym} -2280 -370 2 0 {name=p55 sig_type=std_logic lab=pattern2}
 C {devices/lab_pin.sym} -2340 -260 0 0 {name=p56 sig_type=std_logic lab=vb_pos}
 C {devices/gnd.sym} -2350 -140 0 0 {name=l22 lab=GND}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Postsynaptic_LIF_neuron.sym} -2380 90 1 0 {name=x4}
 C {devices/ammeter.sym} -2280 -300 0 0 {name=Vmeas4 savecurrent=true}
 C {devices/lab_pin.sym} -2280 -340 2 0 {name=p57 sig_type=std_logic lab=pattern2}
 C {devices/lab_pin.sym} -2280 -10 2 0 {name=p58 sig_type=std_logic lab=vp2}
@@ -977,3 +975,4 @@ C {devices/lab_pin.sym} -3060 50 2 0 {name=p90 sig_type=std_logic lab=inh_d}
 C {devices/lab_pin.sym} -3100 0 0 0 {name=p93 sig_type=std_logic lab=vinh}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Input_Layer_LIF.sym} -2980 -540 0 0 {name=x1}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Input_Layer_LIF.sym} -2980 -1060 0 0 {name=x2}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Output_Layer_LIF.sym} -2500 -160 1 0 {name=x3}
