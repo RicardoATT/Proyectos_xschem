@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=5e-06
+x1=-2.48984e-07
+x2=3.76e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,8 +35,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=5e-06
+x1=-2.48984e-07
+x2=3.76e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -123,10 +123,10 @@ value="
 	set wr_vecnames
 	set wr_singlescale
 
-	let mc_runs = 20
+	let mc_runs = 10
 	let run = 1
 	dowhile run <= mc_runs
-		tran 0.1n 3u
+		tran 0.1n 5u
 		wrdata MC_LIF_Neuron\{$&run\}.txt v(vout)
 		reset
 		let run = run + 1
@@ -137,7 +137,7 @@ value="
 C {sky130_fd_pr/corner.sym} -1700 -1240 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
 C {devices/vdd.sym} -2010 -1290 0 0 {name=l7 lab=VDD}
 C {devices/vdd.sym} -2480 -1370 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -2540 -1160 0 1 {name=I1 value="PULSE(0 3u 1n 1n 1n 10n 40n 500)"}
+C {devices/isource.sym} -2540 -1160 0 1 {name=I1 value="PULSE(0 1u 1n 1n 1n 10n 30n 520)"}
 C {devices/gnd.sym} -2540 -1110 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -2440 -1340 0 0 {name=M2
 L=0.15
