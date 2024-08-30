@@ -1,0 +1,56 @@
+** sch_path: /home/ricardo/RATT_repos/Proyectos_xschem/switch/switch_tb.sch
+**.subckt switch_tb
+V1 VDD GND 1.8
+V2 Vin GND PWL(0 0 9.9u 0 10u 1.8 19.9u 1.8 20u 0)
+V3 Vb GND 0.5
+x1 Vin GND VDD Vout Vb switch
+**** begin user architecture code
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /home/ricardo/pdk/sky130B/libs.tech/ngspice/corners/tt.spice
+.include /home/ricardo/pdk/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /home/ricardo/pdk/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /home/ricardo/pdk/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+
+.control
+  save all
+  tran 1n 30u
+  write switch_tb.raw
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/ricardo/RATT_repos/Proyectos_xschem/switch/switch.sym # of pins=5
+** sym_path: /home/ricardo/RATT_repos/Proyectos_xschem/switch/switch.sym
+** sch_path: /home/ricardo/RATT_repos/Proyectos_xschem/switch/switch.sch
+.subckt switch Vin GND VDD Vout Vbias
+*.iopin GND
+*.iopin VDD
+*.opin Vout
+*.ipin Vin
+*.ipin Vbias
+XM1 Vout net1 Vin VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.45 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 Vin Vin Vout GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net1 Vin VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.45 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 Vin GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 Vout Vbias GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end

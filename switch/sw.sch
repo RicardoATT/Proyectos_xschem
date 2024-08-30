@@ -80,10 +80,10 @@ lab=GND}
 N -510 -270 -450 -270 {
 lab=GND}
 N -520 -180 -500 -180 {
-lab=Vin}
+lab=Vbias}
 C {sky130_fd_pr/pfet_01v8.sym} -510 -440 3 1 {name=M1
 L=0.15
-W=1.5
+W=0.45
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -97,7 +97,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -510 -240 3 0 {name=M2
 L=0.15
-W=1.5
+W=0.45
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -111,7 +111,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} -460 -550 1 0 {name=M3
 L=0.15
-W=1.5
+W=0.45
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -125,7 +125,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -560 -550 1 0 {name=M4
 L=0.15
-W=1.5
+W=0.45
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -144,7 +144,7 @@ C {devices/ipin.sym} -700 -590 0 0 {name=p4 lab=Ctrl}
 C {devices/ipin.sym} -620 -340 0 0 {name=p5 lab=Vin}
 C {sky130_fd_pr/nfet_01v8.sym} -480 -180 0 0 {name=M5
 L=0.15
-W=1.5
+W=0.45
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

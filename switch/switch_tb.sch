@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.09984e-06
-x2=2.86418e-05
+x1=0
+x2=3e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -25,8 +25,9 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-color=4
-node=vout}
+color="4 6"
+node="vout
+vin"}
 N -1250 -690 -1250 -680 {
 lab=VDD}
 N -1250 -600 -1250 -590 {
@@ -53,7 +54,7 @@ C {devices/gnd.sym} -1250 -590 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -1250 -690 0 0 {name=l2 lab=VDD}
 C {devices/lab_pin.sym} -1190 -640 2 0 {name=p1 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -1310 -640 0 0 {name=p2 sig_type=std_logic lab=Vin}
-C {devices/vsource.sym} -1360 -480 0 0 {name=V1 value=1.8}
+C {devices/vsource.sym} -1360 -480 0 0 {name=V1 value="PWL(0 1.8 19.9u 1.8 20u 0)"}
 C {devices/gnd.sym} -1360 -430 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -1360 -530 0 0 {name=l7 lab=VDD}
 C {devices/vsource.sym} -1300 -480 0 0 {name=V2 value="PWL(0 0 9.9u 0 10u 1.8 19.9u 1.8 20u 0)"}

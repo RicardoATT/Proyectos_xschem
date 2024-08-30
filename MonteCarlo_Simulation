@@ -5,10 +5,10 @@ value="
 	set wr_vecnames
 	set wr_singlescale
 
-	let mc_runs = 20
+	let mc_runs = 50
 	let run = 1
 	dowhile run <= mc_runs
-		tran 1n 10u
+		tran 0.1n 0.5u
 		wrdata MC_LIF_Neuron{$&run}.txt v(vout)
 		reset
 		let run = run + 1

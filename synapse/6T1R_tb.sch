@@ -5,51 +5,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 -640 -40 160 360 {flags=graph
-y1=-1.8e-06
-y2=0.00034
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=1.13094e-05
-x2=7.42582e-05
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=0
-logy=0
-color=4
-node=i(vread1)}
 B 2 160 -40 960 360 {flags=graph
-y1=132041
-y2=154872
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=1.13094e-05
-x2=7.42582e-05
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=0
-logy=0
-color=4
-node="\\"x1.be x1.te - i(vread1) /\\""}
-B 2 -640 360 160 760 {flags=graph
 y1=0
 y2=1.8
 ypos1=0
@@ -57,8 +13,30 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.13094e-05
-x2=7.42582e-05
+x1=7.42134e-05
+x2=0.000101445
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+color=4
+node=vdd}
+B 2 -640 360 160 760 {flags=graph
+y1=-5.55112e-17
+y2=1.8
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=7.42134e-05
+x2=0.000101445
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -79,8 +57,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.13094e-05
-x2=7.42582e-05
+x1=7.42134e-05
+x2=0.000101445
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -116,7 +94,7 @@ N -660 -240 -560 -240 {
 lab=pre}
 C {devices/gnd.sym} -280 -160 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -280 -300 0 0 {name=l2 lab=VDD}
-C {devices/vsource.sym} -720 -210 0 0 {name=V1 value=1.8}
+C {devices/vsource.sym} -720 -210 0 0 {name=V1 value="PWL(0 1.8 74.999u 1.8 75u 0)"}
 C {devices/gnd.sym} -720 -160 0 0 {name=l4 lab=GND}
 C {devices/vdd.sym} -720 -260 0 0 {name=l5 lab=VDD}
 C {sky130_fd_pr/corner.sym} 440 -310 0 0 {name=CORNER only_toplevel=true corner=tt}
@@ -131,6 +109,10 @@ spice_ignore=false}
 C {devices/code_shown.sym} 330 -160 0 0 {name=NGSPICE
 only_toplevel=true
 value="
+.param L_pre=0.15
+.param W_pre=5
+.param L_pos=0.15
+.param W_pos=5
 .control
   save all
   tran 10n 100u

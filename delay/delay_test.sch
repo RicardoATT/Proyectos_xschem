@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-06
+x1=4.77996e-08
+x2=1.33699e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -58,18 +58,22 @@ spice_ignore=false}
 C {devices/code_shown.sym} -1230 -220 0 0 {name=NGSPICE1
 only_toplevel=true
 value="
+.param Lp_delay=3.5
+.param Wp_delay=0.45
+.param Ln_delay=3.5
+.param Wn_delay=0.45
 .control
   save all
-  tran 1n 2u
+  tran 0.1n 1u
   write delay_test.raw
 .endc
 " }
-C {devices/launcher.sym} -1170 -90 0 0 {name=h1
+C {devices/launcher.sym} -1400 -240 0 0 {name=h1
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/delay_test.raw tran"
 }
 C {devices/gnd.sym} -1620 -180 0 0 {name=l2 lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/delay/delay.sym} -1440 -120 0 0 {name=x1}
-C {devices/vsource.sym} -1680 -150 0 0 {name=V2 value="PULSE(0 1.8 1n 1n 1n 100n 200n 20)"}
+C {devices/vsource.sym} -1680 -150 0 0 {name=V2 value="PULSE(0 1.8 1n 1n 1n 15n 40n 200)"}
 C {devices/lab_pin.sym} -1540 -240 2 0 {name=p1 sig_type=std_logic lab=delay}
 C {devices/lab_pin.sym} -1680 -210 0 0 {name=p2 sig_type=std_logic lab=vin}

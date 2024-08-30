@@ -13,7 +13,7 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.47033e-22
+x1=0
 x2=0.00015
 divx=5
 subdivx=1
@@ -31,7 +31,7 @@ logy=0
 
 color=10
 node="\\"Thickness1 [nm]; 5 n.x1.xr1.n1#ngap -\\""}
-B 2 -880 -1480 -80 -1080 {flags=graph
+B 2 -80 -1080 720 -680 {flags=graph
 y1=-0.049
 y2=1.9
 ypos1=0
@@ -39,7 +39,7 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.47033e-22
+x1=0
 x2=0.00015
 divx=5
 subdivx=1
@@ -121,8 +121,8 @@ lab=GND}
 C {devices/vsource.sym} -910 -500 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} -910 -450 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -910 -550 0 0 {name=l7 lab=VDD}
-C {sky130_fd_pr/corner.sym} -1370 -1120 0 0 {name=CORNER1 only_toplevel=true corner=tt}
-C {devices/code.sym} -1490 -1120 0 0 {name=MODELS1
+C {sky130_fd_pr/corner.sym} 130 -640 0 0 {name=CORNER1 only_toplevel=true corner=tt}
+C {devices/code.sym} 10 -640 0 0 {name=MODELS1
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -130,16 +130,20 @@ value="
 .inc $::SKYWATER_MODELS/rram_v0.spice
 "
 spice_ignore=false}
-C {devices/code_shown.sym} -1240 -1120 0 0 {name=NGSPICE1
+C {devices/code_shown.sym} 260 -640 0 0 {name=NGSPICE1
 only_toplevel=true
 value="
+.param L_pre=0.15
+.param W_pre=5
+.param L_pos=0.15
+.param W_pos=5
 .control
   save all
   tran 1n 150u
   write STDP_reset_stage_test.raw
 .endc
 " }
-C {devices/launcher.sym} -1180 -990 0 0 {name=h1
+C {devices/launcher.sym} 330 -440 0 0 {name=h1
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/STDP_reset_stage_test.raw tran"
 }

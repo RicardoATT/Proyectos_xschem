@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -3050 -1080 -2250 -680 {flags=graph
-y1=-0.0014
+y1=-0.071
 y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-2.48984e-07
-x2=3.76e-06
+x1=7.78868e-06
+x2=7.97315e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -28,15 +28,15 @@ logx=0
 logy=0
 }
 B 2 -2250 -1080 -1450 -680 {flags=graph
-y1=-1.9e-06
-y2=6.1e-05
+y1=6.5e-07
+y2=6.6e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-2.48984e-07
-x2=3.76e-06
+x1=7.78868e-06
+x2=7.97315e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -113,31 +113,22 @@ value=1.8}
 C {devices/lab_pin.sym} -2360 -1170 0 0 {name=p3 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} -2110 -1210 2 0 {name=p5 sig_type=std_logic lab=Vout}
 C {devices/gnd.sym} -2010 -1110 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -1940 -1160 0 0 {name=V2 value=0.5 savecurrent=false}
+C {devices/vsource.sym} -1940 -1160 0 0 {name=V2 value=0.8 savecurrent=false}
 C {devices/lab_pin.sym} -1940 -1210 0 0 {name=p6 sig_type=std_logic lab=Vb}
 C {devices/gnd.sym} -1940 -1110 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -3040 -1350 0 0 {name=MonteCarlo_Simulation
 only_toplevel=true
 value="
 .control
-	set wr_vecnames
-	set wr_singlescale
-
-	let mc_runs = 10
-	let run = 1
-	dowhile run <= mc_runs
-		tran 0.1n 5u
-		wrdata MC_LIF_Neuron\{$&run\}.txt v(vout)
-		reset
-		let run = run + 1
-	end
+	tran 1n 20u
+	write LIF_MonteCarlo.raw
 .endc
 .save all
 " }
-C {sky130_fd_pr/corner.sym} -1700 -1240 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
+C {sky130_fd_pr/corner.sym} -1700 -1240 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/vdd.sym} -2010 -1290 0 0 {name=l7 lab=VDD}
 C {devices/vdd.sym} -2480 -1370 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -2540 -1160 0 1 {name=I1 value="PULSE(0 1u 1n 1n 1n 10n 30n 520)"}
+C {devices/isource.sym} -2540 -1160 0 1 {name=I1 value=1u}
 C {devices/gnd.sym} -2540 -1110 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -2440 -1340 0 0 {name=M2
 L=0.15
