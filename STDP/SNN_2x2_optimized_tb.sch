@@ -5,16 +5,16 @@ K {}
 V {}
 S {}
 E {}
-B 2 145 -1200 945 -800 {flags=graph
-y1=-0.12
-y2=1.9
+B 2 -1360 -1200 -560 -800 {flags=graph
+y1=-0.086
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -27,16 +27,16 @@ unitx=1
 logx=0
 logy=0
 }
-B 2 -655 -1200 145 -800 {flags=graph
-y1=-4.4e-06
-y2=7.7e-05
+B 2 -2160 -1200 -1360 -800 {flags=graph
+y1=-1.9e-08
+y2=7.2e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -56,7 +56,7 @@ node="\\"Isyn11 (A);i(vmeas11)\\"
 \\"Isyn12 (A);i(vmeas12)\\"
 \\"Isyn21 (A);i(vmeas21)\\"
 \\"Isyn22 (A);i(vmeas22)\\""}
-B 2 -655 -800 145 -400 {flags=graph
+B 2 -2160 -800 -1360 -400 {flags=graph
 y1=-0.008
 y2=2.502
 ypos1=0
@@ -64,8 +64,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -81,7 +81,7 @@ logy=0
 color="7 8"
 node="\\"Vpos1 [V];vpos1\\"
 \\"Vpos2 [V];vpos2\\""}
-B 2 145 -800 945 -400 {flags=graph
+B 2 -1360 -800 -560 -400 {flags=graph
 y1=1.4
 y2=5.1
 ypos1=0
@@ -89,8 +89,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -110,7 +110,7 @@ node="\\"Thickness11 [nm]; 5 n.x11.xr1.n1#ngap -\\"
 \\"Thickness12 [nm]; 5 n.x21.xr1.n1#ngap -\\"
 \\"Thickness21 [nm]; 5 n.x12.xr1.n1#ngap -\\"
 \\"Thickness22 [nm]; 5 n.x22.xr1.n1#ngap -\\""}
-B 2 145 -400 945 0 {flags=graph
+B 2 -1360 -400 -560 0 {flags=graph
 y1=0
 y2=1.8
 ypos1=0
@@ -118,8 +118,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -134,7 +134,7 @@ color="7 8 11"
 node="\\"Update Weights;uw\\"
 \\"Training;training\\"
 \\"Inference;inference\\""}
-B 2 -655 -400 145 0 {flags=graph
+B 2 -2160 -400 -1360 0 {flags=graph
 y1=0
 y2=1.8
 ypos1=0
@@ -142,8 +142,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -159,16 +159,16 @@ logy=0
 color="17 21"
 node="\\"Control 1;ctrl1\\"
 \\"Control 2;ctrl2\\""}
-B 2 -655 -1600 145 -1200 {flags=graph
-y1=-1.2e-07
-y2=3.6e-05
+B 2 -2160 -1600 -1360 -1200 {flags=graph
+y1=-1.1e-07
+y2=1.8e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -188,16 +188,16 @@ logy=0
 color="15 16"
 node="\\"Ip1 (A);i(vmeas3)\\"
 \\"Ip2 (A);i(vmeas4)\\""}
-B 2 145 -1600 945 -1200 {flags=graph
-y1=-0.22
+B 2 -1360 -1600 -560 -1200 {flags=graph
+y1=-0.32
 y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -210,9 +210,9 @@ logx=0
 logy=0
 
 color="15 16"
-node="\\"Vp1 [V];vp1\\"
-\\"Vp2 [V];vp2\\""}
-B 2 -655 -2000 145 -1600 {flags=graph
+node="\\"Vp1 [V];N1\\"
+\\"Vp2 [V];N2\\""}
+B 2 -2160 -2000 -1360 -1600 {flags=graph
 y1=-1.15845e-07
 y2=1.4252e-06
 ypos1=0
@@ -220,8 +220,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -244,7 +244,7 @@ node="\\"Im11 (A);i(vmeas11)\\"
 \\"Im12 (A);i(vmeas12)\\"
 \\"Im21 (A);i(vmeas21)\\"
 \\"Im22 (A);i(vmeas22)\\""}
-B 2 145 -2000 945 -1600 {flags=graph
+B 2 -1360 -2000 -560 -1600 {flags=graph
 y1=-8.9e-05
 y2=0.073
 ypos1=0
@@ -252,8 +252,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -271,7 +271,7 @@ color="15 16 18"
 node="inh1
 inh2
 inh_d"}
-B 2 945 -1600 1745 -1200 {flags=graph
+B 2 -560 -1600 240 -1200 {flags=graph
 y1=0
 y2=1.8
 ypos1=0
@@ -279,8 +279,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000219207
-x2=0.000220246
+x1=0.000204284
+x2=0.000207987
 divx=5
 subdivx=1
 xlabmag=1.0
