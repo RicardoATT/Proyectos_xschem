@@ -5,7 +5,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 0 -400 800 0 {flags=graph
+B 2 -1600 -1600 -800 -1200 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,8 +47,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -64,7 +64,7 @@ logy=0
 
 
 
-color="4 6 7 8 10 11 12 13 15 21"
+color="4 6 7 8 10 11 12 13 15 21 5 14 16 17 18 21"
 node="\\"S11; 5 n.x11.xr1.n1#ngap -\\"
 \\"S21; 5 n.x21.xr1.n1#ngap -\\"
 \\"S31; 5 n.x31.xr1.n1#ngap -\\"
@@ -74,7 +74,13 @@ node="\\"S11; 5 n.x11.xr1.n1#ngap -\\"
 \\"S71; 5 n.x71.xr1.n1#ngap -\\"
 \\"S81; 5 n.x81.xr1.n1#ngap -\\"
 \\"S91; 5 n.x91.xr1.n1#ngap -\\"
-\\"[nm]\\""}
+\\"S100; 5 n.x100.xr1.n1#ngap -\\"
+\\"S110; 5 n.x110.xr1.n1#ngap -\\"
+\\"S120; 5 n.x120.xr1.n1#ngap -\\"
+\\"S130; 5 n.x130.xr1.n1#ngap -\\"
+\\"S140; 5 n.x140.xr1.n1#ngap -\\"
+\\"S150; 5 n.x150.xr1.n1#ngap -\\"
+[nm]"}
 B 2 -800 -400 0 0 {flags=graph
 y1=0
 y2=1.8
@@ -83,8 +89,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -107,8 +113,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -127,7 +133,7 @@ color="17 18 19"
 node="\\"Syn1;vdd_syn1\\"
 \\"Syn2;vdd_syn2\\"
 \\"Syn3;vdd_syn3\\""}
-B 2 -1600 -1600 -800 -1200 {flags=graph
+B 2 0 -2400 800 -2000 {flags=graph
 y1=-5.2e-07
 y2=2.2e-05
 ypos1=0
@@ -135,8 +141,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -157,7 +163,7 @@ color="15 16 17"
 node="\\"Ip0;i(vmeas0)\\"
 \\"Ip1;i(vmeas1)\\"
 \\"Ip2;i(vmeas2)\\""}
-B 2 1570 -2700 2370 -2300 {flags=graph
+B 2 1600 -2400 2400 -2000 {flags=graph
 y1=0.14
 y2=1.9
 ypos1=0
@@ -165,8 +171,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -179,10 +185,9 @@ logx=0
 logy=0
 
 
-color="4 6 7"
+color="4 6"
 node="N0
-N1
-N2"}
+N1"}
 B 2 -800 -1600 0 -1200 {flags=graph
 y1=-0.0031
 y2=1.9
@@ -191,8 +196,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -210,42 +215,6 @@ color="15 16 18"
 node="inh0
 inh1
 inh2"}
-B 2 0 -800 800 -400 {flags=graph
-y1=2.2
-y2=5
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=0.00024
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=0
-logy=0
-
-
-
-
-
-color="4 6 7 8 10 11 12 13 15 21"
-node="\\"S12; 5 n.x12.xr1.n1#ngap -\\"
-\\"S22; 5 n.x22.xr1.n1#ngap -\\"
-\\"S32; 5 n.x32.xr1.n1#ngap -\\"
-\\"S42; 5 n.x42.xr1.n1#ngap -\\"
-\\"S52; 5 n.x52.xr1.n1#ngap -\\"
-\\"S62; 5 n.x62.xr1.n1#ngap -\\"
-\\"S72; 5 n.x72.xr1.n1#ngap -\\"
-\\"S82; 5 n.x82.xr1.n1#ngap -\\"
-\\"S92; 5 n.x92.xr1.n1#ngap -\\"
-\\"[nm]\\""}
 B 2 -1600 -800 -800 -400 {flags=graph
 y1=2.2
 y2=5
@@ -254,8 +223,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -271,7 +240,7 @@ logy=0
 
 
 
-color="4 6 7 8 10 11 12 13 15 21"
+color="4 6 7 8 10 11 12 13 15 21 5 14 16 17 18 21"
 node="\\"S10; 5 n.x10.xr1.n1#ngap -\\"
 \\"S20; 5 n.x20.xr1.n1#ngap -\\"
 \\"S30; 5 n.x30.xr1.n1#ngap -\\"
@@ -281,6 +250,12 @@ node="\\"S10; 5 n.x10.xr1.n1#ngap -\\"
 \\"S70; 5 n.x70.xr1.n1#ngap -\\"
 \\"S80; 5 n.x80.xr1.n1#ngap -\\"
 \\"S90; 5 n.x90.xr1.n1#ngap -\\"
+\\"S100; 5 n.x100.xr1.n1#ngap -\\"
+\\"S110; 5 n.x110.xr1.n1#ngap -\\"
+\\"S120; 5 n.x120.xr1.n1#ngap -\\"
+\\"S130; 5 n.x130.xr1.n1#ngap -\\"
+\\"S140; 5 n.x140.xr1.n1#ngap -\\"
+\\"S150; 5 n.x150.xr1.n1#ngap -\\"
 \\"[nm]\\""}
 B 2 -1600 -1200 -800 -800 {flags=graph
 y1=-1.8e-07
@@ -290,8 +265,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -326,8 +301,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -354,43 +329,7 @@ node="\\"I11; i(Vmeas11)\\"
 \\"I81; i(Vmeas81)\\"
 \\"I91; i(Vmeas91)\\"
 \\"[A]\\""}
-B 2 0 -1200 800 -800 {flags=graph
-y1=-3.1e-07
-y2=7e-06
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=0.00024
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=0
-logy=0
-
-
-
-
-
-color="4 6 7 8 10 11 12 13 15 21"
-node="\\"I12; i(Vmeas12)\\"
-\\"I22; i(Vmeas22)\\"
-\\"I32; i(Vmeas32)\\"
-\\"I42; i(Vmeas42)\\"
-\\"I52; i(Vmeas52)\\"
-\\"I62; i(Vmeas62)\\"
-\\"I72; i(Vmeas72)\\"
-\\"I82; i(Vmeas82)\\"
-\\"I92; i(Vmeas92)\\"
-\\"[A]\\""}
-B 2 770 -2700 1570 -2300 {flags=graph
+B 2 800 -2400 1600 -2000 {flags=graph
 y1=-0.0031
 y2=1.9
 ypos1=0
@@ -398,8 +337,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -413,11 +352,10 @@ logy=0
 
 
 
-color="15 16 17"
+color="15 16"
 node="p0
-p1
-p2"}
-B 2 800 -2000 1600 -1600 {flags=graph
+p1"}
+B 2 0 -2000 800 -1600 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -425,8 +363,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -444,7 +382,7 @@ logy=0
 
 color=4
 node=vpre1}
-B 2 800 -1600 1600 -1200 {flags=graph
+B 2 0 -1600 800 -1200 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -452,8 +390,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -471,7 +409,7 @@ logy=0
 
 color=4
 node=vpre4}
-B 2 800 -1200 1600 -800 {flags=graph
+B 2 0 -1200 800 -800 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -479,8 +417,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -498,7 +436,7 @@ logy=0
 
 color=4
 node=vpre7}
-B 2 1600 -2000 2400 -1600 {flags=graph
+B 2 800 -2000 1600 -1600 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -506,8 +444,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -525,7 +463,7 @@ logy=0
 
 color=4
 node=vpre2}
-B 2 1600 -1600 2400 -1200 {flags=graph
+B 2 800 -1600 1600 -1200 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -533,8 +471,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -552,7 +490,7 @@ logy=0
 
 color=4
 node=vpre5}
-B 2 1600 -1200 2400 -800 {flags=graph
+B 2 800 -1200 1600 -800 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -560,8 +498,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -579,7 +517,7 @@ logy=0
 
 color=4
 node=vpre8}
-B 2 2400 -2000 3200 -1600 {flags=graph
+B 2 1600 -2000 2400 -1600 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -587,8 +525,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -606,7 +544,7 @@ logy=0
 
 color=4
 node=vpre3}
-B 2 2400 -1600 3200 -1200 {flags=graph
+B 2 1600 -1600 2400 -1200 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -614,8 +552,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -633,7 +571,7 @@ logy=0
 
 color=4
 node=vpre6}
-B 2 2400 -1200 3200 -800 {flags=graph
+B 2 1600 -1200 2400 -800 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -641,8 +579,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -660,7 +598,7 @@ logy=0
 
 color=4
 node=vpre9}
-B 2 800 -800 1600 -400 {flags=graph
+B 2 0 -800 800 -400 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -668,8 +606,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -687,7 +625,7 @@ logy=0
 
 color=4
 node=vpre10}
-B 2 800 -400 1600 0 {flags=graph
+B 2 0 -400 800 0 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -695,8 +633,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -714,7 +652,7 @@ logy=0
 
 color=4
 node=vpre13}
-B 2 1600 -800 2400 -400 {flags=graph
+B 2 800 -800 1600 -400 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -722,8 +660,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -741,7 +679,7 @@ logy=0
 
 color=4
 node=vpre11}
-B 2 1600 -400 2400 0 {flags=graph
+B 2 800 -400 1600 0 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -749,8 +687,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -768,7 +706,7 @@ logy=0
 
 color=4
 node=vpre14}
-B 2 2400 -800 3200 -400 {flags=graph
+B 2 1600 -800 2400 -400 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -776,8 +714,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -795,7 +733,7 @@ logy=0
 
 color=4
 node=vpre12}
-B 2 2400 -400 3200 0 {flags=graph
+B 2 1600 -400 2400 0 {flags=graph
 y1=-0.23
 y2=2
 ypos1=0
@@ -803,8 +741,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.00024
+x1=0.000227843
+x2=0.000234599
 divx=5
 subdivx=1
 xlabmag=1.0

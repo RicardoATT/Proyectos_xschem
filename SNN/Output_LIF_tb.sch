@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -2100 -1520 -1300 -1120 {flags=graph
-y1=-0.015
-y2=1.8
+y1=0.48
+y2=1.2
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.81262e-06
-x2=1.61162e-05
+x1=0
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -29,15 +29,15 @@ logy=0
 color=4
 node=vin}
 B 2 -2100 -1120 -1300 -720 {flags=graph
-y1=0.1
+y1=0.13
 y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.81262e-06
-x2=1.61162e-05
+x1=0
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -51,15 +51,15 @@ logy=0
 color=4
 node=vout}
 B 2 -2100 -1920 -1300 -1520 {flags=graph
-y1=0
-y2=3.1e-06
+y1=2.52083e-06
+y2=8.09607e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.81262e-06
-x2=1.61162e-05
+x1=0
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -144,8 +144,6 @@ N -2540 -1360 -2540 -1350 {
 lab=Vin}
 N -2430 -1390 -2420 -1390 {
 lab=Vin}
-N -2420 -1320 -2410 -1320 {
-lab=Vinh}
 N -2420 -1430 -2410 -1430 {
 lab=Vlky}
 N -2480 -1040 -2480 -1020 {
@@ -165,7 +163,7 @@ value=1.8}
 C {devices/lab_pin.sym} -2420 -1350 0 0 {name=p3 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} -2160 -1390 2 0 {name=p5 sig_type=std_logic lab=vout}
 C {devices/gnd.sym} -2660 -940 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -2600 -990 0 0 {name=V2 value=0.6 savecurrent=false}
+C {devices/vsource.sym} -2600 -990 0 0 {name=V2 value="PWL(0 0.4 10u 0.9)" savecurrent=false}
 C {devices/lab_pin.sym} -2600 -1040 0 0 {name=p6 sig_type=std_logic lab=Vb}
 C {devices/gnd.sym} -2600 -940 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -2660 -880 0 0 {name=SIMULATION
@@ -177,14 +175,15 @@ value="
 .param Wn_or=1
 .control
 	save all
-	tran 1n 40u
+	tran 1n 10u
 	write Output_LIF_tb.raw
 .endc
 " }
 C {sky130_fd_pr/corner.sym} -2240 -1230 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/vdd.sym} -2660 -1040 0 0 {name=l7 lab=VDD}
 C {devices/vdd.sym} -2600 -1500 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -2660 -1290 0 1 {name=I1 value="PULSE(0 5u 1n 1n 1n 10n 60n 8000)"}
+C {devices/isource.sym} -2660 -1290 0 1 {name=I1 value=5u
+*"PULSE(0 5u 1n 1n 1n 10n 60n 8000)"}
 C {devices/gnd.sym} -2660 -1240 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -2560 -1470 0 0 {name=M2
 L=0.15
@@ -242,7 +241,6 @@ C {devices/vsource.sym} -2540 -990 0 0 {name=V3 savecurrent=false value=1.8}
 C {devices/lab_pin.sym} -2540 -1040 0 0 {name=p7 sig_type=std_logic lab=inh}
 C {devices/gnd.sym} -2540 -940 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} -2430 -1390 0 0 {name=p8 sig_type=std_logic lab=Vin}
-C {devices/lab_pin.sym} -2420 -1320 0 0 {name=p9 sig_type=std_logic lab=Vinh}
 C {devices/lab_pin.sym} -2420 -1430 0 0 {name=p11 sig_type=std_logic lab=Vlky}
 C {devices/lab_pin.sym} -2380 -1170 2 0 {name=p12 sig_type=std_logic lab=Vinh}
 C {devices/vsource.sym} -2480 -990 0 0 {name=V5 savecurrent=false value=0.55}
@@ -255,4 +253,4 @@ C {devices/launcher.sym} -2230 -1080 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/Output_LIF_tb.raw tran"
 }
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Output_LIF.sym} -2320 -1390 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2320 -1390 0 0 {name=x1}

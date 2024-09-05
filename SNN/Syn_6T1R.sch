@@ -126,7 +126,7 @@ C {devices/ipin.sym} -370 90 0 0 {name=p2 lab=Vpos}
 C {devices/iopin.sym} -300 180 0 0 {name=p3 lab=GND}
 C {devices/iopin.sym} -30 -60 0 0 {name=p4 lab=Ipos}
 C {sky130_fd_pr/pfet_01v8.sym} -50 -110 0 0 {name=M6
-L=0.35
+L=0.3
 W=0.45
 nf=1
 mult=1
