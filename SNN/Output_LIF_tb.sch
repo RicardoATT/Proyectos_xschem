@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -2100 -1520 -1300 -1120 {flags=graph
-y1=0.48
-y2=1.2
+y1=0.4
+y2=0.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-06
+x1=5.94682e-07
+x2=8.14581e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,8 +26,9 @@ unitx=1
 logx=0
 logy=0
 
+
 color=4
-node=vin}
+node=Vb}
 B 2 -2100 -1120 -1300 -720 {flags=graph
 y1=0.13
 y2=1.9
@@ -36,8 +37,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-06
+x1=5.94682e-07
+x2=8.14581e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -51,15 +52,15 @@ logy=0
 color=4
 node=vout}
 B 2 -2100 -1920 -1300 -1520 {flags=graph
-y1=2.52083e-06
-y2=8.09607e-06
+y1=-4.58622e-07
+y2=2.08092e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-06
+x1=5.94682e-07
+x2=8.14581e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -163,7 +164,7 @@ value=1.8}
 C {devices/lab_pin.sym} -2420 -1350 0 0 {name=p3 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} -2160 -1390 2 0 {name=p5 sig_type=std_logic lab=vout}
 C {devices/gnd.sym} -2660 -940 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -2600 -990 0 0 {name=V2 value="PWL(0 0.4 10u 0.9)" savecurrent=false}
+C {devices/vsource.sym} -2600 -990 0 0 {name=V2 value=0.7 savecurrent=false}
 C {devices/lab_pin.sym} -2600 -1040 0 0 {name=p6 sig_type=std_logic lab=Vb}
 C {devices/gnd.sym} -2600 -940 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -2660 -880 0 0 {name=SIMULATION
@@ -175,7 +176,7 @@ value="
 .param Wn_or=1
 .control
 	save all
-	tran 1n 10u
+	tran 1n 5u
 	write Output_LIF_tb.raw
 .endc
 " }

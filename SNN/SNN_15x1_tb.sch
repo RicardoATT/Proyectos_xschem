@@ -2379,7 +2379,8 @@ C {devices/lab_pin.sym} -1210 -2600 2 0 {name=p1 sig_type=std_logic lab=vdd_sw}
 C {devices/vsource.sym} -1130 -2550 0 0 {name=V6 value=1.8}
 C {devices/gnd.sym} -1130 -2500 0 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} -1130 -2600 2 0 {name=p3 sig_type=std_logic lab=vdd_tg}
-C {devices/vsource.sym} -1580 -2410 0 0 {name=V7 value=0.55}
+C {devices/vsource.sym} -1580 -2410 0 0 {name=V7 value=0.7
+*0.55}
 C {devices/gnd.sym} -1580 -2360 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -1580 -2460 2 0 {name=p8 sig_type=std_logic lab=vb_pre}
 C {devices/vsource.sym} -1500 -2410 0 0 {name=V8 value=0.5}
