@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=1.77191e-06
+x2=1.89145e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -37,8 +37,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=1.77191e-06
+x2=1.89145e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -59,8 +59,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=1.77191e-06
+x2=1.89145e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -157,8 +157,6 @@ N -2540 -1230 -2540 -1220 {
 lab=VDD}
 N -2430 -1180 -2430 -1170 {
 lab=GND}
-N -2420 -1320 -2410 -1320 {
-lab=Vinh}
 C {devices/gnd.sym} -2320 -1300 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -2320 -1500 0 0 {name=l3 lab=VDD}
 C {devices/vsource.sym} -2660 -990 0 0 {name=V1 
@@ -166,7 +164,7 @@ value=1.8}
 C {devices/lab_pin.sym} -2420 -1350 0 0 {name=p3 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} -2160 -1390 2 0 {name=p5 sig_type=std_logic lab=vout}
 C {devices/gnd.sym} -2660 -940 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -2600 -990 0 0 {name=V2 value=0.55 savecurrent=false}
+C {devices/vsource.sym} -2600 -990 0 0 {name=V2 value=0.45 savecurrent=false}
 C {devices/lab_pin.sym} -2600 -1040 0 0 {name=p6 sig_type=std_logic lab=Vb}
 C {devices/gnd.sym} -2600 -940 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -2660 -880 0 0 {name=SIMULATION
@@ -178,7 +176,7 @@ value="
 .param Wn_or=1
 .control
 	save all
-	tran 1n 10u
+	tran 1n 5u
 	write Output_LIF_tb.raw
 .endc
 " }
@@ -256,5 +254,4 @@ C {devices/launcher.sym} -2230 -1080 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/Output_LIF_tb.raw tran"
 }
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Output_LIF.sym} -2320 -1390 0 0 {name=x1}
-C {devices/lab_pin.sym} -2420 -1320 0 0 {name=p9 sig_type=std_logic lab=Vinh}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2320 -1390 0 0 {name=x1}
