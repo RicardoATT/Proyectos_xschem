@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -2100 -1520 -1300 -1120 {flags=graph
-y1=0.4
-y2=0.9
+y1=0.44
+y2=0.46
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.77191e-06
-x2=1.89145e-06
+x1=2.58066e-05
+x2=2.59954e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -30,15 +30,15 @@ logy=0
 color=4
 node=Vb}
 B 2 -2100 -1120 -1300 -720 {flags=graph
-y1=0.13
+y1=-0.16
 y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.77191e-06
-x2=1.89145e-06
+x1=2.58066e-05
+x2=2.59954e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -52,15 +52,15 @@ logy=0
 color=4
 node=vout}
 B 2 -2100 -1920 -1300 -1520 {flags=graph
-y1=-4.58622e-07
-y2=2.08092e-05
+y1=0.05
+y2=1.7
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.77191e-06
-x2=1.89145e-06
+x1=2.58066e-05
+x2=2.59954e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -74,7 +74,7 @@ logy=0
 
 
 color=7
-node=i(vmeas1)}
+node=Vin}
 N -2180 -1390 -2160 -1390 {
 lab=vout}
 N -2660 -1040 -2660 -1020 {
@@ -164,7 +164,7 @@ value=1.8}
 C {devices/lab_pin.sym} -2420 -1350 0 0 {name=p3 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} -2160 -1390 2 0 {name=p5 sig_type=std_logic lab=vout}
 C {devices/gnd.sym} -2660 -940 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -2600 -990 0 0 {name=V2 value=0.45 savecurrent=false}
+C {devices/vsource.sym} -2600 -990 0 0 {name=V2 value=0.55 savecurrent=false}
 C {devices/lab_pin.sym} -2600 -1040 0 0 {name=p6 sig_type=std_logic lab=Vb}
 C {devices/gnd.sym} -2600 -940 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -2660 -880 0 0 {name=SIMULATION
@@ -176,7 +176,7 @@ value="
 .param Wn_or=1
 .control
 	save all
-	tran 1n 5u
+	tran 100n 50u
 	write Output_LIF_tb.raw
 .endc
 " }

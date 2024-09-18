@@ -103,10 +103,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/rram_v0.sym} -190 40 1 0 {name=R1
-model=rram_v0
-spiceprefix=X
-}
 C {sky130_fd_pr/nfet_01v8.sym} -60 -10 0 1 {name=M3
 L=\{L_pos\}
 W=\{W_pos\}
@@ -183,3 +179,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -200 -60 3 0 {name=p9 sig_type=std_logic lab=vipre}
+C {sky130_fd_pr/rram_v2.sym} -190 40 1 0 {name=R1
+model=rram_v2
+spiceprefix=X
+}

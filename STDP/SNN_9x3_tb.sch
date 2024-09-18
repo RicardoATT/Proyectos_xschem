@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,8 +47,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -83,8 +83,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -107,8 +107,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -135,8 +135,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -165,8 +165,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -191,8 +191,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -218,8 +218,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -254,8 +254,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -290,8 +290,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -326,8 +326,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -362,8 +362,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -398,8 +398,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -425,8 +425,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -452,8 +452,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -479,8 +479,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -506,8 +506,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -533,8 +533,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -560,8 +560,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -587,8 +587,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -614,8 +614,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -641,8 +641,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000300062
-x2=0.000305002
+x1=0.000286227
+x2=0.00030327
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -719,7 +719,7 @@ lab=#net3}
 N -2180 -330 -2180 -320 {
 lab=p0}
 N -2180 -10 -2180 0 {
-lab=N0}
+lab=T}
 N -1500 -2850 -1500 -2830 {
 lab=GND}
 N -1500 -2930 -1500 -2910 {
@@ -951,7 +951,7 @@ lab=#net6}
 N -1960 -330 -1960 -320 {
 lab=p1}
 N -1960 -10 -1960 0 {
-lab=N1}
+lab=X}
 N -2030 -150 -2030 -130 {
 lab=GND}
 N -1890 -150 -1890 -130 {
@@ -979,7 +979,7 @@ lab=#net7}
 N -1740 -330 -1740 -320 {
 lab=p2}
 N -1740 -10 -1740 0 {
-lab=N2}
+lab=U}
 N -1810 -150 -1810 -130 {
 lab=GND}
 N -1670 -150 -1670 -130 {
@@ -1981,11 +1981,11 @@ lab=vc9}
 N -2760 -720 -2750 -720 {
 lab=vb_pre}
 N -660 -3060 -650 -3060 {
-lab=N0}
+lab=U}
 N -660 -3090 -650 -3090 {
-lab=N1}
+lab=X}
 N -660 -3120 -650 -3120 {
-lab=N2}
+lab=T}
 N -1300 -3410 -1300 -3390 {
 lab=GND}
 N -1300 -3490 -1300 -3470 {
@@ -2068,7 +2068,7 @@ value="
 .control
   save all
   tran 1n 310u
-  write SNN_9x3_tb.raw
+  write SNN_9x3_tb2.raw
 .endc
 " }
 C {devices/launcher.sym} 900 -645 0 0 {name=h1
@@ -2241,8 +2241,8 @@ C {devices/gnd.sym} -970 -3250 0 0 {name=l26 lab=GND}
 C {devices/lab_pin.sym} -970 -3350 2 0 {name=p80 sig_type=std_logic lab=vdd_inh}
 C {devices/gnd.sym} -580 -3030 0 0 {name=l27 lab=GND}
 C {devices/lab_pin.sym} -580 -3150 0 0 {name=p81 sig_type=std_logic lab=vdd_inh}
-C {devices/lab_pin.sym} -660 -3120 0 0 {name=p83 sig_type=std_logic lab=N2}
-C {devices/lab_pin.sym} -660 -3090 0 0 {name=p84 sig_type=std_logic lab=N1}
+C {devices/lab_pin.sym} -660 -3120 0 0 {name=p83 sig_type=std_logic lab=T}
+C {devices/lab_pin.sym} -660 -3090 0 0 {name=p84 sig_type=std_logic lab=X}
 C {devices/lab_pin.sym} -2250 -250 1 0 {name=p87 sig_type=std_logic lab=inh0}
 C {devices/vsource.sym} -950 -3020 0 0 {name=V18 value=1.8}
 C {devices/gnd.sym} -950 -2970 0 0 {name=l28 lab=GND}
@@ -3222,7 +3222,7 @@ C {devices/lab_pin.sym} -2900 -840 1 0 {name=p701 sig_type=std_logic lab=vdd_in}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/LIF_neuron/Input_Layer_LIF.sym} -2660 -760 0 0 {name=x190}
 C {devices/lab_pin.sym} -2760 -800 1 0 {name=p702 sig_type=std_logic lab=vlky}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/inhibitory/or_3.sym} -350 -2980 0 0 {name=x3}
-C {devices/lab_pin.sym} -660 -3060 0 0 {name=p105 sig_type=std_logic lab=N0}
+C {devices/lab_pin.sym} -660 -3060 0 0 {name=p105 sig_type=std_logic lab=U}
 C {devices/lab_pin.sym} -2360 -4410 1 0 {name=p2 sig_type=std_logic lab=vpres2}
 C {devices/lab_pin.sym} -2360 -4240 1 0 {name=p24 sig_type=std_logic lab=vpres2}
 C {devices/lab_pin.sym} -2510 -4400 3 0 {name=p5 sig_type=std_logic lab=vpre2}
@@ -3327,4 +3327,8 @@ C {devices/lab_pin.sym} -650 -2660 0 0 {name=p193 sig_type=std_logic lab=vinh}
 C {devices/launcher.sym} 910 -725 0 0 {name=h2
 descr="no lag" 
 tclcommand="xschem raw_read $netlist_dir/SNN_2x2_tb.raw tran"
+}
+C {devices/launcher.sym} 890 -555 0 0 {name=h3
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/SNN_9x3_tb2.raw tran"
 }

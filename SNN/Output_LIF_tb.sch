@@ -178,8 +178,8 @@ value="
 .param Wn_or=1
 .control
 	save all
-	tran 1n 10u
-	write Output_LIF_tb.raw
+	tran 0.01n 100u
+	write Output_LIF_tb.raw V(vout)
 .endc
 " }
 C {sky130_fd_pr/corner.sym} -2240 -1230 0 0 {name=CORNER only_toplevel=true corner=tt}
