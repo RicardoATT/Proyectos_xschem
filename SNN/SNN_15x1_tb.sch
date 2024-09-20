@@ -2286,6 +2286,8 @@ spice_ignore=false}
 C {devices/code_shown.sym} -1360 -2020 0 0 {name=NGSPICE1
 only_toplevel=true
 value="
+.option set_threads = 16
+.option klu
 .param L_in=0.15
 .param W_in=1.5
 .param L_out=0.15

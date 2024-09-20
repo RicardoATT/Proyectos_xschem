@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 160 -40 960 360 {flags=graph
-y1=0
-y2=1.8
+y1=1.7
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
@@ -28,7 +28,7 @@ logy=0
 color=4
 node=vdd}
 B 2 -640 360 160 760 {flags=graph
-y1=0
+y1=-5.55112e-17
 y2=1.8
 ypos1=0
 ypos2=2
@@ -50,8 +50,8 @@ logx=0
 logy=0
 }
 B 2 160 360 960 760 {flags=graph
-y1=2.2
-y2=4.9
+y1=0.97
+y2=0.98
 ypos1=0
 ypos2=2
 divy=5
@@ -63,7 +63,7 @@ divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="\\"Thickness [nm]; 5 n.x1.xr1.n1#ngap -\\""
+node="\\"Thickness [nm];  n.x1.xr1.n1#ngap \\""
 color=7
 dataset=-1
 unitx=1
@@ -94,7 +94,7 @@ N -580 80 -480 80 {
 lab=pre}
 C {devices/gnd.sym} -200 160 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -200 20 0 0 {name=l2 lab=VDD}
-C {devices/vsource.sym} -640 110 0 0 {name=V1 value=1.8}
+C {devices/vsource.sym} -640 110 0 0 {name=V1 value="PWL(0 1.8 74.999u 1.8 75u 0)"}
 C {devices/gnd.sym} -640 160 0 0 {name=l4 lab=GND}
 C {devices/vdd.sym} -640 60 0 0 {name=l5 lab=VDD}
 C {sky130_fd_pr/corner.sym} 440 -310 0 0 {name=CORNER only_toplevel=true corner=tt}
@@ -104,6 +104,7 @@ format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
 .inc $::SKYWATER_MODELS/rram_v0.spice
+.inc $::SKYWATER_MODELS/rram_v2.spice
 "
 spice_ignore=false}
 C {devices/code_shown.sym} 330 -160 0 0 {name=NGSPICE
@@ -116,20 +117,21 @@ value="
 .control
   save all
   tran 1n 100u
-  write 6T1R_tb.raw
+  write 6T1R_tb2.raw
 .endc
 " }
 C {devices/launcher.sym} -330 240 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/6T1R_tb.raw tran"
+tclcommand="xschem raw_read $netlist_dir/6T1R_tb2.raw tran"
 }
-C {devices/vsource.sym} 0 110 0 0 {name=V3 value="PWL(0 0 45u 0 45.1u 1.8)"
-*"PULSE(0 1.8 45.001u 1n 1n 100n 200n 300)"}
+C {devices/vsource.sym} 0 110 0 0 {name=V3 value=0
+*"PWL(0 0 39.9u 0 40u 1.8 79.9u 1.8 80u 0)"}
 C {devices/gnd.sym} 0 160 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -410 80 1 0 {name=p1 sig_type=std_logic lab=pre}
 C {devices/lab_pin.sym} -80 80 1 0 {name=p2 sig_type=std_logic lab=pos}
 C {devices/vsource.sym} -120 130 0 0 {name=vread1 value=1e-4}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -140 260 0 0 {name=x1}
-C {devices/vsource.sym} -580 110 0 0 {name=V4 value="PWL(0 1.8 34.999u 1.8 35u 0)"}
+C {devices/vsource.sym} -580 110 0 0 {name=V4 value=0
+*"PWL(0 1.8 34.999u 1.8 35u 0)"}
 C {devices/gnd.sym} -580 160 0 0 {name=l7 lab=GND
 value="PWL(0 1.8 24.999u 1.8 25u 0)"}

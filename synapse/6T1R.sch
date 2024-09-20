@@ -179,7 +179,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -200 -60 3 0 {name=p9 sig_type=std_logic lab=vipre}
-C {sky130_fd_pr/rram_v2.sym} -190 40 1 0 {name=R1
-model=rram_v2
+C {sky130_fd_pr/rram_v0.sym} -190 40 1 0 {name=R1
+model=rram_v0
 spiceprefix=X
 }
