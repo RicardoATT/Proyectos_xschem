@@ -113,10 +113,14 @@ value="
 .param W_pre=5
 .param L_pos=0.15
 .param W_pos=5
+.param L_mem_in=0.15
+.param W_mem_in=10
+.param L_mem_out=0.25
+.param W_mem_out=0.45
 .control
   save all
   tran 1n 100u
-  write 6T1R_tb.raw
+  write 6T1R_tb2.raw
 .endc
 " }
 C {devices/launcher.sym} -330 240 0 0 {name=h5
@@ -133,3 +137,7 @@ C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -140 260 0 0 {nam
 C {devices/vsource.sym} -580 110 0 0 {name=V4 value="PWL(0 1.8 34.999u 1.8 35u 0)"}
 C {devices/gnd.sym} -580 160 0 0 {name=l7 lab=GND
 value="PWL(0 1.8 24.999u 1.8 25u 0)"}
+C {devices/launcher.sym} -330 290 0 0 {name=h1
+descr="load waves v2" 
+tclcommand="xschem raw_read $netlist_dir/6T1R_tb2.raw tran"
+}

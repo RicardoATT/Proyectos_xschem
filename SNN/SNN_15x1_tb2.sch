@@ -844,7 +844,7 @@ lab=ctrl_stdp}
 N -1420 -2480 -1420 -2460 {
 lab=GND}
 N -1420 -2560 -1420 -2540 {
-lab=vbias}
+lab=vb_wu}
 N -1410 -2620 -1410 -2600 {
 lab=GND}
 N -1410 -2700 -1410 -2680 {
@@ -959,9 +959,9 @@ N -970 -1700 -970 -1690 {
 lab=inh_d}
 N -1010 -1740 -1000 -1740 {
 lab=ctrl_vinh}
-N -1350 -2480 -1350 -2460 {
+N -1260 -2480 -1260 -2460 {
 lab=GND}
-N -1350 -2560 -1350 -2540 {
+N -1260 -2560 -1260 -2540 {
 lab=vlky}
 N -2660 -7840 -2580 -7840 {
 lab=vc1}
@@ -986,7 +986,7 @@ lab=GND}
 N -980 -2700 -980 -2680 {
 lab=vdd_syn0}
 N -2170 -7660 -2160 -7660 {
-lab=vbias}
+lab=vb_wu}
 N -1740 -7820 -1740 -7800 {
 lab=#net6}
 N -1740 -7740 -1740 -7730 {
@@ -1039,9 +1039,9 @@ N -1740 -5620 -1730 -5620 {
 lab=GND}
 N -1740 -5590 -1740 -5580 {
 lab=p0}
-N -1860 -5770 -1860 -5760 {
+N -1870 -5760 -1860 -5760 {
 lab=vpres5}
-N -1740 -5770 -1740 -5760 {
+N -1740 -5760 -1730 -5760 {
 lab=vpos5}
 N -1790 -5620 -1780 -5620 {
 lab=ctrl_pos}
@@ -1057,9 +1057,9 @@ N -1740 -5100 -1730 -5100 {
 lab=GND}
 N -1740 -5070 -1740 -5060 {
 lab=p0}
-N -1860 -5250 -1860 -5240 {
+N -1870 -5240 -1860 -5240 {
 lab=vpres6}
-N -1740 -5250 -1740 -5240 {
+N -1740 -5240 -1730 -5240 {
 lab=vpos6}
 N -1790 -5100 -1780 -5100 {
 lab=ctrl_pos}
@@ -1075,9 +1075,9 @@ N -1740 -4580 -1730 -4580 {
 lab=GND}
 N -1740 -4550 -1740 -4540 {
 lab=p0}
-N -1860 -4730 -1860 -4720 {
+N -1870 -4720 -1860 -4720 {
 lab=vpres7}
-N -1740 -4730 -1740 -4720 {
+N -1740 -4720 -1730 -4720 {
 lab=vpos7}
 N -1790 -4580 -1780 -4580 {
 lab=ctrl_pos}
@@ -1093,9 +1093,9 @@ N -1740 -4060 -1730 -4060 {
 lab=GND}
 N -1740 -4030 -1740 -4020 {
 lab=p0}
-N -1860 -4210 -1860 -4200 {
+N -1870 -4200 -1860 -4200 {
 lab=vpres8}
-N -1740 -4210 -1740 -4200 {
+N -1740 -4200 -1730 -4200 {
 lab=vpos8}
 N -1790 -4060 -1780 -4060 {
 lab=ctrl_pos}
@@ -1111,9 +1111,9 @@ N -1740 -3540 -1730 -3540 {
 lab=GND}
 N -1740 -3510 -1740 -3500 {
 lab=p0}
-N -1860 -3690 -1860 -3680 {
+N -1870 -3680 -1860 -3680 {
 lab=vpres9}
-N -1740 -3690 -1740 -3680 {
+N -1740 -3680 -1730 -3680 {
 lab=vpos9}
 N -1790 -3540 -1780 -3540 {
 lab=ctrl_pos}
@@ -1425,9 +1425,9 @@ N -1740 -3020 -1730 -3020 {
 lab=GND}
 N -1740 -2990 -1740 -2980 {
 lab=p0}
-N -1860 -3170 -1860 -3160 {
+N -1870 -3160 -1860 -3160 {
 lab=vpres10}
-N -1740 -3170 -1740 -3160 {
+N -1740 -3160 -1730 -3160 {
 lab=vpos10}
 N -1790 -3020 -1780 -3020 {
 lab=ctrl_pos}
@@ -1443,9 +1443,9 @@ N -1740 -2500 -1730 -2500 {
 lab=GND}
 N -1740 -2470 -1740 -2460 {
 lab=p0}
-N -1860 -2650 -1860 -2640 {
+N -1870 -2640 -1860 -2640 {
 lab=vpres11}
-N -1740 -2650 -1740 -2640 {
+N -1740 -2640 -1730 -2640 {
 lab=vpos11}
 N -1790 -2500 -1780 -2500 {
 lab=ctrl_pos}
@@ -1461,9 +1461,9 @@ N -1740 -1980 -1730 -1980 {
 lab=GND}
 N -1740 -1950 -1740 -1940 {
 lab=p0}
-N -1860 -2130 -1860 -2120 {
+N -1870 -2120 -1860 -2120 {
 lab=vpres12}
-N -1740 -2130 -1740 -2120 {
+N -1740 -2120 -1730 -2120 {
 lab=vpos12}
 N -1790 -1980 -1780 -1980 {
 lab=ctrl_pos}
@@ -1479,9 +1479,9 @@ N -1740 -1460 -1730 -1460 {
 lab=GND}
 N -1740 -1430 -1740 -1420 {
 lab=p0}
-N -1860 -1610 -1860 -1600 {
+N -1870 -1600 -1860 -1600 {
 lab=vpres13}
-N -1740 -1610 -1740 -1600 {
+N -1740 -1600 -1730 -1600 {
 lab=vpos13}
 N -1790 -1460 -1780 -1460 {
 lab=ctrl_pos}
@@ -1511,7 +1511,7 @@ N -1740 -420 -1730 -420 {
 lab=GND}
 N -1740 -390 -1740 -380 {
 lab=p0}
-N -1740 -570 -1740 -560 {
+N -1740 -560 -1730 -560 {
 lab=vpos15}
 N -1790 -420 -1780 -420 {
 lab=ctrl_pos}
@@ -1801,14 +1801,14 @@ N -2060 -7170 -2050 -7170 {
 lab=vpres2}
 N -2110 -7280 -2110 -7270 {
 lab=GND}
-N -2160 -7470 -2160 -7460 {
+N -2170 -7470 -2160 -7470 {
 lab=vpre2}
 N -2060 -7470 -2050 -7470 {
 lab=vpos2}
 N -2060 -7320 -2050 -7320 {
 lab=vpres2}
 N -2170 -7140 -2160 -7140 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -7500 -2160 -7500 {
 lab=ctrl_stdp}
 N -2170 -7350 -2160 -7350 {
@@ -1840,7 +1840,7 @@ lab=vpos3}
 N -2060 -6800 -2050 -6800 {
 lab=vpres3}
 N -2170 -6620 -2160 -6620 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -6980 -2160 -6980 {
 lab=ctrl_stdp}
 N -2170 -6830 -2160 -6830 {
@@ -1872,7 +1872,7 @@ lab=vpos4}
 N -2060 -6280 -2050 -6280 {
 lab=vpres4}
 N -2170 -6100 -2160 -6100 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -6460 -2160 -6460 {
 lab=ctrl_stdp}
 N -2170 -6310 -2160 -6310 {
@@ -1891,20 +1891,20 @@ N -2110 -5870 -2110 -5860 {
 lab=GND}
 N -2110 -5570 -2110 -5560 {
 lab=GND}
-N -2060 -5620 -2060 -5610 {
+N -2060 -5610 -2050 -5610 {
 lab=vpres5}
 N -2110 -5720 -2110 -5710 {
 lab=GND}
-N -2160 -5760 -2160 -5750 {
+N -2170 -5760 -2160 -5760 {
 lab=vpre5}
-N -2160 -5910 -2160 -5900 {
+N -2170 -5910 -2160 -5910 {
 lab=vpre5}
-N -2060 -5910 -2060 -5900 {
+N -2060 -5910 -2050 -5910 {
 lab=vpos5}
-N -2060 -5770 -2060 -5760 {
+N -2060 -5760 -2050 -5760 {
 lab=vpres5}
 N -2170 -5580 -2160 -5580 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -5940 -2160 -5940 {
 lab=ctrl_stdp}
 N -2170 -5790 -2160 -5790 {
@@ -1923,20 +1923,20 @@ N -2110 -5350 -2110 -5340 {
 lab=GND}
 N -2110 -5050 -2110 -5040 {
 lab=GND}
-N -2060 -5100 -2060 -5090 {
+N -2060 -5090 -2050 -5090 {
 lab=vpres6}
 N -2110 -5200 -2110 -5190 {
 lab=GND}
-N -2160 -5240 -2160 -5230 {
+N -2170 -5240 -2160 -5240 {
 lab=vpre6}
-N -2160 -5390 -2160 -5380 {
+N -2170 -5390 -2160 -5390 {
 lab=vpre6}
-N -2060 -5390 -2060 -5380 {
+N -2060 -5390 -2050 -5390 {
 lab=vpos6}
-N -2060 -5250 -2060 -5240 {
+N -2060 -5240 -2050 -5240 {
 lab=vpres6}
 N -2170 -5060 -2160 -5060 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -5420 -2160 -5420 {
 lab=ctrl_stdp}
 N -2170 -5270 -2160 -5270 {
@@ -1955,20 +1955,20 @@ N -2110 -4830 -2110 -4820 {
 lab=GND}
 N -2110 -4530 -2110 -4520 {
 lab=GND}
-N -2060 -4580 -2060 -4570 {
+N -2060 -4570 -2050 -4570 {
 lab=vpres7}
 N -2110 -4680 -2110 -4670 {
 lab=GND}
-N -2160 -4720 -2160 -4710 {
+N -2170 -4720 -2160 -4720 {
 lab=vpre7}
-N -2160 -4870 -2160 -4860 {
+N -2170 -4870 -2160 -4870 {
 lab=vpre7}
-N -2060 -4870 -2060 -4860 {
+N -2060 -4870 -2050 -4870 {
 lab=vpos7}
-N -2060 -4730 -2060 -4720 {
+N -2060 -4720 -2050 -4720 {
 lab=vpres7}
 N -2170 -4540 -2160 -4540 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -4900 -2160 -4900 {
 lab=ctrl_stdp}
 N -2170 -4750 -2160 -4750 {
@@ -1987,20 +1987,20 @@ N -2110 -4310 -2110 -4300 {
 lab=GND}
 N -2110 -4010 -2110 -4000 {
 lab=GND}
-N -2060 -4060 -2060 -4050 {
+N -2060 -4050 -2050 -4050 {
 lab=vpres8}
 N -2110 -4160 -2110 -4150 {
 lab=GND}
-N -2160 -4200 -2160 -4190 {
+N -2170 -4200 -2160 -4200 {
 lab=vpre8}
-N -2160 -4350 -2160 -4340 {
+N -2170 -4350 -2160 -4350 {
 lab=vpre8}
-N -2060 -4350 -2060 -4340 {
+N -2060 -4350 -2050 -4350 {
 lab=vpos8}
-N -2060 -4210 -2060 -4200 {
+N -2060 -4200 -2050 -4200 {
 lab=vpres8}
 N -2170 -4020 -2160 -4020 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -4380 -2160 -4380 {
 lab=ctrl_stdp}
 N -2170 -4230 -2160 -4230 {
@@ -2019,20 +2019,20 @@ N -2110 -3790 -2110 -3780 {
 lab=GND}
 N -2110 -3490 -2110 -3480 {
 lab=GND}
-N -2060 -3540 -2060 -3530 {
+N -2060 -3530 -2050 -3530 {
 lab=vpres9}
 N -2110 -3640 -2110 -3630 {
 lab=GND}
-N -2160 -3680 -2160 -3670 {
+N -2170 -3680 -2160 -3680 {
 lab=vpre9}
-N -2160 -3830 -2160 -3820 {
+N -2170 -3830 -2160 -3830 {
 lab=vpre9}
-N -2060 -3830 -2060 -3820 {
+N -2060 -3830 -2050 -3830 {
 lab=vpos9}
-N -2060 -3690 -2060 -3680 {
+N -2060 -3680 -2050 -3680 {
 lab=vpres9}
 N -2170 -3500 -2160 -3500 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -3860 -2160 -3860 {
 lab=ctrl_stdp}
 N -2170 -3710 -2160 -3710 {
@@ -2051,20 +2051,20 @@ N -2110 -3270 -2110 -3260 {
 lab=GND}
 N -2110 -2970 -2110 -2960 {
 lab=GND}
-N -2060 -3020 -2060 -3010 {
+N -2060 -3010 -2050 -3010 {
 lab=vpres10}
 N -2110 -3120 -2110 -3110 {
 lab=GND}
-N -2160 -3160 -2160 -3150 {
+N -2170 -3160 -2160 -3160 {
 lab=vpre10}
-N -2160 -3310 -2160 -3300 {
+N -2170 -3310 -2160 -3310 {
 lab=vpre10}
-N -2060 -3310 -2060 -3300 {
+N -2060 -3310 -2050 -3310 {
 lab=vpos10}
-N -2060 -3170 -2060 -3160 {
+N -2060 -3160 -2050 -3160 {
 lab=vpres10}
 N -2170 -2980 -2160 -2980 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -3340 -2160 -3340 {
 lab=ctrl_stdp}
 N -2170 -3190 -2160 -3190 {
@@ -2083,20 +2083,20 @@ N -2110 -2750 -2110 -2740 {
 lab=GND}
 N -2110 -2450 -2110 -2440 {
 lab=GND}
-N -2060 -2500 -2060 -2490 {
+N -2060 -2490 -2050 -2490 {
 lab=vpres11}
 N -2110 -2600 -2110 -2590 {
 lab=GND}
-N -2160 -2640 -2160 -2630 {
+N -2170 -2640 -2160 -2640 {
 lab=vpre11}
-N -2160 -2790 -2160 -2780 {
+N -2170 -2790 -2160 -2790 {
 lab=vpre11}
-N -2060 -2790 -2060 -2780 {
+N -2060 -2790 -2050 -2790 {
 lab=vpos11}
-N -2060 -2650 -2060 -2640 {
+N -2060 -2640 -2050 -2640 {
 lab=vpres11}
 N -2170 -2460 -2160 -2460 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -2820 -2160 -2820 {
 lab=ctrl_stdp}
 N -2170 -2670 -2160 -2670 {
@@ -2115,20 +2115,20 @@ N -2110 -2230 -2110 -2220 {
 lab=GND}
 N -2110 -1930 -2110 -1920 {
 lab=GND}
-N -2060 -1980 -2060 -1970 {
+N -2060 -1970 -2050 -1970 {
 lab=vpres12}
 N -2110 -2080 -2110 -2070 {
 lab=GND}
-N -2160 -2120 -2160 -2110 {
+N -2170 -2120 -2160 -2120 {
 lab=vpre12}
-N -2160 -2270 -2160 -2260 {
+N -2170 -2270 -2160 -2270 {
 lab=vpre12}
-N -2060 -2270 -2060 -2260 {
+N -2060 -2270 -2050 -2270 {
 lab=vpos12}
-N -2060 -2130 -2060 -2120 {
+N -2060 -2120 -2050 -2120 {
 lab=vpres12}
 N -2170 -1940 -2160 -1940 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -2300 -2160 -2300 {
 lab=ctrl_stdp}
 N -2170 -2150 -2160 -2150 {
@@ -2147,20 +2147,20 @@ N -2110 -1710 -2110 -1700 {
 lab=GND}
 N -2110 -1410 -2110 -1400 {
 lab=GND}
-N -2060 -1460 -2060 -1450 {
+N -2060 -1450 -2050 -1450 {
 lab=vpres13}
 N -2110 -1560 -2110 -1550 {
 lab=GND}
-N -2160 -1600 -2160 -1590 {
+N -2170 -1600 -2160 -1600 {
 lab=vpre13}
-N -2160 -1750 -2160 -1740 {
+N -2170 -1750 -2160 -1750 {
 lab=vpre13}
-N -2060 -1750 -2060 -1740 {
+N -2060 -1750 -2050 -1750 {
 lab=vpos13}
-N -2060 -1610 -2060 -1600 {
+N -2060 -1600 -2050 -1600 {
 lab=vpres13}
 N -2170 -1420 -2160 -1420 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -1780 -2160 -1780 {
 lab=ctrl_stdp}
 N -2170 -1630 -2160 -1630 {
@@ -2179,18 +2179,18 @@ N -2110 -1190 -2110 -1180 {
 lab=GND}
 N -2110 -890 -2110 -880 {
 lab=GND}
-N -2060 -940 -2060 -930 {
+N -2060 -930 -2050 -930 {
 lab=vpres14}
 N -2110 -1040 -2110 -1030 {
 lab=GND}
 N -2170 -1080 -2160 -1080 {
 lab=vpre14}
-N -2160 -1230 -2160 -1220 {
+N -2170 -1230 -2160 -1230 {
 lab=vpre14}
-N -2060 -1230 -2060 -1220 {
+N -2060 -1230 -2050 -1230 {
 lab=vpos14}
 N -2170 -900 -2160 -900 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -1260 -2160 -1260 {
 lab=ctrl_stdp}
 N -2170 -1110 -2160 -1110 {
@@ -2209,16 +2209,16 @@ N -2110 -670 -2110 -660 {
 lab=GND}
 N -2110 -370 -2110 -360 {
 lab=GND}
-N -2060 -420 -2060 -410 {
+N -2060 -410 -2050 -410 {
 lab=vpres15}
 N -2110 -520 -2110 -510 {
 lab=GND}
-N -2160 -710 -2160 -700 {
+N -2170 -710 -2160 -710 {
 lab=vpre15}
-N -2060 -710 -2060 -700 {
+N -2060 -710 -2050 -710 {
 lab=vpos15}
 N -2170 -380 -2160 -380 {
-lab=vbias}
+lab=vb_wu}
 N -2170 -740 -2160 -740 {
 lab=ctrl_stdp}
 N -2170 -590 -2160 -590 {
@@ -2233,15 +2233,58 @@ N -2170 -440 -2160 -440 {
 lab=ctrl_wu}
 N -2160 -440 -2160 -410 {
 lab=ctrl_wu}
-N -2170 -7990 -2160 -7990 {}
-N -2170 -7840 -2160 -7840 {}
-N -2170 -7320 -2160 -7320 {}
-N -2170 -560 -2160 -560 {}
-N -2060 -560 -2050 -560 {}
-N -1870 -560 -1860 -560 {}
-N -1870 -1080 -1860 -1080 {}
-N -1740 -1080 -1730 -1080 {}
-N -2060 -1080 -2050 -1080 {}
+N -2170 -7990 -2160 -7990 {
+lab=vpre1}
+N -2170 -7840 -2160 -7840 {
+lab=vpre1}
+N -2170 -7320 -2160 -7320 {
+lab=vpre2}
+N -2170 -560 -2160 -560 {
+lab=vpre15}
+N -2060 -560 -2050 -560 {
+lab=vpres15}
+N -1870 -560 -1860 -560 {
+lab=vpres15}
+N -1870 -1080 -1860 -1080 {
+lab=vpres14}
+N -1740 -1080 -1730 -1080 {
+lab=vpos14}
+N -2060 -1080 -2050 -1080 {
+lab=vpres14}
+N -1340 -2480 -1340 -2460 {
+lab=GND}
+N -1340 -2560 -1340 -2540 {
+lab=vb_tr}
+N -2170 -680 -2160 -680 {
+lab=vb_tr}
+N -2170 -1200 -2160 -1200 {
+lab=vb_tr}
+N -2170 -1720 -2160 -1720 {
+lab=vb_tr}
+N -2170 -2240 -2160 -2240 {
+lab=vb_tr}
+N -2170 -2760 -2160 -2760 {
+lab=vb_tr}
+N -2170 -3280 -2160 -3280 {
+lab=vb_tr}
+N -2170 -3800 -2160 -3800 {
+lab=vb_tr}
+N -2170 -4320 -2160 -4320 {
+lab=vb_tr}
+N -2170 -4840 -2160 -4840 {
+lab=vb_tr}
+N -2170 -5360 -2160 -5360 {
+lab=vb_tr}
+N -2170 -5880 -2160 -5880 {
+lab=vb_tr}
+N -2170 -6400 -2160 -6400 {
+lab=vb_tr}
+N -2170 -6920 -2160 -6920 {
+lab=vb_tr}
+N -2170 -7440 -2160 -7440 {
+lab=vb_tr}
+N -2170 -7960 -2160 -7960 {
+lab=vb_tr}
 C {devices/vsource.sym} -1580 -2650 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} -1580 -2600 0 0 {name=l6 lab=GND}
 C {devices/vsource.sym} -1500 -2650 0 0 {name=V2 value=1.8}
@@ -2362,7 +2405,7 @@ C {devices/gnd.sym} -1500 -2320 0 0 {name=l35 lab=GND}
 C {devices/lab_pin.sym} -1500 -2420 2 0 {name=p17 sig_type=std_logic lab=ctrl_stdp}
 C {devices/vsource.sym} -1420 -2510 0 0 {name=V9 value=0.5}
 C {devices/gnd.sym} -1420 -2460 0 0 {name=l75 lab=GND}
-C {devices/lab_pin.sym} -1420 -2560 2 0 {name=p82 sig_type=std_logic lab=vbias}
+C {devices/lab_pin.sym} -1420 -2560 2 0 {name=p82 sig_type=std_logic lab=vb_wu}
 C {devices/vsource.sym} -1410 -2650 0 0 {name=V3 value="PWL(0 0 124.9u 0 125u 1.8)"}
 C {devices/gnd.sym} -1410 -2600 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} -1410 -2700 2 0 {name=p6 sig_type=std_logic lab=vdd_pos}
@@ -2486,16 +2529,15 @@ spiceprefix=X
 C {devices/gnd.sym} -970 -1750 2 0 {name=l31 lab=GND}
 C {devices/lab_pin.sym} -970 -1690 2 0 {name=p72 sig_type=std_logic lab=inh_d}
 C {devices/lab_pin.sym} -1010 -1740 0 0 {name=p85 sig_type=std_logic lab=ctrl_vinh}
-C {devices/vsource.sym} -1350 -2510 0 0 {name=V19 value=0.55}
-C {devices/gnd.sym} -1350 -2460 0 0 {name=l36 lab=GND}
-C {devices/lab_pin.sym} -1350 -2560 2 0 {name=p95 sig_type=std_logic lab=vlky}
+C {devices/vsource.sym} -1260 -2510 0 0 {name=V19 value=0.55}
+C {devices/gnd.sym} -1260 -2460 0 0 {name=l36 lab=GND}
+C {devices/lab_pin.sym} -1260 -2560 2 0 {name=p95 sig_type=std_logic lab=vlky}
 C {devices/lab_pin.sym} -2580 -7880 1 0 {name=p96 sig_type=std_logic lab=vlky}
 C {devices/lab_pin.sym} -2580 -7360 1 0 {name=p97 sig_type=std_logic lab=vlky}
 C {devices/lab_pin.sym} -1700 -250 1 0 {name=p56 sig_type=std_logic lab=vlky}
 C {devices/vsource.sym} -980 -2650 0 0 {name=V10 value="PWL(0 1.8 119.9u 1.8 120u 0 124.9u 0 125u 1.8)"}
 C {devices/gnd.sym} -980 -2600 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} -980 -2700 2 0 {name=p7 sig_type=std_logic lab=vdd_syn0}
-C {devices/lab_pin.sym} -2170 -7660 0 0 {name=p100 sig_type=std_logic lab=vbias}
 C {devices/gnd.sym} -1800 -6730 0 0 {name=l105 lab=GND}
 C {devices/ammeter.sym} -1740 -6730 0 0 {name=Vmeas30 savecurrent=true}
 C {sky130_fd_pr/nfet_01v8.sym} -1760 -6660 0 0 {name=M30
@@ -2536,7 +2578,7 @@ C {devices/gnd.sym} -1730 -6140 3 0 {name=l126 lab=GND}
 C {devices/lab_pin.sym} -1740 -6100 2 0 {name=p363 sig_type=std_logic lab=p0}
 C {devices/lab_pin.sym} -1790 -6140 0 0 {name=p365 sig_type=std_logic lab=ctrl_pos}
 C {devices/gnd.sym} -1800 -5690 0 0 {name=l145 lab=GND}
-C {devices/lab_pin.sym} -1860 -5770 1 0 {name=p411 sig_type=std_logic lab=vpres5}
+C {devices/lab_pin.sym} -1870 -5760 0 0 {name=p411 sig_type=std_logic lab=vpres5}
 C {devices/ammeter.sym} -1740 -5690 0 0 {name=Vmeas50 savecurrent=true}
 C {sky130_fd_pr/nfet_01v8.sym} -1760 -5620 0 0 {name=M50
 L=\{L_out\}
@@ -2613,8 +2655,8 @@ C {devices/gnd.sym} -1730 -4060 3 0 {name=l206 lab=GND}
 C {devices/lab_pin.sym} -1740 -4020 2 0 {name=p563 sig_type=std_logic lab=p0}
 C {devices/lab_pin.sym} -1790 -4060 0 0 {name=p565 sig_type=std_logic lab=ctrl_pos}
 C {devices/gnd.sym} -1800 -3610 0 0 {name=l225 lab=GND}
-C {devices/lab_pin.sym} -1860 -3690 1 0 {name=p611 sig_type=std_logic lab=vpres9}
-C {devices/lab_pin.sym} -1740 -3690 1 0 {name=p612 sig_type=std_logic lab=vpos9}
+C {devices/lab_pin.sym} -1870 -3680 0 0 {name=p611 sig_type=std_logic lab=vpres9}
+C {devices/lab_pin.sym} -1730 -3680 2 0 {name=p612 sig_type=std_logic lab=vpos9}
 C {devices/ammeter.sym} -1740 -3610 0 0 {name=Vmeas90 savecurrent=true}
 C {sky130_fd_pr/nfet_01v8.sym} -1760 -3540 0 0 {name=M90
 L=\{L_out\}
@@ -2896,19 +2938,19 @@ C {devices/lab_pin.sym} -1020 -1870 0 0 {name=p105 sig_type=std_logic lab=8}
 C {devices/lab_pin.sym} -2330 -7320 2 0 {name=p5 sig_type=std_logic lab=vpre2}
 C {devices/lab_pin.sym} -2330 -6800 2 0 {name=p106 sig_type=std_logic lab=vpre3}
 C {devices/lab_pin.sym} -1870 -6800 0 0 {name=p108 sig_type=std_logic lab=vpres3}
-C {devices/lab_pin.sym} -2330 -3680 3 0 {name=p110 sig_type=std_logic lab=vpre9}
-C {devices/lab_pin.sym} -1860 -4210 1 0 {name=p115 sig_type=std_logic lab=vpres8}
-C {devices/lab_pin.sym} -2330 -4200 3 0 {name=p117 sig_type=std_logic lab=vpre8}
-C {devices/lab_pin.sym} -1860 -4730 1 0 {name=p119 sig_type=std_logic lab=vpres7}
-C {devices/lab_pin.sym} -2330 -4720 3 0 {name=p120 sig_type=std_logic lab=vpre7}
-C {devices/lab_pin.sym} -1860 -5250 1 0 {name=p123 sig_type=std_logic lab=vpres6}
-C {devices/lab_pin.sym} -2330 -5240 3 0 {name=p124 sig_type=std_logic lab=vpre6}
-C {devices/lab_pin.sym} -2330 -5760 3 0 {name=p128 sig_type=std_logic lab=vpre5}
+C {devices/lab_pin.sym} -2330 -3680 2 0 {name=p110 sig_type=std_logic lab=vpre9}
+C {devices/lab_pin.sym} -1870 -4200 0 0 {name=p115 sig_type=std_logic lab=vpres8}
+C {devices/lab_pin.sym} -2330 -4200 2 0 {name=p117 sig_type=std_logic lab=vpre8}
+C {devices/lab_pin.sym} -1870 -4720 0 0 {name=p119 sig_type=std_logic lab=vpres7}
+C {devices/lab_pin.sym} -2330 -4720 2 0 {name=p120 sig_type=std_logic lab=vpre7}
+C {devices/lab_pin.sym} -1870 -5240 0 0 {name=p123 sig_type=std_logic lab=vpres6}
+C {devices/lab_pin.sym} -2330 -5240 2 0 {name=p124 sig_type=std_logic lab=vpre6}
+C {devices/lab_pin.sym} -2330 -5760 2 0 {name=p128 sig_type=std_logic lab=vpre5}
 C {devices/lab_pin.sym} -2330 -6280 2 0 {name=p130 sig_type=std_logic lab=vpre4}
-C {devices/lab_pin.sym} -1740 -4210 1 0 {name=p160 sig_type=std_logic lab=vpos8}
-C {devices/lab_pin.sym} -1740 -4730 1 0 {name=p165 sig_type=std_logic lab=vpos7}
-C {devices/lab_pin.sym} -1740 -5250 1 0 {name=p170 sig_type=std_logic lab=vpos6}
-C {devices/lab_pin.sym} -1740 -5770 1 0 {name=p177 sig_type=std_logic lab=vpos5}
+C {devices/lab_pin.sym} -1730 -4200 2 0 {name=p160 sig_type=std_logic lab=vpos8}
+C {devices/lab_pin.sym} -1730 -4720 2 0 {name=p165 sig_type=std_logic lab=vpos7}
+C {devices/lab_pin.sym} -1730 -5240 2 0 {name=p170 sig_type=std_logic lab=vpos6}
+C {devices/lab_pin.sym} -1730 -5760 2 0 {name=p177 sig_type=std_logic lab=vpos5}
 C {devices/lab_pin.sym} -1730 -6280 2 0 {name=p180 sig_type=std_logic lab=vpos4}
 C {devices/lab_pin.sym} -1730 -6800 2 0 {name=p185 sig_type=std_logic lab=vpos3}
 C {devices/launcher.sym} -1510 -1815 0 0 {name=h2
@@ -3264,9 +3306,9 @@ C {devices/lab_pin.sym} -2720 -640 1 0 {name=p352 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -2580 -600 1 0 {name=p353 sig_type=std_logic lab=vlky}
 C {devices/lab_pin.sym} -2330 -560 2 0 {name=p354 sig_type=std_logic lab=vpre15}
 C {devices/lab_pin.sym} -2330 -1080 2 0 {name=p362 sig_type=std_logic lab=vpre14}
-C {devices/lab_pin.sym} -2330 -1600 3 0 {name=p369 sig_type=std_logic lab=vpre13}
-C {devices/lab_pin.sym} -2330 -2640 3 0 {name=p378 sig_type=std_logic lab=vpre11}
-C {devices/lab_pin.sym} -2330 -3160 3 0 {name=p380 sig_type=std_logic lab=vpre10}
+C {devices/lab_pin.sym} -2330 -1600 2 0 {name=p369 sig_type=std_logic lab=vpre13}
+C {devices/lab_pin.sym} -2330 -2640 2 0 {name=p378 sig_type=std_logic lab=vpre11}
+C {devices/lab_pin.sym} -2330 -3160 2 0 {name=p380 sig_type=std_logic lab=vpre10}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2480 -560 0 0 {name=x2150}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2480 -1080 0 0 {name=x2140}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2480 -1600 0 0 {name=x2130}
@@ -3274,7 +3316,7 @@ C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2480 -2120 0 0 
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2480 -2640 0 0 {name=x2110}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2480 -3160 0 0 {name=x2100}
 C {devices/lab_pin.sym} -1870 -560 0 0 {name=p312 sig_type=std_logic lab=vpres15}
-C {devices/lab_pin.sym} -1740 -570 1 0 {name=p405 sig_type=std_logic lab=vpos15}
+C {devices/lab_pin.sym} -1730 -560 2 0 {name=p405 sig_type=std_logic lab=vpos15}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Syn_6T1R.sym} -1740 -7660 0 0 {name=x10}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Syn_6T1R.sym} -1740 -7140 0 0 {name=x20}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Syn_6T1R.sym} -1740 -6620 0 0 {name=x30}
@@ -3293,15 +3335,15 @@ C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Syn_6T1R.sym} -1740 -380 0 0 {n
 C {/home/ricardo/RATT_repos/Proyectos_xschem/inhibitory/or_2.sym} -940 -1890 0 0 {name=x2}
 C {devices/lab_pin.sym} -1870 -1080 0 0 {name=p359 sig_type=std_logic lab=vpres14}
 C {devices/lab_pin.sym} -1730 -1080 2 0 {name=p382 sig_type=std_logic lab=vpos14}
-C {devices/lab_pin.sym} -1860 -1610 1 0 {name=p367 sig_type=std_logic lab=vpres13}
-C {devices/lab_pin.sym} -1740 -1610 1 0 {name=p392 sig_type=std_logic lab=vpos13}
-C {devices/lab_pin.sym} -1740 -3170 1 0 {name=p394 sig_type=std_logic lab=vpos10}
-C {devices/lab_pin.sym} -1860 -3170 1 0 {name=p216 sig_type=std_logic lab=vpres10}
-C {devices/lab_pin.sym} -1860 -2650 1 0 {name=p376 sig_type=std_logic lab=vpres11}
-C {devices/lab_pin.sym} -1740 -2650 1 0 {name=p400 sig_type=std_logic lab=vpos11}
-C {devices/lab_pin.sym} -2330 -2120 3 0 {name=p159 sig_type=std_logic lab=vpre12}
-C {devices/lab_pin.sym} -1860 -2130 1 0 {name=p373 sig_type=std_logic lab=vpres12}
-C {devices/lab_pin.sym} -1740 -2130 1 0 {name=p396 sig_type=std_logic lab=vpos12}
+C {devices/lab_pin.sym} -1870 -1600 0 0 {name=p367 sig_type=std_logic lab=vpres13}
+C {devices/lab_pin.sym} -1730 -1600 2 0 {name=p392 sig_type=std_logic lab=vpos13}
+C {devices/lab_pin.sym} -1730 -3160 2 0 {name=p394 sig_type=std_logic lab=vpos10}
+C {devices/lab_pin.sym} -1870 -3160 0 0 {name=p216 sig_type=std_logic lab=vpres10}
+C {devices/lab_pin.sym} -1870 -2640 0 0 {name=p376 sig_type=std_logic lab=vpres11}
+C {devices/lab_pin.sym} -1730 -2640 2 0 {name=p400 sig_type=std_logic lab=vpos11}
+C {devices/lab_pin.sym} -2330 -2120 2 0 {name=p159 sig_type=std_logic lab=vpre12}
+C {devices/lab_pin.sym} -1870 -2120 0 0 {name=p373 sig_type=std_logic lab=vpres12}
+C {devices/lab_pin.sym} -1730 -2120 2 0 {name=p396 sig_type=std_logic lab=vpos12}
 C {devices/lab_pin.sym} -1800 -7890 1 0 {name=p63 sig_type=std_logic lab=vdd_syn0}
 C {devices/lab_pin.sym} -1800 -7370 1 0 {name=p70 sig_type=std_logic lab=vdd_syn0}
 C {devices/lab_pin.sym} -1800 -6850 1 0 {name=p136 sig_type=std_logic lab=vdd_syn0}
@@ -3336,10 +3378,9 @@ C {devices/gnd.sym} -2110 -7270 0 0 {name=l23 lab=GND}
 C {devices/lab_pin.sym} -2110 -7530 0 0 {name=p24 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -7230 0 0 {name=p28 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -7380 0 0 {name=p33 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -7140 0 0 {name=p44 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -7500 0 0 {name=p49 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -7320 0 0 {name=x1}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -7170 0 0 {name=x4}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -7320 0 0 {name=x2022}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -7170 0 0 {name=x2023}
 C {devices/lab_pin.sym} -2170 -7200 0 0 {name=p51 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -6900 0 0 {name=l24 lab=GND}
 C {devices/lab_pin.sym} -2050 -6950 2 0 {name=p52 sig_type=std_logic lab=vpos3}
@@ -3349,10 +3390,9 @@ C {devices/gnd.sym} -2110 -6750 0 0 {name=l32 lab=GND}
 C {devices/lab_pin.sym} -2110 -7010 0 0 {name=p62 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -6710 0 0 {name=p64 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -6860 0 0 {name=p67 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -6620 0 0 {name=p68 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -6980 0 0 {name=p69 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -6800 0 0 {name=x5}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -6650 0 0 {name=x7}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -6800 0 0 {name=x2032}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -6650 0 0 {name=x2033}
 C {devices/lab_pin.sym} -2170 -6680 0 0 {name=p74 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -6380 0 0 {name=l33 lab=GND}
 C {devices/lab_pin.sym} -2050 -6430 2 0 {name=p77 sig_type=std_logic lab=vpos4}
@@ -3362,150 +3402,139 @@ C {devices/gnd.sym} -2110 -6230 0 0 {name=l37 lab=GND}
 C {devices/lab_pin.sym} -2110 -6490 0 0 {name=p90 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -6190 0 0 {name=p92 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -6340 0 0 {name=p93 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -6100 0 0 {name=p98 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -6460 0 0 {name=p99 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -6280 0 0 {name=x8}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -6130 0 0 {name=x11}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -6280 0 0 {name=x2042}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -6130 0 0 {name=x2043}
 C {devices/lab_pin.sym} -2170 -6160 0 0 {name=p101 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -5860 0 0 {name=l38 lab=GND}
-C {devices/lab_pin.sym} -2060 -5900 3 0 {name=p102 sig_type=std_logic lab=vpos5}
+C {devices/lab_pin.sym} -2050 -5910 2 0 {name=p102 sig_type=std_logic lab=vpos5}
 C {devices/gnd.sym} -2110 -5560 0 0 {name=l40 lab=GND}
 C {devices/lab_pin.sym} -2170 -5790 0 0 {name=p111 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -5710 0 0 {name=l41 lab=GND}
 C {devices/lab_pin.sym} -2110 -5970 0 0 {name=p112 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -5670 0 0 {name=p113 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -5820 0 0 {name=p114 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -5580 0 0 {name=p116 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -5940 0 0 {name=p118 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -5760 0 0 {name=x12}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -5610 0 0 {name=x14}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -5760 0 0 {name=x2052}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -5610 0 0 {name=x2053}
 C {devices/lab_pin.sym} -2170 -5640 0 0 {name=p121 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -5340 0 0 {name=l42 lab=GND}
-C {devices/lab_pin.sym} -2060 -5380 3 0 {name=p122 sig_type=std_logic lab=vpos6}
+C {devices/lab_pin.sym} -2050 -5390 2 0 {name=p122 sig_type=std_logic lab=vpos6}
 C {devices/gnd.sym} -2110 -5040 0 0 {name=l43 lab=GND}
 C {devices/lab_pin.sym} -2170 -5270 0 0 {name=p131 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -5190 0 0 {name=l44 lab=GND}
 C {devices/lab_pin.sym} -2110 -5450 0 0 {name=p132 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -5150 0 0 {name=p133 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -5300 0 0 {name=p134 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -5060 0 0 {name=p135 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -5420 0 0 {name=p137 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -5240 0 0 {name=x15}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -5090 0 0 {name=x17}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -5240 0 0 {name=x2062}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -5090 0 0 {name=x2063}
 C {devices/lab_pin.sym} -2170 -5120 0 0 {name=p144 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -4820 0 0 {name=l45 lab=GND}
-C {devices/lab_pin.sym} -2060 -4860 3 0 {name=p145 sig_type=std_logic lab=vpos7}
+C {devices/lab_pin.sym} -2050 -4870 2 0 {name=p145 sig_type=std_logic lab=vpos7}
 C {devices/gnd.sym} -2110 -4520 0 0 {name=l46 lab=GND}
 C {devices/lab_pin.sym} -2170 -4750 0 0 {name=p150 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -4670 0 0 {name=l47 lab=GND}
 C {devices/lab_pin.sym} -2110 -4930 0 0 {name=p151 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -4630 0 0 {name=p152 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -4780 0 0 {name=p153 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -4540 0 0 {name=p154 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -4900 0 0 {name=p155 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -4720 0 0 {name=x18}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -4570 0 0 {name=x21}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -4720 0 0 {name=x2072}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -4570 0 0 {name=x2073}
 C {devices/lab_pin.sym} -2170 -4600 0 0 {name=p156 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -4300 0 0 {name=l48 lab=GND}
-C {devices/lab_pin.sym} -2060 -4340 3 0 {name=p157 sig_type=std_logic lab=vpos8}
+C {devices/lab_pin.sym} -2050 -4350 2 0 {name=p157 sig_type=std_logic lab=vpos8}
 C {devices/gnd.sym} -2110 -4000 0 0 {name=l49 lab=GND}
 C {devices/lab_pin.sym} -2170 -4230 0 0 {name=p164 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -4150 0 0 {name=l50 lab=GND}
 C {devices/lab_pin.sym} -2110 -4410 0 0 {name=p166 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -4110 0 0 {name=p167 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -4260 0 0 {name=p168 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -4020 0 0 {name=p169 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -4380 0 0 {name=p171 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -4200 0 0 {name=x22}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -4050 0 0 {name=x24}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -4200 0 0 {name=x2082}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -4050 0 0 {name=x2083}
 C {devices/lab_pin.sym} -2170 -4080 0 0 {name=p172 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -3780 0 0 {name=l51 lab=GND}
-C {devices/lab_pin.sym} -2060 -3820 3 0 {name=p173 sig_type=std_logic lab=vpos9}
+C {devices/lab_pin.sym} -2050 -3830 2 0 {name=p173 sig_type=std_logic lab=vpos9}
 C {devices/gnd.sym} -2110 -3480 0 0 {name=l52 lab=GND}
 C {devices/lab_pin.sym} -2170 -3710 0 0 {name=p179 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -3630 0 0 {name=l53 lab=GND}
 C {devices/lab_pin.sym} -2110 -3890 0 0 {name=p181 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -3590 0 0 {name=p182 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -3740 0 0 {name=p183 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -3500 0 0 {name=p184 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -3860 0 0 {name=p186 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -3680 0 0 {name=x25}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -3530 0 0 {name=x27}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -3680 0 0 {name=x2092}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -3530 0 0 {name=x2093}
 C {devices/lab_pin.sym} -2170 -3560 0 0 {name=p187 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -3260 0 0 {name=l54 lab=GND}
-C {devices/lab_pin.sym} -2060 -3300 3 0 {name=p188 sig_type=std_logic lab=vpos10}
+C {devices/lab_pin.sym} -2050 -3310 2 0 {name=p188 sig_type=std_logic lab=vpos10}
 C {devices/gnd.sym} -2110 -2960 0 0 {name=l55 lab=GND}
 C {devices/lab_pin.sym} -2170 -3190 0 0 {name=p193 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -3110 0 0 {name=l56 lab=GND}
 C {devices/lab_pin.sym} -2110 -3370 0 0 {name=p194 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -3070 0 0 {name=p195 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -3220 0 0 {name=p196 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -2980 0 0 {name=p197 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -3340 0 0 {name=p198 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -3160 0 0 {name=x28}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -3010 0 0 {name=x31}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -3160 0 0 {name=x2102}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -3010 0 0 {name=x2103}
 C {devices/lab_pin.sym} -2170 -3040 0 0 {name=p199 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -2740 0 0 {name=l57 lab=GND}
-C {devices/lab_pin.sym} -2060 -2780 3 0 {name=p200 sig_type=std_logic lab=vpos11}
+C {devices/lab_pin.sym} -2050 -2790 2 0 {name=p200 sig_type=std_logic lab=vpos11}
 C {devices/gnd.sym} -2110 -2440 0 0 {name=l60 lab=GND}
 C {devices/lab_pin.sym} -2170 -2670 0 0 {name=p205 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -2590 0 0 {name=l61 lab=GND}
 C {devices/lab_pin.sym} -2110 -2850 0 0 {name=p206 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -2550 0 0 {name=p207 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -2700 0 0 {name=p208 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -2460 0 0 {name=p209 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -2820 0 0 {name=p210 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -2640 0 0 {name=x32}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -2490 0 0 {name=x34}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -2640 0 0 {name=x2112}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -2490 0 0 {name=x2113}
 C {devices/lab_pin.sym} -2170 -2520 0 0 {name=p211 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -2220 0 0 {name=l65 lab=GND}
-C {devices/lab_pin.sym} -2060 -2260 3 0 {name=p212 sig_type=std_logic lab=vpos12}
+C {devices/lab_pin.sym} -2050 -2270 2 0 {name=p212 sig_type=std_logic lab=vpos12}
 C {devices/gnd.sym} -2110 -1920 0 0 {name=l66 lab=GND}
 C {devices/lab_pin.sym} -2170 -2150 0 0 {name=p220 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -2070 0 0 {name=l73 lab=GND}
 C {devices/lab_pin.sym} -2110 -2330 0 0 {name=p221 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -2030 0 0 {name=p222 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -2180 0 0 {name=p224 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -1940 0 0 {name=p226 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -2300 0 0 {name=p227 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -2120 0 0 {name=x35}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -1970 0 0 {name=x37}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -2120 0 0 {name=x2122}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -1970 0 0 {name=x2123}
 C {devices/lab_pin.sym} -2170 -2000 0 0 {name=p228 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -1700 0 0 {name=l74 lab=GND}
-C {devices/lab_pin.sym} -2060 -1740 3 0 {name=p229 sig_type=std_logic lab=vpos13}
+C {devices/lab_pin.sym} -2050 -1750 2 0 {name=p229 sig_type=std_logic lab=vpos13}
 C {devices/gnd.sym} -2110 -1400 0 0 {name=l78 lab=GND}
 C {devices/lab_pin.sym} -2170 -1630 0 0 {name=p235 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -1550 0 0 {name=l79 lab=GND}
 C {devices/lab_pin.sym} -2110 -1810 0 0 {name=p236 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -1510 0 0 {name=p237 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -1660 0 0 {name=p238 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -1420 0 0 {name=p239 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -1780 0 0 {name=p240 sig_type=std_logic lab=ctrl_stdp}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -1600 0 0 {name=x38}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -1450 0 0 {name=x41}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -1600 0 0 {name=x2132}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -1450 0 0 {name=x2133}
 C {devices/lab_pin.sym} -2170 -1480 0 0 {name=p241 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -1180 0 0 {name=l82 lab=GND}
-C {devices/lab_pin.sym} -2060 -1220 3 0 {name=p242 sig_type=std_logic lab=vpos14}
+C {devices/lab_pin.sym} -2050 -1230 2 0 {name=p242 sig_type=std_logic lab=vpos14}
 C {devices/gnd.sym} -2110 -880 0 0 {name=l83 lab=GND}
 C {devices/lab_pin.sym} -2170 -1110 0 0 {name=p247 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -1030 0 0 {name=l84 lab=GND}
 C {devices/lab_pin.sym} -2110 -1290 0 0 {name=p248 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -990 0 0 {name=p249 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -1140 0 0 {name=p250 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -900 0 0 {name=p251 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} -2170 -1260 0 0 {name=p253 sig_type=std_logic lab=ctrl_stdp}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -1080 0 0 {name=x42}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -930 0 0 {name=x44}
 C {devices/lab_pin.sym} -2170 -960 0 0 {name=p254 sig_type=std_logic lab=ctrl_wu}
 C {devices/gnd.sym} -2110 -660 0 0 {name=l85 lab=GND}
-C {devices/lab_pin.sym} -2060 -700 3 0 {name=p255 sig_type=std_logic lab=vpos15}
+C {devices/lab_pin.sym} -2050 -710 2 0 {name=p255 sig_type=std_logic lab=vpos15}
 C {devices/gnd.sym} -2110 -360 0 0 {name=l86 lab=GND}
 C {devices/lab_pin.sym} -2170 -590 0 0 {name=p260 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2110 -510 0 0 {name=l87 lab=GND}
 C {devices/lab_pin.sym} -2110 -770 0 0 {name=p261 sig_type=std_logic lab=vdd_stdp}
 C {devices/lab_pin.sym} -2110 -470 0 0 {name=p262 sig_type=std_logic lab=vdd_wu}
 C {devices/lab_pin.sym} -2110 -620 0 0 {name=p263 sig_type=std_logic lab=vdd_inf}
-C {devices/lab_pin.sym} -2170 -380 0 0 {name=p265 sig_type=std_logic lab=vbias}
+C {devices/lab_pin.sym} -2170 -380 0 0 {name=p265 sig_type=std_logic lab=vb_wu}
 C {devices/lab_pin.sym} -2170 -740 0 0 {name=p266 sig_type=std_logic lab=ctrl_stdp}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Inf_circuit.sym} -2110 -560 0 0 {name=x45}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/WU_Circuit.sym} -2110 -410 0 0 {name=x47}
@@ -3513,7 +3542,7 @@ C {devices/lab_pin.sym} -2170 -440 0 0 {name=p267 sig_type=std_logic lab=ctrl_wu
 C {devices/lab_pin.sym} -2050 -7320 2 0 {name=p18 sig_type=std_logic lab=vpres2}
 C {devices/lab_pin.sym} -2050 -7170 2 0 {name=p19 sig_type=std_logic lab=vpres2}
 C {devices/lab_pin.sym} -2170 -7320 0 0 {name=p14 sig_type=std_logic lab=vpre2}
-C {devices/lab_pin.sym} -2160 -7460 3 0 {name=p20 sig_type=std_logic lab=vpre2}
+C {devices/lab_pin.sym} -2170 -7470 0 0 {name=p20 sig_type=std_logic lab=vpre2}
 C {devices/lab_pin.sym} -2170 -6800 0 0 {name=p53 sig_type=std_logic lab=vpre3}
 C {devices/lab_pin.sym} -2170 -6950 0 0 {name=p54 sig_type=std_logic lab=vpre3}
 C {devices/lab_pin.sym} -2050 -6800 2 0 {name=p55 sig_type=std_logic lab=vpres3}
@@ -3522,62 +3551,94 @@ C {devices/lab_pin.sym} -2170 -6280 0 0 {name=p79 sig_type=std_logic lab=vpre4}
 C {devices/lab_pin.sym} -2170 -6430 0 0 {name=p83 sig_type=std_logic lab=vpre4}
 C {devices/lab_pin.sym} -2050 -6280 2 0 {name=p84 sig_type=std_logic lab=vpres4}
 C {devices/lab_pin.sym} -2050 -6130 2 0 {name=p86 sig_type=std_logic lab=vpres4}
-C {devices/lab_pin.sym} -2060 -5770 1 0 {name=p103 sig_type=std_logic lab=vpres5}
-C {devices/lab_pin.sym} -2060 -5620 1 0 {name=p104 sig_type=std_logic lab=vpres5}
-C {devices/lab_pin.sym} -2160 -5750 3 0 {name=p107 sig_type=std_logic lab=vpre5}
-C {devices/lab_pin.sym} -2160 -5900 3 0 {name=p109 sig_type=std_logic lab=vpre5}
-C {devices/lab_pin.sym} -2160 -5230 3 0 {name=p125 sig_type=std_logic lab=vpre6}
-C {devices/lab_pin.sym} -2160 -5380 3 0 {name=p126 sig_type=std_logic lab=vpre6}
-C {devices/lab_pin.sym} -2060 -5250 1 0 {name=p127 sig_type=std_logic lab=vpres6}
-C {devices/lab_pin.sym} -2060 -5100 1 0 {name=p129 sig_type=std_logic lab=vpres6}
+C {devices/lab_pin.sym} -2050 -5760 2 0 {name=p103 sig_type=std_logic lab=vpres5}
+C {devices/lab_pin.sym} -2050 -5610 2 0 {name=p104 sig_type=std_logic lab=vpres5}
+C {devices/lab_pin.sym} -2170 -5760 0 0 {name=p107 sig_type=std_logic lab=vpre5}
+C {devices/lab_pin.sym} -2170 -5910 0 0 {name=p109 sig_type=std_logic lab=vpre5}
+C {devices/lab_pin.sym} -2170 -5240 0 0 {name=p125 sig_type=std_logic lab=vpre6}
+C {devices/lab_pin.sym} -2170 -5390 0 0 {name=p126 sig_type=std_logic lab=vpre6}
+C {devices/lab_pin.sym} -2050 -5240 2 0 {name=p127 sig_type=std_logic lab=vpres6}
+C {devices/lab_pin.sym} -2050 -5090 2 0 {name=p129 sig_type=std_logic lab=vpres6}
 C {devices/lab_pin.sym} -2170 -560 0 0 {name=p146 sig_type=std_logic lab=vpre15}
-C {devices/lab_pin.sym} -2160 -700 3 0 {name=p147 sig_type=std_logic lab=vpre15}
+C {devices/lab_pin.sym} -2170 -710 0 0 {name=p147 sig_type=std_logic lab=vpre15}
 C {devices/lab_pin.sym} -2050 -560 2 0 {name=p148 sig_type=std_logic lab=vpres15}
-C {devices/lab_pin.sym} -2060 -420 1 0 {name=p149 sig_type=std_logic lab=vpres15}
+C {devices/lab_pin.sym} -2050 -410 2 0 {name=p149 sig_type=std_logic lab=vpres15}
 C {devices/lab_pin.sym} -2170 -1080 0 0 {name=p243 sig_type=std_logic lab=vpre14}
-C {devices/lab_pin.sym} -2160 -1220 3 0 {name=p244 sig_type=std_logic lab=vpre14}
+C {devices/lab_pin.sym} -2170 -1230 0 0 {name=p244 sig_type=std_logic lab=vpre14}
 C {devices/lab_pin.sym} -2050 -1080 2 0 {name=p245 sig_type=std_logic lab=vpres14}
-C {devices/lab_pin.sym} -2060 -940 1 0 {name=p246 sig_type=std_logic lab=vpres14}
-C {devices/lab_pin.sym} -2160 -1590 3 0 {name=p230 sig_type=std_logic lab=vpre13}
-C {devices/lab_pin.sym} -2160 -1740 3 0 {name=p231 sig_type=std_logic lab=vpre13}
-C {devices/lab_pin.sym} -2060 -1610 1 0 {name=p232 sig_type=std_logic lab=vpres13}
-C {devices/lab_pin.sym} -2060 -1460 1 0 {name=p234 sig_type=std_logic lab=vpres13}
-C {devices/lab_pin.sym} -2160 -2110 3 0 {name=p213 sig_type=std_logic lab=vpre12}
-C {devices/lab_pin.sym} -2160 -2260 3 0 {name=p214 sig_type=std_logic lab=vpre12}
-C {devices/lab_pin.sym} -2060 -2130 1 0 {name=p215 sig_type=std_logic lab=vpres12}
-C {devices/lab_pin.sym} -2060 -1980 1 0 {name=p218 sig_type=std_logic lab=vpres12}
-C {devices/lab_pin.sym} -2060 -2650 1 0 {name=p201 sig_type=std_logic lab=vpres11}
-C {devices/lab_pin.sym} -2060 -2500 1 0 {name=p202 sig_type=std_logic lab=vpres11}
-C {devices/lab_pin.sym} -2160 -2630 3 0 {name=p203 sig_type=std_logic lab=vpre11}
-C {devices/lab_pin.sym} -2160 -2780 3 0 {name=p204 sig_type=std_logic lab=vpre11}
-C {devices/lab_pin.sym} -2160 -3150 3 0 {name=p189 sig_type=std_logic lab=vpre10}
-C {devices/lab_pin.sym} -2160 -3300 3 0 {name=p190 sig_type=std_logic lab=vpre10}
-C {devices/lab_pin.sym} -2060 -3170 1 0 {name=p191 sig_type=std_logic lab=vpres10}
-C {devices/lab_pin.sym} -2060 -3020 1 0 {name=p192 sig_type=std_logic lab=vpres10}
-C {devices/lab_pin.sym} -2160 -3670 3 0 {name=p174 sig_type=std_logic lab=vpre9}
-C {devices/lab_pin.sym} -2160 -3820 3 0 {name=p175 sig_type=std_logic lab=vpre9}
-C {devices/lab_pin.sym} -2060 -3690 1 0 {name=p176 sig_type=std_logic lab=vpres9}
-C {devices/lab_pin.sym} -2060 -3540 1 0 {name=p178 sig_type=std_logic lab=vpres9}
-C {devices/lab_pin.sym} -2160 -4190 3 0 {name=p158 sig_type=std_logic lab=vpre8}
-C {devices/lab_pin.sym} -2160 -4340 3 0 {name=p161 sig_type=std_logic lab=vpre8}
-C {devices/lab_pin.sym} -2060 -4210 1 0 {name=p162 sig_type=std_logic lab=vpres8}
-C {devices/lab_pin.sym} -2060 -4060 1 0 {name=p163 sig_type=std_logic lab=vpres8}
-C {devices/lab_pin.sym} -2160 -4710 3 0 {name=p256 sig_type=std_logic lab=vpre7}
-C {devices/lab_pin.sym} -2160 -4860 3 0 {name=p257 sig_type=std_logic lab=vpre7}
-C {devices/lab_pin.sym} -2060 -4730 1 0 {name=p258 sig_type=std_logic lab=vpres7}
-C {devices/lab_pin.sym} -2060 -4580 1 0 {name=p259 sig_type=std_logic lab=vpres7}
+C {devices/lab_pin.sym} -2050 -930 2 0 {name=p246 sig_type=std_logic lab=vpres14}
+C {devices/lab_pin.sym} -2170 -1600 0 0 {name=p230 sig_type=std_logic lab=vpre13}
+C {devices/lab_pin.sym} -2170 -1750 0 0 {name=p231 sig_type=std_logic lab=vpre13}
+C {devices/lab_pin.sym} -2050 -1600 2 0 {name=p232 sig_type=std_logic lab=vpres13}
+C {devices/lab_pin.sym} -2050 -1450 2 0 {name=p234 sig_type=std_logic lab=vpres13}
+C {devices/lab_pin.sym} -2170 -2120 0 0 {name=p213 sig_type=std_logic lab=vpre12}
+C {devices/lab_pin.sym} -2170 -2270 0 0 {name=p214 sig_type=std_logic lab=vpre12}
+C {devices/lab_pin.sym} -2050 -2120 2 0 {name=p215 sig_type=std_logic lab=vpres12}
+C {devices/lab_pin.sym} -2050 -1970 2 0 {name=p218 sig_type=std_logic lab=vpres12}
+C {devices/lab_pin.sym} -2050 -2640 2 0 {name=p201 sig_type=std_logic lab=vpres11}
+C {devices/lab_pin.sym} -2050 -2490 2 0 {name=p202 sig_type=std_logic lab=vpres11}
+C {devices/lab_pin.sym} -2170 -2640 0 0 {name=p203 sig_type=std_logic lab=vpre11}
+C {devices/lab_pin.sym} -2170 -2790 0 0 {name=p204 sig_type=std_logic lab=vpre11}
+C {devices/lab_pin.sym} -2170 -3160 0 0 {name=p189 sig_type=std_logic lab=vpre10}
+C {devices/lab_pin.sym} -2170 -3310 0 0 {name=p190 sig_type=std_logic lab=vpre10}
+C {devices/lab_pin.sym} -2050 -3160 2 0 {name=p191 sig_type=std_logic lab=vpres10}
+C {devices/lab_pin.sym} -2050 -3010 2 0 {name=p192 sig_type=std_logic lab=vpres10}
+C {devices/lab_pin.sym} -2170 -3680 0 0 {name=p174 sig_type=std_logic lab=vpre9}
+C {devices/lab_pin.sym} -2170 -3830 0 0 {name=p175 sig_type=std_logic lab=vpre9}
+C {devices/lab_pin.sym} -2050 -3680 2 0 {name=p176 sig_type=std_logic lab=vpres9}
+C {devices/lab_pin.sym} -2050 -3530 2 0 {name=p178 sig_type=std_logic lab=vpres9}
+C {devices/lab_pin.sym} -2170 -4200 0 0 {name=p158 sig_type=std_logic lab=vpre8}
+C {devices/lab_pin.sym} -2170 -4350 0 0 {name=p161 sig_type=std_logic lab=vpre8}
+C {devices/lab_pin.sym} -2050 -4200 2 0 {name=p162 sig_type=std_logic lab=vpres8}
+C {devices/lab_pin.sym} -2050 -4050 2 0 {name=p163 sig_type=std_logic lab=vpres8}
+C {devices/lab_pin.sym} -2170 -4720 0 0 {name=p256 sig_type=std_logic lab=vpre7}
+C {devices/lab_pin.sym} -2170 -4870 0 0 {name=p257 sig_type=std_logic lab=vpre7}
+C {devices/lab_pin.sym} -2050 -4720 2 0 {name=p258 sig_type=std_logic lab=vpres7}
+C {devices/lab_pin.sym} -2050 -4570 2 0 {name=p259 sig_type=std_logic lab=vpres7}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -7990 0 0 {name=x2011}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -710 0 0 {name=x3}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -1230 0 0 {name=x6}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -1750 0 0 {name=x9}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -2270 0 0 {name=x13}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -2790 0 0 {name=x16}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -3310 0 0 {name=x19}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -3830 0 0 {name=x23}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -4350 0 0 {name=x26}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -4870 0 0 {name=x29}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -5390 0 0 {name=x33}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -5910 0 0 {name=x36}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -6430 0 0 {name=x39}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -6950 0 0 {name=x43}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -7470 0 0 {name=x46}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -1750 0 0 {name=x2131}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -2270 0 0 {name=x2121}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -2790 0 0 {name=x2111}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -3310 0 0 {name=x2101}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -3830 0 0 {name=x2091}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -4350 0 0 {name=x2081}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -4870 0 0 {name=x2071}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -5390 0 0 {name=x2061}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -5910 0 0 {name=x2051}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -6430 0 0 {name=x2041}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -6950 0 0 {name=x2031}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -7470 0 0 {name=x2021}
+C {devices/vsource.sym} -1340 -2510 0 0 {name=V21 value=0.5}
+C {devices/gnd.sym} -1340 -2460 0 0 {name=l88 lab=GND}
+C {devices/lab_pin.sym} -1340 -2560 2 0 {name=p268 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -680 0 0 {name=p269 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -900 0 0 {name=p44 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -1200 0 0 {name=p68 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -1420 0 0 {name=p98 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -1720 0 0 {name=p100 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -1940 0 0 {name=p116 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -2240 0 0 {name=p135 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -2460 0 0 {name=p154 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -2760 0 0 {name=p169 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -2980 0 0 {name=p184 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -3280 0 0 {name=p197 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -3500 0 0 {name=p209 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -3800 0 0 {name=p226 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -4020 0 0 {name=p239 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -4320 0 0 {name=p251 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -4540 0 0 {name=p270 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -4840 0 0 {name=p271 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -5060 0 0 {name=p272 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -5360 0 0 {name=p273 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -5580 0 0 {name=p274 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -5880 0 0 {name=p275 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -6100 0 0 {name=p277 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -6400 0 0 {name=p278 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -6620 0 0 {name=p279 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -6920 0 0 {name=p280 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -7140 0 0 {name=p281 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -7440 0 0 {name=p282 sig_type=std_logic lab=vb_tr}
+C {devices/lab_pin.sym} -2170 -7660 0 0 {name=p283 sig_type=std_logic lab=vb_wu}
+C {devices/lab_pin.sym} -2170 -7960 0 0 {name=p284 sig_type=std_logic lab=vb_tr}

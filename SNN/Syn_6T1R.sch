@@ -126,8 +126,8 @@ C {devices/ipin.sym} -370 90 0 0 {name=p2 lab=Vpos}
 C {devices/iopin.sym} -300 180 0 0 {name=p3 lab=GND}
 C {devices/iopin.sym} -30 -60 0 0 {name=p4 lab=Ipos}
 C {sky130_fd_pr/pfet_01v8.sym} -50 -110 0 0 {name=M6
-L=0.3
-W=0.45
+L=\{L_mem_out\}
+W=\{W_mem_out\}
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -141,8 +141,8 @@ spiceprefix=X
 }
 C {devices/iopin.sym} -30 -160 0 0 {name=p6 lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} -170 -110 0 1 {name=M5
-L=0.15
-W=10
+L=\{L_mem_in\}
+W=\{W_mem_in\}
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

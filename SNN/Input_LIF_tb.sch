@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -2100 -1520 -1300 -1120 {flags=graph
-y1=0.44
-y2=0.46
+y1=0.8
+y2=0.82
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.58066e-05
-x2=2.59954e-05
+x1=2.73793e-06
+x2=1.07464e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -37,8 +37,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.58066e-05
-x2=2.59954e-05
+x1=2.73793e-06
+x2=1.07464e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -59,8 +59,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.58066e-05
-x2=2.59954e-05
+x1=2.73793e-06
+x2=1.07464e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -177,7 +177,7 @@ value="
 .control
 	save all
 	tran 100n 50u
-	write Output_LIF_tb.raw
+	write Input_LIF_tb.raw
 .endc
 " }
 C {sky130_fd_pr/corner.sym} -2240 -1230 0 0 {name=CORNER only_toplevel=true corner=tt}
@@ -252,6 +252,6 @@ C {devices/vdd.sym} -2540 -1230 0 0 {name=l11 lab=VDD}
 C {devices/gnd.sym} -2430 -1180 2 0 {name=l12 lab=GND}
 C {devices/launcher.sym} -2230 -1080 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/Output_LIF_tb.raw tran"
+tclcommand="xschem raw_read $netlist_dir/Input_LIF_tb.raw tran"
 }
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2320 -1390 0 0 {name=x1}
