@@ -104,6 +104,7 @@ format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
 .inc $::SKYWATER_MODELS/rram_v0.spice
+.inc $::SKYWATER_MODELS/rram_v1.spice
 "
 spice_ignore=false}
 C {devices/code_shown.sym} 330 -160 0 0 {name=NGSPICE
@@ -119,7 +120,7 @@ value="
 .param W_mem_out=0.45
 .control
   save all
-  tran 1n 100u
+  tran 1n 100u 0 1n
   write 6T1R_tb2.raw
 .endc
 " }

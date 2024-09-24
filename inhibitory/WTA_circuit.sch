@@ -321,8 +321,8 @@ C {devices/lab_pin.sym} -1470 -50 0 0 {name=p8 sig_type=std_logic lab=N1}
 C {devices/lab_pin.sym} -1610 -50 0 0 {name=p9 sig_type=std_logic lab=N0}
 C {devices/iopin.sym} -1620 -900 2 0 {name=p10 lab=vdd}
 C {sky130_fd_pr/nfet_01v8.sym} -160 -50 0 0 {name=M2
-L=\{Ln_or\}
-W=\{Wn_or\}
+L=\{Ln_or_inv\}
+W=\{Wn_or_inv\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -335,8 +335,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} -160 -150 0 0 {name=M1
-L=\{Lp_or\}
-W=\{Wp_or\}
+L=\{Lp_or_inv\}
+W=\{Wp_or_inv\}
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

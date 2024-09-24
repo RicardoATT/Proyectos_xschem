@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -2100 -1520 -1300 -1120 {flags=graph
-y1=0.8
-y2=0.82
+y1=0
+y2=5e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.73793e-06
-x2=1.07464e-05
+x1=1.30783e-06
+x2=1.53302e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -27,8 +27,9 @@ logx=0
 logy=0
 
 
+
 color=4
-node=Vb}
+node=i(vmeas1)}
 B 2 -2100 -1120 -1300 -720 {flags=graph
 y1=-0.16
 y2=1.9
@@ -37,8 +38,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.73793e-06
-x2=1.07464e-05
+x1=1.30783e-06
+x2=1.53302e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -52,15 +53,15 @@ logy=0
 color=4
 node=vout}
 B 2 -2100 -1920 -1300 -1520 {flags=graph
-y1=0.05
-y2=1.7
+y1=-0.013
+y2=1.6
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.73793e-06
-x2=1.07464e-05
+x1=1.30783e-06
+x2=1.53302e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -176,7 +177,7 @@ value="
 .param Wn_or=1
 .control
 	save all
-	tran 100n 50u
+	tran 100n 10u 0 1n
 	write Input_LIF_tb.raw
 .endc
 " }
@@ -184,7 +185,7 @@ C {sky130_fd_pr/corner.sym} -2240 -1230 0 0 {name=CORNER only_toplevel=true corn
 C {devices/vdd.sym} -2660 -1040 0 0 {name=l7 lab=VDD}
 C {devices/vdd.sym} -2600 -1500 0 0 {name=l19 lab=VDD}
 C {devices/isource.sym} -2660 -1290 0 1 {name=I1 value=5u
-*"PULSE(0 5u 1n 1n 1n 10n 60n 8000)"}
+*"PULSE(0 1u 1n 1n 1n 10n 30n 8000)"}
 C {devices/gnd.sym} -2660 -1240 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -2560 -1470 0 0 {name=M2
 L=0.15
