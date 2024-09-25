@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0001
+x1=5.2593e-05
+x2=0.000105021
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,8 +35,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0001
+x1=5.2593e-05
+x2=0.000105021
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -50,15 +50,15 @@ logx=0
 logy=0
 }
 B 2 160 360 960 760 {flags=graph
-y1=2.2
+y1=2.3
 y2=4.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0001
+x1=5.2593e-05
+x2=0.000105021
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -111,7 +111,7 @@ C {devices/code_shown.sym} 330 -160 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .param L_pre=0.15
-.param W_pre=5
+.param W_pre=1
 .param L_pos=0.15
 .param W_pos=5
 .param L_mem_in=0.15
@@ -120,25 +120,29 @@ value="
 .param W_mem_out=0.45
 .control
   save all
-  tran 1n 100u 0 1n
-  write 6T1R_tb2.raw
+  tran 1n 200u 0 1n
+  write 6T1R_tb3.raw
 .endc
 " }
 C {devices/launcher.sym} -330 240 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/6T1R_tb.raw tran"
 }
-C {devices/vsource.sym} 0 110 0 0 {name=V3 value="PWL(0 0 45u 0 45.1u 1.8)"
+C {devices/vsource.sym} 0 110 0 0 {name=V3 value="PWL(0 0 59.999u 0 60u 1.8)"
 *"PULSE(0 1.8 45.001u 1n 1n 100n 200n 300)"}
 C {devices/gnd.sym} 0 160 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -410 80 1 0 {name=p1 sig_type=std_logic lab=pre}
 C {devices/lab_pin.sym} -80 80 1 0 {name=p2 sig_type=std_logic lab=pos}
 C {devices/vsource.sym} -120 130 0 0 {name=vread1 value=1e-4}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -140 260 0 0 {name=x1}
-C {devices/vsource.sym} -580 110 0 0 {name=V4 value="PWL(0 1.8 34.999u 1.8 35u 0)"}
+C {devices/vsource.sym} -580 110 0 0 {name=V4 value="PWL(0 1.8 54.999u 1.8 55u 0)"}
 C {devices/gnd.sym} -580 160 0 0 {name=l7 lab=GND
 value="PWL(0 1.8 24.999u 1.8 25u 0)"}
 C {devices/launcher.sym} -330 290 0 0 {name=h1
 descr="load waves v2" 
 tclcommand="xschem raw_read $netlist_dir/6T1R_tb2.raw tran"
+}
+C {devices/launcher.sym} -330 330 0 0 {name=h2
+descr="load waves v3" 
+tclcommand="xschem raw_read $netlist_dir/6T1R_tb3.raw tran"
 }

@@ -82,7 +82,7 @@ lab=GND}
 N -520 -180 -500 -180 {
 lab=Vbias}
 C {sky130_fd_pr/pfet_01v8.sym} -510 -440 3 1 {name=M1
-L=0.15
+L=5
 W=0.45
 nf=1
 mult=1
@@ -96,7 +96,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -510 -240 3 0 {name=M2
-L=0.15
+L=5
 W=0.45
 nf=1 
 mult=1
