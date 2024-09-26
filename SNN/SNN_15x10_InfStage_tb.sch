@@ -4939,17 +4939,17 @@ value="
 .option set_threads = 16
 .option klu
 .param L_in=0.15
-.param W_in=1.5
+.param W_in=1
 .param L_out=0.15
 .param W_out=1.5
-.param L_pre=0.15
-.param W_pre=1
+.param L_pre=0.45
+.param W_pre=0.45
 .param L_pos=0.15
-.param W_pos=5
+.param W_pos=15
 .param L_mem_in=0.15
-.param W_mem_in=10
-.param L_mem_out=0.45
-.param W_mem_out=0.45
+.param W_mem_in=30
+.param L_mem_out=0.15
+.param W_mem_out=1.5
 .param Wp_or=1
 .param Lp_or=0.15
 .param Wn_or=1
@@ -4961,7 +4961,7 @@ value="
 .control
 	save all
 	tran 10n 150u 0
-	write SNN_15x1_InfStage_0to9tb.raw
+	write SNN_15x1_InfStage_tb.raw
 	*wrdata SNN_15x1_lt_tb.ssv v(8)
 .endc
 " }
@@ -5015,8 +5015,7 @@ C {devices/lab_pin.sym} 280 -2700 2 0 {name=p1 sig_type=std_logic lab=vdd_wu}
 C {devices/vsource.sym} 360 -2650 0 0 {name=V6 value=1.8}
 C {devices/gnd.sym} 360 -2600 0 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} 360 -2700 2 0 {name=p3 sig_type=std_logic lab=vdd_tr}
-C {devices/vsource.sym} 20 -2510 0 0 {name=V7 value=0.8
-*0.55}
+C {devices/vsource.sym} 20 -2510 0 0 {name=V7 value=0.45}
 C {devices/gnd.sym} 20 -2460 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 20 -2560 2 0 {name=p8 sig_type=std_logic lab=vb_pre}
 C {devices/vsource.sym} 100 -2510 0 0 {name=V8 value=0.6}
