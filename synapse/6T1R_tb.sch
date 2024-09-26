@@ -79,9 +79,7 @@ lab=GND}
 N -440 60 -440 80 {
 lab=VDD}
 N -160 100 -140 100 {
-lab=#net1}
-N -220 160 -140 160 {
-lab=GND}
+lab=ipos}
 N -20 140 -20 160 {
 lab=GND}
 N -160 80 -20 80 {
@@ -109,7 +107,7 @@ C {devices/code_shown.sym} 330 -160 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .param L_pre=0.15
-.param W_pre=0.45
+.param W_pre=1
 .param L_pos=0.15
 .param W_pos=15
 .param L_mem_in=0.15
@@ -131,7 +129,6 @@ C {devices/vsource.sym} -20 110 0 0 {name=V3 value="PWL(0 0 59.999u 0 60u 1.8)"
 C {devices/gnd.sym} -20 160 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -330 80 1 0 {name=p1 sig_type=std_logic lab=pre}
 C {devices/lab_pin.sym} -100 80 1 0 {name=p2 sig_type=std_logic lab=pos}
-C {devices/vsource.sym} -140 130 0 0 {name=vread1 value=1e-4}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/synapse/6T1R.sym} -160 260 0 0 {name=x1}
 C {devices/vsource.sym} -380 110 0 0 {name=V4 value="PWL(0 1.8 54.999u 1.8 55u 0)"}
 C {devices/gnd.sym} -380 160 0 0 {name=l7 lab=GND
@@ -144,3 +141,4 @@ C {devices/launcher.sym} -350 330 0 0 {name=h2
 descr="load waves v3" 
 tclcommand="xschem raw_read $netlist_dir/6T1R_tb3.raw tran"
 }
+C {devices/lab_pin.sym} -140 100 3 0 {name=p3 sig_type=std_logic lab=ipos}

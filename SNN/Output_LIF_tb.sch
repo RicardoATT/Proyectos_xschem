@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -2100 -1520 -1300 -1120 {flags=graph
-y1=0.4
-y2=0.9
+y1=0.27
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-3.56285e-07
+x2=1.46314e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -27,8 +27,9 @@ logx=0
 logy=0
 
 
-color=4
-node=Vb}
+color="4 6"
+node="Vin
+Vinh"}
 B 2 -2100 -1120 -1300 -720 {flags=graph
 y1=0.13
 y2=1.9
@@ -37,8 +38,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-3.56285e-07
+x2=1.46314e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -59,8 +60,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-05
+x1=-3.56285e-07
+x2=1.46314e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -128,7 +129,7 @@ lab=GND}
 N -2620 -1190 -2610 -1190 {
 lab=GND}
 N -2620 -1150 -2610 -1150 {
-lab=inh}
+lab=vout}
 N -2400 -1170 -2380 -1170 {
 lab=Vinh}
 N -2480 -1170 -2460 -1170 {
@@ -178,14 +179,14 @@ value="
 .param Wn_or=1
 .control
 	save all
-	tran 0.01n 100u
-	write Output_LIF_tb.raw V(vout)
+	tran 1n 20u
+	write Output_LIF_tb.raw
 .endc
 " }
 C {sky130_fd_pr/corner.sym} -2240 -1230 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/vdd.sym} -2660 -1040 0 0 {name=l7 lab=VDD}
 C {devices/vdd.sym} -2600 -1500 0 0 {name=l19 lab=VDD}
-C {devices/isource.sym} -2660 -1290 0 1 {name=I1 value=5u
+C {devices/isource.sym} -2660 -1290 0 1 {name=I1 value=2u
 *"PULSE(0 5u 1n 1n 1n 10n 60n 8000)"}
 C {devices/gnd.sym} -2660 -1240 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -2560 -1470 0 0 {name=M2
@@ -224,7 +225,7 @@ C {devices/lab_pin.sym} -2420 -1040 0 0 {name=p1 sig_type=std_logic lab=ctrl}
 C {devices/gnd.sym} -2420 -940 0 0 {name=l6 lab=GND}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/inhibitory/or_2.sym} -2540 -1170 0 0 {name=x3}
 C {devices/gnd.sym} -2620 -1180 0 0 {name=l8 lab=GND}
-C {devices/lab_pin.sym} -2620 -1150 0 0 {name=p2 sig_type=std_logic lab=inh}
+C {devices/lab_pin.sym} -2620 -1150 0 0 {name=p2 sig_type=std_logic lab=vout}
 C {sky130_fd_pr/nfet_01v8.sym} -2430 -1150 3 0 {name=M1
 L=0.15
 W=1
