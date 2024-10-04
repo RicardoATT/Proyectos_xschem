@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0004
+x1=8.43669e-05
+x2=8.60304e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -38,8 +38,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0004
+x1=8.43669e-05
+x2=8.60304e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -50,9 +50,8 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-color="4 6"
-node="vpos1
-vpres1"}
+color=4
+node=vpre2}
 B 2 -800 -1200 0 -800 {flags=graph
 y1=0
 y2=1.8
@@ -61,8 +60,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0004
+x1=8.43669e-05
+x2=8.60304e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -79,15 +78,15 @@ logy=0
 color=4
 node=ctrl_wu}
 B 2 -800 -1600 0 -1200 {flags=graph
-y1=-1.8e-06
-y2=0.00028
+y1=-6.9e-07
+y2=0.00031
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0004
+x1=8.43669e-05
+x2=8.60304e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -115,8 +114,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0004
+x1=8.43669e-05
+x2=8.60304e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -139,8 +138,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0004
+x1=8.43669e-05
+x2=8.60304e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -166,8 +165,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0004
+x1=8.43669e-05
+x2=8.60304e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -189,8 +188,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.0004
+x1=8.43669e-05
+x2=8.60304e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -540,7 +539,7 @@ lab=vpre1}
 C {devices/gnd.sym} -2460 -970 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -2560 -1020 0 0 {name=p3 sig_type=std_logic lab=vb_pre}
 C {devices/lab_pin.sym} -2300 -1060 2 0 {name=p5 sig_type=std_logic lab=vpre2}
-C {devices/vsource.sym} -2720 -760 0 0 {name=V2 value=0.5 savecurrent=false}
+C {devices/vsource.sym} -2720 -760 0 0 {name=V2 value=0.6 savecurrent=false}
 C {devices/lab_pin.sym} -2720 -810 0 0 {name=p6 sig_type=std_logic lab=vb_pre}
 C {devices/gnd.sym} -2720 -710 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -2800 -500 0 0 {name=SIMULATION
@@ -568,12 +567,12 @@ value="
 .param Ln_or_inv=0.15
 .control
 	save all
-	tran 10n 1m 0
+	tran 10n 100u 0
 	write Input_LIF_tb.raw
 .endc
 " }
 C {sky130_fd_pr/corner.sym} -2550 -490 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/isource.sym} -2800 -960 0 1 {name=I1 value="PWL(0 0 59.9u 0 60u 4u 129.9u 4u 130u 0 134.9u 0 135u 4u 989.9u 4u 990u 0)"
+C {devices/isource.sym} -2800 -960 0 1 {name=I1 value="PWL(0 0 9.9u 0 10u 4u 79.9u 4u 80u 0 84.9u 0 85u 4u 989.9u 4u 990u 0)"
 
 }
 C {devices/gnd.sym} -2800 -910 0 0 {name=l20 lab=GND}
@@ -685,7 +684,7 @@ C {devices/gnd.sym} -2570 -710 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} -2650 -760 0 0 {name=V3 savecurrent=false value=0.5}
 C {devices/lab_pin.sym} -2650 -810 0 0 {name=p17 sig_type=std_logic lab=vb_wu}
 C {devices/gnd.sym} -2650 -710 0 0 {name=l5 lab=GND}
-C {devices/vsource.sym} -2420 -760 0 0 {name=V11 savecurrent=false value="PWL(0 0 134.9u 0 135u 1.8)"}
+C {devices/vsource.sym} -2420 -760 0 0 {name=V11 savecurrent=false value="PWL(0 0 84.9u 0 85u 1.8)"}
 C {devices/lab_pin.sym} -2420 -810 0 0 {name=p18 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2420 -710 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} -1780 -760 1 0 {name=p19 sig_type=std_logic lab=vb_pos}
@@ -729,7 +728,7 @@ value=1.8}
 C {devices/gnd.sym} -2080 -570 0 0 {name=l19 lab=GND}
 C {devices/lab_pin.sym} -2080 -670 0 0 {name=p28 sig_type=std_logic lab=vdd_inh}
 C {devices/gnd.sym} -2200 -480 2 0 {name=l22 lab=GND}
-C {devices/vsource.sym} -2340 -760 0 0 {name=V14 savecurrent=false value="PWL(0 0 134.9u 0 135u 1.8)"}
+C {devices/vsource.sym} -2340 -760 0 0 {name=V14 savecurrent=false value="PWL(0 0 84.9u 0 85u 1.8)"}
 C {devices/lab_pin.sym} -2340 -810 0 0 {name=p29 sig_type=std_logic lab=ctrl_pos}
 C {devices/gnd.sym} -2340 -710 0 0 {name=l23 lab=GND}
 C {devices/vsource.sym} -2260 -760 0 0 {name=V15 savecurrent=false value=0.55}
@@ -753,7 +752,7 @@ C {devices/gnd.sym} -2110 -1160 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} -2110 -1270 0 0 {name=p37 sig_type=std_logic lab=vdd_tr}
 C {devices/lab_pin.sym} -2170 -1240 0 0 {name=p38 sig_type=std_logic lab=ctrl_tr}
 C {devices/lab_pin.sym} -2170 -1180 0 0 {name=p39 sig_type=std_logic lab=vb_tr}
-C {devices/vsource.sym} -2500 -760 0 0 {name=V17 savecurrent=false value="PWL(0 0 59.9u 0 60u 1.8 129.9u 1.8 130u 0)"}
+C {devices/vsource.sym} -2500 -760 0 0 {name=V17 savecurrent=false value="PWL(0 0 9.9u 0 10u 1.8 79.9u 1.8 80u 0)"}
 C {devices/lab_pin.sym} -2500 -810 0 0 {name=p43 sig_type=std_logic lab=ctrl_tr}
 C {devices/gnd.sym} -2500 -710 0 0 {name=l26 lab=GND}
 C {devices/vsource.sym} -2100 -760 0 0 {name=V18 savecurrent=false value=0.5}
@@ -763,7 +762,7 @@ C {devices/lab_pin.sym} -2170 -1210 0 0 {name=p40 sig_type=std_logic lab=vpre2}
 C {devices/gnd.sym} -2460 -1430 0 0 {name=l29 lab=GND}
 C {devices/lab_pin.sym} -2560 -1480 0 0 {name=p49 sig_type=std_logic lab=vb_pre}
 C {devices/lab_pin.sym} -2300 -1520 2 0 {name=p50 sig_type=std_logic lab=vpre1}
-C {devices/isource.sym} -2800 -1420 0 1 {name=I2 value="PWL(0 0 134.9u 0 135u 4u 989.9u 4u 990u 0)"
+C {devices/isource.sym} -2800 -1420 0 1 {name=I2 value="PWL(0 0 84.9u 0 85u 4u 989.9u 4u 990u 0)"
 
 }
 C {devices/gnd.sym} -2800 -1370 0 0 {name=l30 lab=GND}

@@ -1,0 +1,20 @@
+magic
+tech sky130B
+timestamp 1727988820
+<< error_p >>
+rect -16 16 -13 19
+rect 13 16 16 19
+rect -19 13 19 16
+rect -19 -16 19 -13
+rect -16 -19 -13 -16
+rect 13 -19 16 -16
+<< metal1 >>
+rect -16 -13 16 13
+<< reram >>
+rect -16 -16 16 16
+<< labels >>
+flabel metal2 s -13 -16 13 16 0 FreeSans 280 0 0 0 TE
+port 0 nsew
+flabel metal1 s -16 -13 16 13 0 FreeSans 280 0 0 0 BE
+port 1 nsew
+<< end >>
