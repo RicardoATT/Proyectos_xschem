@@ -29,5 +29,5 @@ rect 2086 -2028 2182 -2012
 string FIXED_BBOX -2186 -2040 1894 2040
 string gencell sky130_fd_pr__cap_mim_m3_1
 string library sky130
-string parameters w 20.0 l 20.0 val 815.2 carea 2.00 cperi 0.19 nx 1 ny 1 dummy 0 square 0 lmin 2.00 wmin 2.00 lmax 30.0 wmax 30.0 dc 0 bconnect 1 tconnect 1 ccov 100
+string parameters w 20.0 l 20.0 val 815.2 carea 2.00 cperi 0.19 nx 1 ny 1 dummy 0 square 0 lmin 2.00 wmin 2.00 lmax 30.0 wmax 30.0 dc 0 bconnect 0 tconnect 0 ccov 100
 << end >>
