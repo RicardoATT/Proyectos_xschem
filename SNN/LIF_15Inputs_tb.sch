@@ -474,8 +474,6 @@ N -3690 -5960 -3690 -5940 {
 lab=GND}
 N -3690 -6120 -3690 -6100 {
 lab=vdd_pre}
-N -4070 -5950 -4070 -5930 {
-lab=GND}
 N -3870 -6050 -3870 -6030 {
 lab=vc2}
 N -3870 -6080 -3860 -6080 {
@@ -500,8 +498,6 @@ N -3990 -6030 -3930 -6030 {
 lab=#net1}
 N -3930 -6080 -3930 -6030 {
 lab=#net1}
-N -4070 -6030 -4070 -6010 {
-lab=#net2}
 N -2290 -2610 -2290 -2590 {
 lab=GND}
 N -2290 -2690 -2290 -2670 {
@@ -526,8 +522,6 @@ N -3690 -6410 -3690 -6390 {
 lab=GND}
 N -3690 -6570 -3690 -6550 {
 lab=vdd_pre}
-N -4070 -6400 -4070 -6380 {
-lab=GND}
 N -3870 -6500 -3870 -6480 {
 lab=vc1}
 N -3870 -6530 -3860 -6530 {
@@ -552,8 +546,6 @@ N -3990 -6480 -3930 -6480 {
 lab=#net3}
 N -3930 -6530 -3930 -6480 {
 lab=#net3}
-N -4070 -6480 -4070 -6460 {
-lab=#net4}
 N -3550 -6480 -3540 -6480 {
 lab=vpre1}
 N -4010 -6480 -3990 -6480 {
@@ -578,8 +570,6 @@ N -3690 -5060 -3690 -5040 {
 lab=GND}
 N -3690 -5220 -3690 -5200 {
 lab=vdd_pre}
-N -4070 -5050 -4070 -5030 {
-lab=GND}
 N -3870 -5150 -3870 -5130 {
 lab=vc4}
 N -3870 -5180 -3860 -5180 {
@@ -604,8 +594,6 @@ N -3990 -5130 -3930 -5130 {
 lab=#net5}
 N -3930 -5180 -3930 -5130 {
 lab=#net5}
-N -4070 -5130 -4070 -5110 {
-lab=#net6}
 N -3550 -5130 -3540 -5130 {
 lab=vpre4}
 N -4010 -5130 -3990 -5130 {
@@ -614,8 +602,6 @@ N -3690 -5510 -3690 -5490 {
 lab=GND}
 N -3690 -5670 -3690 -5650 {
 lab=vdd_pre}
-N -4070 -5500 -4070 -5480 {
-lab=GND}
 N -3870 -5600 -3870 -5580 {
 lab=vc3}
 N -3870 -5630 -3860 -5630 {
@@ -640,8 +626,6 @@ N -3990 -5580 -3930 -5580 {
 lab=#net7}
 N -3930 -5630 -3930 -5580 {
 lab=#net7}
-N -4070 -5580 -4070 -5560 {
-lab=#net8}
 N -3550 -5580 -3540 -5580 {
 lab=vpre3}
 N -4010 -5580 -3990 -5580 {
@@ -662,8 +646,6 @@ N -3690 -4160 -3690 -4140 {
 lab=GND}
 N -3690 -4320 -3690 -4300 {
 lab=vdd_pre}
-N -4070 -4150 -4070 -4130 {
-lab=GND}
 N -3870 -4250 -3870 -4230 {
 lab=vc6}
 N -3870 -4280 -3860 -4280 {
@@ -688,8 +670,6 @@ N -3990 -4230 -3930 -4230 {
 lab=#net9}
 N -3930 -4280 -3930 -4230 {
 lab=#net9}
-N -4070 -4230 -4070 -4210 {
-lab=#net10}
 N -3550 -4230 -3540 -4230 {
 lab=vpre6}
 N -4010 -4230 -3990 -4230 {
@@ -698,8 +678,6 @@ N -3690 -4610 -3690 -4590 {
 lab=GND}
 N -3690 -4770 -3690 -4750 {
 lab=vdd_pre}
-N -4070 -4600 -4070 -4580 {
-lab=GND}
 N -3870 -4700 -3870 -4680 {
 lab=vc5}
 N -3870 -4730 -3860 -4730 {
@@ -724,8 +702,6 @@ N -3990 -4680 -3930 -4680 {
 lab=#net11}
 N -3930 -4730 -3930 -4680 {
 lab=#net11}
-N -4070 -4680 -4070 -4660 {
-lab=#net12}
 N -3550 -4680 -3540 -4680 {
 lab=vpre5}
 N -4010 -4680 -3990 -4680 {
@@ -746,8 +722,6 @@ N -3690 -3260 -3690 -3240 {
 lab=GND}
 N -3690 -3420 -3690 -3400 {
 lab=vdd_pre}
-N -4070 -3250 -4070 -3230 {
-lab=GND}
 N -3870 -3350 -3870 -3330 {
 lab=vc8}
 N -3870 -3380 -3860 -3380 {
@@ -772,8 +746,6 @@ N -3990 -3330 -3930 -3330 {
 lab=#net13}
 N -3930 -3380 -3930 -3330 {
 lab=#net13}
-N -4070 -3330 -4070 -3310 {
-lab=#net14}
 N -3550 -3330 -3540 -3330 {
 lab=vpre8}
 N -4010 -3330 -3990 -3330 {
@@ -782,8 +754,6 @@ N -3690 -3710 -3690 -3690 {
 lab=GND}
 N -3690 -3870 -3690 -3850 {
 lab=vdd_pre}
-N -4070 -3700 -4070 -3680 {
-lab=GND}
 N -3870 -3800 -3870 -3780 {
 lab=vc7}
 N -3870 -3830 -3860 -3830 {
@@ -808,8 +778,6 @@ N -3990 -3780 -3930 -3780 {
 lab=#net15}
 N -3930 -3830 -3930 -3780 {
 lab=#net15}
-N -4070 -3780 -4070 -3760 {
-lab=#net16}
 N -3550 -3780 -3540 -3780 {
 lab=vpre7}
 N -4010 -3780 -3990 -3780 {
@@ -830,8 +798,6 @@ N -3690 -2810 -3690 -2790 {
 lab=GND}
 N -3690 -2970 -3690 -2950 {
 lab=vdd_pre}
-N -4070 -2800 -4070 -2780 {
-lab=GND}
 N -3870 -2900 -3870 -2880 {
 lab=vc9}
 N -3870 -2930 -3860 -2930 {
@@ -856,8 +822,6 @@ N -3990 -2880 -3930 -2880 {
 lab=#net17}
 N -3930 -2930 -3930 -2880 {
 lab=#net17}
-N -4070 -2880 -4070 -2860 {
-lab=#net18}
 N -3550 -2880 -3540 -2880 {
 lab=vpre9}
 N -4010 -2880 -3990 -2880 {
@@ -872,8 +836,6 @@ N -3690 -2360 -3690 -2340 {
 lab=GND}
 N -3690 -2520 -3690 -2500 {
 lab=vdd_pre}
-N -4070 -2350 -4070 -2330 {
-lab=GND}
 N -3870 -2450 -3870 -2430 {
 lab=vc10}
 N -3870 -2480 -3860 -2480 {
@@ -898,8 +860,6 @@ N -3990 -2430 -3930 -2430 {
 lab=#net19}
 N -3930 -2480 -3930 -2430 {
 lab=#net19}
-N -4070 -2430 -4070 -2410 {
-lab=#net20}
 N -3550 -2430 -3540 -2430 {
 lab=vpre10}
 N -4010 -2430 -3990 -2430 {
@@ -914,8 +874,6 @@ N -3690 -1460 -3690 -1440 {
 lab=GND}
 N -3690 -1620 -3690 -1600 {
 lab=vdd_pre}
-N -4070 -1450 -4070 -1430 {
-lab=GND}
 N -3870 -1550 -3870 -1530 {
 lab=vc12}
 N -3870 -1580 -3860 -1580 {
@@ -940,8 +898,6 @@ N -3990 -1530 -3930 -1530 {
 lab=#net21}
 N -3930 -1580 -3930 -1530 {
 lab=#net21}
-N -4070 -1530 -4070 -1510 {
-lab=#net22}
 N -3550 -1530 -3540 -1530 {
 lab=vpre12}
 N -4010 -1530 -3990 -1530 {
@@ -950,8 +906,6 @@ N -3690 -1910 -3690 -1890 {
 lab=GND}
 N -3690 -2070 -3690 -2050 {
 lab=vdd_pre}
-N -4070 -1900 -4070 -1880 {
-lab=GND}
 N -3870 -2000 -3870 -1980 {
 lab=vc11}
 N -3870 -2030 -3860 -2030 {
@@ -976,8 +930,6 @@ N -3990 -1980 -3930 -1980 {
 lab=#net23}
 N -3930 -2030 -3930 -1980 {
 lab=#net23}
-N -4070 -1980 -4070 -1960 {
-lab=#net24}
 N -3550 -1980 -3540 -1980 {
 lab=vpre11}
 N -4010 -1980 -3990 -1980 {
@@ -998,8 +950,6 @@ N -3690 -560 -3690 -540 {
 lab=GND}
 N -3690 -720 -3690 -700 {
 lab=vdd_pre}
-N -4070 -550 -4070 -530 {
-lab=GND}
 N -3870 -650 -3870 -630 {
 lab=vc14}
 N -3870 -680 -3860 -680 {
@@ -1024,8 +974,6 @@ N -3990 -630 -3930 -630 {
 lab=#net25}
 N -3930 -680 -3930 -630 {
 lab=#net25}
-N -4070 -630 -4070 -610 {
-lab=#net26}
 N -3550 -630 -3540 -630 {
 lab=vpre14}
 N -4010 -630 -3990 -630 {
@@ -1034,8 +982,6 @@ N -3690 -1010 -3690 -990 {
 lab=GND}
 N -3690 -1170 -3690 -1150 {
 lab=vdd_pre}
-N -4070 -1000 -4070 -980 {
-lab=GND}
 N -3870 -1100 -3870 -1080 {
 lab=vc13}
 N -3870 -1130 -3860 -1130 {
@@ -1060,8 +1006,6 @@ N -3990 -1080 -3930 -1080 {
 lab=#net27}
 N -3930 -1130 -3930 -1080 {
 lab=#net27}
-N -4070 -1080 -4070 -1060 {
-lab=#net28}
 N -3550 -1080 -3540 -1080 {
 lab=vpre13}
 N -4010 -1080 -3990 -1080 {
@@ -1082,8 +1026,6 @@ N -3690 -110 -3690 -90 {
 lab=GND}
 N -3690 -270 -3690 -250 {
 lab=vdd_pre}
-N -4070 -100 -4070 -80 {
-lab=GND}
 N -3870 -200 -3870 -180 {
 lab=vc15}
 N -3870 -230 -3860 -230 {
@@ -1108,8 +1050,6 @@ N -3990 -180 -3930 -180 {
 lab=#net29}
 N -3930 -230 -3930 -180 {
 lab=#net29}
-N -4070 -180 -4070 -160 {
-lab=#net30}
 N -3550 -180 -3540 -180 {
 lab=vpre15}
 N -4010 -180 -3990 -180 {
@@ -1124,65 +1064,65 @@ N -1890 -2750 -1890 -2730 {
 lab=GND}
 N -1890 -2830 -1890 -2810 {
 lab=ctrl_newpattern}
-N -4950 -2950 -4950 -2930 {
+N -4070 -5950 -4070 -5930 {
 lab=GND}
-N -4950 -3030 -4950 -3010 {
+N -4070 -6030 -4070 -6010 {
 lab=#net31}
-N -4950 -3400 -4950 -3380 {
+N -4070 -6400 -4070 -6380 {
 lab=GND}
-N -4950 -3480 -4950 -3460 {
+N -4070 -6480 -4070 -6460 {
 lab=#net32}
-N -4950 -2050 -4950 -2030 {
+N -4070 -5050 -4070 -5030 {
 lab=GND}
-N -4950 -2130 -4950 -2110 {
+N -4070 -5130 -4070 -5110 {
 lab=#net33}
-N -4950 -2500 -4950 -2480 {
+N -4070 -5500 -4070 -5480 {
 lab=GND}
-N -4950 -2580 -4950 -2560 {
+N -4070 -5580 -4070 -5560 {
 lab=#net34}
-N -4950 -1150 -4950 -1130 {
+N -4070 -4150 -4070 -4130 {
 lab=GND}
-N -4950 -1230 -4950 -1210 {
+N -4070 -4230 -4070 -4210 {
 lab=#net35}
-N -4950 -1600 -4950 -1580 {
+N -4070 -4600 -4070 -4580 {
 lab=GND}
-N -4950 -1680 -4950 -1660 {
+N -4070 -4680 -4070 -4660 {
 lab=#net36}
-N -4950 -250 -4950 -230 {
+N -4070 -3250 -4070 -3230 {
 lab=GND}
-N -4950 -330 -4950 -310 {
+N -4070 -3330 -4070 -3310 {
 lab=#net37}
-N -4950 -700 -4950 -680 {
+N -4070 -3700 -4070 -3680 {
 lab=GND}
-N -4950 -780 -4950 -760 {
+N -4070 -3780 -4070 -3760 {
 lab=#net38}
-N -4950 200 -4950 220 {
+N -4070 -2800 -4070 -2780 {
 lab=GND}
-N -4950 120 -4950 140 {
+N -4070 -2880 -4070 -2860 {
 lab=#net39}
-N -4950 650 -4950 670 {
+N -4070 -2350 -4070 -2330 {
 lab=GND}
-N -4950 570 -4950 590 {
+N -4070 -2430 -4070 -2410 {
 lab=#net40}
-N -4950 1550 -4950 1570 {
+N -4070 -1450 -4070 -1430 {
 lab=GND}
-N -4950 1470 -4950 1490 {
+N -4070 -1530 -4070 -1510 {
 lab=#net41}
-N -4950 1100 -4950 1120 {
+N -4070 -1900 -4070 -1880 {
 lab=GND}
-N -4950 1020 -4950 1040 {
+N -4070 -1980 -4070 -1960 {
 lab=#net42}
-N -4950 2450 -4950 2470 {
+N -4070 -550 -4070 -530 {
 lab=GND}
-N -4950 2370 -4950 2390 {
+N -4070 -630 -4070 -610 {
 lab=#net43}
-N -4950 2000 -4950 2020 {
+N -4070 -1000 -4070 -980 {
 lab=GND}
-N -4950 1920 -4950 1940 {
+N -4070 -1080 -4070 -1060 {
 lab=#net44}
-N -4950 2900 -4950 2920 {
+N -4070 -100 -4070 -80 {
 lab=GND}
-N -4950 2820 -4950 2840 {
+N -4070 -180 -4070 -160 {
 lab=#net45}
 C {devices/vsource.sym} -2290 -3060 0 0 {name=V1 value=1.8}
 C {devices/gnd.sym} -2290 -3010 0 0 {name=l6 lab=GND}
@@ -1191,9 +1131,6 @@ C {devices/gnd.sym} -2210 -3010 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} -2210 -3110 2 0 {name=p9 sig_type=std_logic lab=vdd_pre}
 C {devices/gnd.sym} -3690 -5940 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} -3790 -5990 0 0 {name=p13 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -5980 0 0 {name=I2 value="PWL(0 0 199.99u 0 200u 4u 649.99u 4u 650u 0 799.99u 0 800u 4u)"
-*"PWL(0 0 44.99u 0 45u 4u 649.99u 4u 650u 0 799.99u 0 800u 4u)"}
-C {devices/gnd.sym} -4070 -5930 0 0 {name=l20 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -6080 0 0 {name=M173
 L=\{L_in\}
 W=\{W_in\}
@@ -1256,7 +1193,6 @@ C {devices/lab_pin.sym} -2110 -2690 2 0 {name=p66 sig_type=std_logic lab=trainin
 C {devices/vsource.sym} -1850 -2640 0 0 {name=V15 value="PWL(0 0 44.9u 0 45u 1.8)"}
 C {devices/gnd.sym} -1850 -2590 0 0 {name=l69 lab=GND}
 C {devices/lab_pin.sym} -1850 -2690 2 0 {name=p73 sig_type=std_logic lab=inference}
-C {devices/ammeter.sym} -4040 -6030 1 0 {name=Vmeas202 savecurrent=true}
 C {devices/vsource.sym} -2200 -2920 0 0 {name=V7 value=0.5}
 C {devices/gnd.sym} -2200 -2870 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -2200 -2970 2 0 {name=p8 sig_type=std_logic lab=vb_pre}
@@ -1265,8 +1201,6 @@ C {devices/lab_pin.sym} -2290 -3110 2 0 {name=p21 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3930 -6110 1 0 {name=p40 sig_type=std_logic lab=vdd_in}
 C {devices/gnd.sym} -3690 -6390 0 0 {name=l12 lab=GND}
 C {devices/lab_pin.sym} -3790 -6440 0 0 {name=p23 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -6430 0 0 {name=I1 value="PWL(0 0 349.99u 0 350u 4u 949.99u 4u 950u 0 1099.99u 0 1100u 4u 1249.99u 4u 1250u 0)"}
-C {devices/gnd.sym} -4070 -6380 0 0 {name=l14 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -6530 0 0 {name=M171
 L=\{L_in\}
 W=\{W_in\}
@@ -1297,7 +1231,6 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -6480 0 0 {name=p25 sig_type=std_logic lab=vc1}
 C {devices/lab_pin.sym} -3540 -6480 2 0 {name=p37 sig_type=std_logic lab=vpre1}
-C {devices/ammeter.sym} -4040 -6480 1 0 {name=Vmeas201 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -6570 2 0 {name=p43 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -6560 1 0 {name=p50 sig_type=std_logic lab=vdd_in}
 C {devices/vsource.sym} -2290 -2920 0 0 {name=V19 value=0.55}
@@ -1307,8 +1240,6 @@ C {devices/lab_pin.sym} -3790 -6520 1 0 {name=p96 sig_type=std_logic lab=vlky_pr
 C {devices/lab_pin.sym} -3790 -6070 1 0 {name=p97 sig_type=std_logic lab=vlky_pre}
 C {devices/gnd.sym} -3690 -5040 0 0 {name=l245 lab=GND}
 C {devices/lab_pin.sym} -3790 -5090 0 0 {name=p661 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -5080 0 0 {name=I4 value="PWL(0 0 44.99u 0 45u 4u 349.99u 4u 350u 0 649.99u 0 650u 4u 1099.99u 4u 1100u 0 1249.99u 0 1250u 4u)"}
-C {devices/gnd.sym} -4070 -5030 0 0 {name=l246 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -5180 0 0 {name=M177
 L=\{L_in\}
 W=\{W_in\}
@@ -1338,13 +1269,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -5130 0 0 {name=p662 sig_type=std_logic lab=vc4}
-C {devices/ammeter.sym} -4040 -5130 1 0 {name=Vmeas204 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -5220 2 0 {name=p664 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -5210 1 0 {name=p665 sig_type=std_logic lab=vdd_in}
 C {devices/gnd.sym} -3690 -5490 0 0 {name=l247 lab=GND}
 C {devices/lab_pin.sym} -3790 -5540 0 0 {name=p666 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -5530 0 0 {name=I3 value="PWL(0 0 649.99u 0 650u 4u 1249.99u 4u 1250u 0)"}
-C {devices/gnd.sym} -4070 -5480 0 0 {name=l248 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -5630 0 0 {name=M175
 L=\{L_in\}
 W=\{W_in\}
@@ -1374,15 +1302,12 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -5580 0 0 {name=p667 sig_type=std_logic lab=vc3}
-C {devices/ammeter.sym} -4040 -5580 1 0 {name=Vmeas203 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -5670 2 0 {name=p669 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -5660 1 0 {name=p670 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3790 -5620 1 0 {name=p671 sig_type=std_logic lab=vlky_pre}
 C {devices/lab_pin.sym} -3790 -5170 1 0 {name=p672 sig_type=std_logic lab=vlky_pre}
 C {devices/gnd.sym} -3690 -4140 0 0 {name=l249 lab=GND}
 C {devices/lab_pin.sym} -3790 -4190 0 0 {name=p673 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -4180 0 0 {name=I6 value="PWL(0 0 44.99u 0 45u 4u 199.99u 4u 200u 0 349.99u 0 350u 4u 799.99u 4u 800u 0 1099.99u 0 1100u 4u)"}
-C {devices/gnd.sym} -4070 -4130 0 0 {name=l250 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -4280 0 0 {name=M181
 L=\{L_in\}
 W=\{W_in\}
@@ -1412,14 +1337,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -4230 0 0 {name=p674 sig_type=std_logic lab=vc6}
-C {devices/ammeter.sym} -4040 -4230 1 0 {name=Vmeas206 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -4320 2 0 {name=p676 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -4310 1 0 {name=p677 sig_type=std_logic lab=vdd_in}
 C {devices/gnd.sym} -3690 -4590 0 0 {name=l251 lab=GND}
 C {devices/lab_pin.sym} -3790 -4640 0 0 {name=p678 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -4630 0 0 {name=I5 value="PWL(0 0 44.99u 0 45u 4u 349.99u 4u 350u 0)"
-*"PWL(0 0 199.99u 0 200u 4u 349.99u 4u 350u 0)"}
-C {devices/gnd.sym} -4070 -4580 0 0 {name=l252 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -4730 0 0 {name=M179
 L=\{L_in\}
 W=\{W_in\}
@@ -1449,15 +1370,12 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -4680 0 0 {name=p679 sig_type=std_logic lab=vc5}
-C {devices/ammeter.sym} -4040 -4680 1 0 {name=Vmeas205 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -4770 2 0 {name=p681 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -4760 1 0 {name=p682 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3790 -4720 1 0 {name=p683 sig_type=std_logic lab=vlky_pre}
 C {devices/lab_pin.sym} -3790 -4270 1 0 {name=p684 sig_type=std_logic lab=vlky_pre}
 C {devices/gnd.sym} -3690 -3240 0 0 {name=l253 lab=GND}
 C {devices/lab_pin.sym} -3790 -3290 0 0 {name=p685 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -3280 0 0 {name=I8 value="PWL(0 0 199.99u 0 200u 4u 1099.99u 4u 1100u 0 1249.99u 0 1250u 4u)"}
-C {devices/gnd.sym} -4070 -3230 0 0 {name=l254 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -3380 0 0 {name=M185
 L=\{L_in\}
 W=\{W_in\}
@@ -1487,14 +1405,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -3330 0 0 {name=p686 sig_type=std_logic lab=vc8}
-C {devices/ammeter.sym} -4040 -3330 1 0 {name=Vmeas208 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -3420 2 0 {name=p688 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -3410 1 0 {name=p689 sig_type=std_logic lab=vdd_in}
 C {devices/gnd.sym} -3690 -3690 0 0 {name=l255 lab=GND}
 C {devices/lab_pin.sym} -3790 -3740 0 0 {name=p690 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -3730 0 0 {name=I7 value="PWL(0 0 44.99u 0 45u 4u 199.99u 4u 200u 0 499.99u 0 500u 4u 649.99u 4u 650u 0 949.99u 0 950u 4u 1099.99u 4u 1100u 0)"
-*"PWL(0 0 44.99u 0 45u 4u 199.99u 4u 200u 0 949.99u 0 950u 4u 1099.99u 4u 1100u 0)"}
-C {devices/gnd.sym} -4070 -3680 0 0 {name=l256 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -3830 0 0 {name=M183
 L=\{L_in\}
 W=\{W_in\}
@@ -1524,15 +1438,12 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -3780 0 0 {name=p691 sig_type=std_logic lab=vc7}
-C {devices/ammeter.sym} -4040 -3780 1 0 {name=Vmeas207 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -3870 2 0 {name=p693 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -3860 1 0 {name=p694 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3790 -3820 1 0 {name=p695 sig_type=std_logic lab=vlky_pre}
 C {devices/lab_pin.sym} -3790 -3370 1 0 {name=p696 sig_type=std_logic lab=vlky_pre}
 C {devices/gnd.sym} -3690 -2790 0 0 {name=l257 lab=GND}
 C {devices/lab_pin.sym} -3790 -2840 0 0 {name=p697 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -2830 0 0 {name=I9 value="PWL(0 0 44.99u 0 45u 4u 199.99u 4u 200u 0 649.99u 0 650u 4u 799.99u 4u 800u 0 1099.99u 0 1100u 4u 1249.99u 4u 1250u 0 1399.99u 0 1400u 4u)"}
-C {devices/gnd.sym} -4070 -2780 0 0 {name=l258 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -2930 0 0 {name=M187
 L=\{L_in\}
 W=\{W_in\}
@@ -1562,7 +1473,6 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -2880 0 0 {name=p698 sig_type=std_logic lab=vc9}
-C {devices/ammeter.sym} -4040 -2880 1 0 {name=Vmeas209 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -2970 2 0 {name=p700 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -2960 1 0 {name=p701 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3790 -2920 1 0 {name=p702 sig_type=std_logic lab=vlky_pre}
@@ -1580,8 +1490,6 @@ tclcommand="xschem raw_read $netlist_dir/LIF_15Inputs_tb.raw tran"
 }
 C {devices/gnd.sym} -3690 -2340 0 0 {name=l113 lab=GND}
 C {devices/lab_pin.sym} -3790 -2390 0 0 {name=p324 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -2380 0 0 {name=I10 value="PWL(0 0 44.99u 0 45u 4u 199.99u 4u 200u 0 349.99u 0 350u 4u 499.99u 4u 500u 0 949.99u 0 950u 4u 1099.99u 4u 1100u 0 1249.99u 0 1250u 4u 1399.99u 4u 1400u 0)"}
-C {devices/gnd.sym} -4070 -2330 0 0 {name=l114 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -2480 0 0 {name=M189
 L=\{L_in\}
 W=\{W_in\}
@@ -1611,14 +1519,11 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -2430 0 0 {name=p325 sig_type=std_logic lab=vc10}
-C {devices/ammeter.sym} -4040 -2430 1 0 {name=Vmeas210 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -2520 2 0 {name=p326 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -2510 1 0 {name=p327 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3790 -2470 1 0 {name=p328 sig_type=std_logic lab=vlky_pre}
 C {devices/gnd.sym} -3690 -1440 0 0 {name=l115 lab=GND}
 C {devices/lab_pin.sym} -3790 -1490 0 0 {name=p329 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -1480 0 0 {name=I12 value="PWL(0 0 44.99u 0 45u 4u 199.99u 4u 200u 0 499.99u 0 500u 4u 1099.99u 4u 1100u 0 1249.99u 0 1250u 4u)"}
-C {devices/gnd.sym} -4070 -1430 0 0 {name=l116 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -1580 0 0 {name=M193
 L=\{L_in\}
 W=\{W_in\}
@@ -1648,14 +1553,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -1530 0 0 {name=p330 sig_type=std_logic lab=vc12}
-C {devices/ammeter.sym} -4040 -1530 1 0 {name=Vmeas212 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -1620 2 0 {name=p331 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -1610 1 0 {name=p332 sig_type=std_logic lab=vdd_in}
 C {devices/gnd.sym} -3690 -1890 0 0 {name=l117 lab=GND}
 C {devices/lab_pin.sym} -3790 -1940 0 0 {name=p333 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -1930 0 0 {name=I11 value="PWL(0 0 44.99u 0 45u 4u 349.99u 4u 350u 0 1099.99u 0 1100u 4u 1249.99u 4u 1250u 0)"
-*"PWL(0 0 199.99u 0 200u 4u 349.99u 4u 350u 0 1099.99u 0 1100u 4u 1249.99u 4u 1250u 0)"}
-C {devices/gnd.sym} -4070 -1880 0 0 {name=l118 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -2030 0 0 {name=M191
 L=\{L_in\}
 W=\{W_in\}
@@ -1685,16 +1586,12 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -1980 0 0 {name=p334 sig_type=std_logic lab=vc11}
-C {devices/ammeter.sym} -4040 -1980 1 0 {name=Vmeas211 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -2070 2 0 {name=p335 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -2060 1 0 {name=p336 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3790 -2020 1 0 {name=p337 sig_type=std_logic lab=vlky_pre}
 C {devices/lab_pin.sym} -3790 -1570 1 0 {name=p338 sig_type=std_logic lab=vlky_pre}
 C {devices/gnd.sym} -3690 -540 0 0 {name=l119 lab=GND}
 C {devices/lab_pin.sym} -3790 -590 0 0 {name=p339 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -580 0 0 {name=I14 value="PWL(0 0 199.99u 0 200u 4u 649.99u 4u 650u 0 799.99u 0 800u 4u 1099.99u 4u 1100u 0 1249.99u 0 1250u 4u)"
-*"PWL(0 0 44.99u 0 45u 4u 649.99u 4u 650u 0 799.99u 0 800u 4u 1099.99u 4u 1100u 0 1249.99u 0 1250u 4u 1399.99u 4u 1400u 0)"}
-C {devices/gnd.sym} -4070 -530 0 0 {name=l120 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -680 0 0 {name=M197
 L=\{L_in\}
 W=\{W_in\}
@@ -1724,14 +1621,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -630 0 0 {name=p340 sig_type=std_logic lab=vc14}
-C {devices/ammeter.sym} -4040 -630 1 0 {name=Vmeas214 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -720 2 0 {name=p341 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -710 1 0 {name=p342 sig_type=std_logic lab=vdd_in}
 C {devices/gnd.sym} -3690 -990 0 0 {name=l121 lab=GND}
 C {devices/lab_pin.sym} -3790 -1040 0 0 {name=p343 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -1030 0 0 {name=I13 value="PWL(0 0 199.99u 0 200u 4u 649.99u 4u 650u 0 799.99u 0 800u 4u 949.99u 4u 950u 0 1099.99u 0 1100u 4u 1249.99u 4u 1250u 0 1399.99u 0 1400u 4u)"
-*"PWL(0 0 199.99u 0 200u 4u 649.99u 4u 650u 0 799.99u 0 800u 4u 949.99u 4u 950u 0 1099.99u 0 1100u 4u 1249.99u 4u 1250u 0)"}
-C {devices/gnd.sym} -4070 -980 0 0 {name=l122 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -1130 0 0 {name=M195
 L=\{L_in\}
 W=\{W_in\}
@@ -1761,16 +1654,12 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -1080 0 0 {name=p344 sig_type=std_logic lab=vc13}
-C {devices/ammeter.sym} -4040 -1080 1 0 {name=Vmeas213 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -1170 2 0 {name=p345 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -1160 1 0 {name=p346 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3790 -1120 1 0 {name=p347 sig_type=std_logic lab=vlky_pre}
 C {devices/lab_pin.sym} -3790 -670 1 0 {name=p348 sig_type=std_logic lab=vlky_pre}
 C {devices/gnd.sym} -3690 -90 0 0 {name=l123 lab=GND}
 C {devices/lab_pin.sym} -3790 -140 0 0 {name=p349 sig_type=std_logic lab=vb_pre}
-C {devices/isource.sym} -4070 -130 0 0 {name=I15 value="PWL(0 0 199.99u 0 200u 4u 499.99u 4u 500u 0 649.99u 0 650u 4u 799.99u 4u 800u 0)"
-*"PWL(0 0 199.99u 0 200u 4u 499.99u 4u 500u 0 649.99u 0 650u 4u 799.99u 4u 800u 0 1399.99u 0 1400u 4u)"}
-C {devices/gnd.sym} -4070 -80 0 0 {name=l124 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} -3890 -230 0 0 {name=M199
 L=\{L_in\}
 W=\{W_in\}
@@ -1800,7 +1689,6 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -3870 -180 0 0 {name=p350 sig_type=std_logic lab=vc15}
-C {devices/ammeter.sym} -4040 -180 1 0 {name=Vmeas215 savecurrent=true}
 C {devices/lab_pin.sym} -3690 -270 2 0 {name=p351 sig_type=std_logic lab=vdd_pre}
 C {devices/lab_pin.sym} -3930 -260 1 0 {name=p352 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -3790 -220 1 0 {name=p353 sig_type=std_logic lab=vlky_pre}
@@ -1832,48 +1720,48 @@ C {devices/launcher.sym} -2220 -2355 0 0 {name=h1
 descr="Patrones a clasificar (full version)" 
 tclcommand="xschem raw_read $netlist_dir/LIF_15Inputs_lt_tb2.raw tran"
 }
-C {devices/isource.sym} -4950 -2980 0 0 {name=I16 value="PWL(0 0 99.99u 0 100u 4u 249.99u 4u 250u 0 299.99u 0 300u 4u)"}
-C {devices/gnd.sym} -4950 -2930 0 0 {name=l1 lab=GND}
-C {devices/ammeter.sym} -4920 -3030 1 0 {name=Vmeas175 savecurrent=true}
-C {devices/isource.sym} -4950 -3430 0 0 {name=I17 value="PWL(0 0 149.99u 0 150u 4u 349.99u 4u 350u 0 399.99u 0 400u 4u 449.99u 4u 450u 0)"}
-C {devices/gnd.sym} -4950 -3380 0 0 {name=l2 lab=GND}
-C {devices/ammeter.sym} -4920 -3480 1 0 {name=Vmeas176 savecurrent=true}
-C {devices/isource.sym} -4950 -2080 0 0 {name=I18 value="PWL(0 0 44.99u 0 45u 4u 149.99u 4u 150u 0 249.99u 0 250u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u)"}
-C {devices/gnd.sym} -4950 -2030 0 0 {name=l3 lab=GND}
-C {devices/ammeter.sym} -4920 -2130 1 0 {name=Vmeas177 savecurrent=true}
-C {devices/isource.sym} -4950 -2530 0 0 {name=I19 value="PWL(0 0 249.99u 0 250u 4u 449.99u 4u 450u 0)"}
-C {devices/gnd.sym} -4950 -2480 0 0 {name=l4 lab=GND}
-C {devices/ammeter.sym} -4920 -2580 1 0 {name=Vmeas178 savecurrent=true}
-C {devices/isource.sym} -4950 -1180 0 0 {name=I20 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 149.99u 0 150u 4u 299.99u 4u 300u 0 399.99u 0 400u 4u)"}
-C {devices/gnd.sym} -4950 -1130 0 0 {name=l5 lab=GND}
-C {devices/ammeter.sym} -4920 -1230 1 0 {name=Vmeas179 savecurrent=true}
-C {devices/isource.sym} -4950 -1630 0 0 {name=I21 value="PWL(0 0 44.99u 0 45u 4u 149.99u 4u 150u 0)"}
-C {devices/gnd.sym} -4950 -1580 0 0 {name=l7 lab=GND}
-C {devices/ammeter.sym} -4920 -1680 1 0 {name=Vmeas180 savecurrent=true}
-C {devices/isource.sym} -4950 -280 0 0 {name=I22 value="PWL(0 0 99.99u 0 100u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u)"}
-C {devices/gnd.sym} -4950 -230 0 0 {name=l8 lab=GND}
-C {devices/ammeter.sym} -4920 -330 1 0 {name=Vmeas181 savecurrent=true}
-C {devices/isource.sym} -4950 -730 0 0 {name=I23 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 199.99u 0 200u 4u 249.99u 4u 250u 0 349.99u 0 350u 4u 399.99u 4u 400u 0)"}
-C {devices/gnd.sym} -4950 -680 0 0 {name=l11 lab=GND}
-C {devices/ammeter.sym} -4920 -780 1 0 {name=Vmeas182 savecurrent=true}
-C {devices/isource.sym} -4950 170 0 0 {name=I24 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 249.99u 0 250u 4u 299.99u 4u 300u 0 399.99u 0 400u 4u 449.99u 4u 450u 0 499.99u 0 500u 4u)"}
-C {devices/gnd.sym} -4950 220 0 0 {name=l15 lab=GND}
-C {devices/ammeter.sym} -4920 120 1 0 {name=Vmeas183 savecurrent=true}
-C {devices/isource.sym} -4950 620 0 0 {name=I25 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 149.99u 0 150u 4u 199.99u 4u 200u 0 349.99u 0 350u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u 499.99u 4u 500u 0)"}
-C {devices/gnd.sym} -4950 670 0 0 {name=l16 lab=GND}
-C {devices/ammeter.sym} -4920 570 1 0 {name=Vmeas184 savecurrent=true}
-C {devices/isource.sym} -4950 1520 0 0 {name=I26 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 199.99u 0 200u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u)"}
-C {devices/gnd.sym} -4950 1570 0 0 {name=l17 lab=GND}
-C {devices/ammeter.sym} -4920 1470 1 0 {name=Vmeas185 savecurrent=true}
-C {devices/isource.sym} -4950 1070 0 0 {name=I27 value="PWL(0 0 44.99u 0 45u 4u 149.99u 4u 150u 0 399.99u 0 400u 4u 449.99u 4u 450u 0)"}
-C {devices/gnd.sym} -4950 1120 0 0 {name=l18 lab=GND}
-C {devices/ammeter.sym} -4920 1020 1 0 {name=Vmeas186 savecurrent=true}
-C {devices/isource.sym} -4950 2420 0 0 {name=I28 value="PWL(0 0 99.99u 0 100u 4u 249.99u 4u 250u 0 299.99u 0 300u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u 499.99u 4u 500u 0)"}
-C {devices/gnd.sym} -4950 2470 0 0 {name=l19 lab=GND}
-C {devices/ammeter.sym} -4920 2370 1 0 {name=Vmeas187 savecurrent=true}
-C {devices/isource.sym} -4950 1970 0 0 {name=I29 value="PWL(0 0 99.99u 0 100u 4u 249.99u 4u 250u 0 299.99u 0 300u 4u 349.99u 4u 350u 0 399.99u 0 400u 4u 449.99u 4u 450u 0)"}
-C {devices/gnd.sym} -4950 2020 0 0 {name=l21 lab=GND}
-C {devices/ammeter.sym} -4920 1920 1 0 {name=Vmeas188 savecurrent=true}
-C {devices/isource.sym} -4950 2870 0 0 {name=I30 value="PWL(0 0 99.99u 0 100u 4u 199.99u 4u 200u 0 249.99u 0 250u 4u 299.99u 4u 300u 0 499.99u 0 500u 4u)"}
-C {devices/gnd.sym} -4950 2920 0 0 {name=l22 lab=GND}
-C {devices/ammeter.sym} -4920 2820 1 0 {name=Vmeas189 savecurrent=true}
+C {devices/isource.sym} -4070 -5980 0 0 {name=I16 value="PWL(0 0 99.99u 0 100u 4u 249.99u 4u 250u 0 299.99u 0 300u 4u)"}
+C {devices/gnd.sym} -4070 -5930 0 0 {name=l1 lab=GND}
+C {devices/ammeter.sym} -4040 -6030 1 0 {name=Vmeas175 savecurrent=true}
+C {devices/isource.sym} -4070 -6430 0 0 {name=I17 value="PWL(0 0 149.99u 0 150u 4u 349.99u 4u 350u 0 399.99u 0 400u 4u 449.99u 4u 450u 0)"}
+C {devices/gnd.sym} -4070 -6380 0 0 {name=l2 lab=GND}
+C {devices/ammeter.sym} -4040 -6480 1 0 {name=Vmeas176 savecurrent=true}
+C {devices/isource.sym} -4070 -5080 0 0 {name=I18 value="PWL(0 0 44.99u 0 45u 4u 149.99u 4u 150u 0 249.99u 0 250u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u)"}
+C {devices/gnd.sym} -4070 -5030 0 0 {name=l3 lab=GND}
+C {devices/ammeter.sym} -4040 -5130 1 0 {name=Vmeas177 savecurrent=true}
+C {devices/isource.sym} -4070 -5530 0 0 {name=I19 value="PWL(0 0 249.99u 0 250u 4u 449.99u 4u 450u 0)"}
+C {devices/gnd.sym} -4070 -5480 0 0 {name=l4 lab=GND}
+C {devices/ammeter.sym} -4040 -5580 1 0 {name=Vmeas178 savecurrent=true}
+C {devices/isource.sym} -4070 -4180 0 0 {name=I20 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 149.99u 0 150u 4u 299.99u 4u 300u 0 399.99u 0 400u 4u)"}
+C {devices/gnd.sym} -4070 -4130 0 0 {name=l5 lab=GND}
+C {devices/ammeter.sym} -4040 -4230 1 0 {name=Vmeas179 savecurrent=true}
+C {devices/isource.sym} -4070 -4630 0 0 {name=I21 value="PWL(0 0 44.99u 0 45u 4u 149.99u 4u 150u 0)"}
+C {devices/gnd.sym} -4070 -4580 0 0 {name=l7 lab=GND}
+C {devices/ammeter.sym} -4040 -4680 1 0 {name=Vmeas180 savecurrent=true}
+C {devices/isource.sym} -4070 -3280 0 0 {name=I22 value="PWL(0 0 99.99u 0 100u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u)"}
+C {devices/gnd.sym} -4070 -3230 0 0 {name=l8 lab=GND}
+C {devices/ammeter.sym} -4040 -3330 1 0 {name=Vmeas181 savecurrent=true}
+C {devices/isource.sym} -4070 -3730 0 0 {name=I23 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 199.99u 0 200u 4u 249.99u 4u 250u 0 349.99u 0 350u 4u 399.99u 4u 400u 0)"}
+C {devices/gnd.sym} -4070 -3680 0 0 {name=l11 lab=GND}
+C {devices/ammeter.sym} -4040 -3780 1 0 {name=Vmeas182 savecurrent=true}
+C {devices/isource.sym} -4070 -2830 0 0 {name=I24 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 249.99u 0 250u 4u 299.99u 4u 300u 0 399.99u 0 400u 4u 449.99u 4u 450u 0 499.99u 0 500u 4u)"}
+C {devices/gnd.sym} -4070 -2780 0 0 {name=l15 lab=GND}
+C {devices/ammeter.sym} -4040 -2880 1 0 {name=Vmeas183 savecurrent=true}
+C {devices/isource.sym} -4070 -2380 0 0 {name=I25 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 149.99u 0 150u 4u 199.99u 4u 200u 0 349.99u 0 350u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u 499.99u 4u 500u 0)"}
+C {devices/gnd.sym} -4070 -2330 0 0 {name=l16 lab=GND}
+C {devices/ammeter.sym} -4040 -2430 1 0 {name=Vmeas184 savecurrent=true}
+C {devices/isource.sym} -4070 -1480 0 0 {name=I26 value="PWL(0 0 44.99u 0 45u 4u 99.99u 4u 100u 0 199.99u 0 200u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u)"}
+C {devices/gnd.sym} -4070 -1430 0 0 {name=l17 lab=GND}
+C {devices/ammeter.sym} -4040 -1530 1 0 {name=Vmeas185 savecurrent=true}
+C {devices/isource.sym} -4070 -1930 0 0 {name=I27 value="PWL(0 0 44.99u 0 45u 4u 149.99u 4u 150u 0 399.99u 0 400u 4u 449.99u 4u 450u 0)"}
+C {devices/gnd.sym} -4070 -1880 0 0 {name=l18 lab=GND}
+C {devices/ammeter.sym} -4040 -1980 1 0 {name=Vmeas186 savecurrent=true}
+C {devices/isource.sym} -4070 -580 0 0 {name=I28 value="PWL(0 0 99.99u 0 100u 4u 249.99u 4u 250u 0 299.99u 0 300u 4u 399.99u 4u 400u 0 449.99u 0 450u 4u 499.99u 4u 500u 0)"}
+C {devices/gnd.sym} -4070 -530 0 0 {name=l19 lab=GND}
+C {devices/ammeter.sym} -4040 -630 1 0 {name=Vmeas187 savecurrent=true}
+C {devices/isource.sym} -4070 -1030 0 0 {name=I29 value="PWL(0 0 99.99u 0 100u 4u 249.99u 4u 250u 0 299.99u 0 300u 4u 349.99u 4u 350u 0 399.99u 0 400u 4u 449.99u 4u 450u 0)"}
+C {devices/gnd.sym} -4070 -980 0 0 {name=l21 lab=GND}
+C {devices/ammeter.sym} -4040 -1080 1 0 {name=Vmeas188 savecurrent=true}
+C {devices/isource.sym} -4070 -130 0 0 {name=I30 value="PWL(0 0 99.99u 0 100u 4u 199.99u 4u 200u 0 249.99u 0 250u 4u 299.99u 4u 300u 0 499.99u 0 500u 4u)"}
+C {devices/gnd.sym} -4070 -80 0 0 {name=l22 lab=GND}
+C {devices/ammeter.sym} -4040 -180 1 0 {name=Vmeas189 savecurrent=true}

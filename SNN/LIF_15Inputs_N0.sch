@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -37,8 +37,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -57,15 +57,15 @@ logy=0
 color=4
 node=vpre1}
 B 2 -2400 -1600 -1600 -1200 {flags=graph
-y1=0.31
-y2=0.32
+y1=-0.038
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -84,15 +84,15 @@ logy=0
 color=4
 node=vpre4}
 B 2 -2400 -1200 -1600 -800 {flags=graph
-y1=0.31
-y2=0.32
+y1=-0.038
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -112,14 +112,14 @@ color=4
 node=vpre7}
 B 2 -1600 -2000 -800 -1600 {flags=graph
 y1=0.31
-y2=0.33
+y2=0.32
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -138,15 +138,15 @@ logy=0
 color=4
 node=vpre2}
 B 2 -1600 -1600 -800 -1200 {flags=graph
-y1=0.31
-y2=0.33
+y1=-0.045
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -166,14 +166,14 @@ color=4
 node=vpre5}
 B 2 -1600 -1200 -800 -800 {flags=graph
 y1=0.31
-y2=0.33
+y2=0.32
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -193,14 +193,14 @@ color=4
 node=vpre8}
 B 2 -800 -2000 0 -1600 {flags=graph
 y1=0.31
-y2=0.33
+y2=0.32
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -219,15 +219,15 @@ logy=0
 color=4
 node=vpre3}
 B 2 -800 -1600 0 -1200 {flags=graph
-y1=0.31
-y2=0.33
+y1=-0.038
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -246,15 +246,15 @@ logy=0
 color=4
 node=vpre6}
 B 2 -800 -1200 0 -800 {flags=graph
-y1=0.31
-y2=0.33
+y1=-0.025
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -273,15 +273,15 @@ logy=0
 color=4
 node=vpre9}
 B 2 -2400 -800 -1600 -400 {flags=graph
-y1=0.31
-y2=0.33
+y1=-0.038
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -300,15 +300,15 @@ logy=0
 color=4
 node=vpre10}
 B 2 -2400 -400 -1600 0 {flags=graph
-y1=0.31
-y2=0.33
+y1=0.27246
+y2=1.24205
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -327,15 +327,15 @@ logy=0
 color=4
 node=vpre13}
 B 2 -1600 -800 -800 -400 {flags=graph
-y1=0.31
-y2=0.33
+y1=-0.025
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -355,14 +355,14 @@ color=4
 node=vpre11}
 B 2 -1600 -400 -800 0 {flags=graph
 y1=0.31
-y2=0.33
+y2=0.32
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -381,15 +381,15 @@ logy=0
 color=4
 node=vpre14}
 B 2 -800 -800 0 -400 {flags=graph
-y1=0.31
-y2=0.32
+y1=-0.038
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -409,14 +409,14 @@ color=4
 node=vpre12}
 B 2 -800 -400 0 0 {flags=graph
 y1=0.31
-y2=0.33
+y2=0.32
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -442,8 +442,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.58237e-05
-x2=8.44653e-05
+x1=-0.00022
+x2=0.00033
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -1177,223 +1177,29 @@ value="
 .param L_in=0.15
 .param W_in=1
 *--Initial Values--*
-.param i_val1=0
-.param i_val2=0
-.param i_val3=0
-.param i_val4=0
-.param i_val5=0
-.param i_val6=0
-.param i_val7=0
-.param i_val8=0
-.param i_val9=0
-.param i_val10=0
-.param i_val11=0
-.param i_val12=0
-.param i_val13=0
-.param i_val14=0
-.param i_val15=0
+.param i_val1=0  
+.param i_val2=0  
+.param i_val3=0  
+.param i_val4=4u 
+.param i_val5=4u 
+.param i_val6=4u 
+.param i_val7=4u 
+.param i_val8=0  
+.param i_val9=4u
+.param i_val10=4u
+.param i_val11=4u
+.param i_val12=4u
+.param i_val13=0 
+.param i_val14=0 
+.param i_val15=0 
 .control
 	save all
-	
+	set wr_vecnames
+	set wr_singlescale
 	*--Clasificación del patrón 0--*
-	alterparam i_val1=0
-	alterparam i_val2=0
-	alterparam i_val3=0
-	alterparam i_val4=4u
-	alterparam i_val5=4u
-	alterparam i_val6=4u
-	alterparam i_val7=4u
-	alterparam i_val8=0
-	alterparam i_val9=4u
-	alterparam i_val10=4u
-	alterparam i_val11=4u
-	alterparam i_val12=4u
-	alterparam i_val13=0
-	alterparam i_val14=0
-	alterparam i_val15=0
-	tran 10n 50u 0
+	tran 100n 550u
 	write LIF_15Inputs_N0.raw 
 	wrdata LIF_15inputs_N0.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
-	
-	*--Clasificación del patrón 1--*
-	alterparam i_val1=0
-	alterparam i_val2=4u
-	alterparam i_val3=0
-	alterparam i_val4=4u
-	alterparam i_val5=4u
-	alterparam i_val6=0
-	alterparam i_val7=0
-	alterparam i_val8=4u
-	alterparam i_val9=0
-	alterparam i_val10=0
-	alterparam i_val11=4u
-	alterparam i_val12=0
-	alterparam i_val13=4u
-	alterparam i_val14=4u
-	alterparam i_val15=4u
-	tran 10n 50u 0
-	write LIF_15Inputs_N1.raw 
-	wrdata LIF_15inputs_N1.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
-	
-	*--Clasificación del patrón 2--*
-	alterparam i_val1=4u
-	alterparam i_val2=4u
-	alterparam i_val3=0
-	alterparam i_val4=0
-	alterparam i_val5=0
-	alterparam i_val6=4u
-	alterparam i_val7=0
-	alterparam i_val8=4u
-	alterparam i_val9=0
-	alterparam i_val10=4u
-	alterparam i_val11=0
-	alterparam i_val12=0
-	alterparam i_val13=4u
-	alterparam i_val14=4u
-	alterparam i_val15=4u
-	tran 10n 50u 0
-	write LIF_15Inputs_N2.raw 
-	wrdata LIF_15inputs_N2.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
-
-	*--Clasificación del patrón 3--*
-	alterparam i_val1=4u
-	alterparam i_val2=4u
-	alterparam i_val3=0
-	alterparam i_val4=0
-	alterparam i_val5=0
-	alterparam i_val6=4u
-	alterparam i_val7=4u
-	alterparam i_val8=4u
-	alterparam i_val9=0
-	alterparam i_val10=0
-	alterparam i_val11=0
-	alterparam i_val12=4u
-	alterparam i_val13=4u
-	alterparam i_val14=4u
-	alterparam i_val15=0
-	tran 10n 50u 0
-	write LIF_15Inputs_N3.raw 
-	wrdata LIF_15inputs_N3.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
-
-	*--Clasificación del patrón 4--*
-	alterparam i_val1=4u
-	alterparam i_val2=0
-	alterparam i_val3=4u
-	alterparam i_val4=4u
-	alterparam i_val5=0
-	alterparam i_val6=4u
-	alterparam i_val7=0
-	alterparam i_val8=4u
-	alterparam i_val9=4u
-	alterparam i_val10=0
-	alterparam i_val11=0
-	alterparam i_val12=4u
-	alterparam i_val13=0
-	alterparam i_val14=0
-	alterparam i_val15=4u
-	tran 10n 50u 0
-	write LIF_15Inputs_N4.raw 
-	wrdata LIF_15inputs_N4.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
-
-	*--Clasificación del patrón 5--*
-	alterparam i_val1=4u
-	alterparam i_val2=4u
-	alterparam i_val3=4u
-	alterparam i_val4=4u
-	alterparam i_val5=0
-	alterparam i_val6=0
-	alterparam i_val7=0
-	alterparam i_val8=4u
-	alterparam i_val9=0
-	alterparam i_val10=0
-	alterparam i_val11=0
-	alterparam i_val12=4u
-	alterparam i_val13=4u
-	alterparam i_val14=4u
-	alterparam i_val15=0
-	tran 10n 50u 0
-	write LIF_15Inputs_N5.raw 
-	wrdata LIF_15inputs_N5.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
-
-	*--Clasificación del patrón 6--*
-	alterparam i_val1=0
-	alterparam i_val2=4u
-	alterparam i_val3=4u
-	alterparam i_val4=4u
-	alterparam i_val5=0
-	alterparam i_val6=0
-	alterparam i_val7=4u
-	alterparam i_val8=4u
-	alterparam i_val9=0
-	alterparam i_val10=4u
-	alterparam i_val11=0
-	alterparam i_val12=4u
-	alterparam i_val13=0
-	alterparam i_val14=4u
-	alterparam i_val15=0
-	tran 10n 50u 0
-	write LIF_15Inputs_N6.raw 
-	wrdata LIF_15inputs_N6.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
-
-	*--Clasificación del patrón 7--*
-	alterparam i_val1=4u
-	alterparam i_val2=4u
-	alterparam i_val3=4u
-	alterparam i_val4=0
-	alterparam i_val5=0
-	alterparam i_val6=4u
-	alterparam i_val7=0
-	alterparam i_val8=0
-	alterparam i_val9=4u
-	alterparam i_val10=0
-	alterparam i_val11=4u
-	alterparam i_val12=0
-	alterparam i_val13=4u
-	alterparam i_val14=0
-	alterparam i_val15=0
-	tran 10n 50u 0
-	write LIF_15Inputs_N7.raw 
-	wrdata LIF_15inputs_N7.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
-
-	*--Clasificación del patrón 8--*
-	alterparam i_val1=0
-	alterparam i_val2=4u
-	alterparam i_val3=0
-	alterparam i_val4=4u
-	alterparam i_val5=0
-	alterparam i_val6=4u
-	alterparam i_val7=0
-	alterparam i_val8=4u
-	alterparam i_val9=0
-	alterparam i_val10=4u
-	alterparam i_val11=0
-	alterparam i_val12=4u
-	alterparam i_val13=0
-	alterparam i_val14=4u
-	alterparam i_val15=0
-	tran 10n 50u 0
-	write LIF_15Inputs_N8.raw 
-	wrdata LIF_15inputs_N8.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
-
-	*--Clasificación del patrón 9--*
-	alterparam i_val1=0
-	alterparam i_val2=4u
-	alterparam i_val3=0
-	alterparam i_val4=4u
-	alterparam i_val5=0
-	alterparam i_val6=4u
-	alterparam i_val7=0
-	alterparam i_val8=4u
-	alterparam i_val9=4u
-	alterparam i_val10=0
-	alterparam i_val11=0
-	alterparam i_val12=4u
-	alterparam i_val13=0
-	alterparam i_val14=0
-	alterparam i_val15=4u
-	tran 10n 50u 0
-	write LIF_15Inputs_N9.raw 
-	wrdata LIF_15inputs_N9.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(ctrl_newpattern)
 .endc
 " }
 C {devices/lab_pin.sym} -2850 -5960 0 0 {name=p10 sig_type=std_logic lab=vc2}
@@ -1699,7 +1505,7 @@ C {devices/lab_pin.sym} -2520 -4610 2 0 {name=p128 sig_type=std_logic lab=vpre5}
 C {devices/lab_pin.sym} -2520 -5060 2 0 {name=p130 sig_type=std_logic lab=vpre4}
 C {devices/launcher.sym} -2220 -2385 0 0 {name=h2
 descr="Patrones a clasificar" 
-tclcommand="xschem raw_read $netlist_dir/LIF_15Inputs_N9.raw tran"
+tclcommand="xschem raw_read $netlist_dir/LIF_15Inputs_N0.raw tran"
 }
 C {devices/gnd.sym} -2670 -2270 0 0 {name=l113 lab=GND}
 C {devices/lab_pin.sym} -2770 -2320 0 0 {name=p324 sig_type=std_logic lab=vb_pre}
