@@ -1,0 +1,88 @@
+magic
+tech sky130B
+magscale 1 2
+timestamp 1728409957
+<< locali >>
+rect 134 1178 206 1248
+rect -216 1070 -68 1104
+rect -216 550 -68 584
+rect 134 342 206 412
+<< metal1 >>
+rect -14 1010 66 1038
+rect -58 860 -24 963
+rect 32 875 66 1010
+rect 274 1010 354 1040
+rect 408 1010 488 1040
+rect -252 826 -24 860
+rect -58 769 -24 826
+rect 23 869 75 875
+rect 23 811 75 817
+rect -67 763 -15 769
+rect -252 720 -182 754
+rect -216 412 -182 720
+rect -67 705 -15 711
+rect -58 618 -24 705
+rect 32 580 66 811
+rect 274 642 308 1010
+rect 364 875 398 963
+rect 355 869 407 875
+rect 355 811 407 817
+rect 454 807 488 1010
+rect 454 773 592 807
+rect 454 642 488 773
+rect -14 552 66 580
+rect 100 612 354 642
+rect 408 612 488 642
+rect 100 412 134 612
+rect 197 523 249 529
+rect 249 480 398 514
+rect 197 465 249 471
+rect -216 378 134 412
+<< via1 >>
+rect 23 817 75 869
+rect -67 711 -15 763
+rect 355 817 407 869
+rect 197 471 249 523
+<< metal2 >>
+rect 17 817 23 869
+rect 75 860 81 869
+rect 349 860 355 869
+rect 75 826 355 860
+rect 75 817 81 826
+rect 349 817 355 826
+rect 407 817 413 869
+rect -73 711 -67 763
+rect -15 754 -9 763
+rect -15 720 240 754
+rect -15 711 -9 720
+rect 206 523 240 720
+rect 191 471 197 523
+rect 249 471 255 523
+use sky130_fd_pr__pfet_01v8_2779BZ  XM1
+timestamp 1728409957
+transform 1 0 -41 0 1 1019
+box -211 -229 211 229
+use sky130_fd_pr__nfet_01v8_DR7ETE  XM2
+timestamp 1728409957
+transform 1 0 -41 0 1 566
+box -211 -224 211 224
+use sky130_fd_pr__pfet_01v8_2779BZ  XM3
+timestamp 1728409957
+transform 1 0 381 0 1 1019
+box -211 -229 211 229
+use sky130_fd_pr__nfet_01v8_HVESAE  XM4
+timestamp 1728409957
+transform 1 0 381 0 1 566
+box -211 -224 211 224
+<< labels >>
+flabel locali s 134 1248 206 1248 0 FreeSans 480 0 0 0 VDD
+port 12 nsew
+flabel locali s 134 342 206 342 0 FreeSans 480 0 0 0 GND
+port 13 nsew
+flabel metal1 s 592 773 592 807 0 FreeSans 480 0 0 0 Vout
+port 14 nsew
+flabel metal1 s -252 720 -252 754 0 FreeSans 480 0 0 0 Vin
+port 15 nsew
+flabel metal1 s -252 826 -252 860 0 FreeSans 480 0 0 0 Ctrl
+port 16 nsew
+<< end >>

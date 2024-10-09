@@ -1,0 +1,94 @@
+magic
+tech sky130B
+magscale 1 2
+timestamp 1728435493
+<< error_p >>
+rect -29 -1507 29 -1501
+rect -29 -1541 -17 -1507
+rect -29 -1547 29 -1541
+<< pwell >>
+rect -211 -1679 211 1679
+<< nmos >>
+rect -15 -1469 15 1531
+<< ndiff >>
+rect -73 1519 -15 1531
+rect -73 -1457 -61 1519
+rect -27 -1457 -15 1519
+rect -73 -1469 -15 -1457
+rect 15 1519 73 1531
+rect 15 -1457 27 1519
+rect 61 -1457 73 1519
+rect 15 -1469 73 -1457
+<< ndiffc >>
+rect -61 -1457 -27 1519
+rect 27 -1457 61 1519
+<< psubdiff >>
+rect -175 1609 -79 1643
+rect 79 1609 175 1643
+rect -175 1547 -141 1609
+rect 141 1547 175 1609
+rect -175 -1609 -141 -1547
+rect 141 -1609 175 -1547
+rect -175 -1643 -79 -1609
+rect 79 -1643 175 -1609
+<< psubdiffcont >>
+rect -79 1609 79 1643
+rect -175 -1547 -141 1547
+rect 141 -1547 175 1547
+rect -79 -1643 79 -1609
+<< poly >>
+rect -15 1531 15 1557
+rect -15 -1491 15 -1469
+rect -33 -1507 33 -1491
+rect -33 -1541 -17 -1507
+rect 17 -1541 33 -1507
+rect -33 -1557 33 -1541
+<< polycont >>
+rect -17 -1541 17 -1507
+<< locali >>
+rect -175 1609 -79 1643
+rect 79 1609 175 1643
+rect -175 1547 -141 1609
+rect 141 1547 175 1609
+rect -61 1519 -27 1535
+rect -61 -1473 -27 -1457
+rect 27 1519 61 1535
+rect 27 -1473 61 -1457
+rect -33 -1541 -17 -1507
+rect 17 -1541 33 -1507
+rect -175 -1609 -141 -1547
+rect 141 -1609 175 -1547
+rect -175 -1643 -79 -1609
+rect 79 -1643 175 -1609
+<< viali >>
+rect -61 -1457 -27 1519
+rect 27 -1457 61 1519
+rect -17 -1541 17 -1507
+<< metal1 >>
+rect -67 1519 -21 1531
+rect -67 -1457 -61 1519
+rect -27 -1457 -21 1519
+rect -67 -1469 -21 -1457
+rect 21 1519 67 1531
+rect 21 -1457 27 1519
+rect 61 -1457 67 1519
+rect 21 -1469 67 -1457
+rect -29 -1507 29 -1501
+rect -29 -1541 -17 -1507
+rect 17 -1541 29 -1507
+rect -29 -1547 29 -1541
+<< labels >>
+flabel metal1 s 0 -1524 0 -1524 0 FreeSans 480 0 0 0 G
+port 0 nsew
+flabel metal1 s -42 114 -42 114 0 FreeSans 480 0 0 0 D
+port 1 nsew
+flabel metal1 s 43 110 43 110 0 FreeSans 480 0 0 0 S
+port 2 nsew
+flabel locali s -1 -1625 -1 -1625 0 FreeSans 480 0 0 0 B
+port 3 nsew
+<< properties >>
+string FIXED_BBOX -158 -1626 158 1626
+string gencell sky130_fd_pr__nfet_01v8
+string library sky130
+string parameters w 15.0 l 0.15 m 1 nf 1 diffcov 100 polycov 100 guard 1 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 topc 0 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt  sky130_fd_bs_flash__special_sonosfet_star  sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt  sky130_fd_pr__nfet_03v3_nvt} full_metal 1 viasrc 100 viadrn 100 viagate 100 viagb 0 viagr 0 viagl 0 viagt 0
+<< end >>
