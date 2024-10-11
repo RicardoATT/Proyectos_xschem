@@ -54,10 +54,12 @@ C {devices/gnd.sym} -1250 -590 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -1250 -690 0 0 {name=l2 lab=VDD}
 C {devices/lab_pin.sym} -1190 -640 2 0 {name=p1 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -1310 -640 0 0 {name=p2 sig_type=std_logic lab=Vin}
-C {devices/vsource.sym} -1360 -480 0 0 {name=V1 value="PWL(0 1.8 19.9u 1.8 20u 0)"}
+C {devices/vsource.sym} -1360 -480 0 0 {name=V1 value=1.8
+*"PWL(0 1.8 19.9u 1.8 20u 0)"}
 C {devices/gnd.sym} -1360 -430 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -1360 -530 0 0 {name=l7 lab=VDD}
-C {devices/vsource.sym} -1300 -480 0 0 {name=V2 value="PWL(0 0 9.9u 0 10u 1.8 19.9u 1.8 20u 0)"}
+C {devices/vsource.sym} -1300 -480 0 0 {name=V2 value=0
+*"PWL(0 0 9.9u 0 10u 1.8 19.9u 1.8 20u 0)"}
 C {devices/gnd.sym} -1300 -430 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} -1300 -530 1 0 {name=p3 sig_type=std_logic lab=Vin}
 C {sky130_fd_pr/corner.sym} -1380 -310 0 0 {name=CORNER1 only_toplevel=true corner=tt}
@@ -66,8 +68,9 @@ only_toplevel=true
 value="
 .control
   save all
-  tran 1n 30u
-  write switch_tb.raw
+  tran 10n 16m
+  *write switch_tb.raw
+  wrdata SNN_15x10_FullStages.txt v(vin)
 .endc
 " }
 C {devices/launcher.sym} -1310 -380 0 0 {name=h1

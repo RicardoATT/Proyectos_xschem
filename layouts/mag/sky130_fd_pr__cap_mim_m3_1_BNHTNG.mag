@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1728085572
+timestamp 1728522838
 << metal3 >>
 rect -2186 2012 2186 2040
 rect -2186 -2012 2102 2012
@@ -25,6 +25,11 @@ rect -2107 -1961 1815 -1960
 rect 2086 -2012 2102 2012
 rect 2166 -2012 2182 2012
 rect 2086 -2028 2182 -2012
+<< labels >>
+flabel metal3 s -1516 -1017 -1516 -1017 0 FreeSans 480 0 0 0 c0
+port 0 nsew
+flabel metal4 s -1289 -1286 -1289 -1286 0 FreeSans 480 0 0 0 c1
+port 1 nsew
 << properties >>
 string FIXED_BBOX -2186 -2040 1894 2040
 string gencell sky130_fd_pr__cap_mim_m3_1

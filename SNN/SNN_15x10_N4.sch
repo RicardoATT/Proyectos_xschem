@@ -5216,7 +5216,7 @@ value="
 	tran 10n 550u 0
 	write SNN_15x10_N4.raw 
 	wrdata SNN_15x10_N4.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(N0) v(N1) v(N2) v(N3) v(N4) v(N5) v(N6) v(N7) v(N8) v(N9) v(p0) v(p1) v(p2) v(p3) v(p4) v(p5) v(p6) v(p7) v(p8) v(p9) i(Vmeas200) i(Vmeas1) i(Vmeas2) i(Vmeas3) i(Vmeas4) i(Vmeas5) i(Vmeas6) i(Vmeas7) i(Vmeas8) i(Vmeas9) v(ctrl_newpattern) v(inh_d) v(uw) v(training) v(inference)
-	wrdata SNN_15x10_N4syn.txt v(n.x14.xr1.n1#ngap) v(n.x24.xr1.n1#ngap) v(n.x34.xr1.n1#ngap) v(n.x44.xr1.n1#ngap) v(n.x54.xr1.n1#ngap) v(n.x64.xr1.n1#ngap) v(n.x74.xr1.n1#ngap) v(n.x84.xr1.n1#ngap) v(n.x94.xr1.n1#ngap) v(n.x144.xr1.n1#ngap) v(n.x114.xr1.n1#ngap) v(n.x124.xr1.n1#ngap) v(n.x134.xr1.n1#ngap) v(n.x144.xr1.n1#ngap) v(n.x154.xr1.n1#ngap)
+	wrdata SNN_15x10_N4syn.txt v(n.x14.xr1.n1#ngap) v(n.x24.xr1.n1#ngap) v(n.x34.xr1.n1#ngap) v(n.x44.xr1.n1#ngap) v(n.x54.xr1.n1#ngap) v(n.x64.xr1.n1#ngap) v(n.x74.xr1.n1#ngap) v(n.x84.xr1.n1#ngap) v(n.x94.xr1.n1#ngap) v(n.x104.xr1.n1#ngap) v(n.x114.xr1.n1#ngap) v(n.x124.xr1.n1#ngap) v(n.x134.xr1.n1#ngap) v(n.x144.xr1.n1#ngap) v(n.x154.xr1.n1#ngap)
 .endc
 " }
 C {devices/launcher.sym} 90 -1945 0 0 {name=h1

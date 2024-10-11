@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1727994832
+timestamp 1728501028
 << error_p >>
 rect -29 -511 29 -505
 rect -29 -545 -17 -511
@@ -78,13 +78,13 @@ rect -29 -545 -17 -511
 rect 17 -545 29 -511
 rect -29 -551 29 -545
 << labels >>
-flabel metal1 s 44 34 44 34 0 FreeSans 480 0 0 0 D
+flabel metal1 s -45 34 -45 34 0 FreeSans 480 0 0 0 D
 port 16 nsew
-flabel metal1 s -44 36 -44 36 0 FreeSans 480 0 0 0 S
+flabel metal1 s 44 33 44 33 0 FreeSans 480 0 0 0 S
 port 17 nsew
-flabel metal1 s 0 -528 0 -528 0 FreeSans 480 0 0 0 G
+flabel metal1 s 0 -529 0 -529 0 FreeSans 480 0 0 0 G
 port 18 nsew
-flabel locali s 0 631 0 631 0 FreeSans 480 0 0 0 B
+flabel locali s 0 -631 0 -631 0 FreeSans 480 0 0 0 B
 port 19 nsew
 << properties >>
 string FIXED_BBOX -158 -631 158 631

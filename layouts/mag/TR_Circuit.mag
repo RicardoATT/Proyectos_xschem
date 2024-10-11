@@ -1,15 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1728432946
-<< error_s >>
-rect 1352 1487 1387 1496
-rect 1459 1487 1809 1496
-rect 1370 1381 1792 1451
-rect 1370 963 1809 1381
-rect 1370 893 1792 963
-rect 1406 876 1792 893
-rect 1423 840 1792 876
+timestamp 1728609217
 << locali >>
 rect 1387 1949 1459 2019
 rect 1071 1841 1151 1875
@@ -83,19 +75,15 @@ timestamp 1728430153
 transform 1 0 1212 0 1 1735
 box -211 -284 211 284
 use sky130_fd_pr__nfet_01v8_64Z3AY  XM2
-timestamp 1728430153
+timestamp 1728500067
 transform 1 0 1212 0 1 1172
 box -211 -279 211 279
-use sky130_fd_pr__pfet_01v8_XGS3BL  XM3
-timestamp 0
-transform 1 0 1581 0 1 1159
-box -211 -319 211 319
 use sky130_fd_pr__nfet_01v8_64QSBY  XM4
 timestamp 1728430229
 transform 1 0 1634 0 1 1172
 box -211 -279 211 279
 use sky130_fd_pr__nfet_01v8_64Z3AY  XM5
-timestamp 1728430153
+timestamp 1728500067
 transform 1 0 1634 0 1 614
 box -211 -279 211 279
 << labels >>
