@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-05
-x2=0.00012
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -38,8 +38,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-05
-x2=0.00012
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -61,8 +61,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-05
-x2=0.00012
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -86,8 +86,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-05
-x2=0.00012
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -170,7 +170,8 @@ lab=GND}
 C {devices/gnd.sym} -2460 -970 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -2560 -1020 0 0 {name=p3 sig_type=std_logic lab=vb_pre}
 C {devices/lab_pin.sym} -2300 -1060 2 0 {name=p5 sig_type=std_logic lab=vpre}
-C {devices/vsource.sym} -2720 -760 0 0 {name=V2 savecurrent=false value="PWL(0 0 100u 0.6)"}
+C {devices/vsource.sym} -2720 -760 0 0 {name=V2 savecurrent=false value=0.5
+*"PWL(0 0 100u 0.6)"}
 C {devices/lab_pin.sym} -2720 -810 0 0 {name=p6 sig_type=std_logic lab=vb_pre}
 C {devices/gnd.sym} -2720 -710 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -2800 -500 0 0 {name=SIMULATION
@@ -187,8 +188,7 @@ value="
 .save all
 " }
 C {sky130_fd_pr/corner.sym} -2550 -490 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/isource.sym} -2800 -960 0 1 {name=I1 value=4u
-*"PWL(0 0 100u 2u)"
+C {devices/isource.sym} -2800 -960 0 1 {name=I1 value="PWL(0 0 100u 2u)"
 
 }
 C {devices/gnd.sym} -2800 -910 0 0 {name=l20 lab=GND}

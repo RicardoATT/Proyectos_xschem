@@ -39,7 +39,7 @@ def leer_csv_y_contar_flancos(archivo_csv):
     return resultados
 
 # Archivo CSV de ejemplo (puedes reemplazarlo por el tuyo)
-archivo = 'SNN_15x10_N9.csv'
+archivo = 'SNN_15x10_N0.csv'
 
 # Contar los flancos de subida de cada señal
 resultados = leer_csv_y_contar_flancos(archivo)

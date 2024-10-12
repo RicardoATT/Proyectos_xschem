@@ -42,7 +42,7 @@ def plot_csv_data(output_csv):
     plt.show()
 
 # Rutas del archivo .csv de salida
-output_csv = 'SNN_15x10_N0.csv'
+output_csv = 'SNN_15x10_N1.csv'
 
 
 # Llamar a la función para graficar los datos del archivo .csv
