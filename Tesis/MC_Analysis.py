@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 plt.close("all")
 
 for i in range(1,101):
-    file_path = 'Input_LIF_MC'+str(i)+'.txt'
+    file_path = 'Syn7T1R_MC'+str(i)+'.txt'
     
     # Inicializar listas para almacenar los datos
     x_data = []
@@ -25,11 +25,11 @@ for i in range(1,101):
             data = line.split()
             if len(data) >= 2:  # Asegurarse de que haya suficientes columnas
                 x_data.append(float(data[0]))
-                y_data.append(float(data[1]))
+                y_data.append(5-float(data[1]))
     
     # Crear el gráfico
     #plt.figure(figsize=(10, 6))
-    plt.plot(x_data,y_data, label='Datos')
+    plt.plot(x_data,y_data)
     plt.xlabel('Tiempo (s)')
     plt.ylabel('Voltaje de salida (V)')
     plt.title('Análisis de MonteCarlo de la Neurona LIF')
