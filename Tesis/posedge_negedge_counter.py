@@ -8,6 +8,7 @@ Created on Thu Oct 10 17:18:42 2024
 
 import csv
 import numpy as np
+import pandas as pd
 
 # Función para convertir archivos .txt a .csv
 def convertir_txt_a_csv(prefijo, numero_archivos):
@@ -37,65 +38,37 @@ def convertir_txt_a_csv(prefijo, numero_archivos):
         except Exception as e:
             print(f"Error procesando el archivo {nombre_archivo_txt}: {e}")
 
-# Función para detectar flancos de subida y bajada
-def detectar_flancos(signal, umbral=0.8):
-    tiempos_subida = []
-    tiempos_bajada = []
-    
-    for i in range(1, len(signal)):
-        # Flanco de subida
-        if signal[i-1] < umbral and signal[i] >= umbral:
-            tiempos_subida.append(i)  # Guardar el índice
+# Función para encontrar el primer tiempo en el que la señal baja de los umbrales
+def find_threshold_times(file_name, threshold1=1.6994, threshold2=0.11009):
+    # Leer el archivo CSV
+    data = pd.read_csv(file_name)
 
-        # Flanco de bajada
-        if signal[i-1] >= umbral and signal[i] < umbral:
-            tiempos_bajada.append(i)  # Guardar el índice
-    
-    return tiempos_subida, tiempos_bajada
+    # Asumimos que la primera columna es tiempo y la segunda es la señal
+    time = data.iloc[:, 0]  # Columna de tiempo
+    signal = data.iloc[:, 1]  # Columna de la señal
 
-# Función para procesar archivos .csv y detectar flancos
-def procesar_archivos_csv(prefijo, numero_archivos, umbral=0.8):
-    resultados = {}
-    
-    for i in range(1, numero_archivos + 1):
-        nombre_archivo_csv = f"{prefijo}{i}.csv"
-        
-        try:
-            # Leer el archivo CSV
-            with open(nombre_archivo_csv, 'r') as csvfile:
-                csvreader = csv.reader(csvfile)
-                next(csvreader)  # Omitir el encabezado
-                signal = [float(row[0]) for row in csvreader]  # Convertir a float
-            
-            # Detectar flancos de subida y bajada
-            tiempos_subida, tiempos_bajada = detectar_flancos(np.array(signal), umbral)
-            
-            # Guardar los resultados con el nombre del archivo
-            resultados[nombre_archivo_csv] = {
-                'flancos_subida': tiempos_subida,
-                'flancos_bajada': tiempos_bajada
-            }
-        except FileNotFoundError:
-            print(f"Archivo {nombre_archivo_csv} no encontrado.")
-        except Exception as e:
-            print(f"Error procesando el archivo {nombre_archivo_csv}: {e}")
-    
-    return resultados
+    # Encontrar el primer tiempo en el que la señal baja de threshold1
+    time_below_threshold1 = time[signal < threshold1].iloc[0] if (signal < threshold1).any() else None
 
-# Configuración del procesamiento
-prefijo_archivo = 'Input_LIF_MC'  # Prefijo de los nombres de archivos (ej: archivo1.txt, archivo2.txt, ...)
-numero_archivos = 100        # Número de archivos a procesar
-umbral = 0.8                 # Umbral de detección
+    # Encontrar el primer tiempo en el que la señal baja de threshold2
+    time_below_threshold2 = time[signal < threshold2].iloc[0] if (signal < threshold2).any() else None
+
+    return time_below_threshold1, time_below_threshold2
 
 # Llamar a la función para convertir los archivos
-convertir_txt_a_csv(prefijo_archivo, numero_archivos)
+convertir_txt_a_csv("Syn7T1R_MC", 100)
 
-# Procesar los archivos .csv y detectar flancos
-resultados_flancos = procesar_archivos_csv(prefijo_archivo, numero_archivos, umbral)
+# Lista de archivos CSV
+file_names = [f'Syn7T1R_MC{i}.csv' for i in range(1, 101)]  # Ajusta los nombres de los archivos si es necesario
 
-# Mostrar los resultados
-for archivo, flancos in resultados_flancos.items():
-    print(f"{archivo}:")
-    print(f"  Flancos de subida en los tiempos: {flancos['flancos_subida']}")
-    print(f"  Flancos de bajada en los tiempos: {flancos['flancos_bajada']}")
-    print("-" * 50)
+# Iterar sobre cada archivo y encontrar los tiempos para cada umbral
+for file_name in file_names:
+    try:
+        t_below_1, t_below_2 = find_threshold_times(file_name)
+        print(f'Archivo: {file_name}')
+        print(f'Primer tiempo que baja de 1.6994: {t_below_1}')
+        print(f'Primer tiempo que baja de 0.11009: {t_below_2}\n')
+    except FileNotFoundError:
+        print(f'Archivo {file_name} no encontrado.')
+    except pd.errors.EmptyDataError:
+        print(f'Archivo {file_name} está vacío o tiene un formato incorrecto.')

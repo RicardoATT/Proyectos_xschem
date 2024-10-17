@@ -5130,7 +5130,7 @@ value="
 .param Ln_or_inv=0.15
 *--Initial Values--*
 .param i_val1=0
-.param i_val2=0
+.param i_val2=4u
 .param i_val3=0
 .param i_val4=4u
 .param i_val5=0

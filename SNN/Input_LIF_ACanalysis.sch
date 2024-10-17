@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.13141e-05
-x2=7.48326e-05
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -38,8 +38,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.13141e-05
-x2=7.48326e-05
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -61,8 +61,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.13141e-05
-x2=7.48326e-05
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -86,8 +86,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.13141e-05
-x2=7.48326e-05
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -106,7 +106,7 @@ logy=0
 
 
 color=17
-node="\\"-1.8 i(v6) *\\""}
+node="\\"-1.8 i(v10) *\\""}
 N -2320 -1060 -2300 -1060 {
 lab=vpre}
 N -2720 -810 -2720 -790 {
@@ -170,7 +170,7 @@ lab=GND}
 C {devices/gnd.sym} -2460 -970 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -2560 -1020 0 0 {name=p3 sig_type=std_logic lab=vb_pre}
 C {devices/lab_pin.sym} -2300 -1060 2 0 {name=p5 sig_type=std_logic lab=vpre}
-C {devices/vsource.sym} -2720 -760 0 0 {name=V2 savecurrent=false value="PWL(0 0.3 100u 0.55)"
+C {devices/vsource.sym} -2720 -760 0 0 {name=V2 savecurrent=false value=0.5
 *"PWL(0 0 100u 0.6)"}
 C {devices/lab_pin.sym} -2720 -810 0 0 {name=p6 sig_type=std_logic lab=vb_pre}
 C {devices/gnd.sym} -2720 -710 0 0 {name=l4 lab=GND}
@@ -179,16 +179,19 @@ only_toplevel=true
 value="
 .option set_threads = 16
 .option klu
+.ac dec 0.0001 1 10k
 .control
-	tran 1n 100u 0
-	write Input_LIF_IinvsVout.raw
-	*wrdata Input_LIF_IinvsVout.txt i(vmeas1) v(vpre) v(vin)
-	reset
+	run
+	setplot tran1
+	set color0=rgb:f/f/f
+	set color1=rgb:0/0/0
+	settype decibel vpre
+	plot vdb(vpre) xlog
 .endc
 .save all
 " }
 C {sky130_fd_pr/corner.sym} -2550 -490 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/isource.sym} -2800 -960 0 1 {name=I1 value=4u
+C {devices/isource.sym} -2800 -960 0 1 {name=I1 value="ac 1 SINE(2u 2u 10000k)"
 
 }
 C {devices/gnd.sym} -2800 -910 0 0 {name=l20 lab=GND}
@@ -234,7 +237,7 @@ C {devices/lab_pin.sym} -2800 -810 0 0 {name=p13 sig_type=std_logic lab=vlky}
 C {devices/gnd.sym} -2800 -710 0 0 {name=l9 lab=GND}
 C {devices/launcher.sym} -2480 -540 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/Input_LIF_IinvsVout.raw tran"
+tclcommand="xschem raw_read $netlist_dir/Input_LIF_ACanalysis.raw ac"
 }
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Input_LIF.sym} -2460 -1060 0 0 {name=x1}
 C {devices/vsource.sym} -2680 -620 0 0 {name=V6 savecurrent=false value=1.8
