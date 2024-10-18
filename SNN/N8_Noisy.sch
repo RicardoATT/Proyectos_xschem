@@ -5150,8 +5150,8 @@ value="
 	set wr_singlescale
 	*--Classification 8--*
 	tran 10n 150u 0
-	write N8_Noisy_1.raw 
-	wrdata N8_Noisy_1.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(N0) v(N1) v(N2) v(N3) v(N4) v(N5) v(N6) v(N7) v(N8) v(N9) v(p0) v(p1) v(p2) v(p3) v(p4) v(p5) v(p6) v(p7) v(p8) v(p9) i(Vmeas200) i(Vmeas1) i(Vmeas2) i(Vmeas3) i(Vmeas4) i(Vmeas5) i(Vmeas6) i(Vmeas7) i(Vmeas8) i(Vmeas9) v(inh) v(uw) v(training) v(inference)
+	write N8_Noisy.raw 
+	wrdata N8_Noisy.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(N0) v(N1) v(N2) v(N3) v(N4) v(N5) v(N6) v(N7) v(N8) v(N9) v(p0) v(p1) v(p2) v(p3) v(p4) v(p5) v(p6) v(p7) v(p8) v(p9) i(Vmeas200) i(Vmeas1) i(Vmeas2) i(Vmeas3) i(Vmeas4) i(Vmeas5) i(Vmeas6) i(Vmeas7) i(Vmeas8) i(Vmeas9) v(inh) v(uw) v(training) v(inference)
 	*wrdata SNN_15x10_N8syn.txt v(n.x18.xr1.n1#ngap) v(n.x28.xr1.n1#ngap) v(n.x38.xr1.n1#ngap) v(n.x48.xr1.n1#ngap) v(n.x58.xr1.n1#ngap) v(n.x68.xr1.n1#ngap) v(n.x78.xr1.n1#ngap) v(n.x88.xr1.n1#ngap) v(n.x98.xr1.n1#ngap) v(n.x108.xr1.n1#ngap) v(n.x118.xr1.n1#ngap) v(n.x128.xr1.n1#ngap) v(n.x138.xr1.n1#ngap) v(n.x148.xr1.n1#ngap) v(n.x158.xr1.n1#ngap)
 .endc
 " }

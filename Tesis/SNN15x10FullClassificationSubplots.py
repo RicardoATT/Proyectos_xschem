@@ -10,7 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Función para leer y graficar las señales en subplots separados con delay en el tiempo y colores consistentes
-def leer_y_graficar_por_senales_con_colores(archivos_csv, delay=0.00055):
+def leer_y_graficar_por_senales_con_colores(archivos_csv, delay=0.00015):
     # Crear una figura con 10 subplots (uno por cada señal)
     fig, axs = plt.subplots(10, 1, figsize=(10, 20))
     
@@ -42,14 +42,17 @@ def leer_y_graficar_por_senales_con_colores(archivos_csv, delay=0.00055):
 
     # Ajustar el diseño para evitar solapamiento
     plt.tight_layout()
-    plt.savefig('Classification.png')
+    plt.savefig('Classification_lt.png')
     plt.show()
 
 # Lista de archivos CSV (puedes agregar las rutas correctas de tus archivos aquí)
-archivos = [
-    'SNN_15x10_N0.csv', 'SNN_15x10_N1.csv', 'SNN_15x10_N2.csv', 'SNN_15x10_N3.csv', 'SNN_15x10_N4.csv',
-    'SNN_15x10_N5.csv', 'SNN_15x10_N6.csv', 'SNN_15x10_N7.csv', 'SNN_15x10_N8.csv', 'SNN_15x10_N9.csv'
-]
+archivos = ["SNN_15x10_N0_lt.csv", "SNN_15x10_N1_lt.csv", "SNN_15x10_N2_lt.csv", "SNN_15x10_N3_lt.csv", "SNN_15x10_N4_lt.csv", "SNN_15x10_N5_lt.csv", "SNN_15x10_N6_lt.csv", "SNN_15x10_N7_lt.csv", "SNN_15x10_N8_lt.csv", "SNN_15x10_N9_lt.csv"]
+#archivos = ['SNN_15x10_N0.csv', 'SNN_15x10_N1.csv', 'SNN_15x10_N2.csv', 'SNN_15x10_N3.csv', 'SNN_15x10_N4.csv', 'SNN_15x10_N5.csv', 'SNN_15x10_N6.csv', 'SNN_15x10_N7.csv', 'SNN_15x10_N8.csv', 'SNN_15x10_N9.csv']
+#archivos = ['N0_Noisy_1.csv', 'N1_Noisy_1.csv', 'N2_Noisy_1.csv', 'N3_Noisy_1.csv', 'N4_Noisy_1.csv', 'N5_Noisy_1.csv', 'N6_Noisy_1.csv', 'N7_Noisy_1.csv', 'N8_Noisy_1.csv', 'N9_Noisy_1.csv']
+#archivos = ['N0_Noisy_2.csv', 'N1_Noisy_2.csv', 'N2_Noisy_2.csv', 'N3_Noisy_2.csv', 'N4_Noisy_2.csv', 'N5_Noisy_2.csv', 'N6_Noisy_2.csv', 'N7_Noisy_2.csv', 'N8_Noisy_2.csv', 'N9_Noisy_2.csv']
+#archivos = ['N0_Noisy_3.csv', 'N1_Noisy_3.csv', 'N2_Noisy_3.csv', 'N3_Noisy_3.csv', 'N4_Noisy_3.csv', 'N5_Noisy_3.csv', 'N6_Noisy_3.csv', 'N7_Noisy_3.csv', 'N8_Noisy_3.csv', 'N9_Noisy_3.csv']
+#archivos = ['N0_Noisy_4.csv', 'N1_Noisy_4.csv', 'N2_Noisy_4.csv', 'N3_Noisy_4.csv', 'N4_Noisy_4.csv', 'N5_Noisy_4.csv', 'N6_Noisy_4.csv', 'N7_Noisy_4.csv', 'N8_Noisy_4.csv', 'N9_Noisy_4.csv']
+
 
 # Llamar a la función para graficar con delay
 leer_y_graficar_por_senales_con_colores(archivos)
