@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.6RC file_version=1.2
 }
 G {}
 K {}
@@ -5082,8 +5082,8 @@ spice_ignore=false}
 C {devices/code_shown.sym} 300 -4190 0 0 {name=SIM0
 only_toplevel=true
 value="
-.option set_threads = 16
-.option klu
+*.option set_threads = 16
+*.option klu
 *--Current Injection--*
 .param L_in=0.15
 .param W_in=1
@@ -5129,9 +5129,10 @@ value="
 	set wr_vecnames
 	set wr_singlescale
 	*--Classification 0--*
+	set num_threads = 8
 	tran 10n 150u 0
-	write N0_Noisy.raw 
-	wrdata N0_Noisy.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(N0) v(N1) v(N2) v(N3) v(N4) v(N5) v(N6) v(N7) v(N8) v(N9) v(p0) v(p1) v(p2) v(p3) v(p4) v(p5) v(p6) v(p7) v(p8) v(p9) i(Vmeas200) i(Vmeas1) i(Vmeas2) i(Vmeas3) i(Vmeas4) i(Vmeas5) i(Vmeas6) i(Vmeas7) i(Vmeas8) i(Vmeas9) v(inh) v(uw) v(training) v(inference)
+	write N0_Noisy_tb.raw 
+	wrdata N0_Noisy_tb.txt v(vpre1) v(vpre2) v(vpre3) v(vpre4) v(vpre5) v(vpre6) v(vpre7) v(vpre8) v(vpre9) v(vpre10) v(vpre11) v(vpre12) v(vpre13) v(vpre14) v(vpre15) v(N0) v(N1) v(N2) v(N3) v(N4) v(N5) v(N6) v(N7) v(N8) v(N9) v(p0) v(p1) v(p2) v(p3) v(p4) v(p5) v(p6) v(p7) v(p8) v(p9) i(Vmeas200) i(Vmeas1) i(Vmeas2) i(Vmeas3) i(Vmeas4) i(Vmeas5) i(Vmeas6) i(Vmeas7) i(Vmeas8) i(Vmeas9) v(inh) v(uw) v(training) v(inference)
 	*wrdata SNN_15x10_N0syn.txt v(n.x10.xr1.n1#ngap) v(n.x20.xr1.n1#ngap) v(n.x30.xr1.n1#ngap) v(n.x40.xr1.n1#ngap) v(n.x50.xr1.n1#ngap) v(n.x60.xr1.n1#ngap) v(n.x70.xr1.n1#ngap) v(n.x80.xr1.n1#ngap) v(n.x90.xr1.n1#ngap) v(n.x100.xr1.n1#ngap) v(n.x110.xr1.n1#ngap) v(n.x120.xr1.n1#ngap) v(n.x130.xr1.n1#ngap) v(n.x140.xr1.n1#ngap) v(n.x150.xr1.n1#ngap)
 .endc
 " }

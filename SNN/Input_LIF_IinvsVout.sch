@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.6RC file_version=1.2
 }
 G {}
 K {}
@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 -2200 -1110 -1400 -710 {flags=graph
-y1=0
-y2=5e-06
+y1=-0.07
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.13141e-05
-x2=7.48326e-05
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -29,7 +29,7 @@ logy=0
 
 
 color=4
-node=i(Vmeas1)}
+node=vpre}
 B 2 -2200 -710 -1400 -310 {flags=graph
 y1=0
 y2=1.9
@@ -38,8 +38,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.13141e-05
-x2=7.48326e-05
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -61,8 +61,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.13141e-05
-x2=7.48326e-05
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -86,8 +86,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.13141e-05
-x2=7.48326e-05
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -105,8 +105,8 @@ logy=0
 
 
 
-color=17
-node="\\"-1.8 i(v6) *\\""}
+
+}
 N -2320 -1060 -2300 -1060 {
 lab=vpre}
 N -2720 -810 -2720 -790 {
@@ -170,20 +170,21 @@ lab=GND}
 C {devices/gnd.sym} -2460 -970 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -2560 -1020 0 0 {name=p3 sig_type=std_logic lab=vb_pre}
 C {devices/lab_pin.sym} -2300 -1060 2 0 {name=p5 sig_type=std_logic lab=vpre}
-C {devices/vsource.sym} -2720 -760 0 0 {name=V2 savecurrent=false value="PWL(0 0.3 100u 0.55)"
-*"PWL(0 0 100u 0.6)"}
+C {devices/vsource.sym} -2720 -760 0 0 {name=V2 savecurrent=false value="PWL(0 0 100u 0.6)"}
 C {devices/lab_pin.sym} -2720 -810 0 0 {name=p6 sig_type=std_logic lab=vb_pre}
 C {devices/gnd.sym} -2720 -710 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -2800 -500 0 0 {name=SIMULATION
 only_toplevel=true
 value="
-.option set_threads = 16
-.option klu
+*.option set_threads = 16
+*.option klu
 .control
-	tran 1n 100u 0
-	write Input_LIF_IinvsVout.raw
-	*wrdata Input_LIF_IinvsVout.txt i(vmeas1) v(vpre) v(vin)
-	reset
+	set num_threads = 8
+	set wr_vecnames
+	set wr_singlescale
+	tran 0.1n 100u
+	write Input_LIF_VbvsVout.raw
+	wrdata Input_LIF_VbvsVout.txt v(vpre) v(vb_pre)
 .endc
 .save all
 " }
@@ -243,3 +244,7 @@ C {devices/lab_pin.sym} -2680 -670 0 0 {name=p2 sig_type=std_logic lab=vdd_pre}
 C {devices/gnd.sym} -2680 -570 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} -2810 -1170 0 0 {name=p4 sig_type=std_logic lab=vdd_in}
 C {devices/lab_pin.sym} -2460 -1140 2 0 {name=p7 sig_type=std_logic lab=vdd_pre}
+C {devices/launcher.sym} -2340 -640 0 0 {name=h1
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/Input_LIF_VbvsVout.raw tran"
+}
