@@ -9,13 +9,6 @@ Created on Wed Oct  9 17:05:22 2024
 import csv
 import matplotlib.pyplot as plt
 
-def is_float(value):
-    try:
-        float(value)
-        return True
-    except ValueError:
-        return False
-
 # Función para convertir el archivo .txt en un archivo .csv
 def txt_to_csv(input_txt, output_csv):
     # Abrir el archivo .txt
@@ -31,12 +24,9 @@ def txt_to_csv(input_txt, output_csv):
         for line in lines:
             # Separar la línea por espacios
             columns = line.strip().split()
-            isfloat = is_float(columns[0])
-            if isfloat and float(columns[0]) >= 0.00015:
-                break
-            if len(columns) >= 51:  # Asegurarse de que haya al menos 300 columnas
+            if len(columns) >= 2:  # Asegurarse de que haya al menos 300 columnas
                 # Escribir la columna 0, y las columnas 16 a 25 en el archivo .csv
-                writer.writerow([columns[0], columns[16], columns[17], columns[18], columns[19], columns[20], columns[21], columns[22], columns[23], columns[24], columns[25]])
+                writer.writerow([columns[0], columns[1]])
 '''                
                 writer.writerow([columns[0], columns[1], columns[3], columns[5], columns[7], columns[9], columns[11], columns[13], 
 columns[15], columns[17], columns[19], columns[21], columns[23], columns[25], columns[27], columns[29], 
