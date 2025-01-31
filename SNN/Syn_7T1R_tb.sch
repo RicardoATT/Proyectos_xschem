@@ -92,6 +92,9 @@ N -660 -180 -660 -160 {
 lab=GND}
 N -660 -240 -560 -240 {
 lab=pre}
+N -360 -290 -280 -290 {lab=VDD}
+N -360 -290 -360 -220 {lab=VDD}
+N -360 -220 -340 -220 {lab=VDD}
 C {devices/gnd.sym} -280 -160 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} -280 -300 0 0 {name=l2 lab=VDD}
 C {devices/vsource.sym} -720 -210 0 0 {name=V1 value="PWL(0 1.8 74.999u 1.8 75u 0)"}
@@ -131,4 +134,4 @@ C {devices/vsource.sym} -200 -190 0 0 {name=vread1 value=1e-4}
 C {devices/vsource.sym} -660 -210 0 0 {name=V4 value="PWL(0 1.8 14.999u 1.8 15u 0)"}
 C {devices/gnd.sym} -660 -160 0 0 {name=l7 lab=GND
 value="PWL(0 1.8 24.999u 1.8 25u 0)"}
-C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Syn_6T1R.sym} -220 -60 0 0 {name=x1}
+C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Syn_7T1R.sym} 10 -100 0 0 {name=x1}
