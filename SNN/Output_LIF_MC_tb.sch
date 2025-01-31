@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.6RC file_version=1.2
 }
 G {}
 K {}
@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.5e-06
+x1=6.70005e-07
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -31,15 +31,15 @@ logy=0
 color=4
 node=i(Vmeas1)}
 B 2 -1600 -1200 -800 -800 {flags=graph
-y1=0.3
+y1=0.31
 y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.5e-06
+x1=6.70005e-07
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -60,8 +60,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.5e-06
+x1=6.70005e-07
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -85,8 +85,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.5e-06
+x1=6.70005e-07
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -107,15 +107,15 @@ logy=0
 color=17
 node="\\"-1.8 i(v10) *\\""}
 B 2 -1600 -800 -800 -400 {flags=graph
-y1=1.1
-y2=5.3
+y1=4.46
+y2=8.66
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.5e-06
+x1=6.70005e-07
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -138,8 +138,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.5e-06
+x1=6.70005e-07
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -165,8 +165,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.5e-06
+x1=6.70005e-07
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -188,8 +188,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.5e-06
+x1=6.70005e-07
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -273,10 +273,10 @@ lab=vinh}
 C {devices/gnd.sym} -1870 -1000 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -1970 -1050 0 0 {name=p3 sig_type=std_logic lab=vb_pre}
 C {devices/lab_pin.sym} -1710 -1090 2 0 {name=p5 sig_type=std_logic lab=vpre}
-C {devices/vsource.sym} -2130 -790 0 0 {name=V2 value=0.55 savecurrent=false}
+C {devices/vsource.sym} -2130 -790 0 0 {name=V2 value=0.5 savecurrent=false}
 C {devices/lab_pin.sym} -2130 -840 0 0 {name=p6 sig_type=std_logic lab=vb_pre}
 C {devices/gnd.sym} -2130 -740 0 0 {name=l4 lab=GND}
-C {devices/code_shown.sym} -2210 -530 0 0 {name=SIMULATION
+C {devices/code_shown.sym} -2210 -540 0 0 {name=SIMULATION
 only_toplevel=true
 value="
 .option set_threads = 16
@@ -284,12 +284,12 @@ value="
 .control
 	set wr_vecnames
 	set wr_singlescale
-	let mc_runs = 10
+	let mc_runs = 100
 	let run = 1
 	dowhile run <= mc_runs
-		tran 0.1n 2.5u 0
-		write Output_LIF_MC\{$&run\}.raw
-		*wrdata Output_LIF_MC\{$&run\}.txt v(vpre)
+		tran 0.01n 2u 0.67u
+		*write Output_LIF_MC.raw
+		wrdata Output_LIF_MC\{$&run\}.txt v(vpre)
 		reset
 		let run = run + 1
 	end
@@ -297,7 +297,7 @@ value="
 .save all
 " }
 C {sky130_fd_pr/corner.sym} -1960 -520 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
-C {devices/isource.sym} -2210 -990 0 1 {name=I1 value=4u
+C {devices/isource.sym} -2210 -990 0 1 {name=I1 value="PWL(0 0 0.009u 0 0.01u 4u)"
 *"PWL(0 0 0.099u 0 0.1u 4u)"
 
 }
@@ -342,9 +342,9 @@ C {devices/lab_pin.sym} -1970 -1130 0 0 {name=p11 sig_type=std_logic lab=vlky}
 C {devices/vsource.sym} -2210 -790 0 0 {name=V5 savecurrent=false value=0.55}
 C {devices/lab_pin.sym} -2210 -840 0 0 {name=p13 sig_type=std_logic lab=vlky}
 C {devices/gnd.sym} -2210 -740 0 0 {name=l9 lab=GND}
-C {devices/launcher.sym} -1890 -570 0 0 {name=h5
+C {devices/launcher.sym} -1760 -940 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/Output_LIF_MC5.raw tran"
+tclcommand="xschem raw_read $netlist_dir/Output_LIF_MC.raw tran"
 }
 C {devices/vsource.sym} -2090 -650 0 0 {name=V6 savecurrent=false value=1.8
 *"PWL(0 0 39.9u 0 40u 1.8)"}

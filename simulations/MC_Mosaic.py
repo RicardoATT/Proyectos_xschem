@@ -18,7 +18,7 @@ file_names = [f'MC_LIF_Neuron{i}.txt' for i in range(1,17)]  # Ajusta los nombre
 data_list = [read_data(file) for file in file_names]
 
 # Crear una figura y una cuadrícula de subplots (2 filas por 5 columnas)
-fig, axes = plt.subplots(4, 4, figsize=(17, 10))
+fig, axes = plt.subplots(2, 1, figsize=(17, 10))
 
 # Asegurarse de que axes es una lista plana
 axes = axes.flatten()

@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.6RC file_version=1.2
 }
 G {}
 K {}
@@ -46,11 +46,11 @@ lab=vdd}
 N -1550 -260 -1550 -230 {
 lab=vdd}
 N 0 -50 10 -50 {
-lab=#net4}
+lab=gnd}
 N 10 -50 10 -20 {
-lab=#net4}
+lab=gnd}
 N 0 -20 10 -20 {
-lab=#net4}
+lab=gnd}
 N 0 -100 20 -100 {
 lab=out}
 N 0 -120 0 -100 {
@@ -58,15 +58,15 @@ lab=out}
 N 0 -100 0 -80 {
 lab=out}
 N 0 -150 10 -150 {
-lab=#net5}
+lab=vdd}
 N 10 -180 10 -150 {
-lab=#net5}
+lab=vdd}
 N 0 -180 10 -180 {
-lab=#net5}
+lab=vdd}
 N -40 -150 -40 -100 {
-lab=#net6}
+lab=#net3}
 N -40 -100 -40 -50 {
-lab=#net6}
+lab=#net3}
 N -1580 -20 -1560 -20 {
 lab=gnd}
 N -1560 -310 -1550 -310 {
@@ -74,7 +74,7 @@ lab=vdd}
 N -1550 -340 -1550 -310 {
 lab=vdd}
 N -1560 -360 -1560 -340 {
-lab=#net7}
+lab=#net4}
 N -1550 -310 -1550 -260 {
 lab=vdd}
 N -1620 -310 -1600 -310 {
@@ -108,17 +108,17 @@ lab=N8}
 N -1620 -870 -1600 -870 {
 lab=N9}
 N -1560 -440 -1560 -420 {
-lab=#net8}
+lab=#net5}
 N -1560 -520 -1560 -500 {
-lab=#net9}
+lab=#net6}
 N -1560 -600 -1560 -580 {
-lab=#net10}
+lab=#net7}
 N -1560 -680 -1560 -660 {
-lab=#net11}
+lab=#net8}
 N -1560 -760 -1560 -740 {
-lab=#net12}
+lab=#net9}
 N -1560 -840 -1560 -820 {
-lab=#net13}
+lab=#net10}
 N -1550 -390 -1550 -340 {
 lab=vdd}
 N -1560 -390 -1550 -390 {
@@ -246,13 +246,13 @@ lab=#net3}
 N -300 -100 -300 -80 {
 lab=#net3}
 N -150 -20 0 -20 {
-lab=#net4}
+lab=gnd}
 N -160 -100 -40 -100 {
-lab=#net6}
+lab=#net3}
 N -1620 -950 -1600 -950 {
 lab=RST}
 N -1560 -920 -1560 -900 {
-lab=#net14}
+lab=#net11}
 N -1550 -950 -1550 -870 {
 lab=vdd}
 N -1560 -950 -1550 -950 {
@@ -264,7 +264,7 @@ lab=vdd}
 N -1560 -980 -1550 -980 {
 lab=vdd}
 N -220 -50 -200 -50 {
-lab=N9}
+lab=RST}
 N -290 -20 -160 -20 {
 lab=gnd}
 N -160 -20 -150 -20 {
@@ -277,8 +277,8 @@ N -300 -100 -160 -100 {
 lab=#net3}
 N -160 -100 -160 -80 {
 lab=#net3}
-N -1550 -980 -0 -980 {}
-N -0 -980 -0 -180 {}
+N -1550 -980 -0 -980 {lab=vdd}
+N -0 -980 -0 -180 {lab=vdd}
 C {devices/iopin.sym} -1580 -20 2 0 {name=p2 lab=gnd}
 C {devices/ipin.sym} -1620 -150 0 0 {name=p3 lab=N0}
 C {devices/ipin.sym} -1620 -230 0 0 {name=p4 lab=N1}
@@ -343,8 +343,8 @@ C {devices/lab_pin.sym} -1470 -50 0 0 {name=p8 sig_type=std_logic lab=N1}
 C {devices/lab_pin.sym} -1610 -50 0 0 {name=p9 sig_type=std_logic lab=N0}
 C {devices/iopin.sym} -1620 -980 2 0 {name=p10 lab=vdd}
 C {sky130_fd_pr/nfet_01v8.sym} -20 -50 0 0 {name=M2
-L=\{Ln_or_inv\}
-W=\{Wn_or_inv\}
+L=\{Ln_or\}
+W=\{Wn_or\}
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -357,8 +357,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} -20 -150 0 0 {name=M1
-L=\{Lp_or_inv\}
-W=\{Wp_or_inv\}
+L=\{Lp_or\}
+W=\{Wp_or\}
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

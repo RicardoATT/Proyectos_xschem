@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.6RC file_version=1.2
 }
 G {}
 K {}
@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.05879e-22
-x2=1e-05
+x1=7.651046e-05
+x2=7.7845667e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -38,8 +38,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.05879e-22
-x2=1e-05
+x1=7.651046e-05
+x2=7.7845667e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -60,8 +60,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.05879e-22
-x2=1e-05
+x1=7.651046e-05
+x2=7.7845667e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -78,15 +78,15 @@ logy=0
 color=4
 node=ctrl_wu}
 B 2 -800 -1600 0 -1200 {flags=graph
-y1=-6.9e-07
+y1=-2.9e-06
 y2=0.00031
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.05879e-22
-x2=1e-05
+x1=7.651046e-05
+x2=7.7845667e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -114,8 +114,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.05879e-22
-x2=1e-05
+x1=7.651046e-05
+x2=7.7845667e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -138,8 +138,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.05879e-22
-x2=1e-05
+x1=7.651046e-05
+x2=7.7845667e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -165,8 +165,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.05879e-22
-x2=1e-05
+x1=7.651046e-05
+x2=7.7845667e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -181,15 +181,15 @@ logy=0
 color=6
 node=\\"i(Vmeas160)\\"}
 B 2 -800 -400 0 0 {flags=graph
-y1=-0.42215
-y2=1.75283
+y1=-0.26
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.05879e-22
-x2=1e-05
+x1=7.651046e-05
+x2=7.7845667e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -201,9 +201,9 @@ unitx=1
 logx=0
 logy=0
 
-color="6 4"
-node="\\"p0\\"
-\\"N0\\""}
+color="6 7"
+node="\\"p\\"
+\\"N\\""}
 N -2320 -1060 -2300 -1060 {
 lab=vpre}
 N -2720 -810 -2720 -790 {
@@ -317,7 +317,7 @@ lab=vdd_inf}
 N -2390 -590 -2390 -570 {
 lab=GND}
 N -2280 -670 -2280 -650 {
-lab=vdd_syn0}
+lab=vdd_syn}
 N -2280 -590 -2280 -570 {
 lab=GND}
 N -2570 -810 -2570 -790 {
@@ -353,17 +353,9 @@ lab=vdd_inh}
 N -2110 -240 -2110 -230 {
 lab=GND}
 N -1930 -380 -1920 -380 {
-lab=inh_d}
+lab=inh}
 N -2200 -290 -2190 -290 {
 lab=N}
-N -2280 -450 -2270 -450 {
-lab=inh}
-N -2310 -460 -2310 -450 {
-lab=GND}
-N -2310 -410 -2310 -400 {
-lab=inh_d}
-N -2350 -450 -2340 -450 {
-lab=ctrl_vinh}
 N -2180 -670 -2180 -650 {
 lab=vdd_pos}
 N -2180 -590 -2180 -570 {
@@ -416,10 +408,6 @@ N -2260 -810 -2260 -790 {
 lab=vb_pos}
 N -2260 -730 -2260 -710 {
 lab=GND}
-N -2170 -810 -2170 -790 {
-lab=ctrl_vinh}
-N -2170 -730 -2170 -710 {
-lab=GND}
 N -2110 -1170 -2110 -1160 {
 lab=GND}
 N -2060 -1210 -2050 -1210 {
@@ -443,7 +431,7 @@ lab=GND}
 C {devices/gnd.sym} -2460 -970 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -2560 -1020 0 0 {name=p3 sig_type=std_logic lab=vb_pre}
 C {devices/lab_pin.sym} -2300 -1060 2 0 {name=p5 sig_type=std_logic lab=vpre}
-C {devices/vsource.sym} -2720 -760 0 0 {name=V2 value=0.5 savecurrent=false}
+C {devices/vsource.sym} -2720 -760 0 0 {name=V2 value=0.6 savecurrent=false}
 C {devices/lab_pin.sym} -2720 -810 0 0 {name=p6 sig_type=std_logic lab=vb_pre}
 C {devices/gnd.sym} -2720 -710 0 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} -2800 -500 0 0 {name=SIMULATION
@@ -459,8 +447,8 @@ value="
 .param W_mem_in=30
 .param L_mem_out=0.15
 .param W_mem_out=1.5
-.param L_out=0.15
-.param W_out=1.5
+.param L_out=0.4
+.param W_out=3.6
 .param Wp_or=1
 .param Lp_or=0.15
 .param Wn_or=1
@@ -471,8 +459,9 @@ value="
 .param Ln_or_inv=0.15
 .control
 	save all
-	tran 1n 10u 0
+	tran 1n 100u 0
 	write Input_LIF_1p_tb.raw
+	wrdata Potencias.txt i(v6) i(v7) i(v8) i(v9) i(v10) i(v11) i(v12)
 .endc
 " }
 C {sky130_fd_pr/corner.sym} -2550 -490 0 0 {name=CORNER only_toplevel=true corner=tt}
@@ -517,7 +506,8 @@ C {devices/lab_pin.sym} -2780 -670 0 0 {name=p1 sig_type=std_logic lab=vdd_in}
 C {devices/gnd.sym} -2780 -570 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -2570 -1060 0 0 {name=p8 sig_type=std_logic lab=Vin}
 C {devices/lab_pin.sym} -2560 -1100 0 0 {name=p11 sig_type=std_logic lab=vlky}
-C {devices/vsource.sym} -2800 -760 0 0 {name=V5 savecurrent=false value=0.55}
+C {devices/vsource.sym} -2800 -760 0 0 {name=V5 savecurrent=false value=0
+*0.55}
 C {devices/lab_pin.sym} -2800 -810 0 0 {name=p13 sig_type=std_logic lab=vlky}
 C {devices/gnd.sym} -2800 -710 0 0 {name=l9 lab=GND}
 C {devices/launcher.sym} -2480 -220 0 0 {name=h5
@@ -580,7 +570,7 @@ C {devices/lab_pin.sym} -2390 -670 0 0 {name=p14 sig_type=std_logic lab=vdd_inf}
 C {devices/vsource.sym} -2280 -620 0 0 {name=V10 
 value=1.8}
 C {devices/gnd.sym} -2280 -570 0 0 {name=l14 lab=GND}
-C {devices/lab_pin.sym} -2280 -670 0 0 {name=p15 sig_type=std_logic lab=vdd_syn0}
+C {devices/lab_pin.sym} -2280 -670 0 0 {name=p15 sig_type=std_logic lab=vdd_syn}
 C {devices/lab_pin.sym} -2460 -1140 2 0 {name=p7 sig_type=std_logic lab=vdd_pre}
 C {devices/vsource.sym} -2570 -760 0 0 {name=V1 savecurrent=false value="PWL(0 1.8 4.9u 1.8 5u 0)"}
 C {devices/lab_pin.sym} -2570 -810 0 0 {name=p16 sig_type=std_logic lab=ctrl_wu}
@@ -588,7 +578,7 @@ C {devices/gnd.sym} -2570 -710 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} -2650 -760 0 0 {name=V3 savecurrent=false value=0.5}
 C {devices/lab_pin.sym} -2650 -810 0 0 {name=p17 sig_type=std_logic lab=vb_wu}
 C {devices/gnd.sym} -2650 -710 0 0 {name=l5 lab=GND}
-C {devices/vsource.sym} -2420 -760 0 0 {name=V11 savecurrent=false value="PWL(0 0 84.9u 0 85u 1.8)"}
+C {devices/vsource.sym} -2420 -760 0 0 {name=V113 savecurrent=false value="PWL(0 0 59.9u 0 60u 1.8)"}
 C {devices/lab_pin.sym} -2420 -810 0 0 {name=p18 sig_type=std_logic lab=ctrl_inf}
 C {devices/gnd.sym} -2420 -710 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} -1780 -760 1 0 {name=p19 sig_type=std_logic lab=vb_pos}
@@ -602,52 +592,30 @@ C {devices/lab_pin.sym} -1700 -760 1 0 {name=p24 sig_type=std_logic lab=vlky}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Output_LIF.sym} -1740 -660 1 0 {name=x200}
 C {devices/gnd.sym} -2110 -230 0 0 {name=l27 lab=GND}
 C {devices/lab_pin.sym} -2110 -530 2 0 {name=p81 sig_type=std_logic lab=vdd_inh}
-C {devices/lab_pin.sym} -1920 -380 2 0 {name=p91 sig_type=std_logic lab=inh_d}
+C {devices/lab_pin.sym} -1920 -380 2 0 {name=p91 sig_type=std_logic lab=inh}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/inhibitory/WTA_circuit.sym} -2070 -380 0 0 {name=x160}
 C {devices/lab_pin.sym} -2200 -290 0 0 {name=p25 sig_type=std_logic lab=N}
-C {devices/lab_pin.sym} -2270 -450 2 0 {name=p31 sig_type=std_logic lab=inh}
-C {sky130_fd_pr/nfet_01v8.sym} -2310 -430 3 0 {name=M160
-L=0.15
-W=1
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {devices/gnd.sym} -2310 -460 2 0 {name=l21 lab=GND}
-C {devices/lab_pin.sym} -2310 -400 2 0 {name=p32 sig_type=std_logic lab=inh_d}
-C {devices/lab_pin.sym} -2350 -450 0 0 {name=p45 sig_type=std_logic lab=ctrl_vinh}
-C {devices/vsource.sym} -2180 -620 0 0 {name=V12 
+C {devices/vsource.sym} -2180 -620 0 0 {name=V11
 value=1.8}
 C {devices/gnd.sym} -2180 -570 0 0 {name=l17 lab=GND}
 C {devices/lab_pin.sym} -2180 -670 0 0 {name=p27 sig_type=std_logic lab=vdd_pos}
-C {devices/vsource.sym} -2080 -620 0 0 {name=V13 
+C {devices/vsource.sym} -2080 -620 0 0 {name=V12
 value=1.8}
 C {devices/gnd.sym} -2080 -570 0 0 {name=l19 lab=GND}
 C {devices/lab_pin.sym} -2080 -670 0 0 {name=p28 sig_type=std_logic lab=vdd_inh}
 C {devices/gnd.sym} -2200 -480 2 0 {name=l22 lab=GND}
-C {devices/vsource.sym} -2340 -760 0 0 {name=V14 savecurrent=false value="PWL(0 0 84.9u 0 85u 1.8)"}
+C {devices/vsource.sym} -2340 -760 0 0 {name=V14 savecurrent=false value="PWL(0 0 59.9u 0 60u 1.8)"}
 C {devices/lab_pin.sym} -2340 -810 0 0 {name=p29 sig_type=std_logic lab=ctrl_pos}
 C {devices/gnd.sym} -2340 -710 0 0 {name=l23 lab=GND}
 C {devices/vsource.sym} -2260 -760 0 0 {name=V15 savecurrent=false value=0.55}
 C {devices/lab_pin.sym} -2260 -810 0 0 {name=p30 sig_type=std_logic lab=vb_pos}
 C {devices/gnd.sym} -2260 -710 0 0 {name=l24 lab=GND}
-C {devices/vsource.sym} -2170 -760 0 0 {name=V16 savecurrent=false value=1.8}
-C {devices/lab_pin.sym} -2170 -810 0 0 {name=p33 sig_type=std_logic lab=ctrl_vinh}
-C {devices/gnd.sym} -2170 -710 0 0 {name=l25 lab=GND}
 C {devices/code.sym} -2550 -350 0 0 {name=MODELS2
 only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
 .inc $::SKYWATER_MODELS/rram_v0.spice
-.inc $::SKYWATER_MODELS/rram_v1.spice
 "
 spice_ignore=false}
 C {/home/ricardo/RATT_repos/Proyectos_xschem/SNN/Tr_Circuit.sym} -2110 -1210 0 0 {name=x2}
@@ -656,7 +624,7 @@ C {devices/gnd.sym} -2110 -1160 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} -2110 -1270 0 0 {name=p37 sig_type=std_logic lab=vdd_tr}
 C {devices/lab_pin.sym} -2170 -1240 0 0 {name=p38 sig_type=std_logic lab=ctrl_tr}
 C {devices/lab_pin.sym} -2170 -1180 0 0 {name=p39 sig_type=std_logic lab=vb_tr}
-C {devices/vsource.sym} -2500 -760 0 0 {name=V17 savecurrent=false value="PWL(0 0 9.9u 0 10u 1.8 79.9u 1.8 80u 0)"}
+C {devices/vsource.sym} -2500 -760 0 0 {name=V17 savecurrent=false value="PWL(0 0 9.9u 0 10u 1.8 54.9u 1.8 55u 0)"}
 C {devices/lab_pin.sym} -2500 -810 0 0 {name=p43 sig_type=std_logic lab=ctrl_tr}
 C {devices/gnd.sym} -2500 -710 0 0 {name=l26 lab=GND}
 C {devices/vsource.sym} -2100 -760 0 0 {name=V18 savecurrent=false value=0.5}
