@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.6RC file_version=1.2
 }
 G {}
 K {}
@@ -102,8 +102,8 @@ lab=GND}
 N 100 -30 120 -30 {
 lab=ctrl_pos}
 C {sky130_fd_pr/nfet_01v8.sym} -320 -10 0 0 {name=M1
-L=0.45
-W=0.45
+L=0.15
+W=15
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -181,8 +181,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -60 90 0 1 {name=M4
-L=0.45
-W=0.45
+L=0.15
+W=15
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
